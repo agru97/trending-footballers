@@ -35,5 +35,6 @@ jobs:
           git config --local user.name "github-actions[bot]"
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git add public/trending_footballers.csv
+          git add public/last_update.txt
           git diff --cached --quiet || git commit -m "Update trending footballers.csv at $(date)"
           git push 
