@@ -2,6 +2,7 @@ import requests
 import os
 import google.generativeai as genai
 from dotenv import load_dotenv
+import datetime
 
 # Load environment variables from .env file
 load_dotenv()
@@ -83,12 +84,17 @@ Player Name 5,Score 5
     model = genai.GenerativeModel("gemini-1.5-pro")
     response = model.generate_content(prompt)
     
-    # Write the response to a CSV file in the public directory
+    # Write the response and timestamp to separate files
     csv_path = os.path.join(os.getcwd(), 'public', 'trending_footballers.csv')
+    timestamp_path = os.path.join(os.getcwd(), 'public', 'last_update.txt')
     os.makedirs(os.path.dirname(csv_path), exist_ok=True)
     
     with open(csv_path, 'w', newline='') as f:
         f.write(response.text.strip())
+    
+    # Save current timestamp
+    with open(timestamp_path, 'w') as f:
+        f.write(datetime.datetime.now().isoformat())
 
 if __name__ == "__main__":
     try:

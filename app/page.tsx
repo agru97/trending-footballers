@@ -10,6 +10,7 @@ interface Footballer {
 
 export default function TrendingFootballers() {
   const [footballers, setFootballers] = useState<Footballer[]>([])
+  const [lastUpdate, setLastUpdate] = useState<string>('')
   const [loading, setLoading] = useState<boolean>(true)
   const [error, setError] = useState<string | null>(null)
 
@@ -20,8 +21,9 @@ export default function TrendingFootballers() {
         if (!response.ok) {
           throw new Error('Network response was not ok')
         }
-        const data: Footballer[] = await response.json()
-        setFootballers(data)
+        const data = await response.json()
+        setFootballers(data.footballers)
+        setLastUpdate(data.lastUpdate)
       } catch (err: any) {
         setError(err.message || 'An error occurred')
       } finally {
@@ -98,7 +100,7 @@ export default function TrendingFootballers() {
           transition={{ duration: 0.5, delay: 1 }}
           className="text-center mt-6 text-sm text-brand/50"
         >
-          Last updated: {new Date().toLocaleString()}
+          Last updated: {lastUpdate}
         </motion.p>
       </motion.div>
     </div>

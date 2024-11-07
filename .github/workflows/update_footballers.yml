@@ -2,7 +2,7 @@ name: Update Footballers Daily
 
 on:
   schedule:
-    - cron: '0 6 * * *'  # Runs every day at 6 AM UTC
+    - cron: '0 */6 * * *'  # Runs every 6 hours
   workflow_dispatch:     # Allows manual trigger for testing
 
 jobs:
