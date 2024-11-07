@@ -8,6 +8,8 @@ on:
 jobs:
   update-footballers:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     
     env:
       SERPAPI_KEY: ${{ secrets.SERPAPI_KEY }}
