@@ -41,31 +41,53 @@ export default function TrendingFootballers() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 to-gray-800 flex items-center justify-center p-4">
+    <div className="min-h-screen bg-black flex items-center justify-center p-4">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className="bg-gray-800 rounded-lg shadow-xl p-6 w-full max-w-md"
+        className="bg-black/50 backdrop-blur-sm rounded-xl shadow-2xl p-6 w-full max-w-md border border-brand/10"
       >
-        <h1 className="text-3xl font-bold text-center mb-6 text-gray-100">Trending Footballers</h1>
-        <ul className="space-y-4">
+        <h1 className="text-3xl font-bold text-center mb-8 text-brand">Trending Footballers</h1>
+        <ul className="space-y-3">
           {footballers.map((footballer, index) => (
             <motion.li
               key={footballer.name}
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.3, delay: index * 0.1 }}
-              className="bg-gray-700 rounded-lg p-4 flex justify-between items-center"
+              className="bg-black/40 rounded-lg p-4 flex justify-between items-center border border-brand/5 hover:border-brand/20 transition-colors"
             >
-              <span className="text-lg font-semibold text-gray-200">{footballer.name}</span>
+              <span className="text-lg font-medium text-gray-100">{footballer.name}</span>
               <motion.div
                 initial={{ scale: 0 }}
                 animate={{ scale: 1 }}
                 transition={{ duration: 0.3, delay: index * 0.1 + 0.3 }}
-                className="bg-gray-900 text-gray-100 rounded-full w-12 h-12 flex items-center justify-center"
+                className="flex items-center gap-3"
               >
-                {footballer.searchInterest}
+                <motion.div 
+                  className="text-sm font-mono bg-black px-3 py-1.5 rounded-md border border-brand/20 text-brand"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                >
+                  {footballer.searchInterest}
+                </motion.div>
+                <motion.div
+                  animate={{ 
+                    scale: [1, 1.1, 1],
+                    rotate: footballer.searchInterest > 5000 ? [0, 5, -5, 0] : 0
+                  }}
+                  transition={{ 
+                    duration: 2,
+                    repeat: Infinity,
+                    ease: "easeInOut"
+                  }}
+                  className="text-xl"
+                >
+                  {footballer.searchInterest > 30000 ? "🔥" : 
+                   footballer.searchInterest > 10000 ? "⚡" : 
+                   footballer.searchInterest > 5000 ? "🌟" : "⚽"}
+                </motion.div>
               </motion.div>
             </motion.li>
           ))}
@@ -74,7 +96,7 @@ export default function TrendingFootballers() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 1 }}
-          className="text-center mt-6 text-sm text-gray-400"
+          className="text-center mt-6 text-sm text-brand/50"
         >
           Last updated: {new Date().toLocaleString()}
         </motion.p>

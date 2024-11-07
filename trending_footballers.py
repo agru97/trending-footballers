@@ -1,10 +1,11 @@
 import requests
-import google.generativeai as genai
 import os
+import google.generativeai as genai
 from dotenv import load_dotenv
 
 # Load environment variables from .env file
 load_dotenv()
+
 
 # Get API keys from environment variables
 serpapi_key = os.environ.get('SERPAPI_KEY')
@@ -13,39 +14,40 @@ gemini_api_key = os.environ.get('GEMINI_API_KEY')
 if not serpapi_key or not gemini_api_key:
     raise Exception("Missing required API keys in environment variables")
 
-# Fetch data from SerpApi
-serpapi_url = "https://serpapi.com/search.json"
-params = {
-    "engine": "google_trends",
-    "q": "footballer",
-    "hl": "en",
-    "data_type": "RELATED_TOPICS",
-    "date": "now 1-d",
-    "api_key": serpapi_key
-}
+def fetch_trending_footballers():
+    # Fetch data from SerpApi
+    serpapi_url = "https://serpapi.com/search.json"
+    params = {
+        "engine": "google_trends",
+        "q": "footballer",
+        "hl": "en",
+        "data_type": "RELATED_TOPICS",
+        "date": "now 1-d",
+        "api_key": serpapi_key
+    }
 
-response = requests.get(serpapi_url, params=params)
-if response.status_code != 200:
-    print("Error fetching data from SerpApi:", response.text)
-else:
+    response = requests.get(serpapi_url, params=params)
+    if response.status_code != 200:
+        raise Exception(f"Error fetching data from SerpApi: {response.text}")
+
     data = response.json()
-    # Extract rising related topics
     rising_topics = data.get('related_topics', {}).get('rising', [])
+    
     if not rising_topics:
-        print("No rising topics found.")
+        raise Exception("No rising topics found.")
 
-# Prepare the list of entries
-entries = []
-for item in rising_topics:
-    topic_title = item['topic']['title']
-    extracted_value = item.get('extracted_value', '0')
-    entries.append(f"{topic_title}: {extracted_value}")
+    # Prepare the list of entries
+    entries = []
+    for item in rising_topics:
+        topic_title = item['topic']['title']
+        extracted_value = item.get('extracted_value', '0')
+        entries.append(f"{topic_title}: {extracted_value}")
 
-entries_text = "; ".join(entries)
-
-# Prepare the prompt
-prompt = f"""
-Please analyze the following list of entries separated by semicolons (;). Each entry consists of two parts separated by a colon (:):
+    entries_text = "; ".join(entries)
+    
+    # Prepare the prompt for Gemini
+    prompt = f"""
+   Please analyze the following list of entries separated by semicolons (;). Each entry consists of two parts separated by a colon (:):
 
 - The first part is a term from Google Trends related to footballers.
 - The second part is a numerical value indicating search interest.
@@ -74,8 +76,24 @@ Player Name 4,Score 4
 Player Name 5,Score 5
 
 **Important**: Do not include any explanations, headings, numbering, or extra text. Provide **only** the CSV data as specified, and **only the top 5 players**.
-"""
+    """
 
-genai.configure(api_key=gemini_api_key)
-model = genai.GenerativeModel("gemini-1.5-pro")
-response = model.generate_content(prompt)
+    # Get response from Gemini
+    genai.configure(api_key=gemini_api_key)
+    model = genai.GenerativeModel("gemini-1.5-pro")
+    response = model.generate_content(prompt)
+    
+    # Write the response to a CSV file in the public directory
+    csv_path = os.path.join(os.getcwd(), 'public', 'trending_footballers.csv')
+    os.makedirs(os.path.dirname(csv_path), exist_ok=True)
+    
+    with open(csv_path, 'w', newline='') as f:
+        f.write(response.text.strip())
+
+if __name__ == "__main__":
+    try:
+        fetch_trending_footballers()
+        print("Successfully updated trending footballers data")
+    except Exception as e:
+        print(f"Error: {str(e)}")
+        exit(1)
