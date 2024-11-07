@@ -84,17 +84,24 @@ Player Name 5,Score 5
     model = genai.GenerativeModel("gemini-1.5-pro")
     response = model.generate_content(prompt)
     
+    # Create public directory if it doesn't exist
+    os.makedirs('public', exist_ok=True)
+    
     # Write the response and timestamp to separate files
-    csv_path = os.path.join(os.getcwd(), 'public', 'trending_footballers.csv')
-    timestamp_path = os.path.join(os.getcwd(), 'public', 'last_update.txt')
-    os.makedirs(os.path.dirname(csv_path), exist_ok=True)
+    csv_path = os.path.join('public', 'trending_footballers.csv')
+    timestamp_path = os.path.join('public', 'last_update.txt')
     
     with open(csv_path, 'w', newline='') as f:
         f.write(response.text.strip())
     
     # Save current timestamp
+    current_time = datetime.datetime.utcnow()
+    formatted_time = current_time.strftime('%Y-%m-%dT%H:%M:%S.%fZ')
+    print(f"Writing timestamp to: {timestamp_path}")  # Debug log
+    print(f"Timestamp content: {formatted_time}")     # Debug log
+    
     with open(timestamp_path, 'w') as f:
-        f.write(datetime.datetime.now().isoformat())
+        f.write(formatted_time)
 
 if __name__ == "__main__":
     try:

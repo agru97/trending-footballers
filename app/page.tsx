@@ -100,7 +100,7 @@ export default function TrendingFootballers() {
           transition={{ duration: 0.5, delay: 1 }}
           className="text-center mt-6 text-sm text-brand/50"
         >
-          Last updated: {lastUpdate}
+          Last updated: {lastUpdate || 'Not available'}
         </motion.p>
       </motion.div>
     </div>
