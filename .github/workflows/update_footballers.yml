@@ -1,0 +1,38 @@
+name: Update Footballers Daily
+
+on:
+  schedule:
+    - cron: '0 6 * * *'  # Runs every day at 6 AM UTC
+  workflow_dispatch:     # Allows manual trigger for testing
+
+jobs:
+  update-footballers:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python 3.x
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Install Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          # Install any dependencies if your script requires
+          # pip install -r requirements.txt
+
+      - name: Run Python Script
+        run: |
+          jupyter nbconvert --to script test.ipynb
+          python test.py > public/trending_footballers.csv
+
+      - name: Commit and Push Changes
+        run: |
+          git config --local user.name "github-actions[bot]"
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git add public/trending_footballers.csv
+          git diff --cached --quiet || git commit -m "Update trending footballers.csv at $(date)"
+          git push 
