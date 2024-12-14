@@ -111,7 +111,7 @@ export default function TrendingFootballers() {
               </span>
               <div className="relative flex items-center gap-2">
                 <div className="text-sm font-mono bg-gradient-to-r from-brand/5 to-brand/10 px-3 sm:px-4 py-1.5 sm:py-2 rounded-lg border border-brand/10 text-brand font-semibold group-hover:bg-gradient-to-r group-hover:from-brand/10 group-hover:to-brand/20 transition-all">
-                  {footballer.searchInterest.toLocaleString()}
+                  {footballer.searchInterest}
                 </div>
                 <div className="opacity-0 group-hover:opacity-100 transition-opacity text-brand">
                   →
