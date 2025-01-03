@@ -1,5 +1,6 @@
-Rafaelson,49050
-Ianis Hagi,20600
-Takefusa Kubo,300
-Zinedine Zidane,120
-Gheorghe Hagi,900
+name,trend_score,full_name,nationality,club,club_logo,player_photo
+"M. Cornet","100","Gnaly Albert Maxwel Cornet","Côte d'Ivoire","Southampton","https://media.api-sports.io/football/teams/41.png","https://media.api-sports.io/football/players/665.png"
+"A. Armstrong","82","Adam James Armstrong","England","Southampton","https://media.api-sports.io/football/teams/41.png","https://media.api-sports.io/football/players/19484.png"
+"Chiquinho","71","Francisco Jorge Tavares Oliveira","Portugal","Wolves","https://media.api-sports.io/football/teams/39.png","https://media.api-sports.io/football/players/195962.png"
+"A. Bella-Kotchap","66","Armel Bella-Kotchap","Germany","Southampton","https://media.api-sports.io/football/teams/41.png","https://media.api-sports.io/football/players/25061.png"
+"V. Barco","54","Valentín Barco","Argentina","Brighton","https://media.api-sports.io/football/teams/51.png","https://media.api-sports.io/football/players/319572.png"
