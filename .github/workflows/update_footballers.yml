@@ -14,6 +14,8 @@ jobs:
       PROXY_LIST: ${{ secrets.PROXY_LIST }}
     steps:
       - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.PAT_TOKEN }}
       
       - name: Set up Python
         uses: actions/setup-python@v2
@@ -33,7 +35,7 @@ jobs:
 
       - name: Commit and push if changed
         run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
+          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
           git add public/trending_footballers.csv public/last_update.txt
           git diff --quiet && git diff --staged --quiet || (git commit -m "Update trending footballers" && git push) 
