@@ -2,10 +2,27 @@
 
 import React, { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
+import countryCodes from '../public/country-codes.json'
 
 interface Footballer {
   name: string
   searchInterest: number
+  full_name: string
+  nationality: string
+  club: string
+  club_logo: string
+  player_photo: string
+}
+
+// Helper function to convert country name to ISO code
+function getCountryCode(nationality: string): string {
+  const countryCodesReverse = Object.entries(countryCodes)
+    .reduce<{ [key: string]: string }>((acc, [code, name]) => {
+      acc[name.toLowerCase()] = code;
+      return acc;
+    }, {});
+
+  return countryCodesReverse[nationality.toLowerCase()] || nationality.toLowerCase();
 }
 
 export default function TrendingFootballers() {
@@ -63,6 +80,12 @@ export default function TrendingFootballers() {
         <div className="text-center bg-white/90 p-6 rounded-xl shadow-lg">
           <div className="text-red-500 text-xl mb-2">Oops! Something went wrong</div>
           <div className="text-gray-600">{error}</div>
+          <button 
+            onClick={() => window.location.reload()} 
+            className="mt-4 px-4 py-2 bg-brand text-white rounded-lg"
+          >
+            Try Again
+          </button>
         </div>
       </div>
     )
@@ -94,6 +117,13 @@ export default function TrendingFootballers() {
           Trending Footballers
         </h1>
         <p className="text-center text-gray-500 text-sm mb-6 sm:mb-8">Click on a player to see their latest news</p>
+        {loading && (
+          <ul className="space-y-3">
+            {[...Array(10)].map((_, i) => (
+              <div key={i} className="animate-pulse bg-white/50 h-16 rounded-xl"></div>
+            ))}
+          </ul>
+        )}
         <ul className="space-y-3">
           {footballers.map((footballer, index) => (
             <motion.li
@@ -102,13 +132,45 @@ export default function TrendingFootballers() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1 }}
               onClick={() => handlePlayerClick(footballer.name)}
-              className="group bg-white rounded-xl p-4 flex justify-between items-center border border-brand/5 hover:border-brand/20 transition-all hover:shadow-lg hover:-translate-y-0.5 cursor-pointer relative overflow-hidden"
+              className="group bg-white rounded-xl p-4 flex items-center border border-brand/5 hover:border-brand/20 transition-all hover:shadow-lg hover:-translate-y-0.5 cursor-pointer relative overflow-hidden"
             >
               <div className="absolute inset-0 bg-gradient-to-r from-brand/0 via-brand/0 to-brand/0 group-hover:from-brand/0 group-hover:via-brand/[0.02] group-hover:to-brand/[0.03] transition-all duration-500"></div>
-              <span className="text-base sm:text-lg font-medium text-gray-800 flex items-center gap-3 relative">
-                <span className="text-brand/30 font-bold min-w-[1.5rem]">{index + 1}</span>
-                {footballer.name}
-              </span>
+              
+              {/* Ranking Number */}
+              <span className="text-brand/30 font-bold min-w-[1.5rem]">{index + 1}</span>
+              
+              {/* Player Photo */}
+              <div className="relative">
+                <div className="absolute inset-0 w-12 h-12 -m-0.5 bg-brand rounded-full transition-transform group-hover:scale-110"></div>
+                <img 
+                  src={footballer.player_photo} 
+                  alt={footballer.name}
+                  className="w-11 h-11 rounded-full object-cover mr-4 transition-transform group-hover:scale-110 relative z-10"
+                />
+              </div>
+              
+              {/* Player Info */}
+              <div className="flex-1">
+                <div className="flex flex-col">
+                  <span className="text-base sm:text-lg font-medium text-gray-800">
+                    {footballer.name}
+                  </span>
+                  <div className="flex items-center text-sm text-gray-500 gap-2">
+                    <img 
+                      src={footballer.club_logo} 
+                      alt={footballer.club}
+                      className="w-5 h-5"
+                    />
+                    <img 
+                      src={`https://flagcdn.com/256x192/${getCountryCode(footballer.nationality)}.png`}
+                      alt={footballer.nationality}
+                      className="h-4 w-auto"
+                    />
+                  </div>
+                </div>
+              </div>
+              
+              {/* Score */}
               <div className="relative flex items-center gap-2">
                 <div className="text-sm font-mono bg-gradient-to-r from-brand/5 to-brand/10 px-3 sm:px-4 py-1.5 sm:py-2 rounded-lg border border-brand/10 text-brand font-semibold group-hover:bg-gradient-to-r group-hover:from-brand/10 group-hover:to-brand/20 transition-all">
                   {footballer.searchInterest}

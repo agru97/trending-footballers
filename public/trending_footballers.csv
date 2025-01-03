@@ -1,5 +1,6 @@
-Jorge Cuenca,26050
-Chris Wood,450
-Christoph Kramer,700
-Kevin Campbell,500
-GK Barry,750
+name,trend_score,full_name,nationality,club,club_logo,player_photo
+"A. Lallana","100","Adam David Lallana","England","Southampton","https://media.api-sports.io/football/teams/41.png","https://media.api-sports.io/football/players/295.png"
+"M. Cornet","84","Gnaly Albert Maxwel Cornet","Côte d'Ivoire","Southampton","https://media.api-sports.io/football/teams/41.png","https://media.api-sports.io/football/players/665.png"
+"T. Dibling","78","Tyler-Jay Dibling","England","Southampton","https://media.api-sports.io/football/teams/41.png","https://media.api-sports.io/football/players/304317.png"
+"Chiquinho","77","Francisco Jorge Tavares Oliveira","Portugal","Wolves","https://media.api-sports.io/football/teams/39.png","https://media.api-sports.io/football/players/195962.png"
+"L. Ugochukwu","74","Lesley Chimuanya Ugochukwu","France","Southampton","https://media.api-sports.io/football/teams/41.png","https://media.api-sports.io/football/players/270508.png"

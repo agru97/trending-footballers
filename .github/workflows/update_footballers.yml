@@ -1,41 +1,36 @@
-name: Update Footballers Daily
+name: Update Trending Footballers
 
 on:
   schedule:
-    - cron: '0 */6 * * *'  # Runs every 6 hours
-  workflow_dispatch:     # Allows manual trigger for testing
+    # Run daily at 6 AM UTC to capture global overnight activity
+    - cron: '0 6 * * *'  # 06:00 UTC (captures overnight matches and morning reactions)
+  workflow_dispatch:
 
 jobs:
-  update-footballers:
+  update-trending:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
-    
     env:
-      SERPAPI_KEY: ${{ secrets.SERPAPI_KEY }}
-      GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-
+      FOOTBALL_API_KEY: ${{ secrets.FOOTBALL_API_KEY }}
+      PROXY_LIST: ${{ secrets.PROXY_LIST }}
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v3
-
-      - name: Set up Python 3.x
-        uses: actions/setup-python@v4
+      - uses: actions/checkout@v2
+      
+      - name: Set up Python
+        uses: actions/setup-python@v2
         with:
           python-version: '3.x'
-
-      - name: Install Dependencies
+          
+      - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install python-dotenv requests google-generativeai
+          pip install pandas pytrends
 
-      - name: Run Python Script
-        run: python trending_footballers.py
+      - name: Update trending data
+        run: python scripts/trending_footballers.py
 
-      - name: Commit and Push Changes
+      - name: Commit and push if changed
         run: |
-          git config --local user.name "github-actions[bot]"
-          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
           git add public/trending_footballers.csv public/last_update.txt
-          git diff --cached --quiet || git commit -m "Update trending footballers data at $(date)"
-          git push 
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Update trending footballers" && git push) 
