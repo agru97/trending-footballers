@@ -8,7 +8,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'brand': '#3B82F6'
+        brand: '#4D96FF',
       },
       animation: {
         'gradient-xy': 'gradient-xy 6s ease infinite',

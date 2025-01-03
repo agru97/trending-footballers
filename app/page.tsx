@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useEffect, useState } from 'react'
-import { motion } from 'framer-motion'
+import { motion, AnimatePresence } from 'framer-motion'
 import countryCodes from '../public/country-codes.json'
 
 interface Footballer {
@@ -92,12 +92,12 @@ export default function TrendingFootballers() {
   }
 
   return (
-    <div className="min-h-screen w-full bg-[#4D96FF] flex items-center justify-center p-4 sm:p-6 md:p-8">
+    <div className="min-h-screen w-full bg-brand flex items-center justify-center p-4 sm:p-6 md:p-8">
       <motion.div
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.5 }}
-        className="relative bg-white/90 backdrop-blur-xl rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.06)] p-6 sm:p-8 w-full max-w-md border border-brand/5"
+        className="relative bg-white/95 backdrop-blur-xl rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] p-6 sm:p-8 w-full max-w-md border border-white/20"
       >
         <motion.div 
           className="absolute -top-3 sm:-top-4 left-0 right-0 mx-auto w-fit"
@@ -105,7 +105,7 @@ export default function TrendingFootballers() {
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.2 }}
         >
-          <div className="bg-brand text-white text-sm py-2 px-4 rounded-full shadow-lg flex items-center gap-2">
+          <div className="bg-gradient-to-r from-brand to-blue-600 text-white text-sm py-2 px-4 rounded-full shadow-lg flex items-center gap-2">
             <span className="relative flex h-2 w-2">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-white"></span>
@@ -124,75 +124,114 @@ export default function TrendingFootballers() {
             ))}
           </ul>
         )}
-        <ul className="space-y-3">
-          {footballers.map((footballer, index) => (
-            <motion.li
-              key={footballer.name}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.1 }}
-              onClick={() => handlePlayerClick(footballer.name)}
-              className="group bg-white rounded-xl p-4 flex items-center border border-brand/5 hover:border-brand/20 transition-all hover:shadow-lg hover:-translate-y-0.5 cursor-pointer relative overflow-hidden"
-            >
-              <div className="absolute inset-0 bg-gradient-to-r from-brand/0 via-brand/0 to-brand/0 group-hover:from-brand/0 group-hover:via-brand/[0.02] group-hover:to-brand/[0.03] transition-all duration-500"></div>
-              
-              {/* Ranking Number */}
-              <span className="text-brand/30 font-bold min-w-[1.5rem]">{index + 1}</span>
-              
-              {/* Player Photo */}
-              <div className="relative">
-                <div className="absolute inset-0 w-12 h-12 -m-0.5 bg-brand rounded-full transition-transform group-hover:scale-110"></div>
-                <img 
-                  src={footballer.player_photo} 
-                  alt={footballer.name}
-                  className="w-11 h-11 rounded-full object-cover mr-4 transition-transform group-hover:scale-110 relative z-10"
-                />
-              </div>
-              
-              {/* Player Info */}
-              <div className="flex-1">
-                <div className="flex flex-col">
-                  <span className="text-base sm:text-lg font-medium text-gray-800">
-                    {footballer.name}
-                  </span>
-                  <div className="flex items-center text-sm text-gray-500 gap-2">
-                    <img 
-                      src={footballer.club_logo} 
-                      alt={footballer.club}
-                      className="w-5 h-5"
-                    />
-                    <img 
-                      src={`https://flagcdn.com/256x192/${getCountryCode(footballer.nationality)}.png`}
-                      alt={footballer.nationality}
-                      className="h-4 w-auto"
-                    />
+        <AnimatePresence>
+          <ul className="space-y-3">
+            {footballers.map((footballer, index) => (
+              <motion.li
+                key={footballer.name}
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: 20 }}
+                transition={{ 
+                  type: "spring",
+                  stiffness: 400,
+                  damping: 25
+                }}
+                onClick={() => handlePlayerClick(footballer.name)}
+                className="group bg-white/80 rounded-xl p-4 flex items-center border border-white/40 hover:border-brand/20 hover:shadow-[0_8px_30px_rgb(0,0,0,0.12)] hover:-translate-y-0.5 cursor-pointer relative overflow-hidden"
+                whileHover={{ 
+                  scale: 1.02,
+                  transition: { 
+                    scale: {
+                      type: "spring",
+                      stiffness: 400,
+                      damping: 25,
+                      duration: 0.15
+                    }
+                  }
+                }}
+                whileTap={{ 
+                  scale: 0.98,
+                  transition: { 
+                    duration: 0.1 
+                  }
+                }}
+              >
+                <div className="absolute inset-0 bg-gradient-to-r from-brand/0 via-brand/0 to-brand/0 group-hover:from-brand/5 group-hover:via-brand/10 group-hover:to-brand/5"></div>
+                
+                <span className="text-transparent bg-clip-text bg-gradient-to-br from-brand to-blue-600 font-bold min-w-[1.5rem]">
+                  {index + 1}
+                </span>
+                
+                <div className="relative">
+                  <div className="absolute inset-0 w-12 h-12 -m-0.5 bg-gradient-to-br from-brand to-blue-600 rounded-full group-hover:scale-110"></div>
+                  <img 
+                    src={footballer.player_photo} 
+                    alt={footballer.name}
+                    className="w-11 h-11 rounded-full object-cover mr-4 relative z-10"
+                  />
+                </div>
+
+                <div className="flex-1">
+                  <div className="flex flex-col">
+                    <span className="text-base sm:text-lg font-semibold text-gray-800 group-hover:text-brand">
+                      {footballer.name}
+                    </span>
+                    <div className="flex items-center text-sm text-gray-500 gap-2">
+                      <img 
+                        src={footballer.club_logo} 
+                        alt={footballer.club}
+                        className="w-5 h-5"
+                      />
+                      <img 
+                        src={`https://flagcdn.com/256x192/${getCountryCode(footballer.nationality)}.png`}
+                        alt={footballer.nationality}
+                        className="h-4 w-auto"
+                      />
+                    </div>
                   </div>
                 </div>
-              </div>
-              
-              {/* Score */}
-              <div className="relative flex items-center gap-2">
-                <div className="text-sm font-mono bg-gradient-to-r from-brand/5 to-brand/10 px-3 sm:px-4 py-1.5 sm:py-2 rounded-lg border border-brand/10 text-brand font-semibold group-hover:bg-gradient-to-r group-hover:from-brand/10 group-hover:to-brand/20 transition-all">
-                  {footballer.searchInterest}
+
+                <div className="relative flex items-center gap-2">
+                  <motion.div 
+                    className="text-sm font-mono bg-gradient-to-r from-brand/10 to-blue-600/10 px-3 sm:px-4 py-1.5 sm:py-2 rounded-lg border border-brand/20 text-brand font-semibold group-hover:from-brand/20 group-hover:to-blue-600/20"
+                    whileHover={{ 
+                      scale: 1.05,
+                      transition: { 
+                        type: "spring",
+                        stiffness: 400,
+                        damping: 25,
+                        duration: 0.15
+                      }
+                    }}
+                    whileTap={{ scale: 1 }}
+                  >
+                    {footballer.searchInterest}
+                  </motion.div>
+                  <div className="opacity-0 group-hover:opacity-100 text-brand">
+                    →
+                  </div>
                 </div>
-                <div className="opacity-0 group-hover:opacity-100 transition-opacity text-brand">
-                  →
-                </div>
-              </div>
-            </motion.li>
-          ))}
-        </ul>
-        <div className="mt-6 sm:mt-8 text-center">
-          <p className="text-sm text-gray-400">
+              </motion.li>
+            ))}
+          </ul>
+        </AnimatePresence>
+        <motion.div 
+          className="mt-6 sm:mt-8 text-center"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.5 }}
+        >
+          <p className="text-sm text-gray-500">
             Last updated: {lastUpdate || 'Not available'}
           </p>
           <div className="flex items-center justify-center gap-2 mt-2">
-            <div className="w-1.5 h-1.5 rounded-full bg-brand/40 animate-pulse"></div>
-            <p className="text-xs text-gray-400">
-              Refreshes every 6 hours
+            <div className="w-1.5 h-1.5 rounded-full bg-gradient-to-r from-brand to-blue-600 animate-pulse"></div>
+            <p className="text-xs text-gray-500">
+              Refreshes every 24 hours
             </p>
           </div>
-        </div>
+        </motion.div>
       </motion.div>
     </div>
   )
