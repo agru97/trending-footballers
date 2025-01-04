@@ -15,9 +15,11 @@ from datetime import datetime
 from pytrends.request import TrendReq
 import html
 import requests
+import random
 
 # Constants
 PROXIES = os.environ['PROXY_LIST'].split(',') if 'PROXY_LIST' in os.environ else []
+random.shuffle(PROXIES)  # Shuffle proxies for better load distribution
 MAX_RETRIES = 3
 RETRY_DELAYS = [2, 5, 10]
 MIN_DELAY_BETWEEN_CALLS = 1  # Minimum seconds between API calls
