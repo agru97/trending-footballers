@@ -1,23 +1,28 @@
+"""
+Trending Footballers Script
+
+This script runs a tournament-style competition to find the most trending footballers
+using Google Trends data. It processes players in groups and ultimately determines
+the top 5 trending players.
+"""
+
 import os
 import json
 import time
 from datetime import datetime, timedelta
 from pytrends.request import TrendReq
 import pandas as pd
-import itertools
-import threading
-import sys
 import random
 
-# Configure pandas
+# Configuration
 pd.set_option('future.no_silent_downcasting', True)
 
-# Globals
-api_calls_counter = 0
+# Constants
 PROXIES = os.environ['PROXY_LIST'].split(',') if 'PROXY_LIST' in os.environ else []
 
-# Add timing stats
+# Utility Classes
 class TimingStats:
+    """Track timing statistics for API calls"""
     def __init__(self):
         self.start_time = None
         self.api_calls = []  # List to store duration of each call
@@ -38,9 +43,6 @@ class TimingStats:
             return timedelta(0)
         return sum(self.api_calls, timedelta(0)) / len(self.api_calls)
 
-# Add to globals
-timing_stats = TimingStats()
-
 class Colors:
     """ANSI color codes for terminal output"""
     GREEN = '\033[92m'
@@ -49,6 +51,77 @@ class Colors:
     BLUE = '\033[94m'
     RESET = '\033[0m'
 
+class ProgressDisplay:
+    """Handle progress display and updates"""
+    def __init__(self, total, desc="Processing"):
+        self.total = total
+        self.current = 0
+        self.desc = desc
+        self.start_time = datetime.now()
+        self.last_api_call_time = None
+        self.message = ""
+        
+    def start(self):
+        self.start_time = datetime.now()
+        print(f"\n{Colors.BLUE}=== {self.desc} ==={Colors.RESET}")
+        self._print_progress_bar()
+    
+    def update(self, current):
+        self.current = current
+        self._print_progress_bar()
+    
+    def set_api_call_time(self, duration):
+        self.last_api_call_time = duration.total_seconds()
+    
+    def set_message(self, message, status="warning"):
+        """Set a warning or error message"""
+        color = Colors.RED if status == "error" else Colors.YELLOW
+        # Move to new line, print message, and restore progress bar
+        print(f"\n{color}⚠ {message}{Colors.RESET}")
+        self._print_progress_bar()
+    
+    def clear_message(self):
+        pass
+    
+    def _print_progress_bar(self):
+        """Print the progress bar"""
+        elapsed = datetime.now() - self.start_time
+        progress = int(50 * self.current / self.total)
+        # Only color the completed portion green
+        bar = Colors.GREEN + '=' * progress + Colors.RESET + '-' * (50 - progress)
+        percent = int(100 * self.current / self.total)
+        
+        timing_info = []
+        if self.last_api_call_time:
+            timing_info.append(f"API: {self.last_api_call_time:.1f}s")
+        timing_info.append(f"Total: {elapsed.total_seconds():.1f}s")
+        
+        print(f"\r{Colors.BLUE}▶{Colors.RESET} [{bar}] {percent}% ({self.current}/{self.total}) | "
+              f"{' | '.join(timing_info)}", end='', flush=True)
+    
+    def show_group_result(self, group_num, players, scores, winners):
+        """Display results for a completed group"""
+        print('\n')  # Add extra line for spacing
+        
+        # Format player scores more compactly
+        player_scores = []
+        for player in players:
+            name = player['player']['name']
+            score = scores.get(name, 0)
+            if name in winners:
+                player_scores.append(f"{Colors.GREEN}★{name}({score}){Colors.RESET}")
+            else:
+                player_scores.append(f"{name}({score})")
+        
+        print(f"{Colors.BLUE}Group {group_num}:{Colors.RESET} " + " | ".join(player_scores))
+        self._print_progress_bar()
+    
+    def finish(self):
+        print('\n')  # Add extra line for spacing
+        elapsed = datetime.now() - self.start_time
+        print(f"{Colors.GREEN}✓ Done in {elapsed.total_seconds():.1f}s{Colors.RESET}\n")
+
+# Utility Functions
 def log_message(message, color=None):
     """Print a message with optional color"""
     if color:
@@ -56,8 +129,9 @@ def log_message(message, color=None):
     else:
         print(message)
 
+# Tournament Functions
 def get_trends_data(players_group, progress=None):
-    """Query Google Trends for a group of players and return their maximum scores"""
+    """Query Google Trends for a group of players"""
     global api_calls_counter
     max_retries = 3
     max_no_data_retries = 2
@@ -192,75 +266,6 @@ def create_progress_bar(current, total, width=50):
     percent = int(100 * current / total)
     return f"[{bar}] {percent}% ({current}/{total})"
 
-class ProgressDisplay:
-    def __init__(self, total, desc="Processing"):
-        self.total = total
-        self.current = 0
-        self.desc = desc
-        self.start_time = datetime.now()
-        self.last_api_call_time = None
-        self.message = ""
-        
-    def start(self):
-        self.start_time = datetime.now()
-        print(f"\n{Colors.BLUE}=== {self.desc} ==={Colors.RESET}")
-        self._print_progress_bar()
-    
-    def update(self, current):
-        self.current = current
-        self._print_progress_bar()
-    
-    def set_api_call_time(self, duration):
-        self.last_api_call_time = duration.total_seconds()
-    
-    def set_message(self, message, status="warning"):
-        """Set a warning or error message"""
-        color = Colors.RED if status == "error" else Colors.YELLOW
-        # Move to new line, print message, and restore progress bar
-        print(f"\n{color}⚠ {message}{Colors.RESET}")
-        self._print_progress_bar()
-    
-    def clear_message(self):
-        pass
-    
-    def _print_progress_bar(self):
-        """Print the progress bar"""
-        elapsed = datetime.now() - self.start_time
-        progress = int(50 * self.current / self.total)
-        # Only color the completed portion green
-        bar = Colors.GREEN + '=' * progress + Colors.RESET + '-' * (50 - progress)
-        percent = int(100 * self.current / self.total)
-        
-        timing_info = []
-        if self.last_api_call_time:
-            timing_info.append(f"API: {self.last_api_call_time:.1f}s")
-        timing_info.append(f"Total: {elapsed.total_seconds():.1f}s")
-        
-        print(f"\r{Colors.BLUE}▶{Colors.RESET} [{bar}] {percent}% ({self.current}/{self.total}) | "
-              f"{' | '.join(timing_info)}", end='', flush=True)
-    
-    def show_group_result(self, group_num, players, scores, winners):
-        """Display results for a completed group"""
-        print('\n')  # Add extra line for spacing
-        
-        # Format player scores more compactly
-        player_scores = []
-        for player in players:
-            name = player['player']['name']
-            score = scores.get(name, 0)
-            if name in winners:
-                player_scores.append(f"{Colors.GREEN}★{name}({score}){Colors.RESET}")
-            else:
-                player_scores.append(f"{name}({score})")
-        
-        print(f"{Colors.BLUE}Group {group_num}:{Colors.RESET} " + " | ".join(player_scores))
-        self._print_progress_bar()
-    
-    def finish(self):
-        print('\n')  # Add extra line for spacing
-        elapsed = datetime.now() - self.start_time
-        print(f"{Colors.GREEN}✓ Done in {elapsed.total_seconds():.1f}s{Colors.RESET}\n")
-
 def run_tournament_round(players, players_to_keep=2, round_num=1):
     """Run one round of the tournament"""
     results = []
@@ -306,15 +311,7 @@ def run_tournament_round(players, players_to_keep=2, round_num=1):
     return list(seen_players.values())
 
 def run_final_round(players):
-    """
-    Run final round as a knockout system:
-    - Start with top 5
-    - For each challenger:
-      - Compare with current top 4
-      - Keep best 4
-      - Track best 5th place
-    - Continue until all challengers are processed
-    """
+    """Run final round as a knockout system"""
     log_message("\n=== Final Round ===", Colors.GREEN)
     log_message(f"Starting final round with {len(players)} players", Colors.BLUE)
     
@@ -444,6 +441,7 @@ def run_final_round(players):
     return final_group, final_scores
 
 def fetch_trending_footballers(test_limit=None):
+    """Main function to find trending footballers"""
     try:
         global api_calls_counter
         api_calls_counter = 0
@@ -504,7 +502,7 @@ def fetch_trending_footballers(test_limit=None):
         raise
 
 def save_results(top_5, scores, interest_data=None):
-    """Save the final top 5 results to JSON with all player data"""
+    """Save the final results to JSON"""
     # Debug log at start
     log_message("Starting save_results...", Colors.BLUE)
     if interest_data:

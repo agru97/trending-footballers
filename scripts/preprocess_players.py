@@ -1,21 +1,31 @@
+"""
+Player Preprocessing Script
+
+This script processes football player data to:
+1. Filter active players
+2. Find Google Trends topic IDs for players
+3. Save processed data to JSON
+"""
+
 import json
 import os
 import time
 import unicodedata
 from datetime import datetime
 from pytrends.request import TrendReq
-import html  # Add this import at the top
+import html
 import requests
 
 # Constants
 MAX_RETRIES = 3
 RETRY_DELAYS = [2, 5, 10]  # Increasing delays between retries
-
 PROXIES = os.environ['PROXY_LIST'].split(',') if 'PROXY_LIST' in os.environ else []
 
+# Custom Exceptions
 class RetryableError(Exception):
     pass
 
+# Name Processing Functions
 def normalize_name(name):
     """Normalize special characters in names and decode HTML entities"""
     # First decode HTML entities (like &apos; -> ')
@@ -46,84 +56,8 @@ def normalize_name(name):
     normalized = unicodedata.normalize('NFKD', decoded).encode('ASCII', 'ignore').decode('utf-8')
     return normalized
 
-def get_topic_suggestions(pytrends, keyword, max_retries=MAX_RETRIES):
-    """
-    Get topic suggestions with retry logic
-    """
-    for attempt in range(max_retries):
-        try:
-            suggestions = pytrends.suggestions(keyword=keyword)
-            return suggestions
-            
-        except (requests.exceptions.ReadTimeout, requests.exceptions.ConnectTimeout) as e:
-            print(f"Timeout error on attempt {attempt + 1}/{max_retries}")
-            print(f"Request details: keyword='{keyword}'")
-            
-            if attempt < max_retries - 1:
-                delay = RETRY_DELAYS[attempt]
-                print(f"Retrying in {delay} seconds...")
-                time.sleep(delay)
-                
-                # Create a new pytrends instance with a different proxy
-                proxy_index = (attempt + 1) % len(PROXIES)  # Rotate through proxies
-                new_proxy = PROXIES[proxy_index]
-                pytrends = TrendReq(
-                    hl='en-US',
-                    timeout=(3.05, 30),  # Increased timeout
-                    retries=2,
-                    backoff_factor=2.0,
-                    proxies=[new_proxy]
-                )
-                continue
-                
-            raise RetryableError(f"Timeout error after {max_retries} attempts: {str(e)}")
-            
-        except Exception as e:
-            if "429" in str(e):
-                print(f"Rate limit error: {str(e)}")
-                print(f"Attempt {attempt + 1}/{max_retries}, retrying in {RETRY_DELAYS[attempt]}s...")
-                if attempt < max_retries - 1:
-                    time.sleep(RETRY_DELAYS[attempt])
-                    continue
-                raise RetryableError(f"Rate limit exceeded after {max_retries} attempts: {str(e)}")
-            else:
-                print(f"Non-retryable API error: {str(e)}")
-                print(f"Request details: keyword='{keyword}', attempt={attempt + 1}")
-                raise
-
-def get_name_parts(player):
-    """Extract all possible name parts from a player"""
-    name_parts = set()
-    
-    # Get the full name parts
-    full_name = []
-    if player['player']['firstname']:
-        full_name.extend(player['player']['firstname'].lower().split())
-    if player['player']['lastname']:
-        full_name.extend(player['player']['lastname'].lower().split())
-    
-    # Add display name parts
-    display_parts = player['player']['name'].lower().split()
-    
-    # Add both individual parts and consecutive pairs
-    for i in range(len(full_name)):
-        if len(full_name[i]) > 1:  # Skip initials
-            name_parts.add(full_name[i])
-            if i < len(full_name) - 1:
-                # Add pairs of consecutive names (e.g., "vinicius junior")
-                name_parts.add(f"{full_name[i]} {full_name[i+1]}")
-    
-    # Do the same for display name
-    for i in range(len(display_parts)):
-        if len(display_parts[i]) > 1:
-            name_parts.add(display_parts[i])
-            if i < len(display_parts) - 1:
-                name_parts.add(f"{display_parts[i]} {display_parts[i+1]}")
-    
-    return name_parts
-
 def normalize_for_comparison(text):
-    """Normalize text for name comparison by handling hyphens, spaces and special characters"""
+    """Normalize text for name comparison by handling special cases"""
     # First decode HTML entities (like &apos; -> ')
     text = html.unescape(text)
     
@@ -233,7 +167,7 @@ def get_name_variations(name):
     return variations
 
 def normalize_name_parts(name):
-    """Split a name into normalized parts, handling middle names and common variations"""
+    """Split a name into normalized parts, handling middle names"""
     # First normalize the text
     name = normalize_for_comparison(name)
     parts = name.split()
@@ -260,10 +194,9 @@ def normalize_name_parts(name):
     
     return variations
 
+# Matching Functions
 def is_name_match(player, suggestion):
-    """
-    Determine if a suggestion matches the player's name using strict rules
-    """
+    """Determine if a suggestion matches the player's name"""
     # Normalize the suggestion title
     title = normalize_for_comparison(suggestion['title'])
     
@@ -359,8 +292,52 @@ def is_valid_player_type(type_lower):
     
     return is_player and is_active
 
+# API Functions
+def get_topic_suggestions(pytrends, keyword, max_retries=MAX_RETRIES):
+    """Get topic suggestions with retry logic"""
+    for attempt in range(max_retries):
+        try:
+            suggestions = pytrends.suggestions(keyword=keyword)
+            return suggestions
+            
+        except (requests.exceptions.ReadTimeout, requests.exceptions.ConnectTimeout) as e:
+            print(f"Timeout error on attempt {attempt + 1}/{max_retries}")
+            print(f"Request details: keyword='{keyword}'")
+            
+            if attempt < max_retries - 1:
+                delay = RETRY_DELAYS[attempt]
+                print(f"Retrying in {delay} seconds...")
+                time.sleep(delay)
+                
+                # Create a new pytrends instance with a different proxy
+                proxy_index = (attempt + 1) % len(PROXIES)  # Rotate through proxies
+                new_proxy = PROXIES[proxy_index]
+                pytrends = TrendReq(
+                    hl='en-US',
+                    timeout=(3.05, 30),  # Increased timeout
+                    retries=2,
+                    backoff_factor=2.0,
+                    proxies=[new_proxy]
+                )
+                continue
+                
+            raise RetryableError(f"Timeout error after {max_retries} attempts: {str(e)}")
+            
+        except Exception as e:
+            if "429" in str(e):
+                print(f"Rate limit error: {str(e)}")
+                print(f"Attempt {attempt + 1}/{max_retries}, retrying in {RETRY_DELAYS[attempt]}s...")
+                if attempt < max_retries - 1:
+                    time.sleep(RETRY_DELAYS[attempt])
+                    continue
+                raise RetryableError(f"Rate limit exceeded after {max_retries} attempts: {str(e)}")
+            else:
+                print(f"Non-retryable API error: {str(e)}")
+                print(f"Request details: keyword='{keyword}', attempt={attempt + 1}")
+                raise
+
 def get_search_terms(player, team_name):
-    """Generate search terms for a player, prioritizing full name over initials"""
+    """Generate search terms for a player"""
     search_terms = []
     
     # Get the player's full name if available
@@ -383,13 +360,9 @@ def get_search_terms(player, team_name):
     
     return search_terms
 
+# Main Processing Function
 def preprocess_players():
-    """
-    Preprocess players data:
-    - Filter active players
-    - Filter players with a topic identifier
-    - Add topic identifier
-    """
+    """Main function to preprocess player data"""
     print("\n=== Starting Player Preprocessing ===")
     
     # Load players data
