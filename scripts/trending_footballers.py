@@ -19,6 +19,8 @@ pd.set_option('future.no_silent_downcasting', True)
 
 # Constants
 PROXIES = os.environ['PROXY_LIST'].split(',') if 'PROXY_LIST' in os.environ else []
+MIN_DELAY_BETWEEN_CALLS = 1.5  # Minimum seconds between API calls
+RATE_LIMIT_PAUSE = 60  # Seconds to pause when hitting rate limit
 
 # Utility Classes
 class TimingStats:
@@ -134,9 +136,15 @@ def log_message(message, color=None):
 # Tournament Functions
 def get_trends_data(players_group, progress=None):
     """Query Google Trends for a group of players"""
-    global api_calls_counter
+    global api_calls_counter, last_api_call
     max_retries = 3
     max_no_data_retries = 2
+    
+    # Ensure minimum delay between API calls
+    if hasattr(get_trends_data, 'last_call'):
+        time_since_last = time.time() - get_trends_data.last_call
+        if time_since_last < MIN_DELAY_BETWEEN_CALLS:
+            time.sleep(MIN_DELAY_BETWEEN_CALLS - time_since_last)
     
     # Use topic IDs for search but keep player names for display
     player_identifiers = {
@@ -161,11 +169,14 @@ def get_trends_data(players_group, progress=None):
         try:
             call_start = datetime.now()
             pytrends = TrendReq(
-                timeout=(3.05, 27),
+                timeout=(3.05, 30),
                 retries=max_retries,
-                backoff_factor=2.0,
+                backoff_factor=3.0,
                 proxies=PROXIES
             )
+            
+            # Add delay before API call
+            time.sleep(MIN_DELAY_BETWEEN_CALLS)
             
             pytrends.build_payload(
                 search_names,
@@ -176,6 +187,8 @@ def get_trends_data(players_group, progress=None):
             )
             
             api_calls_counter += 1
+            get_trends_data.last_call = time.time()  # Update last call time
+            
             interest_data = pytrends.interest_over_time()
             
             call_duration = datetime.now() - call_start
@@ -224,6 +237,16 @@ def get_trends_data(players_group, progress=None):
             return results
             
         except Exception as e:
+            if "429" in str(e):
+                if no_data_attempt < max_no_data_retries:
+                    # On rate limit, take a longer pause
+                    if progress:
+                        progress.set_message(
+                            f"Rate limit hit, pausing for {RATE_LIMIT_PAUSE}s before retry",
+                            status="warning"
+                        )
+                    time.sleep(RATE_LIMIT_PAUSE)
+                    continue
             if no_data_attempt < max_no_data_retries:
                 delay = retry_delays[no_data_attempt]
                 if progress:
@@ -584,6 +607,9 @@ def save_results(top_5, scores, interest_data=None):
         if os.path.exists(tmp_json_path):
             os.remove(tmp_json_path)
         raise e
+
+# Initialize the last call time
+get_trends_data.last_call = 0
 
 if __name__ == "__main__":
     try:
