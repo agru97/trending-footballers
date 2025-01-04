@@ -2,8 +2,8 @@ name: Update Trending Footballers
 
 on:
   schedule:
-    # Run daily at 6 AM UTC to capture global overnight activity
-    - cron: '0 6 * * *'  # 06:00 UTC (captures overnight matches and morning reactions)
+    # Run daily at 2 AM UTC to capture global overnight activity
+    - cron: '0 2 * * *'  # 02:00 UTC (captures overnight matches and morning reactions)
   workflow_dispatch:
 
 jobs:
