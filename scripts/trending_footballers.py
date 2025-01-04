@@ -22,6 +22,14 @@ PROXIES = os.environ['PROXY_LIST'].split(',') if 'PROXY_LIST' in os.environ else
 MIN_DELAY_BETWEEN_CALLS = 1.5  # Minimum seconds between API calls
 RATE_LIMIT_PAUSE = 60  # Seconds to pause when hitting rate limit
 
+# Initialize pytrends once
+pytrends = TrendReq(
+    timeout=(3.05, 30),
+    retries=3,
+    backoff_factor=3.0,
+    proxies=PROXIES
+)
+
 # Utility Classes
 class TimingStats:
     """Track timing statistics for API calls"""
@@ -168,12 +176,6 @@ def get_trends_data(players_group, progress=None):
     for no_data_attempt in range(max_no_data_retries + 1):
         try:
             call_start = datetime.now()
-            pytrends = TrendReq(
-                timeout=(3.05, 30),
-                retries=max_retries,
-                backoff_factor=3.0,
-                proxies=PROXIES
-            )
             
             # Add delay before API call
             time.sleep(MIN_DELAY_BETWEEN_CALLS)
@@ -404,13 +406,6 @@ def run_final_round(players):
     # Now get detailed interest over time data for the final top 5
     log_message("\nGetting detailed data for final top 5...", Colors.BLUE)
     try:
-        pytrends = TrendReq(
-            timeout=(3.05, 27),
-            retries=3,
-            backoff_factor=2.0,
-            proxies=PROXIES
-        )
-        
         # Use topic IDs for the final 5
         top_5_topics = [f"/m/{player['topic_id']}" for player in final_group[:5]]  # Ensure only top 5
         

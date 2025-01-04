@@ -17,9 +17,19 @@ import html
 import requests
 
 # Constants
-MAX_RETRIES = 3
-RETRY_DELAYS = [2, 5, 10]  # Increasing delays between retries
 PROXIES = os.environ['PROXY_LIST'].split(',') if 'PROXY_LIST' in os.environ else []
+MAX_RETRIES = 3
+RETRY_DELAYS = [2, 5, 10]
+MIN_DELAY_BETWEEN_CALLS = 1  # Minimum seconds between API calls
+
+# Initialize pytrends once
+pytrends = TrendReq(
+    hl='en-US',
+    timeout=(3.05, 30),
+    retries=MAX_RETRIES,
+    backoff_factor=3.0,
+    proxies=PROXIES
+)
 
 # Custom Exceptions
 class RetryableError(Exception):
@@ -295,9 +305,16 @@ def is_valid_player_type(type_lower):
 # API Functions
 def get_topic_suggestions(pytrends, keyword, max_retries=MAX_RETRIES):
     """Get topic suggestions with retry logic"""
+    # Ensure minimum delay between API calls
+    if hasattr(get_topic_suggestions, 'last_call'):
+        time_since_last = time.time() - get_topic_suggestions.last_call
+        if time_since_last < MIN_DELAY_BETWEEN_CALLS:
+            time.sleep(MIN_DELAY_BETWEEN_CALLS - time_since_last)
+    
     for attempt in range(max_retries):
         try:
             suggestions = pytrends.suggestions(keyword=keyword)
+            get_topic_suggestions.last_call = time.time()  # Update last call time
             return suggestions
             
         except (requests.exceptions.ReadTimeout, requests.exceptions.ConnectTimeout) as e:
@@ -308,17 +325,6 @@ def get_topic_suggestions(pytrends, keyword, max_retries=MAX_RETRIES):
                 delay = RETRY_DELAYS[attempt]
                 print(f"Retrying in {delay} seconds...")
                 time.sleep(delay)
-                
-                # Create a new pytrends instance with a different proxy
-                proxy_index = (attempt + 1) % len(PROXIES)  # Rotate through proxies
-                new_proxy = PROXIES[proxy_index]
-                pytrends = TrendReq(
-                    hl='en-US',
-                    timeout=(3.05, 30),  # Increased timeout
-                    retries=2,
-                    backoff_factor=2.0,
-                    proxies=[new_proxy]
-                )
                 continue
                 
             raise RetryableError(f"Timeout error after {max_retries} attempts: {str(e)}")
@@ -383,16 +389,6 @@ def preprocess_players():
             active_players.append(player)
     
     print(f"Found {len(active_players)} active players")
-    
-    # Initialize pytrends
-    print("\nInitializing Google Trends client...")
-    pytrends = TrendReq(
-        hl='en-US',
-        timeout=(3.05, 30),  # Increased timeout
-        retries=2,
-        backoff_factor=2.0,
-        proxies=PROXIES[:5]  # Start with fewer proxies
-    )
     
     # Process players and find their topic IDs
     print("\nSearching for player topic IDs...")
@@ -498,6 +494,8 @@ def preprocess_players():
 
 if __name__ == "__main__":
     try:
+        # Initialize the last call time
+        get_topic_suggestions.last_call = 0
         preprocess_players()
     except Exception as e:
         print(f"\nError during preprocessing: {str(e)}")
