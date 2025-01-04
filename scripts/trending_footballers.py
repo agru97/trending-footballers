@@ -72,7 +72,7 @@ class ProgressDisplay:
     
     def update(self, current):
         self.current = current
-        self._print_progress_bar()
+        # Don't print progress bar here - it will be printed after showing group result
     
     def set_api_call_time(self, duration):
         self.last_api_call_time = duration.total_seconds()
@@ -80,9 +80,10 @@ class ProgressDisplay:
     def set_message(self, message, status="warning"):
         """Set a warning or error message"""
         color = Colors.RED if status == "error" else Colors.YELLOW
-        # Move to new line, print message, and restore progress bar
-        print(f"\n{color}⚠ {message}{Colors.RESET}")
-        self._print_progress_bar()
+        # Only print error messages, not group member warnings
+        if status == "error":
+            print(f"\n{color}⚠ {message}{Colors.RESET}")
+            self._print_progress_bar()
     
     def clear_message(self):
         pass
@@ -91,7 +92,6 @@ class ProgressDisplay:
         """Print the progress bar"""
         elapsed = datetime.now() - self.start_time
         progress = int(50 * self.current / self.total)
-        # Only color the completed portion green
         bar = Colors.GREEN + '=' * progress + Colors.RESET + '-' * (50 - progress)
         percent = int(100 * self.current / self.total)
         
@@ -105,8 +105,6 @@ class ProgressDisplay:
     
     def show_group_result(self, group_num, players, scores, winners):
         """Display results for a completed group"""
-        print('\n')  # Add extra line for spacing
-        
         # Format player scores more compactly
         player_scores = []
         for player in players:
@@ -117,8 +115,8 @@ class ProgressDisplay:
             else:
                 player_scores.append(f"{name}({score})")
         
-        print(f"{Colors.BLUE}Group {group_num}:{Colors.RESET} " + " | ".join(player_scores))
-        self._print_progress_bar()
+        print(f"\nGroup {group_num}: " + " | ".join(player_scores))
+        self._print_progress_bar()  # Print progress bar after showing group result
     
     def finish(self):
         print('\n')  # Add extra line for spacing
@@ -398,7 +396,7 @@ def run_final_round(players):
         
         pytrends.build_payload(
             top_5_topics,
-            timeframe='now 1-d',  # Last 24 hours
+            timeframe='now 1-d',
             cat=294,
             geo='',
             gprop=''
@@ -589,7 +587,7 @@ def save_results(top_5, scores, interest_data=None):
 
 if __name__ == "__main__":
     try:
-        fetch_trending_footballers(test_limit=10)
+        fetch_trending_footballers()
         log_message("Successfully updated top 5 footballers data", Colors.GREEN)
     except Exception as e:
         log_message(f"Error occurred: {str(e)}", Colors.RED)
