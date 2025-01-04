@@ -34,5 +34,5 @@ jobs:
         run: |
           git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git add public/preprocessed_players.json public/trending_footballers.json public/last_update.txt
+          git add public/preprocessed_players.json public/trending_footballers.json
           git diff --quiet && git diff --staged --quiet || (git commit -m "Update trending footballers" && git push) 

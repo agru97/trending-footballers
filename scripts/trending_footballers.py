@@ -20,7 +20,7 @@ pd.set_option('future.no_silent_downcasting', True)
 # Constants
 PROXIES = os.environ['PROXY_LIST'].split(',') if 'PROXY_LIST' in os.environ else []
 random.shuffle(PROXIES)  # Shuffle proxies for better load distribution
-MIN_DELAY_BETWEEN_CALLS = 1.5  # Minimum seconds between API calls
+MIN_DELAY_BETWEEN_CALLS = 1  # Minimum seconds between API calls
 RATE_LIMIT_PAUSE = 60  # Seconds to pause when hitting rate limit
 
 # Initialize pytrends once
@@ -155,9 +155,10 @@ def get_trends_data(players_group, progress=None):
         if time_since_last < MIN_DELAY_BETWEEN_CALLS:
             time.sleep(MIN_DELAY_BETWEEN_CALLS - time_since_last)
     
-    # Use topic IDs for search but keep player names for display
+    # Use topic ID if it has valid prefix, otherwise use player name
     player_identifiers = {
-        f"/m/{player['topic_id']}": player 
+        player['topic_id'] if (player['topic_id'].startswith('/m/') or player['topic_id'].startswith('/g/'))
+        else player['player']['name']: player 
         for player in players_group
     }
     search_names = list(player_identifiers.keys())
@@ -609,7 +610,7 @@ get_trends_data.last_call = 0
 
 if __name__ == "__main__":
     try:
-        fetch_trending_footballers()
+        fetch_trending_footballers(50)
         log_message("Successfully updated top 5 footballers data", Colors.GREEN)
     except Exception as e:
         log_message(f"Error occurred: {str(e)}", Colors.RED)
