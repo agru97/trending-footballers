@@ -3,15 +3,35 @@
 import React, { useEffect, useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import countryCodes from '../public/country-codes.json'
+import { LineChart, Line, ResponsiveContainer } from 'recharts'
 
 interface Footballer {
-  name: string
-  searchInterest: number
-  full_name: string
-  nationality: string
-  club: string
-  club_logo: string
-  player_photo: string
+  rank: number
+  trending_score: number
+  player: {
+    id: number
+    name: string
+    firstname: string
+    lastname: string
+    nationality: string
+    photo: string
+  }
+  statistics: [{
+    team: {
+      id: number
+      name: string
+      logo: string
+    }
+  }]
+  interest_over_time?: {
+    values: number[]
+    dates: string[]
+  }
+}
+
+interface TrendingData {
+  updated_at: string
+  players: Footballer[]
 }
 
 // Helper function to convert country name to ISO code
@@ -23,6 +43,61 @@ function getCountryCode(nationality: string): string {
     }, {});
 
   return countryCodesReverse[nationality.toLowerCase()] || nationality.toLowerCase();
+}
+
+function Sparkline({ data }: { data: number[] }) {
+  const smoothData = data.reduce((acc: number[], val: number, i: number) => {
+    if (i < 12) return acc;
+    const windowSum = data.slice(i - 12, i).reduce((sum, v) => sum + v, 0);
+    const avg = windowSum / 12;
+    if (i % 6 === 0) {
+      acc.push(avg);
+    }
+    return acc;
+  }, []);
+
+  const chartData = smoothData.map((value) => ({ value }));
+
+  return (
+    <div className="w-24 h-8">
+      <ResponsiveContainer width="100%" height="100%">
+        <LineChart data={chartData}>
+          <Line
+            type="monotone"
+            dataKey="value"
+            stroke="#4D96FF"
+            strokeWidth={1.5}
+            dot={false}
+            isAnimationActive={true}
+            animationDuration={1500}
+            className="sparkline-path group-hover:animate-drawLine"
+            strokeDasharray="200"
+            strokeDashoffset="0"
+          />
+        </LineChart>
+      </ResponsiveContainer>
+
+      <style jsx global>{`
+        .sparkline-path {
+          stroke-dasharray: 200;
+          stroke-dashoffset: 0;
+        }
+        
+        @keyframes drawLine {
+          0% {
+            stroke-dashoffset: 200;
+          }
+          100% {
+            stroke-dashoffset: 0;
+          }
+        }
+        
+        .group:hover .sparkline-path {
+          animation: drawLine 1.5s ease-out forwards;
+        }
+      `}</style>
+    </div>
+  )
 }
 
 export default function TrendingFootballers() {
@@ -39,23 +114,23 @@ export default function TrendingFootballers() {
   useEffect(() => {
     const fetchFootballers = async () => {
       try {
-        const response = await fetch('/api/trending-footballers')
+        setLoading(true)
+        const response = await fetch('/trending_footballers.json')
         if (!response.ok) {
           throw new Error('Network response was not ok')
         }
-        const data = await response.json()
-        setFootballers(data.footballers)
-        setLastUpdate(data.lastUpdate)
+        const data: TrendingData = await response.json()
+        setFootballers(data.players)
+        setLastUpdate(new Date(data.updated_at).toLocaleString())
       } catch (err: any) {
         setError(err.message || 'An error occurred')
+        console.error('Fetch error:', err)
       } finally {
         setLoading(false)
       }
     }
 
     fetchFootballers()
-
-    // Auto-refresh every 5 minutes
     const interval = setInterval(fetchFootballers, 300000)
     return () => clearInterval(interval)
   }, [])
@@ -91,6 +166,16 @@ export default function TrendingFootballers() {
     )
   }
 
+  if (!footballers || footballers.length === 0) {
+    return (
+      <div className="min-h-screen bg-[#4D96FF] flex items-center justify-center p-4">
+        <div className="text-center text-white">
+          <div className="text-xl font-medium">No data available</div>
+        </div>
+      </div>
+    )
+  }
+
   return (
     <div className="min-h-screen w-full bg-brand flex items-center justify-center p-4 sm:p-6 md:p-8">
       <motion.div
@@ -116,7 +201,7 @@ export default function TrendingFootballers() {
         <h1 className="text-3xl sm:text-4xl font-bold text-center mb-2 bg-gradient-to-r from-brand to-blue-700 text-transparent bg-clip-text">
           Trending Footballers
         </h1>
-        <p className="text-center text-gray-500 text-sm mb-6 sm:mb-8">Click on a player to see their latest news</p>
+        <p className="text-center text-gray-500 text-sm mb-6 sm:mb-8">Based on Search Interest in the last 24 hours</p>
         {loading && (
           <ul className="space-y-3">
             {[...Array(10)].map((_, i) => (
@@ -126,9 +211,9 @@ export default function TrendingFootballers() {
         )}
         <AnimatePresence>
           <ul className="space-y-3">
-            {footballers.map((footballer, index) => (
+            {footballers.map((footballer) => (
               <motion.li
-                key={footballer.name}
+                key={footballer.player.name}
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: 20 }}
@@ -137,7 +222,7 @@ export default function TrendingFootballers() {
                   stiffness: 400,
                   damping: 25
                 }}
-                onClick={() => handlePlayerClick(footballer.name)}
+                onClick={() => handlePlayerClick(footballer.player.name)}
                 className="group bg-white/80 rounded-xl p-4 flex items-center border border-white/40 hover:border-brand/20 hover:shadow-[0_8px_30px_rgb(0,0,0,0.12)] hover:-translate-y-0.5 cursor-pointer relative overflow-hidden"
                 whileHover={{ 
                   scale: 1.02,
@@ -160,14 +245,14 @@ export default function TrendingFootballers() {
                 <div className="absolute inset-0 bg-gradient-to-r from-brand/0 via-brand/0 to-brand/0 group-hover:from-brand/5 group-hover:via-brand/10 group-hover:to-brand/5"></div>
                 
                 <span className="text-transparent bg-clip-text bg-gradient-to-br from-brand to-blue-600 font-bold min-w-[1.5rem]">
-                  {index + 1}
+                  {footballer.rank}
                 </span>
                 
                 <div className="relative">
                   <div className="absolute inset-0 w-12 h-12 -m-0.5 bg-gradient-to-br from-brand to-blue-600 rounded-full group-hover:scale-110"></div>
                   <img 
-                    src={footballer.player_photo} 
-                    alt={footballer.name}
+                    src={footballer.player.photo} 
+                    alt={footballer.player.name}
                     className="w-11 h-11 rounded-full object-cover mr-4 relative z-10"
                   />
                 </div>
@@ -175,17 +260,17 @@ export default function TrendingFootballers() {
                 <div className="flex-1">
                   <div className="flex flex-col">
                     <span className="text-base sm:text-lg font-semibold text-gray-800 group-hover:text-brand">
-                      {footballer.name}
+                      {footballer.player.name}
                     </span>
                     <div className="flex items-center text-sm text-gray-500 gap-2">
                       <img 
-                        src={footballer.club_logo} 
-                        alt={footballer.club}
+                        src={footballer.statistics[0].team.logo} 
+                        alt={footballer.statistics[0].team.name}
                         className="w-5 h-5"
                       />
                       <img 
-                        src={`https://flagcdn.com/256x192/${getCountryCode(footballer.nationality)}.png`}
-                        alt={footballer.nationality}
+                        src={`https://flagcdn.com/256x192/${getCountryCode(footballer.player.nationality)}.png`}
+                        alt={footballer.player.nationality}
                         className="h-4 w-auto"
                       />
                     </div>
@@ -193,21 +278,23 @@ export default function TrendingFootballers() {
                 </div>
 
                 <div className="relative flex items-center gap-2">
-                  <motion.div 
-                    className="text-sm font-mono bg-gradient-to-r from-brand/10 to-blue-600/10 px-3 sm:px-4 py-1.5 sm:py-2 rounded-lg border border-brand/20 text-brand font-semibold group-hover:from-brand/20 group-hover:to-blue-600/20"
-                    whileHover={{ 
-                      scale: 1.05,
-                      transition: { 
-                        type: "spring",
-                        stiffness: 400,
-                        damping: 25,
-                        duration: 0.15
-                      }
-                    }}
-                    whileTap={{ scale: 1 }}
-                  >
-                    {footballer.searchInterest}
-                  </motion.div>
+                  <div className="flex items-center gap-3">
+                    <motion.span 
+                      className="text-sm font-semibold text-brand"
+                      initial={{ opacity: 0.8 }}
+                      animate={{ opacity: 1 }}
+                      transition={{
+                        repeat: Infinity,
+                        repeatType: "reverse",
+                        duration: 1.5
+                      }}
+                    >
+                      {footballer.trending_score.toFixed(0)}
+                    </motion.span>
+                    {footballer.interest_over_time && (
+                      <Sparkline data={footballer.interest_over_time.values} />
+                    )}
+                  </div>
                   <div className="opacity-0 group-hover:opacity-100 text-brand">
                     →
                   </div>

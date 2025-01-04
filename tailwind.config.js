@@ -12,6 +12,7 @@ module.exports = {
       },
       animation: {
         'gradient-xy': 'gradient-xy 6s ease infinite',
+        'drawLine': 'drawLine 1.5s ease-out forwards',
       },
       keyframes: {
         'gradient-xy': {
