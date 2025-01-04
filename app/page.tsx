@@ -57,43 +57,62 @@ function Sparkline({ data }: { data: number[] }) {
   }, []);
 
   const chartData = smoothData.map((value) => ({ value }));
+  const maxValue = Math.max(...smoothData);
 
   return (
-    <div className="w-24 h-8">
+    <div className="w-16 sm:w-24 h-8">
       <ResponsiveContainer width="100%" height="100%">
         <LineChart data={chartData}>
+          <defs>
+            <linearGradient id="valueGradient" x1="0" y1="1" x2="0" y2="0">
+              <stop offset="0%" stopColor="#0EA5E9" />
+              <stop offset="50%" stopColor="#8B5CF6" />
+              <stop offset="100%" stopColor="#EC4899" />
+            </linearGradient>
+          </defs>
           <Line
             type="monotone"
             dataKey="value"
-            stroke="#4D96FF"
-            strokeWidth={1.5}
+            stroke="url(#valueGradient)"
+            strokeWidth={2.5}
             dot={false}
-            isAnimationActive={true}
-            animationDuration={1500}
-            className="sparkline-path group-hover:animate-drawLine"
-            strokeDasharray="200"
-            strokeDashoffset="0"
+            isAnimationActive={false}
+            className="sparkline-path-bg"
+          />
+          <Line
+            type="monotone"
+            dataKey="value"
+            stroke="url(#valueGradient)"
+            strokeWidth={3.5}
+            dot={false}
+            isAnimationActive={false}
+            className="sparkline-path"
           />
         </LineChart>
       </ResponsiveContainer>
 
       <style jsx global>{`
+        .sparkline-path-bg {
+          opacity: 0.5;
+          filter: drop-shadow(0 0 2px rgba(14, 165, 233, 0.3));
+        }
+
         .sparkline-path {
           stroke-dasharray: 200;
-          stroke-dashoffset: 0;
-        }
-        
-        @keyframes drawLine {
-          0% {
-            stroke-dashoffset: 200;
-          }
-          100% {
-            stroke-dashoffset: 0;
-          }
+          stroke-dashoffset: 200;
+          filter: drop-shadow(0 0 3px rgba(14, 165, 233, 0.5));
+          transition: stroke-dashoffset 1.5s ease-out;
         }
         
         .group:hover .sparkline-path {
-          animation: drawLine 1.5s ease-out forwards;
+          stroke-dashoffset: 0;
+          filter: drop-shadow(0 0 4px rgba(14, 165, 233, 0.7));
+        }
+
+        /* Reset animation when not hovering */
+        .group:not(:hover) .sparkline-path {
+          stroke-dashoffset: 200;
+          transition: stroke-dashoffset 0.3s ease-out;
         }
       `}</style>
     </div>
@@ -182,7 +201,7 @@ export default function TrendingFootballers() {
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.5 }}
-        className="relative bg-white/95 backdrop-blur-xl rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] p-6 sm:p-8 w-full max-w-md border border-white/20"
+        className="relative bg-white/95 backdrop-blur-xl rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] p-4 sm:p-6 md:p-8 w-full max-w-[95vw] sm:max-w-md border border-white/20"
       >
         <motion.div 
           className="absolute -top-3 sm:-top-4 left-0 right-0 mx-auto w-fit"
@@ -190,7 +209,7 @@ export default function TrendingFootballers() {
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.2 }}
         >
-          <div className="bg-gradient-to-r from-brand to-blue-600 text-white text-sm py-2 px-4 rounded-full shadow-lg flex items-center gap-2">
+          <div className="bg-gradient-to-r from-brand to-blue-600 text-white text-sm py-2 px-4 rounded-full shadow-lg flex items-center gap-2 animate-pulse-slow">
             <span className="relative flex h-2 w-2">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-white"></span>
@@ -214,16 +233,16 @@ export default function TrendingFootballers() {
             {footballers.map((footballer) => (
               <motion.li
                 key={footballer.player.name}
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: 20 }}
+                initial={{ opacity: 0, scale: 0.97 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.97 }}
                 transition={{ 
                   type: "spring",
                   stiffness: 400,
-                  damping: 25
+                  damping: 30
                 }}
                 onClick={() => handlePlayerClick(footballer.player.name)}
-                className="group bg-white/80 rounded-xl p-4 flex items-center border border-white/40 hover:border-brand/20 hover:shadow-[0_8px_30px_rgb(0,0,0,0.12)] hover:-translate-y-0.5 cursor-pointer relative overflow-hidden"
+                className="group bg-white/80 rounded-xl p-3 sm:p-4 flex items-center border border-white/40 hover:border-brand/20 active:border-brand/40 hover:shadow-[0_8px_30px_rgb(0,0,0,0.12)] hover:-translate-y-0.5 active:translate-y-0 cursor-pointer relative overflow-hidden transition-all duration-300 touch-manipulation"
                 whileHover={{ 
                   scale: 1.02,
                   transition: { 
@@ -242,60 +261,50 @@ export default function TrendingFootballers() {
                   }
                 }}
               >
-                <div className="absolute inset-0 bg-gradient-to-r from-brand/0 via-brand/0 to-brand/0 group-hover:from-brand/5 group-hover:via-brand/10 group-hover:to-brand/5"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-brand/0 via-brand/0 to-brand/0 group-hover:from-brand/5 group-hover:via-brand/10 group-hover:to-brand/5 transition-colors duration-500"></div>
                 
-                <span className="text-transparent bg-clip-text bg-gradient-to-br from-brand to-blue-600 font-bold min-w-[1.5rem]">
+                <span className="text-transparent bg-clip-text bg-gradient-to-br from-brand to-blue-600 font-bold min-w-[1.5rem] transition-transform duration-200 group-hover:scale-110">
                   {footballer.rank}
                 </span>
                 
                 <div className="relative">
-                  <div className="absolute inset-0 w-12 h-12 -m-0.5 bg-gradient-to-br from-brand to-blue-600 rounded-full group-hover:scale-110"></div>
+                  <div className="absolute inset-0 w-10 sm:w-12 h-10 sm:h-12 -m-0.5 bg-gradient-to-br from-brand to-blue-600 rounded-full group-hover:scale-110"></div>
                   <img 
                     src={footballer.player.photo} 
                     alt={footballer.player.name}
-                    className="w-11 h-11 rounded-full object-cover mr-4 relative z-10"
+                    className="w-9 sm:w-11 h-9 sm:h-11 rounded-full object-cover mr-3 sm:mr-4 relative z-10"
                   />
                 </div>
 
                 <div className="flex-1">
                   <div className="flex flex-col">
-                    <span className="text-base sm:text-lg font-semibold text-gray-800 group-hover:text-brand">
+                    <span className="text-base sm:text-lg font-semibold text-gray-800 group-hover:text-brand truncate">
                       {footballer.player.name}
                     </span>
-                    <div className="flex items-center text-sm text-gray-500 gap-2">
+                    <div className="flex items-center text-sm text-gray-500 gap-2 min-w-0">
                       <img 
                         src={footballer.statistics[0].team.logo} 
                         alt={footballer.statistics[0].team.name}
-                        className="w-5 h-5"
+                        className="w-4 sm:w-5 h-4 sm:h-5 flex-shrink-0"
+                        loading="lazy"
+                        onError={(e) => {
+                          e.currentTarget.style.opacity = '0.5';
+                        }}
                       />
                       <img 
                         src={`https://flagcdn.com/256x192/${getCountryCode(footballer.player.nationality)}.png`}
                         alt={footballer.player.nationality}
-                        className="h-4 w-auto"
+                        className="h-3 sm:h-4 w-auto flex-shrink-0"
                       />
                     </div>
                   </div>
                 </div>
 
                 <div className="relative flex items-center gap-2">
-                  <div className="flex items-center gap-3">
-                    <motion.span 
-                      className="text-sm font-semibold text-brand"
-                      initial={{ opacity: 0.8 }}
-                      animate={{ opacity: 1 }}
-                      transition={{
-                        repeat: Infinity,
-                        repeatType: "reverse",
-                        duration: 1.5
-                      }}
-                    >
-                      {footballer.trending_score.toFixed(0)}
-                    </motion.span>
-                    {footballer.interest_over_time && (
-                      <Sparkline data={footballer.interest_over_time.values} />
-                    )}
-                  </div>
-                  <div className="opacity-0 group-hover:opacity-100 text-brand">
+                  {footballer.interest_over_time && (
+                    <Sparkline data={footballer.interest_over_time.values} />
+                  )}
+                  <div className="opacity-0 group-hover:opacity-100 text-brand transition-opacity duration-200">
                     →
                   </div>
                 </div>
@@ -310,9 +319,14 @@ export default function TrendingFootballers() {
           transition={{ delay: 0.5 }}
         >
           <p className="text-sm text-gray-500">
-            Last updated: {lastUpdate || 'Not available'}
+            Last updated: {new Date(lastUpdate).toLocaleDateString('en-US', {
+              month: 'short',
+              day: 'numeric',
+              hour: 'numeric',
+              minute: 'numeric'
+            })}
           </p>
-          <div className="flex items-center justify-center gap-2 mt-2">
+          <div className="flex items-center justify-center gap-2 mt-2 opacity-75 hover:opacity-100 transition-opacity duration-200">
             <div className="w-1.5 h-1.5 rounded-full bg-gradient-to-r from-brand to-blue-600 animate-pulse"></div>
             <p className="text-xs text-gray-500">
               Refreshes every 24 hours

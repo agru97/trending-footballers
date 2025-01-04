@@ -79,11 +79,12 @@ class ProgressDisplay:
     def start(self):
         self.start_time = datetime.now()
         print(f"\n{Colors.BLUE}=== {self.desc} ==={Colors.RESET}")
-        self._print_progress_bar()
+        # Don't print initial progress bar - wait for first update
     
     def update(self, current):
+        """Update progress with current count"""
         self.current = current
-        # Don't print progress bar here - it will be printed after showing group result
+        self._print_progress_bar()
     
     def set_api_call_time(self, duration):
         self.last_api_call_time = duration.total_seconds()
@@ -126,8 +127,8 @@ class ProgressDisplay:
             else:
                 player_scores.append(f"{name}({score})")
         
-        print(f"\nGroup {group_num}: " + " | ".join(player_scores))
-        self._print_progress_bar()  # Print progress bar after showing group result
+        print(f"\rGroup {group_num}: " + " | ".join(player_scores))
+        # Don't print progress bar here - it's handled by update()
     
     def finish(self):
         print('\n')  # Add extra line for spacing
@@ -165,7 +166,7 @@ def get_trends_data(players_group, progress=None):
     
     # For display purposes, create a mapping of topic IDs to player names
     player_names = {
-        f"/m/{player['topic_id']}": player['player']['name']
+        f"{player['topic_id']}": player['player']['name']
         for player in players_group
     }
     
@@ -185,7 +186,6 @@ def get_trends_data(players_group, progress=None):
             pytrends.build_payload(
                 search_names,
                 timeframe='now 1-d',
-                cat=294,
                 geo='',
                 gprop=''
             )
@@ -399,17 +399,53 @@ def run_final_round(players):
         progress.update(i+1)
     
     progress.finish()
+
+    # Now we have the definitive top 4, find the best 5th
+    top_4 = current_group[:4]
+    
+    # Get all players that aren't in the top 4
+    remaining_players = [p for p in players if p not in top_4]
+    
+    log_message("\nFinding best 5th place from all remaining players...", Colors.BLUE)
+    progress = ProgressDisplay(len(remaining_players), desc="Testing for 5th place")
+    progress.start()
+    
+    best_fifth = None
+    best_fifth_score = -1
+    
+    # Test each remaining player against the top 4
+    for i, player in enumerate(remaining_players):
+        comparison_group = top_4 + [player]
+        scores = get_trends_data(comparison_group)
+        player_score = scores.get(player['player']['name'], 0)
+        
+        if player_score > best_fifth_score:
+            best_fifth = player
+            best_fifth_score = player_score
+            log_message(f"\nNew best 5th: {player['player']['name']} ({player_score})", Colors.GREEN)
+        
+        progress.show_group_result(i+1, comparison_group, scores, 
+                                 [p['player']['name'] for p in top_4])
+        progress.update(i+1)  # Update after showing group result
+    
+    # Update to final count before finishing
+    progress.update(len(remaining_players))
+    progress.finish()
     
     # Final comparison of top 4 plus best 5th place
-    final_group = current_group[:4] + [best_fifth]
+    final_group = top_4 + [best_fifth]
     final_scores = get_trends_data(final_group)
     final_group.sort(key=lambda p: final_scores.get(p['player']['name'], 0), reverse=True)
     
     # Now get detailed interest over time data for the final top 5
     log_message("\nGetting detailed data for final top 5...", Colors.BLUE)
     try:
-        # Use topic IDs for the final 5
-        top_5_topics = [f"/m/{player['topic_id']}" for player in final_group[:5]]  # Ensure only top 5
+        # Use topic IDs for the final 5, keeping their original prefixes
+        top_5_topics = [
+            player['topic_id'] if (player['topic_id'].startswith('/m/') or player['topic_id'].startswith('/g/'))
+            else player['player']['name']  # Use player name if no valid prefix
+            for player in final_group[:5]
+        ]
         
         # Debug log
         log_message(f"Fetching interest over time for topics: {top_5_topics}", Colors.BLUE)
@@ -417,7 +453,6 @@ def run_final_round(players):
         pytrends.build_payload(
             top_5_topics,
             timeframe='now 1-d',
-            cat=294,
             geo='',
             gprop=''
         )
@@ -430,7 +465,7 @@ def run_final_round(players):
         # Convert to dictionary with player names as keys
         detailed_data = {}
         for player in final_group[:5]:  # Process only top 5
-            topic_id = f"/m/{player['topic_id']}"
+            topic_id = player['topic_id']  # Use the original topic_id
             player_name = player['player']['name']
             
             if topic_id in interest_data:
@@ -610,7 +645,7 @@ get_trends_data.last_call = 0
 
 if __name__ == "__main__":
     try:
-        fetch_trending_footballers()
+        fetch_trending_footballers(100)
         log_message("Successfully updated top 5 footballers data", Colors.GREEN)
     except Exception as e:
         log_message(f"Error occurred: {str(e)}", Colors.RED)
