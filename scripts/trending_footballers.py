@@ -43,6 +43,10 @@ class TimingStats:
             return timedelta(0)
         return sum(self.api_calls, timedelta(0)) / len(self.api_calls)
 
+# Global instances
+api_calls_counter = 0
+timing_stats = TimingStats()
+
 class Colors:
     """ANSI color codes for terminal output"""
     GREEN = '\033[92m'
@@ -383,7 +387,7 @@ def run_final_round(players):
             timeout=(3.05, 27),
             retries=3,
             backoff_factor=2.0,
-            proxies=LOCAL_PROXIES
+            proxies=PROXIES
         )
         
         # Use topic IDs for the final 5
