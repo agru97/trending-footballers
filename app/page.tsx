@@ -129,8 +129,17 @@ export default function TrendingFootballers() {
   const [error, setError] = useState<string | null>(null)
 
   const handlePlayerClick = (playerName: string) => {
-    const searchQuery = encodeURIComponent(playerName + ' footballer')
-    window.open(`https://www.google.com/search?q=${searchQuery}`, '_blank')
+    const isTouchDevice = window.matchMedia('(hover: none) and (pointer: coarse)').matches;
+    
+    if (isTouchDevice) {
+      setTimeout(() => {
+        const searchQuery = encodeURIComponent(playerName + ' footballer')
+        window.open(`https://www.google.com/search?q=${searchQuery}`, '_blank')
+      }, 1000)
+    } else {
+      const searchQuery = encodeURIComponent(playerName + ' footballer')
+      window.open(`https://www.google.com/search?q=${searchQuery}`, '_blank')
+    }
   }
 
   useEffect(() => {
@@ -199,12 +208,12 @@ export default function TrendingFootballers() {
   }
 
   return (
-    <div className="min-h-screen w-full bg-brand flex items-center justify-center p-8">
+    <div className="min-h-screen w-full bg-brand flex items-start sm:items-center justify-center p-4 pt-8 sm:p-4">
       <motion.div
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.5 }}
-        className="relative bg-white/95 backdrop-blur-xl rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] p-8 w-full max-w-md border border-white/20"
+        className="relative bg-white/95 backdrop-blur-xl rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] p-6 w-full min-w-[380px] max-w-md border border-white/20"
       >
         <motion.div 
           className="absolute -top-4 left-0 right-0 mx-auto w-fit"
@@ -264,22 +273,20 @@ export default function TrendingFootballers() {
                   }
                 }}
               >
-                <div className="absolute inset-0 bg-gradient-to-r from-brand/0 via-brand/0 to-brand/0 group-hover:from-brand/5 group-hover:via-brand/10 group-hover:to-brand/5 transition-colors duration-500"></div>
-                
                 <span className="text-transparent bg-clip-text bg-gradient-to-br from-brand to-blue-600 font-bold min-w-[1.5rem] transition-transform duration-200 group-hover:scale-110">
                   {footballer.rank}
                 </span>
                 
                 <div className="relative">
-                  <div className="absolute inset-0 w-10 sm:w-12 h-10 sm:h-12 -m-0.5 bg-gradient-to-br from-brand to-blue-600 rounded-full group-hover:scale-110"></div>
+                  <div className="absolute inset-0 w-12 h-12 -m-0.5 bg-gradient-to-br from-brand to-blue-600 rounded-full group-hover:scale-110"></div>
                   <img 
                     src={footballer.player.photo} 
                     alt={footballer.player.name}
-                    className="w-9 sm:w-11 h-9 sm:h-11 rounded-full object-cover mr-3 sm:mr-4 relative z-10"
+                    className="w-11 h-11 rounded-full object-cover mr-4 relative z-10"
                   />
                 </div>
 
-                <div className="flex-1">
+                <div className="flex-1 min-w-0">
                   <div className="flex flex-col">
                     <span className="text-lg font-semibold text-gray-800 group-hover:text-brand truncate">
                       {footballer.player.name}
@@ -311,7 +318,7 @@ export default function TrendingFootballers() {
                       </div>
                     </div>
                   )}
-                  <div className="opacity-0 group-hover:opacity-100 text-brand transition-opacity duration-200">
+                  <div className="hidden md:block opacity-0 group-hover:opacity-100 text-brand transition-opacity duration-200">
                     →
                   </div>
                 </div>
@@ -320,7 +327,7 @@ export default function TrendingFootballers() {
           </ul>
         </AnimatePresence>
         <motion.div 
-          className="mt-6 sm:mt-8 text-center"
+          className="mt-4 sm:mt-8 text-center"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5 }}
@@ -336,7 +343,7 @@ export default function TrendingFootballers() {
           <div className="flex items-center justify-center gap-2 mt-2 opacity-75 hover:opacity-100 transition-opacity duration-200">
             <div className="w-1.5 h-1.5 rounded-full bg-gradient-to-r from-brand to-blue-600 animate-pulse"></div>
             <p className="text-xs text-gray-500">
-              Refreshes every 24 hours
+              Refreshes every 12 hours
             </p>
           </div>
         </motion.div>
