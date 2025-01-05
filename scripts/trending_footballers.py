@@ -645,7 +645,7 @@ get_trends_data.last_call = 0
 
 if __name__ == "__main__":
     try:
-        fetch_trending_footballers(100)
+        fetch_trending_footballers()
         log_message("Successfully updated top 5 footballers data", Colors.GREEN)
     except Exception as e:
         log_message(f"Error occurred: {str(e)}", Colors.RED)
