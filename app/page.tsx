@@ -134,7 +134,7 @@ export default function TrendingFootballers() {
     if (isTouchDevice) {
       setTimeout(() => {
         const searchQuery = encodeURIComponent(playerName + ' footballer')
-        window.open(`https://www.google.com/search?q=${searchQuery}`, '_blank')
+        window.location.href = `https://www.google.com/search?q=${searchQuery}`
       }, 1000)
     } else {
       const searchQuery = encodeURIComponent(playerName + ' footballer')
@@ -152,7 +152,20 @@ export default function TrendingFootballers() {
         }
         const data: TrendingData = await response.json()
         setFootballers(data.players)
-        setLastUpdate(new Date(data.updated_at).toLocaleString())
+        
+        // Format the date string directly from the timestamp
+        const timestamp = data.updated_at // "2025-01-05T12:00:07.010932Z"
+        const date = new Date(timestamp)
+        const formattedDate = `${date.toLocaleDateString('en-US', {
+          month: 'short',
+          day: 'numeric'
+        })} at ${date.toLocaleTimeString('en-US', {
+          hour: 'numeric',
+          minute: 'numeric',
+          hour12: true
+        })}`
+        setLastUpdate(formattedDate)
+
       } catch (err: any) {
         setError(err.message || 'An error occurred')
         console.error('Fetch error:', err)
@@ -221,7 +234,7 @@ export default function TrendingFootballers() {
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.2 }}
         >
-          <div className="bg-gradient-to-r from-brand to-blue-600 text-white text-sm py-2 px-4 rounded-full shadow-lg flex items-center gap-2 animate-pulse-slow">
+          <div className="bg-gradient-to-r from-blue-500 to-indigo-600 text-white text-sm py-2 px-4 rounded-full shadow-lg flex items-center gap-2 animate-pulse-slow">
             <span className="relative flex h-2 w-2">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-white"></span>
@@ -229,7 +242,7 @@ export default function TrendingFootballers() {
             Live Rankings
           </div>
         </motion.div>
-        <h1 className="text-4xl font-bold text-center mb-2 bg-gradient-to-r from-brand to-blue-700 text-transparent bg-clip-text">
+        <h1 className="text-4xl font-bold text-center mb-2 bg-gradient-to-r from-blue-600 to-indigo-500 text-transparent bg-clip-text">
           Trending Footballers
         </h1>
         <p className="text-center text-gray-500 text-sm mb-8">Based on Search Interest in the last 24 hours</p>
@@ -333,12 +346,7 @@ export default function TrendingFootballers() {
           transition={{ delay: 0.5 }}
         >
           <p className="text-sm text-gray-500">
-            Last updated: {new Date(lastUpdate).toLocaleDateString('en-US', {
-              month: 'short',
-              day: 'numeric',
-              hour: 'numeric',
-              minute: 'numeric'
-            })}
+            Last updated: {lastUpdate}
           </p>
           <div className="flex items-center justify-center gap-2 mt-2 opacity-75 hover:opacity-100 transition-opacity duration-200">
             <div className="w-1.5 h-1.5 rounded-full bg-gradient-to-r from-brand to-blue-600 animate-pulse"></div>
