@@ -36,13 +36,22 @@ interface TrendingData {
 
 // Helper function to convert country name to ISO code
 function getCountryCode(nationality: string): string {
+  const normalizedNationality = nationality.toLowerCase();
+  
+  // Special cases for Ivory Coast
+  if (normalizedNationality === "côte d'ivoire" || 
+      normalizedNationality === "ivory coast" ||
+      normalizedNationality === "cote d'ivoire") {
+    return "ci";
+  }
+
   const countryCodesReverse = Object.entries(countryCodes)
     .reduce<{ [key: string]: string }>((acc, [code, name]) => {
       acc[name.toLowerCase()] = code;
       return acc;
     }, {});
 
-  return countryCodesReverse[nationality.toLowerCase()] || nationality.toLowerCase();
+  return countryCodesReverse[normalizedNationality] || normalizedNationality;
 }
 
 function Sparkline({ data }: { data: number[] }) {
@@ -308,7 +317,7 @@ export default function TrendingFootballers() {
                       <img 
                         src={footballer.statistics[0].team.logo} 
                         alt={footballer.statistics[0].team.name}
-                        className="w-5 h-5 flex-shrink-0"
+                        className="h-5 w-auto flex-shrink-0 object-contain"
                         loading="lazy"
                         onError={(e) => {
                           e.currentTarget.style.opacity = '0.5';
