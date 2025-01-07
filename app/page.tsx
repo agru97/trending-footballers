@@ -38,13 +38,29 @@ interface TrendingData {
 function getCountryCode(nationality: string): string {
   const normalizedNationality = nationality.toLowerCase();
   
-  // Special cases for Ivory Coast
-  if (normalizedNationality === "côte d'ivoire" || 
-      normalizedNationality === "ivory coast" ||
-      normalizedNationality === "cote d'ivoire") {
-    return "ci";
+  // Special cases mapping
+  const specialCases: { [key: string]: string } = {
+    "côte d'ivoire": "ci",
+    "ivory coast": "ci",
+    "cote d'ivoire": "ci",
+    "türkiye": "tr",
+    "turkey": "tr",
+    "usa": "us",
+    "united states": "us",
+    "england": "gb-eng",
+    "republic of ireland": "ie",
+    "korea republic": "kr",
+    "south korea": "kr",
+    "dr congo": "cd",
+    "congo": "cg",
+  };
+
+  // Check special cases first
+  if (specialCases[normalizedNationality]) {
+    return specialCases[normalizedNationality];
   }
 
+  // Regular country code lookup
   const countryCodesReverse = Object.entries(countryCodes)
     .reduce<{ [key: string]: string }>((acc, [code, name]) => {
       acc[name.toLowerCase()] = code;
