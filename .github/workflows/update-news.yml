@@ -30,7 +30,7 @@ jobs:
     
     - name: Commit and push if changes
       run: |
-        git config --global user.name 'GitHub Action'
-        git config --global user.email 'action@github.com'
+        git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+        git config --local user.name "github-actions[bot]"
         git add public/player_news.json
         git diff --quiet && git diff --staged --quiet || (git commit -m "Update player news data" && git push) 
