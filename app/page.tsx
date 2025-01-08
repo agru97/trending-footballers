@@ -119,14 +119,12 @@ function Sparkline({ data }: { data: number[] }) {
       <style jsx global>{`
         .sparkline-path-bg {
           opacity: 0.5;
-          filter: drop-shadow(0 0 2px rgba(14, 165, 233, 0.3));
           transform: translateZ(0);
         }
 
         .sparkline-path {
           stroke-dasharray: 200;
           stroke-dashoffset: 200;
-          filter: drop-shadow(0 0 3px rgba(14, 165, 233, 0.5));
           transition: stroke-dashoffset 1.5s ease-out;
           transform: translateZ(0);
           will-change: stroke-dashoffset;
@@ -134,7 +132,6 @@ function Sparkline({ data }: { data: number[] }) {
         
         .group:hover .sparkline-path {
           stroke-dashoffset: 0;
-          filter: drop-shadow(0 0 4px rgba(14, 165, 233, 0.7));
         }
 
         /* Reset animation when not hovering */
