@@ -44,15 +44,17 @@ def generate_trend_summary(news_articles, player_name, topic_title):
 
 {news_content}
 
-As an elite sports journalist for a major publication, write a gripping 2-3 sentence summary that captures {topic_title}'s latest headlines.
+As an elite sports journalist, write a gripping 2-3 sentence summary that captures {topic_title}'s latest headlines.
+IMPORTANT: Only include facts that are explicitly mentioned in the provided news articles.
 Focus on the most newsworthy elements, such as:
-- Match performances or key moments
+- Match performances or key moments (be specific about competitions)
 - Transfer rumors and contract talks
 - Injuries or fitness updates
 - Off-field developments or controversies
 - Career milestones or achievements
-Use powerful, journalistic language that draws readers in, whether covering on-pitch action or behind-the-scenes stories.
-Aim for the style of a top-tier sports publication's lead paragraph.
+
+Use powerful, journalistic language that draws readers in, but maintain strict factual accuracy.
+Double-check all competition names, scores, and events against the source articles.
 
 Summary:"""
     
