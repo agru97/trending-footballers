@@ -11,8 +11,6 @@ jobs:
     
     steps:
     - uses: actions/checkout@v3
-      with:
-        lfs: true  # Enable Git LFS
     
     - name: Set up Python
       uses: actions/setup-python@v4
@@ -24,6 +22,11 @@ jobs:
         python -m pip install --upgrade pip
         pip install gnews
         pip install llama-cpp-python
+    
+    - name: Download LLM model
+      run: |
+        mkdir -p models
+        curl -L https://huggingface.co/TheBloke/Llama-3.2-3B-Instruct-GGUF/resolve/main/llama-3.2-3b-instruct.Q4_K_M.gguf -o models/Llama-3.2-3B-Instruct-Q4_K_M.gguf
     
     - name: Run news fetching script
       run: python scripts/fetch_player_news.py
