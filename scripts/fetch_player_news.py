@@ -4,7 +4,10 @@ import time
 from datetime import datetime, timezone
 import os
 import re
-from llama_cpp import Llama  # for direct GGUF usage
+import google.generativeai as genai
+
+genai.configure(api_key=os.environ['GOOGLE_API_KEY'])
+MODEL = genai.GenerativeModel('gemini-pro')
 
 def clean_title(title):
     """Remove source names and clean up the title"""
@@ -20,41 +23,68 @@ def clean_description(desc):
     desc = re.sub(r'http\S+', '', desc)
     return desc.strip()
 
-def generate_trend_summary(news_articles, llm, player_name):
-    """Generate a summary using local LLM"""
+def generate_trend_summary(news_articles, player_name, topic_title):
+    """Generate a summary using Google Gemini"""
+    print(f"\nGenerating summary for {topic_title}...")
+    start_time = time.time()
+    
     if not news_articles:
+        print("No news articles found, returning default message")
         return "No recent news available."
     
-    # Combine all news content
+    print(f"Found {len(news_articles)} articles to summarize")
+    
+    print("Preparing content...")
     news_content = "\n\n".join([
         f"Title: {article['title']}\nDescription: {article['description']}"
         for article in news_articles
     ])
     
-    prompt = f"""Recent news about {player_name}:
+    prompt = f"""Recent news about {topic_title}:
 
 {news_content}
 
-Write a concise 2-3 sentence summary highlighting the key developments or events involving {player_name}. 
-Focus on what's making headlines - whether it's match performances, transfer news, or other significant events.
-Be direct and engaging, avoid phrases like 'is trending' or 'is currently trending'.
+As an elite sports journalist for a major publication, write a gripping 2-3 sentence summary that captures {topic_title}'s latest headlines.
+Focus on the most newsworthy elements, such as:
+- Match performances or key moments
+- Transfer rumors and contract talks
+- Injuries or fitness updates
+- Off-field developments or controversies
+- Career milestones or achievements
+Use powerful, journalistic language that draws readers in, whether covering on-pitch action or behind-the-scenes stories.
+Aim for the style of a top-tier sports publication's lead paragraph.
 
 Summary:"""
-
+    
+    print("Calling Gemini API for summary...")
+    api_start = time.time()
+    
     try:
-        response = llm(
+        response = MODEL.generate_content(
             prompt,
-            max_tokens=150,
-            temperature=0.75,  # Slightly increased for more variety
-            stop=["</s>", "\n\n"]
+            generation_config=genai.types.GenerationConfig(
+                temperature=0.7,
+                max_output_tokens=150,
+            )
         )
-        return response['choices'][0]['text'].strip()
+        api_duration = time.time() - api_start
+        print(f"API call took {api_duration:.2f} seconds")
     except Exception as e:
-        print(f"Error generating summary: {str(e)}")
+        print(f"Error calling Gemini API: {str(e)}")
         return "Unable to generate summary at this time."
+    
+    total_duration = time.time() - start_time
+    print(f"Total summary generation took {total_duration:.2f} seconds")
+    
+    return response.text
 
 def fetch_news_for_player(player_name, topic_title):
     """Fetch news for a specific player using their name and topic title"""
+    print(f"\nFetching news for {player_name}...")
+    start_time = time.time()
+    
+    print(f"Using topic title: {topic_title}")
+    
     gn = GNews(
         period='1d',
         max_results=5,
@@ -63,12 +93,27 @@ def fetch_news_for_player(player_name, topic_title):
     
     try:
         search_query = f'"{topic_title}" football'
+        print(f"Searching with query: {search_query}")
+        search_start = time.time()
         articles = gn.get_news(search_query)
+        search_duration = time.time() - search_start
+        print(f"Search took {search_duration:.2f} seconds")
         
         if not articles:
+            print("No articles found with topic title, trying player name...")
             search_query = f'"{player_name}" football'
+            print(f"New search query: {search_query}")
+            search_start = time.time()
             articles = gn.get_news(search_query)
+            search_duration = time.time() - search_start
+            print(f"Second search took {search_duration:.2f} seconds")
             
+        found_count = len(articles[:5]) if articles else 0
+        print(f"Found {found_count} articles")
+        
+        total_duration = time.time() - start_time
+        print(f"Total news fetch took {total_duration:.2f} seconds")
+        
         return articles[:5] if articles else []
     except Exception as e:
         print(f"Error fetching news for {player_name}: {str(e)}")
@@ -95,54 +140,42 @@ def get_preferred_name(player_info):
     return f"{firstname} {lastname}".strip()
 
 def main():
-    # Initialize LLM
-    model_path = './models/Llama-3.2-3B-Instruct-Q4_K_M.gguf'
-    
-    try:
-        llm = Llama(
-            model_path=model_path,
-            n_ctx=2048,  # Context window
-            n_threads=4   # CPU threads to use
-        )
-    except Exception as e:
-        print(f"Error loading model: {str(e)}")
-        return
-
+    print("\nStarting news update process...")
     try:
         with open('public/trending_footballers.json', 'r') as f:
             data = json.load(f)
+            print("Successfully loaded trending_footballers.json")
     except FileNotFoundError:
-        print("trending_footballers.json not found")
+        print("ERROR: trending_footballers.json not found")
         return
     
     players = data.get('players', [])[:5]
+    print(f"Processing top {len(players)} players")
     
     news_data = {
         "updated_at": datetime.now(timezone.utc).isoformat(),
         "player_news": []
     }
     
-    for player in players:
+    for idx, player in enumerate(players, 1):
+        print(f"\nProcessing player {idx} of {len(players)}...")
         player_info = player.get('player', {})
-        player_name = get_preferred_name(player_info)  # Use preferred name
+        player_name = get_preferred_name(player_info)
         topic_title = player.get('topic_title')
         
         if not topic_title:
-            print(f"Skipping {player_name} - missing topic title")
+            print(f"WARNING: Skipping {player_name} - missing topic title")
             continue
-            
-        print(f"Fetching news for {player_name} (Topic: {topic_title})...")
         
         news_articles = fetch_news_for_player(player_name, topic_title)
+        trend_summary = generate_trend_summary(news_articles, player_name, topic_title)
         
-        # Generate trend summary from news articles
-        trend_summary = generate_trend_summary(news_articles, llm, player_name)
-        
+        print(f"Adding news data for {player_name}")
         player_news = {
             "player_id": player_info.get('id'),
             "player_name": player_name,
             "trending_score": player.get('trending_score'),
-            "trend_summary": trend_summary,  # Add the generated summary
+            "trend_summary": trend_summary,
             "news": []
         }
         
@@ -155,13 +188,14 @@ def main():
             player_news["news"].append(news_item)
         
         news_data["player_news"].append(player_news)
+        print(f"Completed processing for {player_name}")
         time.sleep(2)
     
     output_path = 'public/player_news.json'
     with open(output_path, 'w', encoding='utf-8') as f:
         json.dump(news_data, f, ensure_ascii=False, indent=2)
     
-    print(f"News data saved to {output_path}")
+    print(f"\nProcess complete! News data saved to {output_path}")
 
 if __name__ == "__main__":
     main() 
