@@ -1,21 +1,21 @@
 {
-  "updated_at": "2025-01-09T10:45:09.090612+00:00",
+  "updated_at": "2025-01-09T12:14:59.465350+00:00",
   "player_news": [
     {
       "player_id": 863,
       "player_name": "Rodrigo Bentancur Colmán",
       "trending_score": 100.0,
-      "trend_summary": "Tottenham Hotspur midfielder Rodrigo Bentancur suffered a worrying head injury during the Carabao Cup semi-final against Manchester United, sparking concerns over his well-being. Despite being stretchered off, Bentancur has since reassured fans that he is \"conscious, talking, and heading to the hospital.\" The injury has cast a shadow over Tottenham's impressive performance in adversity, as they battled to a 0-0 draw against their rivals.",
+      "trend_summary": "Tottenham midfielder Rodrigo Bentancur suffered a sickening head injury during the Carabao Cup semi-final against Manchester City, but is now conscious, talking, and undergoing further medical evaluation at the hospital. Despite the injury, Tottenham displayed resilience and impressed in their performance after Bentancur's departure.",
       "news": [
-        {
-          "title": "Tottenham impressed in adversity after worrying Rodrigo Bentancur head injury – Ange Postecoglou",
-          "description": "Tottenham impressed in adversity after worrying Rodrigo Bentancur head injury – Ange Postecoglou",
-          "date": "Thu, 09 Jan 2025 08:12:02 GMT"
-        },
         {
           "title": "Bentancur 'conscious and talking' after being stretchered off in Carabao Cup semi-final",
           "description": "Bentancur 'conscious and talking' after being stretchered off in Carabao Cup semi-final  Eurosport COM",
           "date": "Wed, 08 Jan 2025 21:17:00 GMT"
+        },
+        {
+          "title": "Tottenham impressed in adversity after worrying Rodrigo Bentancur head injury – Ange Postecoglou",
+          "description": "Tottenham impressed in adversity after worrying Rodrigo Bentancur head injury – Ange Postecoglou",
+          "date": "Wed, 08 Jan 2025 23:34:49 GMT"
         },
         {
           "title": "Rodrigo Bentancur injury: Tottenham player is 'conscious, talking and heading to hospital' after falling",
@@ -23,14 +23,14 @@
           "date": "Wed, 08 Jan 2025 22:43:00 GMT"
         },
         {
+          "title": "Rodrigo Bentancur suffers sickening head injury as Tottenham post update on player's condition",
+          "description": "Rodrigo Bentancur suffers sickening head injury as Tottenham post update on player's condition  GB News",
+          "date": "Thu, 09 Jan 2025 09:35:59 GMT"
+        },
+        {
           "title": "Bentancur latest as Spurs player provides update on worrying incident",
           "description": "Bentancur latest as Spurs player provides update on worrying incident  The Independent",
           "date": "Thu, 09 Jan 2025 08:09:00 GMT"
-        },
-        {
-          "title": "Rodrigo Bentancur injury: Tottenham player says he is 'all good'",
-          "description": "Rodrigo Bentancur injury: Tottenham player says he is 'all good'  BBC.com",
-          "date": "Wed, 08 Jan 2025 20:43:42 GMT"
         }
       ]
     },
@@ -38,17 +38,12 @@
       "player_id": 347316,
       "player_name": "Lucas Erik Holger Bergvall",
       "trending_score": 73.0,
-      "trend_summary": "Teen sensation Lucas Bergvall has emerged as a pivotal figure for Tottenham Hotspur, scoring a dramatic late winner against Liverpool in the Champions League semi-final first leg. Despite a controversial escape from a second yellow card, the Swedish forward has proven his mettle on the grandest stage, injecting a surge of energy into Antonio Conte's team.",
+      "trend_summary": "In a thrilling Carabao Cup semi-final clash, teenage sensation Lucas Bergvall emerged as the hero for Tottenham Hotspur, scoring a late winner against Liverpool despite escaping a second yellow card for a foul on Kostas Tsimika. Bergvall's goal has given Spurs a crucial advantage going into the second leg at Anfield, leaving Liverpool fuming over the referee's decision to spare the young Swedish attacker a red card.",
       "news": [
         {
-          "title": "Lucas Bergvall and Antonin Kinsky inject fresh impetus into the Postecoglou project",
-          "description": "Lucas Bergvall and Antonin Kinsky inject fresh impetus into the Postecoglou project  The New York Times",
-          "date": "Thu, 09 Jan 2025 07:24:43 GMT"
-        },
-        {
-          "title": "Arne Slot Fumes As Teenager Lucas Bergvall Avoids Red Card, Then Sinks Liverpool With 86th-Minute Wi..",
-          "description": "Arne Slot Fumes As Teenager Lucas Bergvall Avoids Red Card, Then Sinks Liverpool With 86th-Minute Wi..  NDTV Sports",
-          "date": "Thu, 09 Jan 2025 03:23:50 GMT"
+          "title": "Lucas Bergvall and Antonin Kinsky inject fresh impetus into Spurs’ Postecoglou project",
+          "description": "Lucas Bergvall and Antonin Kinsky inject fresh impetus into Spurs’ Postecoglou project  The New York Times",
+          "date": "Thu, 09 Jan 2025 07:33:49 GMT"
         },
         {
           "title": "Liverpool are left FUMING as Spurs hero Lucas Bergvall escapes a second yellow card for foul on Kostas Tsimika",
@@ -56,9 +51,14 @@
           "date": "Thu, 09 Jan 2025 09:48:08 GMT"
         },
         {
-          "title": "Arne Slot responds as Liverpool rage over Lucas Bergvall goal after red card reprieve",
-          "description": "Arne Slot responds as Liverpool rage over Lucas Bergvall goal after red card reprieve  The Independent",
-          "date": "Thu, 09 Jan 2025 07:14:00 GMT"
+          "title": "Arne Slot Fumes As Teenager Lucas Bergvall Avoids Red Card, Then Sinks Liverpool With 86th-Minute Wi..",
+          "description": "Arne Slot Fumes As Teenager Lucas Bergvall Avoids Red Card, Then Sinks Liverpool With 86th-Minute Wi..  NDTV Sports",
+          "date": "Thu, 09 Jan 2025 03:23:50 GMT"
+        },
+        {
+          "title": "Lucas Bergvall scores late winner as Spurs beat Liverpool in Carabao Cup semi-final",
+          "description": "Lucas Bergvall scores late winner as Spurs beat Liverpool in Carabao Cup semi-final  The Independent",
+          "date": "Thu, 09 Jan 2025 11:00:00 GMT"
         },
         {
           "title": "Late Bergvall winner gives Spurs semi-final advantage over Liverpool",
@@ -71,12 +71,17 @@
       "player_id": 1323,
       "player_name": "Daniel Olmo Carvajal",
       "trending_score": 18.0,
-      "trend_summary": "Barcelona's Dani Olmo and Pau Victor have been granted temporary playing permission by the Spanish government, allowing them to make their long-awaited debuts for the club after a protracted registration saga. The decision comes as a major boost for Barcelona, who have been eager to unleash the talented duo in their pursuit of domestic and European glory.",
+      "trend_summary": "Barcelona's Dani Olmo has been cleared to play after the Spanish Sports Council extended the registration deadline, allowing him to debut for the club after a transfer from Dinamo Zagreb. The move has sparked controversy, with some critics accusing Barça of exploiting loopholes to gain an unfair advantage.",
       "news": [
         {
           "title": "Barca's Olmo and Victor free to play after Sports Council extends registration",
           "description": "Barca's Olmo and Victor free to play after Sports Council extends registration  Reuters",
           "date": "Thu, 09 Jan 2025 06:47:42 GMT"
+        },
+        {
+          "title": "Barça face fury after Olmo registration boost",
+          "description": "Barça face fury after Olmo registration boost  ESPN",
+          "date": "Thu, 09 Jan 2025 10:58:00 GMT"
         },
         {
           "title": "Barcelona’s Dani Olmo, Pau Victor given temporary permission to play by Spanish government",
@@ -89,11 +94,6 @@
           "date": "Wed, 08 Jan 2025 18:01:13 GMT"
         },
         {
-          "title": "Barça's Olmo, Víctor given temporary registration",
-          "description": "Barça's Olmo, Víctor given temporary registration  ESPN",
-          "date": "Wed, 08 Jan 2025 17:47:00 GMT"
-        },
-        {
           "title": "Revealed: the reason why Dani Olmo was cleared to play for Barcelona",
           "description": "Revealed: the reason why Dani Olmo was cleared to play for Barcelona  AS USA",
           "date": "Wed, 08 Jan 2025 18:33:10 GMT"
@@ -104,7 +104,7 @@
       "player_id": 296667,
       "player_name": "Pablo Martín Páez Gavira",
       "trending_score": 16.0,
-      "trend_summary": "Gavi, Barcelona's teenage sensation, continues to dazzle with his match-winning performance in the Spanish Super Cup semifinal, propelling the Catalan giants to the final with a 2-0 victory over Athletic Bilbao. The 18-year-old midfielder's exceptional display, marked by dazzling dribbling and a crucial assist, has reignited transfer rumors linking him to Premier League giants Liverpool.",
+      "trend_summary": "In the Spanish Super Cup semi-final, Gavi played a pivotal role in Barcelona's 2-0 victory over Athletic Bilbao, showcasing his exceptional talent and helping the team secure a place in the final. The 18-year-old midfielder's performance has sparked renewed praise and speculation about his future, as clubs reportedly express interest in acquiring his services.",
       "news": [
         {
           "title": "Barcelona punch Super Cup final ticket with 2-0 win over Bilbao",
@@ -127,9 +127,9 @@
           "date": "Wed, 08 Jan 2025 20:57:16 GMT"
         },
         {
-          "title": "Bilbao 0-2 Barcelona, Spanish Super Cup: Gavi, Yamal Send Flick's Side Into Supercopa Final",
-          "description": "Bilbao 0-2 Barcelona, Spanish Super Cup: Gavi, Yamal Send Flick's Side Into Supercopa Final  Outlook India",
-          "date": "Thu, 09 Jan 2025 03:44:53 GMT"
+          "title": "Athletic Club 0-2 FC Barcelona: Half the job done",
+          "description": "Athletic Club 0-2 FC Barcelona: Half the job done  FC Barcelona",
+          "date": "Wed, 08 Jan 2025 21:01:22 GMT"
         }
       ]
     },
@@ -137,7 +137,7 @@
       "player_id": 18883,
       "player_name": "Dominic Ayodele Solanke-Mitchell",
       "trending_score": 16.0,
-      "trend_summary": "Dominic Solanke's goal for Tottenham against Liverpool was controversially ruled offside via VAR in a historic moment for English football. The striker has also been the subject of praise from former teammate Micky van de Ven for his performance against his old club.",
+      "trend_summary": "In a groundbreaking moment for English football, referee Craig Pawson made the first-ever in-stadium announcement to rule out Dominic Solanke's goal for Tottenham against Liverpool due to offside, aided by VAR technology. Despite his offside goal, Solanke has continued to make headlines with his recent performances, including scoring the opening goal in Tottenham's victory over Manchester City.",
       "news": [
         {
           "title": "GOAL! Dominic Solanke puts Tottenham ahead! But is it offside?",
@@ -150,14 +150,14 @@
           "date": "Thu, 09 Jan 2025 06:35:00 GMT"
         },
         {
-          "title": "In a first for English football, referee makes in-stadium announcement to rule out goal",
-          "description": "In a first for English football, referee makes in-stadium announcement to rule out goal  Sportstar",
-          "date": "Thu, 09 Jan 2025 04:00:24 GMT"
-        },
-        {
           "title": "How Bournemouth are better off WITHOUT Dominic Solanke's goals",
           "description": "How Bournemouth are better off WITHOUT Dominic Solanke's goals",
           "date": "Wed, 08 Jan 2025 20:05:41 GMT"
+        },
+        {
+          "title": "In a first for English football, referee makes in-stadium announcement to rule out goal",
+          "description": "In a first for English football, referee makes in-stadium announcement to rule out goal  Sportstar",
+          "date": "Thu, 09 Jan 2025 04:00:24 GMT"
         },
         {
           "title": "Solanke was offside The history of the first VAR in the history of football against Tottenham Liverpool",
