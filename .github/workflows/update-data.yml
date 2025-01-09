@@ -1,40 +1,49 @@
-name: Update Trending Footballers
+name: Update Trending Data
 
 on:
   schedule:
-    # 23:00 UTC (Midnight CET) - After all European matches finish
     - cron: '0 23 * * *'  # Daily at 23:00 UTC / 00:00 CET
-    # 11:00 UTC (12:00 CET) - Morning news/reactions
-    - cron: '0 11 * * *'   # Daily morning update
+    - cron: '0 11 * * *'  # Daily at 11:00 UTC / 12:00 CET
   workflow_dispatch:
 
 jobs:
-  update-trending:
+  update-football-data:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     env:
       FOOTBALL_API_KEY: ${{ secrets.FOOTBALL_API_KEY }}
       PROXY_LIST: ${{ secrets.PROXY_LIST }}
+      GOOGLE_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+    
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         with:
           token: ${{ secrets.PAT_TOKEN }}
+          fetch-depth: 0  # Fetch all history for all branches and tags
       
       - name: Set up Python
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v4
         with:
-          python-version: '3.x'
+          python-version: '3.10'
           
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
+          pip install gnews
+          pip install google-generativeai
         
       - name: Update trending footballers
         run: python scripts/trending_footballers.py
+
+      - name: Update player news
+        run: python scripts/fetch_player_news.py
 
       - name: Commit and push if changed
         run: |
           git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git add public/preprocessed_players.json public/trending_footballers.json
-          git diff --quiet && git diff --staged --quiet || (git commit -m "Update trending footballers" && git push) 
+          git pull origin main --rebase
+          git add public/preprocessed_players.json public/trending_footballers.json public/player_news.json
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Update football data" && git push) 
