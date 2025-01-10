@@ -67,18 +67,37 @@ Summary:"""
             generation_config=genai.types.GenerationConfig(
                 temperature=0.7,
                 max_output_tokens=150,
+                safety_settings=[
+                    {
+                        "category": "HARM_CATEGORY_HARASSMENT",
+                        "threshold": "BLOCK_NONE"
+                    },
+                    {
+                        "category": "HARM_CATEGORY_HATE_SPEECH",
+                        "threshold": "BLOCK_NONE"
+                    },
+                    {
+                        "category": "HARM_CATEGORY_SEXUALLY_EXPLICIT",
+                        "threshold": "BLOCK_NONE"
+                    },
+                    {
+                        "category": "HARM_CATEGORY_DANGEROUS_CONTENT",
+                        "threshold": "BLOCK_NONE"
+                    }
+                ]
             )
         )
+        if not response.candidates or response.candidates[0].finish_reason == "SAFETY":
+            print(f"Content filtered by safety system for {player_name}")
+            return f"Recent news available for {player_name}. Please check sports news websites for the latest updates."
+            
         api_duration = time.time() - api_start
         print(f"API call took {api_duration:.2f} seconds")
+        return response.text
+        
     except Exception as e:
         print(f"Error calling Gemini API: {str(e)}")
         return "Unable to generate summary at this time."
-    
-    total_duration = time.time() - start_time
-    print(f"Total summary generation took {total_duration:.2f} seconds")
-    
-    return response.text
 
 def fetch_news_for_player(player_name, topic_title):
     """Fetch news for a specific player using their name and topic title"""
