@@ -248,7 +248,7 @@ export default function TrendingFootballers() {
             duration: 0.3,
             ease: "easeInOut"
           }}
-          className="relative bg-white/95 backdrop-blur-xl rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] p-6 w-[440px] border border-white/20"
+          className="relative bg-white/95 backdrop-blur-xl rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] p-6 w-[420px] border border-white/20"
         >
           <motion.div 
             className="absolute -top-4 left-0 right-0 mx-auto w-fit"
@@ -264,9 +264,7 @@ export default function TrendingFootballers() {
               Live Rankings
             </div>
           </motion.div>
-          <h1 className="text-4xl font-bold text-center mb-2 bg-gradient-to-r from-blue-600 to-indigo-500 text-transparent bg-clip-text">
-            Trending Footballers
-          </h1>
+          <h1 className="text-3xl font-bold text-brand mb-1">Trending Footballers</h1>
           <p className="text-center text-gray-500 text-sm mb-8">Based on search interest in the last 24 hours</p>
           {loading && (
             <ul className="space-y-3">
