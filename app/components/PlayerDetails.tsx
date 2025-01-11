@@ -185,8 +185,10 @@ export default function PlayerDetails({
             </div>
 
             <div className="bg-white/80 rounded-xl p-6 border border-white/40">
-              <h3 className="text-lg font-semibold text-gray-800 mb-3">Latest Summary</h3>
-              <p className="text-gray-600 leading-relaxed">{news.trend_summary}</p>
+              <h3 className="text-lg font-semibold text-gray-800 mb-3">Trending News</h3>
+              <p className="text-gray-600 leading-relaxed hyphens-auto" style={{ wordSpacing: '-1px' }}>
+                {news.trend_summary}
+              </p>
             </div>
           </div>
         ) : (
