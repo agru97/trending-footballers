@@ -71,7 +71,7 @@ function getCountryCode(nationality: string): string {
   return countryCodesReverse[normalizedNationality] || normalizedNationality;
 }
 
-function Sparkline({ data }: { data: number[] }) {
+function Sparkline({ data, className }: { data: number[], className?: string }) {
   const smoothData = data.reduce((acc: number[], val: number, i: number) => {
     if (i < 12) return acc;
     const windowSum = data.slice(i - 12, i).reduce((sum, v) => sum + v, 0);
@@ -153,8 +153,23 @@ export default function TrendingFootballers() {
   const [selectedPlayer, setSelectedPlayer] = useState<Footballer | null>(null)
 
   const handlePlayerClick = (footballer: Footballer) => {
-    setSelectedPlayer(footballer)
-  }
+    // Only add delay for screens that show the plot (xs and larger, but not the smallest screen)
+    if (window.innerWidth >= 375 && window.innerWidth < 768) {  // 375px is 'xs' breakpoint
+      // First trigger the plot animation
+      const listItem = document.querySelector(`[data-player-id="${footballer.player.id}"]`);
+      if (listItem) {
+        listItem.classList.add('group-hover');
+        
+        // Shorter delay to match the plot animation
+        setTimeout(() => {
+          setSelectedPlayer(footballer);
+        }, 500); // Reduced from 1500ms to 800ms to match the plot animation duration
+      }
+    } else {
+      // On smallest screens or larger screens, transition immediately
+      setSelectedPlayer(footballer);
+    }
+  };
 
   useEffect(() => {
     const fetchFootballers = async () => {
@@ -235,8 +250,8 @@ export default function TrendingFootballers() {
   }
 
   return (
-    <div className="min-h-screen w-full bg-brand flex items-center justify-center p-4">
-      <div className="relative w-[440px]">
+    <div className="min-h-screen w-full min-w-[320px] bg-brand flex items-center justify-center p-4">
+      <div className="relative w-[320px] xs:w-[375px] sm:w-[410px]">
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ 
@@ -248,7 +263,7 @@ export default function TrendingFootballers() {
             duration: 0.3,
             ease: "easeInOut"
           }}
-          className="relative bg-white/95 backdrop-blur-xl rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] p-6 w-[420px] border border-white/20"
+          className="relative bg-white/95 backdrop-blur-xl rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] p-6 w-[320px] xs:w-[375px] sm:w-[410px] border border-white/20"
         >
           <motion.div 
             className="absolute -top-4 left-0 right-0 mx-auto w-fit"
@@ -264,8 +279,10 @@ export default function TrendingFootballers() {
               Live Rankings
             </div>
           </motion.div>
-          <h1 className="text-3xl font-bold text-brand mb-1">Trending Footballers</h1>
-          <p className="text-center text-gray-500 text-sm mb-8">Based on search interest in the last 24 hours</p>
+          <div className="text-center">
+            <h1 className="text-3xl font-bold text-brand mb-1">Trending Footballers</h1>
+            <p className="text-gray-500 text-sm mb-8">Based on search interest in the last 24 hours</p>
+          </div>
           {loading && (
             <ul className="space-y-3">
               {[...Array(10)].map((_, i) => (
@@ -278,6 +295,7 @@ export default function TrendingFootballers() {
               {footballers.map((footballer) => (
                 <motion.li
                   key={footballer.player.name}
+                  data-player-id={footballer.player.id}
                   initial={{ opacity: 0, scale: 0.97 }}
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.97 }}
@@ -353,9 +371,12 @@ export default function TrendingFootballers() {
 
                   <div className="relative flex items-center gap-2">
                     {footballer.interest_over_time && (
-                      <div className="w-24 h-8 relative" style={{ transform: 'translate3d(0,0,0)' }}>
+                      <div className="hidden xs:block w-24 h-8 relative" style={{ transform: 'translate3d(0,0,0)' }}>
                         <div className="absolute inset-0">
-                          <Sparkline data={footballer.interest_over_time.values} />
+                          <Sparkline 
+                            data={footballer.interest_over_time.values}
+                            className="sparkline-path"
+                          />
                         </div>
                       </div>
                     )}

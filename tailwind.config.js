@@ -25,6 +25,10 @@ module.exports = {
             'background-position': 'right bottom'
           }
         }
+      },
+      screens: {
+        'xs': '375px',  // For medium phones
+        'sm': '425px'   // For large phones
       }
     },
   },

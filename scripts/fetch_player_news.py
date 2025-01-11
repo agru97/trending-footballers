@@ -5,6 +5,7 @@ from datetime import datetime, timezone
 import os
 import re
 import google.generativeai as genai
+from google.generativeai.types import HarmCategory, HarmBlockThreshold
 
 genai.configure(api_key=os.environ['GOOGLE_API_KEY'])
 MODEL = genai.GenerativeModel('gemini-pro')
@@ -65,29 +66,18 @@ Summary:"""
         response = MODEL.generate_content(
             prompt,
             generation_config=genai.types.GenerationConfig(
-                temperature=0.7,
-                max_output_tokens=150,
-                safety_settings=[
-                    {
-                        "category": "HARM_CATEGORY_HARASSMENT",
-                        "threshold": "BLOCK_NONE"
-                    },
-                    {
-                        "category": "HARM_CATEGORY_HATE_SPEECH",
-                        "threshold": "BLOCK_NONE"
-                    },
-                    {
-                        "category": "HARM_CATEGORY_SEXUALLY_EXPLICIT",
-                        "threshold": "BLOCK_NONE"
-                    },
-                    {
-                        "category": "HARM_CATEGORY_DANGEROUS_CONTENT",
-                        "threshold": "BLOCK_NONE"
-                    }
-                ]
-            )
+                temperature=0.5,
+                max_output_tokens=100
+            ),
+            safety_settings={
+                HarmCategory.HARM_CATEGORY_HATE_SPEECH: HarmBlockThreshold.BLOCK_ONLY_HIGH,
+                HarmCategory.HARM_CATEGORY_HARASSMENT: HarmBlockThreshold.BLOCK_ONLY_HIGH,
+                HarmCategory.HARM_CATEGORY_SEXUALLY_EXPLICIT: HarmBlockThreshold.BLOCK_ONLY_HIGH,
+                HarmCategory.HARM_CATEGORY_DANGEROUS_CONTENT: HarmBlockThreshold.BLOCK_ONLY_HIGH
+            }
         )
-        if not response.candidates or response.candidates[0].finish_reason == "SAFETY":
+        
+        if response.prompt_feedback.block_reason:
             print(f"Content filtered by safety system for {player_name}")
             return f"Recent news available for {player_name}. Please check sports news websites for the latest updates."
             

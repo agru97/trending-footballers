@@ -72,7 +72,7 @@ export default function PlayerDetails({
         delay: 0.15
       }}
       onAnimationComplete={() => setShowChart(true)}
-      className="bg-white/95 backdrop-blur-xl rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] p-6 w-[420px] border border-white/20"
+      className="min-w-[320px] bg-white/95 backdrop-blur-xl rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] p-6 w-[320px] xs:w-[375px] sm:w-[410px] border border-white/20"
     >
       <div className="relative">
         <button
