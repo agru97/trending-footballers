@@ -98,7 +98,7 @@ def fetch_news_for_player(player_name, topic_title):
     
     gn = GNews(
         period='1d',
-        max_results=5,
+        max_results=10,
         exclude_websites=[]
     )
     
@@ -119,13 +119,13 @@ def fetch_news_for_player(player_name, topic_title):
             search_duration = time.time() - search_start
             print(f"Second search took {search_duration:.2f} seconds")
             
-        found_count = len(articles[:5]) if articles else 0
+        found_count = len(articles[:10]) if articles else 0
         print(f"Found {found_count} articles")
         
         total_duration = time.time() - start_time
         print(f"Total news fetch took {total_duration:.2f} seconds")
         
-        return articles[:5] if articles else []
+        return articles[:10] if articles else []
     except Exception as e:
         print(f"Error fetching news for {player_name}: {str(e)}")
         return []
