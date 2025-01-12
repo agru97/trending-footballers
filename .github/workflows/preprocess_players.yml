@@ -1,0 +1,56 @@
+name: Preprocess Players
+
+on:
+  workflow_dispatch:  # Allows manual triggering
+  
+jobs:
+  preprocess:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+          cache: 'pip'
+          
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          
+      - name: Configure git
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          
+      - name: Run preprocessing script
+        env:
+          PROXY_LIST: ${{ secrets.PROXY_LIST }}
+        run: |
+          python scripts/preprocess_players.py
+          
+      - name: Check for changes
+        id: check_changes
+        run: |
+          if [[ -n $(git status --porcelain) ]]; then
+            echo "changes=true" >> $GITHUB_OUTPUT
+          else
+            echo "changes=false" >> $GITHUB_OUTPUT
+          fi
+          
+      - name: Commit and push if changed
+        if: steps.check_changes.outputs.changes == 'true'
+        run: |
+          git add public/preprocessed_players.json
+          git commit -m "Update preprocessed players data"
+          git push
+          
+      - name: Handle Failure
+        if: failure()
+        run: |
+          echo "Preprocessing failed. Check the logs for details."
+          exit 1 

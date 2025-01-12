@@ -252,7 +252,8 @@ def is_name_match(player, suggestion):
                 if player_surname in remaining_text:
                     return True
     
-            return False
+    # Return False if no match found
+    return False
 
 def is_valid_player_type(type_lower):
     """Check if the type indicates an active football player"""
