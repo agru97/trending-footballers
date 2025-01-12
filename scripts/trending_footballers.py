@@ -348,8 +348,6 @@ def run_final_round(players):
     current_group = players[:5]
     challengers = players[5:]
     final_scores = {}
-    best_fifth = None
-    best_fifth_score = -1
     
     # Get initial scores
     scores = get_trends_data(current_group)
@@ -360,13 +358,13 @@ def run_final_round(players):
     
     # Initialize best_fifth with 5th place from initial group
     best_fifth = current_group[4]
-    best_fifth_score = scores[best_fifth['player']['name']]
+    best_fifth_score = scores.get(best_fifth['player']['name'], 0)  # Use .get() with default 0
     
     # Show initial group
     log_message("\nInitial Top 5:", Colors.BLUE)
     for i, player in enumerate(current_group, 1):
         name = player['player']['name']
-        score = scores[name]
+        score = scores.get(name, 0)  # Use .get() with default 0
         team = player['statistics'][0]['team']['name']
         log_message(f"{i}. {name:<20} {score:>3} ({team})", Colors.BLUE)
     
@@ -384,7 +382,7 @@ def run_final_round(players):
         
         # Check if the 5th place (loser) of this round is better than our current best 5th
         current_fifth = comparison_group[4]
-        current_fifth_score = scores[current_fifth['player']['name']]
+        current_fifth_score = scores.get(current_fifth['player']['name'], 0)  # Use .get() with default 0
         
         if current_fifth_score > best_fifth_score:
             best_fifth = current_fifth
