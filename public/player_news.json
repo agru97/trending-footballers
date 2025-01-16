@@ -1,74 +1,36 @@
 {
-  "updated_at": "2025-01-15T23:52:07.781987+00:00",
+  "updated_at": "2025-01-16T12:14:08.069411+00:00",
   "player_news": [
-    {
-      "player_id": 386828,
-      "player_name": "Lamine Yamal Nasraoui Ebana",
-      "trending_score": 100.0,
-      "trend_summary": "In a commanding performance, 19-year-old Lamine Yamal led Barcelona to a 5-1 victory over Real Betis in the Copa del Rey round of 16, marking the first time in his career that he has managed a personal feat. Yamal's brilliance has drawn praise from across the footballing world, solidifying his status as a rising star for Barcelona.",
-      "news": [
-        {
-          "title": "Lamine Yamal managed a personal feat for the first time in his career in Barcelona 5-1 Real Betis",
-          "description": "Lamine Yamal managed a personal feat for the first time in his career in Barcelona 5-1 Real Betis  Yahoo Canada Sports",
-          "date": "Wed, 15 Jan 2025 22:36:00 GMT"
-        },
-        {
-          "title": "\"It is a joy, not only for those of us from Barcelona, for all of us who like football\"",
-          "description": "\"It is a joy, not only for those of us from Barcelona, for all of us who like football\"",
-          "date": "Wed, 15 Jan 2025 23:14:00 GMT"
-        },
-        {
-          "title": "Barcelona's Indirect Message to Vinicius Featuring Lamine Yamal",
-          "description": "Barcelona's Indirect Message to Vinicius Featuring Lamine Yamal  FootBoom",
-          "date": "Wed, 15 Jan 2025 23:04:14 GMT"
-        },
-        {
-          "title": "Lamine Yamal dazzles as Barcelona smash Betis to move into Copa del Rey quarters",
-          "description": "Lamine Yamal dazzles as Barcelona smash Betis to move into Copa del Rey quarters  Flashscore.com",
-          "date": "Wed, 15 Jan 2025 22:22:48 GMT"
-        },
-        {
-          "title": "European football: Barcelona hit five but Lyon are humbled in Coupe de France",
-          "description": "European football: Barcelona hit five but Lyon are humbled in Coupe de France  The Guardian",
-          "date": "Wed, 15 Jan 2025 23:32:00 GMT"
-        },
-        {
-          "title": "Barcelona's Future Star: Lamine Yamal Shines in Copa del Rey",
-          "description": "Barcelona's Future Star: Lamine Yamal Shines in Copa del Rey  Devdiscourse",
-          "date": "Wed, 15 Jan 2025 23:06:33 GMT"
-        },
-        {
-          "title": "Barcelona 5-1 Real Betis Highlights: Yamal shines in commanding Barca win in Copa Del Rey round of 16",
-          "description": "Barcelona 5-1 Real Betis Highlights: Yamal shines in commanding Barca win in Copa Del Rey round of 16  Sportstar",
-          "date": "Wed, 15 Jan 2025 22:07:30 GMT"
-        },
-        {
-          "title": "Soccer-Yamal shines as Barcelona thrash Betis 5-1 to reach cup quarters",
-          "description": "Soccer-Yamal shines as Barcelona thrash Betis 5-1 to reach cup quarters  MSN",
-          "date": "Wed, 15 Jan 2025 23:49:44 GMT"
-        },
-        {
-          "title": "Barcelona 5-1 Real Betis: Lamine Yamal stars as Barca reach Copa del Rey quarter-finals",
-          "description": "Barcelona 5-1 Real Betis: Lamine Yamal stars as Barca reach Copa del Rey quarter-finals  bbc.co.uk",
-          "date": "Wed, 15 Jan 2025 22:33:09 GMT"
-        },
-        {
-          "title": "Yamal shines as Barcelona thrash Betis 5-1 to reach cup quarters",
-          "description": "Yamal shines as Barcelona thrash Betis 5-1 to reach cup quarters  The Straits Times",
-          "date": "Wed, 15 Jan 2025 23:09:00 GMT"
-        }
-      ]
-    },
     {
       "player_id": 328089,
       "player_name": "Archie James Francis Gray",
-      "trending_score": 99.0,
-      "trend_summary": "In a pulsating North London Derby, Tottenham's Archie Gray shone amidst a disappointing display, impressing with his performance against Arsenal. Despite Tottenham's defeat, Gray's standout display has earned him praise from fans and media alike, cementing his status as a rising star in the Premier League.",
+      "trending_score": 100.0,
+      "trend_summary": "Tottenham's Archie Gray has impressed in recent matches, earning praise from Arsenal's Declan Rice. Despite Tottenham's loss to Arsenal in the North London derby, Gray's performance stood out, with his skills impressing both fans and pundits. The young midfielder's consistent performances have sparked transfer rumors, with several clubs reportedly interested in acquiring his services.",
       "news": [
+        {
+          "title": "Tottenham news: Aaron Lennon on Arsenal loss and injury problems",
+          "description": "Tottenham news: Aaron Lennon on Arsenal loss and injury problems  BBC.com",
+          "date": "Thu, 16 Jan 2025 08:10:34 GMT"
+        },
         {
           "title": "Tottenham player ratings vs Arsenal: Yves Bissouma and Pape Matar Sarr struggle; Archie Gray impresses again",
           "description": "Tottenham player ratings vs Arsenal: Yves Bissouma and Pape Matar Sarr struggle; Archie Gray impresses again  Evening Standard",
-          "date": "Wed, 15 Jan 2025 22:06:48 GMT"
+          "date": "Thu, 16 Jan 2025 09:24:05 GMT"
+        },
+        {
+          "title": "Ange Postecoglou says he wants two Tottenham players to be 'disappointed' after losing to Arsenal",
+          "description": "Ange Postecoglou says he wants two Tottenham players to be 'disappointed' after losing to Arsenal  TBR Football",
+          "date": "Thu, 16 Jan 2025 08:55:00 GMT"
+        },
+        {
+          "title": "Arsenal star Declan Rice picks out Tottenham trio in interview straight after derby win",
+          "description": "Arsenal star Declan Rice picks out Tottenham trio in interview straight after derby win  The Mirror",
+          "date": "Thu, 16 Jan 2025 04:31:02 GMT"
+        },
+        {
+          "title": "Tottenham player ratings vs Arsenal: Yves Bissouma and Pape Matar Sarr struggle; Archie Gray impresses again",
+          "description": "Tottenham player ratings vs Arsenal: Yves Bissouma and Pape Matar Sarr struggle; Archie Gray impresses again  MSN",
+          "date": "Wed, 15 Jan 2025 23:30:28 GMT"
         },
         {
           "title": "Unique record instantly broken at the start of north London derby between Arsenal and Tottenham...",
@@ -76,14 +38,14 @@
           "date": "Wed, 15 Jan 2025 20:06:29 GMT"
         },
         {
-          "title": "Tottenham fans name the only three players who deserve credit after their North London derby defeat to Arsenal",
-          "description": "Tottenham fans name the only three players who deserve credit after their North London derby defeat to Arsenal  TBR Football",
-          "date": "Wed, 15 Jan 2025 22:16:48 GMT"
-        },
-        {
           "title": "PHOTO GALLERY: Arsenal close on Liverpool, five-star Bayern go clear on top",
           "description": "PHOTO GALLERY: Arsenal close on Liverpool, five-star Bayern go clear on top  Ahram Online",
-          "date": "Wed, 15 Jan 2025 22:13:25 GMT"
+          "date": "Wed, 15 Jan 2025 22:11:39 GMT"
+        },
+        {
+          "title": "Arsenal 2-1 Tottenham: Ange Postecoglou 'hoping for hurt' as Lucas Bergvall performance assessed",
+          "description": "Arsenal 2-1 Tottenham: Ange Postecoglou 'hoping for hurt' as Lucas Bergvall performance assessed  Sports Mole",
+          "date": "Thu, 16 Jan 2025 00:00:00 GMT"
         },
         {
           "title": "Bayern Munich Signs American Midfielder Bajung Darboe From LAFC",
@@ -91,72 +53,85 @@
           "date": "Wed, 15 Jan 2025 19:20:33 GMT"
         },
         {
-          "title": "Arsenal v Spurs Tips: Our 6/1 Bet Builder on Wednesday",
-          "description": "Arsenal v Spurs Tips: Our 6/1 Bet Builder on Wednesday  Paddy Power News",
-          "date": "Wed, 15 Jan 2025 16:59:54 GMT"
-        },
-        {
-          "title": "Football transfer rumours: Salah agrees Liverpool exit; Man Utd want €70m Garnacho sale",
-          "description": "Football transfer rumours: Salah agrees Liverpool exit; Man Utd want €70m Garnacho sale  Bundle",
-          "date": "Wed, 15 Jan 2025 02:41:58 GMT"
-        },
-        {
-          "title": "FA Cup: Ange Postecoglou praises 'calm' Tottenham after edging past non-league Tamworth",
-          "description": "FA Cup: Ange Postecoglou praises 'calm' Tottenham after edging past non-league Tamworth  Flashscore.com",
-          "date": "Wed, 15 Jan 2025 11:42:19 GMT"
-        },
-        {
-          "title": "Ange rails at Spurs' 'unacceptable' derby showing",
-          "description": "Ange rails at Spurs' 'unacceptable' derby showing  ESPN",
-          "date": "Wed, 15 Jan 2025 23:02:35 GMT"
-        },
-        {
-          "title": "LIVE: Arsenal vs Tottenham Hotspur – English Premier League",
-          "description": "LIVE: Arsenal vs Tottenham Hotspur – English Premier League  Al Jazeera English",
-          "date": "Wed, 15 Jan 2025 19:55:23 GMT"
+          "title": "Arsenal star Declan Rice names the three Tottenham players who've really impressed him this season",
+          "description": "Arsenal star Declan Rice names the three Tottenham players who've really impressed him this season  TBR Football",
+          "date": "Thu, 16 Jan 2025 06:35:00 GMT"
         }
       ]
     },
     {
-      "player_id": 340279,
-      "player_name": "Vitor Hugo Roque Ferreira",
-      "trending_score": 79.0,
-      "trend_summary": "Vitor Roque's dazzling display in Barcelona's 5-1 Copa del Rey triumph over Real Betis has ignited transfer speculation, with reports suggesting the Brazilian striker is eager to depart the Catalan giants. Despite his impressive performance, which included an assist, Roque's future remains uncertain as Barcelona weighs up its options amidst interest from several top European clubs.",
+      "player_id": 386828,
+      "player_name": "Lamine Yamal Nasraoui Ebana",
+      "trending_score": 87.0,
+      "trend_summary": "Lamine Yamal, the 17-year-old Barcelona prodigy, has emerged as a global brand ambassador for OPPO and has impressed in the Copa del Rey, scoring a goal and showcasing his skills in a 5-1 victory over Real Betis. Yamal's performance has drawn comparisons to Lionel Messi and Neymar, with former Barcelona players and fans hailing him as a blend of the two legendary forwards.",
       "news": [
         {
-          "title": "FC Barcelona 5-1 Betis: A football exhibition, a 'manita' and into the quarterfinals of the Cup",
-          "description": "FC Barcelona 5-1 Betis: A football exhibition, a 'manita' and into the quarterfinals of the Cup  FC Barcelona Noticias",
-          "date": "Wed, 15 Jan 2025 22:10:00 GMT"
+          "title": "Make Your Moment: OPPO Announces Lamine Yamal as Global Brand Ambassador",
+          "description": "Make Your Moment: OPPO Announces Lamine Yamal as Global Brand Ambassador",
+          "date": "Thu, 16 Jan 2025 09:21:05 GMT"
         },
         {
-          "title": "Barcelona 5-1 Real Betis: Yamal inspires dominant cup win",
-          "description": "Barcelona 5-1 Real Betis: Yamal inspires dominant cup win  FotMob",
-          "date": "Wed, 15 Jan 2025 22:37:06 GMT"
+          "title": "Lamine Yamal: A New Number on His Barça Jersey",
+          "description": "Lamine Yamal: A New Number on His Barça Jersey  FootBoom",
+          "date": "Thu, 16 Jan 2025 12:02:45 GMT"
         },
         {
-          "title": "Barcelona 5-1 Real Betis: Lamine Yamal stars as Barca reach Copa del Rey quarter-finals",
-          "description": "Barcelona 5-1 Real Betis: Lamine Yamal stars as Barca reach Copa del Rey quarter-finals  bbc.co.uk",
-          "date": "Wed, 15 Jan 2025 22:33:09 GMT"
+          "title": "Lamine Yamal managed a personal feat for the first time in his career in Barcelona 5-1 Real Betis",
+          "description": "Lamine Yamal managed a personal feat for the first time in his career in Barcelona 5-1 Real Betis  Yahoo Canada Sports",
+          "date": "Wed, 15 Jan 2025 22:36:00 GMT"
         },
         {
-          "title": "Yamal shines as Barcelona thrash Betis 5-1 to reach cup quarters",
-          "description": "Yamal shines as Barcelona thrash Betis 5-1 to reach cup quarters  The Straits Times",
-          "date": "Wed, 15 Jan 2025 23:09:00 GMT"
+          "title": "\"Plays like Messi and Neymar at the same time\", \"He is the chosen one\"",
+          "description": "\"Plays like Messi and Neymar at the same time\", \"He is the chosen one\"",
+          "date": "Thu, 16 Jan 2025 05:11:00 GMT"
         },
         {
-          "title": "Super Champion Barça Aims for Another Cup Against Betis",
-          "description": "Super Champion Barça Aims for Another Cup Against Betis  FootBoom",
-          "date": "Wed, 15 Jan 2025 06:20:43 GMT"
+          "title": "Former FC Barcelona Forward Hails 17-Year-Old Wonder Kid Lamine Yamal as Blend of Lionel Messi and Neymar Jr",
+          "description": "Former FC Barcelona Forward Hails 17-Year-Old Wonder Kid Lamine Yamal as Blend of Lionel Messi and Neymar Jr  SportsTak",
+          "date": "Thu, 16 Jan 2025 02:39:45 GMT"
         },
         {
-          "title": "Now It's Time for the Cup, by Víctor Muñoz",
-          "description": "Now It's Time for the Cup, by Víctor Muñoz  FootBoom",
-          "date": "Wed, 15 Jan 2025 06:20:45 GMT"
+          "title": "Copa del Rey: Lamine Yamal stars as Barcelona dominate Real Betis to book quarter-final spot",
+          "description": "Copa del Rey: Lamine Yamal stars as Barcelona dominate Real Betis to book quarter-final spot  The Times of India",
+          "date": "Thu, 16 Jan 2025 03:40:00 GMT"
         },
         {
-          "title": "Barcelona vs Real Betis summary: score, stats, goals and highlights",
-          "description": "Barcelona vs Real Betis summary: score, stats, goals and highlights",
-          "date": "Wed, 15 Jan 2025 22:00:37 GMT"
+          "title": "Neymar's Message to Lamine Yamal: 'You're Very...'",
+          "description": "Neymar's Message to Lamine Yamal: 'You're Very...'  FootBoom",
+          "date": "Thu, 16 Jan 2025 10:03:40 GMT"
+        },
+        {
+          "title": "WATCH: Lamine Yamal rounds off spectacular performance with goal as Barcelona make it 5-0",
+          "description": "WATCH: Lamine Yamal rounds off spectacular performance with goal as Barcelona make it 5-0  Football Espana",
+          "date": "Wed, 15 Jan 2025 21:45:59 GMT"
+        },
+        {
+          "title": "\"It is a joy, not only for those of us from Barcelona, for all of us who like football\"",
+          "description": "\"It is a joy, not only for those of us from Barcelona, for all of us who like football\"",
+          "date": "Wed, 15 Jan 2025 23:14:00 GMT"
+        },
+        {
+          "title": "Football: Soccer-Yamal shines as Barcelona thrash Betis 5-1 to reach cup quarters",
+          "description": "Football: Soccer-Yamal shines as Barcelona thrash Betis 5-1 to reach cup quarters  The Star Online",
+          "date": "Wed, 15 Jan 2025 22:27:00 GMT"
+        }
+      ]
+    },
+    {
+      "player_id": 296667,
+      "player_name": "Pablo Martín Páez Gavira",
+      "trending_score": 76.0,
+      "trend_summary": "Barcelona's Gavi has sparked headlines after declaring his teammate Lamine Yamal the \"best in the world after Messi,\" following a standout performance in the Copa del Rey victory over Real Betis. Amid transfer speculation, Gavi confirmed that Yamal \"wants to\" leave Barcelona, while also acknowledging Dani Olmo's impressive display as a \"false 9\" in the same match.",
+      "news": [
+        {
+          "title": "Gavi: Barcelona's Yamal best in world after Messi",
+          "description": "Gavi: Barcelona's Yamal best in world after Messi  ESPN",
+          "date": "Thu, 16 Jan 2025 00:12:00 GMT"
+        },
+        {
+          "title": "FC Barcelona Teammate Calls Lamine Yamal ‘Best In The World’, ‘Behind Only Messi’ After Betis Masterclass",
+          "description": "FC Barcelona Teammate Calls Lamine Yamal ‘Best In The World’, ‘Behind Only Messi’ After Betis Masterclass  Forbes",
+          "date": "Wed, 15 Jan 2025 23:56:23 GMT"
         },
         {
           "title": "“He wants to…” – Gavi confirms transfer reports on Barcelona teammate",
@@ -164,23 +139,20 @@
           "date": "Wed, 15 Jan 2025 22:41:55 GMT"
         },
         {
-          "title": "Barcelona 5-1 Real Betis: Player Ratings From a Dominant Copa Del Ray Performance",
-          "description": "Barcelona 5-1 Real Betis: Player Ratings From a Dominant Copa Del Ray Performance  OneFootball",
-          "date": "Wed, 15 Jan 2025 22:24:07 GMT"
+          "title": "Gavi calls Lamine Yamali the best player in the world, avoids comparison with Messi",
+          "description": "Gavi calls Lamine Yamali the best player in the world, avoids comparison with Messi  Telegrafi",
+          "date": "Thu, 16 Jan 2025 08:03:42 GMT"
         },
         {
-          "title": "FC Barcelona vs Real Betis Lineups, Starting XIs for Copa del Rey Game",
-          "description": "FC Barcelona vs Real Betis Lineups, Starting XIs for Copa del Rey Game  GIVEMESPORT",
-          "date": "Wed, 15 Jan 2025 18:51:00 GMT"
-        }
-      ]
-    },
-    {
-      "player_id": 296667,
-      "player_name": "Pablo Martín Páez Gavira",
-      "trending_score": 74.0,
-      "trend_summary": "Barcelona's Gavi, playing as a 'false 9' against Real Betis in the Copa del Rey, contributed two assists in a 5-1 victory, solidifying his impressive start to 2023. Despite scoring a goal, Gavi refrained from celebrating out of respect for his former club.",
-      "news": [
+          "title": "Barcelona star Gavi names only player who is ahead of Lamine Yamal in ‘best in the world’ debate right now",
+          "description": "Barcelona star Gavi names only player who is ahead of Lamine Yamal in ‘best in the world’ debate right now  Sportskeeda",
+          "date": "Thu, 16 Jan 2025 06:19:00 GMT"
+        },
+        {
+          "title": "Gavi \"really enjoyed\" Barcelona Copa triumph over Betis",
+          "description": "Gavi \"really enjoyed\" Barcelona Copa triumph over Betis  Tribal Football",
+          "date": "Thu, 16 Jan 2025 01:49:34 GMT"
+        },
         {
           "title": "Dani Olmo shines as a 'false 9' with two assists against Betis",
           "description": "Dani Olmo shines as a 'false 9' with two assists against Betis  FC Barcelona Noticias",
@@ -192,57 +164,95 @@
           "date": "Wed, 15 Jan 2025 20:34:29 GMT"
         },
         {
-          "title": "WATCH: Barcelona strike early against Real Betis as Gavi nets second goal of 2025",
-          "description": "WATCH: Barcelona strike early against Real Betis as Gavi nets second goal of 2025  Football Espana",
-          "date": "Wed, 15 Jan 2025 20:10:56 GMT"
+          "title": "Yamal drives dominant Barca past Betis into quarters",
+          "description": "Yamal drives dominant Barca past Betis into quarters  Prothom Alo English",
+          "date": "Thu, 16 Jan 2025 04:26:27 GMT"
         },
         {
           "title": "The Counter-Report of Barça-Betis: Olmo and Gavi, Two False Nines",
           "description": "The Counter-Report of Barça-Betis: Olmo and Gavi, Two False Nines  FootBoom",
           "date": "Wed, 15 Jan 2025 22:22:12 GMT"
+        }
+      ]
+    },
+    {
+      "player_id": 340279,
+      "player_name": "Vitor Hugo Roque Ferreira",
+      "trending_score": 73.0,
+      "trend_summary": "Vitor Roque, on loan from Barcelona to Real Betis, scored against his parent club in the Copa del Rey Round of 16, with the Catalan giants ultimately securing a 5-1 victory to advance to the quarterfinals. Despite his goal, Roque expressed admiration for Barcelona, calling them \"the best team in the world.\" Amidst the off-field news, Roque's impressive performances have reportedly caught the attention of an unnamed Premier League club.",
+      "news": [
+        {
+          "title": "Vitor Roque labels Barcelona ‘the best team in the world’ after scoring in Real Betis’ Copa defeat",
+          "description": "Vitor Roque labels Barcelona ‘the best team in the world’ after scoring in Real Betis’ Copa defeat  Yahoo Canada Sports",
+          "date": "Wed, 15 Jan 2025 22:13:00 GMT"
         },
         {
-          "title": "Yamal shines as Barcelona thrash Betis 5-1 to reach cup quarters",
-          "description": "Yamal shines as Barcelona thrash Betis 5-1 to reach cup quarters  The Straits Times",
-          "date": "Wed, 15 Jan 2025 23:09:00 GMT"
+          "title": "Vitor Roque, proud to score a goal \"against the best team in the world\"",
+          "description": "Vitor Roque, proud to score a goal \"against the best team in the world\"  FC Barcelona Noticias",
+          "date": "Thu, 16 Jan 2025 00:17:00 GMT"
         },
         {
-          "title": "FC Barcelona vs Betis: Summary, goals, and best plays from the Copa del Rey match 24/25",
-          "description": "FC Barcelona vs Betis: Summary, goals, and best plays from the Copa del Rey match 24/25  FC Barcelona Noticias",
-          "date": "Wed, 15 Jan 2025 21:15:47 GMT"
+          "title": "The Premier League club that is interested in Vitor Roque",
+          "description": "The Premier League club that is interested in Vitor Roque  fichajes.net",
+          "date": "Thu, 16 Jan 2025 08:38:00 GMT"
         },
         {
-          "title": "WATCH: Jules Kounde doubles Barcelona advantage over Real Betis",
-          "description": "WATCH: Jules Kounde doubles Barcelona advantage over Real Betis  Football Espana",
-          "date": "Wed, 15 Jan 2025 20:33:35 GMT"
+          "title": "Barcelona star's wife demands divorce over DOG FOOD",
+          "description": "Barcelona star's wife demands divorce over DOG FOOD  FootballTransfers",
+          "date": "Thu, 16 Jan 2025 11:15:00 GMT"
         },
         {
-          "title": "£58.9m player now agrees new contract just days after Arsenal were about to bid",
-          "description": "£58.9m player now agrees new contract just days after Arsenal were about to bid  TBR Football",
-          "date": "Wed, 15 Jan 2025 14:15:00 GMT"
+          "title": "Real Betis",
+          "description": "Real Betis",
+          "date": "Thu, 16 Jan 2025 11:52:20 GMT"
         },
         {
-          "title": "FC Barcelona 5-1 Betis: A football exhibition, a 'manita' and into the quarterfinals of the Cup",
-          "description": "FC Barcelona 5-1 Betis: A football exhibition, a 'manita' and into the quarterfinals of the Cup  FC Barcelona Noticias",
-          "date": "Wed, 15 Jan 2025 22:10:00 GMT"
+          "title": "WATCH: Vitor Roque scores against parent club Barcelona as Real Betis score consolation",
+          "description": "WATCH: Vitor Roque scores against parent club Barcelona as Real Betis score consolation  Football Espana",
+          "date": "Wed, 15 Jan 2025 21:54:04 GMT"
+        },
+        {
+          "title": "Barcelona Blitzes Real Betis 5-1 to Storm into Copa del Rey Quarterfinals",
+          "description": "Barcelona Blitzes Real Betis 5-1 to Storm into Copa del Rey Quarterfinals  FootBoom",
+          "date": "Thu, 16 Jan 2025 12:08:43 GMT"
+        },
+        {
+          "title": "Barcelona 5-1 Real Betis: Lamine Yamal stars as Barca reach Copa del Rey quarter-finals",
+          "description": "Barcelona 5-1 Real Betis: Lamine Yamal stars as Barca reach Copa del Rey quarter-finals  BBC",
+          "date": "Thu, 16 Jan 2025 10:35:26 GMT"
         },
         {
           "title": "Barcelona 5-1 Real Betis: Yamal inspires dominant cup win",
           "description": "Barcelona 5-1 Real Betis: Yamal inspires dominant cup win  FotMob",
           "date": "Wed, 15 Jan 2025 22:37:06 GMT"
+        },
+        {
+          "title": "Goals and summary of Barcelona 5-1 Betis in Copa del Rey",
+          "description": "Goals and summary of Barcelona 5-1 Betis in Copa del Rey  VAVEL.com",
+          "date": "Wed, 15 Jan 2025 22:00:00 GMT"
         }
       ]
     },
     {
       "player_id": 1257,
       "player_name": "Jules Olivier Koundé",
-      "trending_score": 69.0,
-      "trend_summary": "Jules Koundé's stellar performance for Barcelona in the Copa del Rey match against Real Betis saw him score two goals, including the second that doubled their lead. Despite a controversial offside call that denied him a hat-trick, Koundé's goals helped secure a 5-1 victory and a place in the quarterfinals.",
+      "trending_score": 63.0,
+      "trend_summary": "In a dominant Copa del Rey performance, Barcelona's Jules Koundé, hailed as the world's top right-back, scored a stunning goal and assisted another in a 5-1 victory over Real Betis. Despite a controversial offside call that denied Barcelona an additional goal, Koundé's performance solidified his status as a key player for the Catalan giants.",
       "news": [
+        {
+          "title": "Jules Koundé: The best right-back in the world destroys Betis with a stunning goal",
+          "description": "Jules Koundé: The best right-back in the world destroys Betis with a stunning goal  FC Barcelona Noticias",
+          "date": "Wed, 15 Jan 2025 23:57:00 GMT"
+        },
         {
           "title": "WATCH: Jules Kounde doubles Barcelona advantage over Real Betis",
           "description": "WATCH: Jules Kounde doubles Barcelona advantage over Real Betis  Football Espana",
           "date": "Wed, 15 Jan 2025 20:33:35 GMT"
+        },
+        {
+          "title": "FC Barcelona 5-1 Betis: High five... again!",
+          "description": "FC Barcelona 5-1 Betis: High five... again!  FC Barcelona",
+          "date": "Wed, 15 Jan 2025 22:11:34 GMT"
         },
         {
           "title": "📸 Have Barcelona suffered the tightest offside call this season? 😅",
@@ -250,14 +260,24 @@
           "date": "Wed, 15 Jan 2025 21:21:14 GMT"
         },
         {
+          "title": "Photo: Barcelona were denied a goal by maybe the tightest offside call ever vs Real Betis",
+          "description": "Photo: Barcelona were denied a goal by maybe the tightest offside call ever vs Real Betis  Yahoo Canada Sports",
+          "date": "Wed, 15 Jan 2025 21:45:00 GMT"
+        },
+        {
+          "title": "Barcelona 5-1 Real Betis: Player Ratings From a Dominant Copa Del Rey Performance",
+          "description": "Barcelona 5-1 Real Betis: Player Ratings From a Dominant Copa Del Rey Performance  Sports Illustrated",
+          "date": "Wed, 15 Jan 2025 22:13:59 GMT"
+        },
+        {
           "title": "Lamine's Masterclass with a Marvelous Assist to Koundé",
           "description": "Lamine's Masterclass with a Marvelous Assist to Koundé  FootBoom",
           "date": "Wed, 15 Jan 2025 22:12:16 GMT"
         },
         {
-          "title": "FC Barcelona vs Real Betis: The most just (and unjust) offside of the year",
-          "description": "FC Barcelona vs Real Betis: The most just (and unjust) offside of the year  FC Barcelona Noticias",
-          "date": "Wed, 15 Jan 2025 21:57:58 GMT"
+          "title": "Yamal drives dominant Barca past Betis into quarters",
+          "description": "Yamal drives dominant Barca past Betis into quarters  Prothom Alo English",
+          "date": "Thu, 16 Jan 2025 04:26:27 GMT"
         },
         {
           "title": "WATCH: Jules Kounde doubles up as Barcelona score third goal before half time",
@@ -265,29 +285,9 @@
           "date": "Wed, 15 Jan 2025 20:56:32 GMT"
         },
         {
-          "title": "Yamal shines as Barcelona thrash Betis 5-1 to reach cup quarters",
-          "description": "Yamal shines as Barcelona thrash Betis 5-1 to reach cup quarters  The Straits Times",
-          "date": "Wed, 15 Jan 2025 23:09:00 GMT"
-        },
-        {
-          "title": "FC Barcelona 5-1 Betis: A football exhibition, a 'manita' and into the quarterfinals of the Cup",
-          "description": "FC Barcelona 5-1 Betis: A football exhibition, a 'manita' and into the quarterfinals of the Cup  FC Barcelona Noticias",
-          "date": "Wed, 15 Jan 2025 22:10:00 GMT"
-        },
-        {
-          "title": "WATCH: Super sub Ferran Torres scores Barcelona’s fourth against Real Betis",
-          "description": "WATCH: Super sub Ferran Torres scores Barcelona’s fourth against Real Betis  Football Espana",
-          "date": "Wed, 15 Jan 2025 21:35:47 GMT"
-        },
-        {
-          "title": "Barcelona reaches Copa del Rey quarterfinals with 5-1 rout of Real Betis. Atletico also advances",
-          "description": "Barcelona reaches Copa del Rey quarterfinals with 5-1 rout of Real Betis. Atletico also advances  Bluefield Daily Telegraph",
-          "date": "Wed, 15 Jan 2025 22:49:43 GMT"
-        },
-        {
-          "title": "Lamine Yamal managed a personal feat for the first time in his career in Barcelona 5-1 Real Betis",
-          "description": "Lamine Yamal managed a personal feat for the first time in his career in Barcelona 5-1 Real Betis  Yahoo Canada Sports",
-          "date": "Wed, 15 Jan 2025 22:36:00 GMT"
+          "title": "FC Barcelona vs Real Betis: The most just (and unjust) offside of the year",
+          "description": "FC Barcelona vs Real Betis: The most just (and unjust) offside of the year  FC Barcelona Noticias",
+          "date": "Wed, 15 Jan 2025 21:57:00 GMT"
         }
       ]
     }
