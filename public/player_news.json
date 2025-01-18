@@ -1,74 +1,26 @@
 {
-  "updated_at": "2025-01-17T23:59:08.804274+00:00",
+  "updated_at": "2025-01-18T12:12:59.824898+00:00",
   "player_news": [
-    {
-      "player_id": 1100,
-      "player_name": "Erling Braut Haaland",
-      "trending_score": 100.0,
-      "trend_summary": "Erling Haaland has committed his long-term future to Manchester City, signing a remarkable 10-year contract that is reportedly one of the most lucrative in sports history. The Norwegian striker, who joined City from Borussia Dortmund in the summer of 2022, has been in sensational form for the Premier League champions, scoring 32 goals in 31 appearances across all competitions.",
-      "news": [
-        {
-          "title": "Here To Stay: Haaland signs new 10-year City contract!",
-          "description": "Here To Stay: Haaland signs new 10-year City contract!  Manchester City FC",
-          "date": "Fri, 17 Jan 2025 09:00:00 GMT"
-        },
-        {
-          "title": "Haaland and Manchester City agree new 10-year contract",
-          "description": "Haaland and Manchester City agree new 10-year contract  Al Jazeera English",
-          "date": "Fri, 17 Jan 2025 09:49:40 GMT"
-        },
-        {
-          "title": "Erling Haaland signs huge 10-year contract with Manchester City",
-          "description": "Erling Haaland signs huge 10-year contract with Manchester City  CNN",
-          "date": "Fri, 17 Jan 2025 11:45:00 GMT"
-        },
-        {
-          "title": "Report: Erling Haaland's Man City Contract Among 'Most Lucrative' in Sports History",
-          "description": "Report: Erling Haaland's Man City Contract Among 'Most Lucrative' in Sports History  Bleacher Report",
-          "date": "Fri, 17 Jan 2025 14:03:45 GMT"
-        },
-        {
-          "title": "Haaland’s record-breaking deal is a coup but what happens if City are relegated?",
-          "description": "Haaland’s record-breaking deal is a coup but what happens if City are relegated?",
-          "date": "Fri, 17 Jan 2025 22:39:00 GMT"
-        },
-        {
-          "title": "Transfer news live updates: January window tracker and today’s done deals",
-          "description": "Transfer news live updates: January window tracker and today’s done deals",
-          "date": "Fri, 17 Jan 2025 22:30:25 GMT"
-        },
-        {
-          "title": "Football fans all say the same thing as Erling Haaland signs incredible nine-and-a-half-year deal at Man City to commit future to the club until 2034",
-          "description": "Football fans all say the same thing as Erling Haaland signs incredible nine-and-a-half-year deal at Man City to commit future to the club until 2034  MSN",
-          "date": "Fri, 17 Jan 2025 16:17:54 GMT"
-        },
-        {
-          "title": "Erling Haaland signs 10-year contract with Manchester City",
-          "description": "Erling Haaland signs 10-year contract with Manchester City  Financial Times",
-          "date": "Fri, 17 Jan 2025 09:51:59 GMT"
-        },
-        {
-          "title": "Erling Haaland signs '10-year' contract at Man City: Salary, clauses and what it means for Pep Guardiola",
-          "description": "Erling Haaland signs '10-year' contract at Man City: Salary, clauses and what it means for Pep Guardiola  Sporting News",
-          "date": "Fri, 17 Jan 2025 10:00:00 GMT"
-        },
-        {
-          "title": "5 style moments that crowned Erling Haaland as football's most daring dresser",
-          "description": "5 style moments that crowned Erling Haaland as football's most daring dresser  HELLO!",
-          "date": "Fri, 17 Jan 2025 15:25:32 GMT"
-        }
-      ]
-    },
     {
       "player_id": 81573,
       "player_name": "Omar Khaled Mohamed Abd Elsala Marmoush",
-      "trending_score": 85.0,
-      "trend_summary": "Amidst speculation of a transfer to Manchester City, Omar Marmoush was notably omitted from Eintracht Frankfurt's squad for their victory over Borussia Dortmund in the Bundesliga. The Egyptian winger's departure from Frankfurt seems imminent, with sources claiming that details of his contract with the Premier League giants have been finalized.",
+      "trending_score": 100.0,
+      "trend_summary": "Omar Marmoush, the Egyptian forward who has been linked with a move to Manchester City, was left out of Eintracht Frankfurt's squad for their Bundesliga match against Borussia Dortmund, fueling speculation that a transfer is imminent. According to reports, City and Frankfurt are in advanced negotiations for the 23-year-old, who has impressed with his pace, direct running, and ability to create chances.",
       "news": [
+        {
+          "title": "What Omar Marmoush brings to Manchester City: Lethal on the break, runs behind and a passing option",
+          "description": "What Omar Marmoush brings to Manchester City: Lethal on the break, runs behind and a passing option",
+          "date": "Fri, 17 Jan 2025 19:18:36 GMT"
+        },
         {
           "title": "Details of Omar Marmoush’s Manchester City contract",
           "description": "Details of Omar Marmoush’s Manchester City contract  Yahoo Sports",
           "date": "Fri, 17 Jan 2025 17:23:00 GMT"
+        },
+        {
+          "title": "Omar Marmoush: Man City-bound star left out of Frankfurt squad",
+          "description": "Omar Marmoush: Man City-bound star left out of Frankfurt squad  ESPN",
+          "date": "Sat, 18 Jan 2025 00:54:12 GMT"
         },
         {
           "title": "Frankfurt leaves out Omar Marmoush and beats struggling Dortmund in the Bundesliga",
@@ -76,62 +28,67 @@
           "date": "Fri, 17 Jan 2025 21:51:25 GMT"
         },
         {
-          "title": "Omar Marmoush: Man City-bound star left out of Frankfurt squad",
-          "description": "Omar Marmoush: Man City-bound star left out of Frankfurt squad  ESPN",
-          "date": "Fri, 17 Jan 2025 19:58:39 GMT"
+          "title": "Club confirms Omar Marmoush exit inches closer as Man City reportedly reaches 'verbal agreement'",
+          "description": "Club confirms Omar Marmoush exit inches closer as Man City reportedly reaches 'verbal agreement'  Sporting News",
+          "date": "Sat, 18 Jan 2025 05:33:22 GMT"
         },
         {
-          "title": "'Is this farewell!?'",
-          "description": "'Is this farewell!?'",
-          "date": "Fri, 17 Jan 2025 23:53:28 GMT"
+          "title": "Omar Marmoush’s ridiculous wages as Man City sign Liverpool ‘target’",
+          "description": "Omar Marmoush’s ridiculous wages as Man City sign Liverpool ‘target’  This Is Anfield",
+          "date": "Sat, 18 Jan 2025 09:01:35 GMT"
         },
         {
-          "title": "Omar Marmoush says goodbye to Eintracht Frankfurt as the Etihad awaits",
-          "description": "Omar Marmoush says goodbye to Eintracht Frankfurt as the Etihad awaits  OneFootball",
-          "date": "Fri, 17 Jan 2025 22:54:05 GMT"
+          "title": "Omar Marmoush: His best moments in an Eintracht Frankfurt shirt",
+          "description": "Omar Marmoush: His best moments in an Eintracht Frankfurt shirt  Sky Sports",
+          "date": "Fri, 17 Jan 2025 22:16:25 GMT"
         },
         {
-          "title": "Frankfurt leaves out Omar Marmoush and beats struggling Dortmund in the Bundesliga",
-          "description": "Frankfurt leaves out Omar Marmoush and beats struggling Dortmund in the Bundesliga  Oil City Derrick",
-          "date": "Fri, 17 Jan 2025 21:51:26 GMT"
+          "title": "Manchester City and Eintracht Frankfurt continue negotiations for Omar Marmoush",
+          "description": "Manchester City and Eintracht Frankfurt continue negotiations for Omar Marmoush  OneFootball",
+          "date": "Fri, 17 Jan 2025 23:44:27 GMT"
         },
         {
-          "title": "Omar Marmoush left out of Frankfurt squad amid Manchester City transfer talk",
-          "description": "Omar Marmoush left out of Frankfurt squad amid Manchester City transfer talk  Flashscore.com",
-          "date": "Fri, 17 Jan 2025 20:27:46 GMT"
+          "title": "January Transfer News: Omar Marmoush Set to Depart for Manchester City",
+          "description": "January Transfer News: Omar Marmoush Set to Depart for Manchester City  FootBoom",
+          "date": "Sat, 18 Jan 2025 05:17:42 GMT"
         },
         {
-          "title": "Eintracht Frankfurt issue Omar Marmoush update amid Man City talks",
-          "description": "Eintracht Frankfurt issue Omar Marmoush update amid Man City talks  Daily Mail",
-          "date": "Fri, 17 Jan 2025 19:18:47 GMT"
-        },
-        {
-          "title": "Omar Marmoush Omitted from Frankfurt Squad Amid Transfer Talks with Manchester City",
-          "description": "Omar Marmoush Omitted from Frankfurt Squad Amid Transfer Talks with Manchester City  FootBoom",
-          "date": "Fri, 17 Jan 2025 18:47:15 GMT"
-        },
-        {
-          "title": "Marmoush poised for Man City move after missing Frankfurt game",
-          "description": "Marmoush poised for Man City move after missing Frankfurt game  MSN",
-          "date": "Fri, 17 Jan 2025 20:58:15 GMT"
+          "title": "Frankfurt leaves Omar Marmoush out of its squad ahead of expected transfer to Man City",
+          "description": "Frankfurt leaves Omar Marmoush out of its squad ahead of expected transfer to Man City  Oil City Derrick",
+          "date": "Fri, 17 Jan 2025 18:27:41 GMT"
         }
       ]
     },
     {
       "player_id": 339874,
       "player_name": "Oscar Winther Højlund",
-      "trending_score": 65.0,
-      "trend_summary": "In a crucial Bundesliga clash, Oscar Højlund's impressive performance for Eintracht Frankfurt against Borussia Dortmund was a key factor in their 2-0 victory, further deepening Dortmund's ongoing crisis. Højlund's goal, alongside Ekitike's, piled more misery on Dortmund, marking their third consecutive defeat.",
+      "trending_score": 77.0,
+      "trend_summary": "In a crucial Bundesliga clash, Oscar Højlund's impressive performance for Eintracht Frankfurt contributed to a 2-0 victory over Borussia Dortmund, further deepening the latter's ongoing crisis. Højlund's attacking prowess proved decisive as he played a pivotal role in securing the win for Frankfurt.",
       "news": [
         {
-          "title": "Eintracht Frankfurt 2-0 Borussia Dortmund: Ekitike and Hojlund pile more misery on Sahin",
-          "description": "Eintracht Frankfurt 2-0 Borussia Dortmund: Ekitike and Hojlund pile more misery on Sahin  beIN SPORTS",
-          "date": "Fri, 17 Jan 2025 21:53:38 GMT"
+          "title": "Eintracht Frankfurt 2-0 Borussia Dortmund, Bundesliga: Ekitike, Hojlund Pile More Misery On Sahin",
+          "description": "Eintracht Frankfurt 2-0 Borussia Dortmund, Bundesliga: Ekitike, Hojlund Pile More Misery On Sahin  Outlook India",
+          "date": "Sat, 18 Jan 2025 01:54:50 GMT"
         },
         {
           "title": "Ekitiké and Højlund on target in deserved win",
           "description": "Ekitiké and Højlund on target in deserved win  OneFootball",
           "date": "Fri, 17 Jan 2025 22:11:17 GMT"
+        },
+        {
+          "title": "Borussia's agony continues in Frankfurt",
+          "description": "Borussia's agony continues in Frankfurt  Mozzart Sport",
+          "date": "Sat, 18 Jan 2025 10:08:24 GMT"
+        },
+        {
+          "title": "Eintracht Frankfurt Defeat Borrussia Dortmund 2-0 After Resting Omar Marmoush",
+          "description": "Eintracht Frankfurt Defeat Borrussia Dortmund 2-0 After Resting Omar Marmoush  News18",
+          "date": "Sat, 18 Jan 2025 03:14:52 GMT"
+        },
+        {
+          "title": "Dortmund crisis deepens after 2-0 loss to Frankfurt for third straight defeat",
+          "description": "Dortmund crisis deepens after 2-0 loss to Frankfurt for third straight defeat  New Straits Times",
+          "date": "Fri, 17 Jan 2025 21:57:03 GMT"
         },
         {
           "title": "Eintracht Frankfurt Secures 2-0 Victory Over Borussia Dortmund Amidst Ongoing Crisis",
@@ -144,135 +101,163 @@
           "date": "Fri, 17 Jan 2025 22:34:00 GMT"
         },
         {
-          "title": "Dortmund crisis deepens after 2-0 loss to Frankfurt for third straight defeat",
-          "description": "Dortmund crisis deepens after 2-0 loss to Frankfurt for third straight defeat  New Straits Times",
-          "date": "Fri, 17 Jan 2025 21:57:03 GMT"
-        },
-        {
-          "title": "Frankfurt leaves out Omar Marmoush and beats struggling Dortmund in the Bundesliga",
-          "description": "Frankfurt leaves out Omar Marmoush and beats struggling Dortmund in the Bundesliga  FOX Sports",
-          "date": "Fri, 17 Jan 2025 21:51:25 GMT"
-        },
-        {
-          "title": "“We just want to keep going”",
-          "description": "“We just want to keep going”  OneFootball",
-          "date": "Fri, 17 Jan 2025 20:36:02 GMT"
+          "title": "Frankfurt heap more pain on struggling Dortmund",
+          "description": "Frankfurt heap more pain on struggling Dortmund  SuperSport",
+          "date": "Fri, 17 Jan 2025 21:57:07 GMT"
         }
       ]
     },
     {
-      "player_id": 21090,
-      "player_name": "Diego Carlos Santos Silva",
-      "trending_score": 64.0,
-      "trend_summary": "Aston Villa defender Diego Carlos is reportedly close to joining Turkish club Fenerbahce, with talks between the clubs progressing. Villa manager Unai Emery has confirmed that the club is in discussions to sell Carlos, who has been linked with a move away from the Premier League side. The Brazilian center-back has been a key figure for Villa since joining in 2022, but could now be set for a new challenge in Turkey.",
+      "player_id": 1100,
+      "player_name": "Erling Braut Haaland",
+      "trending_score": 62.0,
+      "trend_summary": "Erling Haaland's meteoric rise continues as he inks a record-breaking 9.5-year contract with Manchester City, a deal that has sent shockwaves through the football world and sparked speculation about whether he can eclipse Alan Shearer's all-time Premier League goal-scoring record. The Norwegian striker's move has also raised questions about the potential consequences should City face relegation, a scenario that could have significant implications for Haaland's long-term future at the club.",
       "news": [
         {
-          "title": "Mourinho's Fenerbahce closing in on Villa defender Diego Carlos",
-          "description": "Mourinho's Fenerbahce closing in on Villa defender Diego Carlos  BeSoccer EN",
-          "date": "Fri, 17 Jan 2025 11:40:36 GMT"
+          "title": "After Erling Haaland signed a 9.5-year deal, what are football’s longest contracts and how did they work out?",
+          "description": "After Erling Haaland signed a 9.5-year deal, what are football’s longest contracts and how did they work out?  The Athletic",
+          "date": "Sat, 18 Jan 2025 11:23:17 GMT"
         },
         {
-          "title": "Every word Unai Emery said about Donyell Malen, Diego Carlos transfer, injuries and Arsenal",
-          "description": "Every word Unai Emery said about Donyell Malen, Diego Carlos transfer, injuries and Arsenal  Birmingham Live",
-          "date": "Fri, 17 Jan 2025 18:00:00 GMT"
+          "title": "Premier League legend claims Erling Haaland will break his all-time record",
+          "description": "Premier League legend claims Erling Haaland will break his all-time record  Sporting News",
+          "date": "Sat, 18 Jan 2025 09:27:22 GMT"
         },
         {
-          "title": "Emery reveals new signing Malen could make Villa debut against Arsenal this weekend",
-          "description": "Emery reveals new signing Malen could make Villa debut against Arsenal this weekend  Tribal Football",
-          "date": "Fri, 17 Jan 2025 16:12:58 GMT"
+          "title": "Saturday briefing: Football mourns Denis Law as Erling Haaland signs mega deal",
+          "description": "Saturday briefing: Football mourns Denis Law as Erling Haaland signs mega deal  Yahoo Eurosport UK",
+          "date": "Sat, 18 Jan 2025 04:30:00 GMT"
         },
         {
-          "title": "FPL team news and predicted lineups for Gameweek 22",
-          "description": "FPL team news and predicted lineups for Gameweek 22  Fantasy Football Hub",
-          "date": "Fri, 17 Jan 2025 23:57:43 GMT"
+          "title": "Haaland nets win for Premier League",
+          "description": "Haaland nets win for Premier League  Financial Times",
+          "date": "Sat, 18 Jan 2025 09:00:32 GMT"
         },
         {
-          "title": "Unai Emery confirms Aston Villa in talks to sell star",
-          "description": "Unai Emery confirms Aston Villa in talks to sell star  Express & Star",
-          "date": "Fri, 17 Jan 2025 14:52:17 GMT"
+          "title": "Report: Erling Haaland's Man City Contract Among 'Most Lucrative' in Sports History",
+          "description": "Report: Erling Haaland's Man City Contract Among 'Most Lucrative' in Sports History  Bleacher Report",
+          "date": "Fri, 17 Jan 2025 14:03:45 GMT"
         },
         {
-          "title": "Club have 'reached an agreement' to sign Aston Villa player",
-          "description": "Club have 'reached an agreement' to sign Aston Villa player",
-          "date": "Fri, 17 Jan 2025 09:26:33 GMT"
+          "title": "Erling Haaland to make contract clause demand in Manchester City talks amid transfer interest from three European giants",
+          "description": "Erling Haaland to make contract clause demand in Manchester City talks amid transfer interest from three European giants  OneFootball",
+          "date": "Fri, 17 Jan 2025 23:44:27 GMT"
         },
         {
-          "title": "Fenerbahce Closing In On Diego Carlos",
-          "description": "Fenerbahce Closing In On Diego Carlos  Inside Futbol",
-          "date": "Fri, 17 Jan 2025 09:41:00 GMT"
+          "title": "Haaland’s record-breaking deal is a coup but what happens if City are relegated?",
+          "description": "Haaland’s record-breaking deal is a coup but what happens if City are relegated?",
+          "date": "Sat, 18 Jan 2025 02:30:00 GMT"
         },
         {
-          "title": "Diego Carlos update as Unai Emery breaks silence on Aston Villa transfer exit",
-          "description": "Diego Carlos update as Unai Emery breaks silence on Aston Villa transfer exit  Birmingham Live",
-          "date": "Fri, 17 Jan 2025 14:46:00 GMT"
+          "title": "Pep Guardiola admits disbelief at length of new Erling Haaland deal",
+          "description": "Pep Guardiola admits disbelief at length of new Erling Haaland deal  The Independent",
+          "date": "Sat, 18 Jan 2025 08:10:00 GMT"
         },
         {
-          "title": "Aston Villa transfer state of play",
-          "description": "Aston Villa transfer state of play",
+          "title": "Erling Haaland Extends Contract with Manchester City until 2034",
+          "description": "Erling Haaland Extends Contract with Manchester City until 2034  FootBoom",
+          "date": "Sat, 18 Jan 2025 04:35:33 GMT"
+        },
+        {
+          "title": "Can Erling Haaland break Alan Shearer’s record of 260 Premier League goals?",
+          "description": "Can Erling Haaland break Alan Shearer’s record of 260 Premier League goals?",
+          "date": "Fri, 17 Jan 2025 18:55:04 GMT"
+        }
+      ]
+    },
+    {
+      "player_id": 483,
+      "player_name": "Khvicha Kvaratskhelia",
+      "trending_score": 45.0,
+      "trend_summary": "Paris Saint-Germain has secured the highly sought-after signature of Georgian forward Khvicha Kvaratskhelia from Napoli, signing him to a contract until June 2029. The move ends a lengthy transfer saga and sees the French giants bolster their attacking options with one of Europe's most promising talents.",
+      "news": [
+        {
+          "title": "Why Paris Saint-Germain signed Khvicha Kvaratskhelia and didn't want anyone else",
+          "description": "Why Paris Saint-Germain signed Khvicha Kvaratskhelia and didn't want anyone else  ESPN",
+          "date": "Fri, 17 Jan 2025 20:30:00 GMT"
+        },
+        {
+          "title": "Khvicha Kvaratskhelia: Paris St-Germain sign Napoli forward on deal until June 2029",
+          "description": "Khvicha Kvaratskhelia: Paris St-Germain sign Napoli forward on deal until June 2029  BBC.com",
+          "date": "Fri, 17 Jan 2025 22:44:34 GMT"
+        },
+        {
+          "title": "Paris Saint-Germain FC Signs Georgian Winger Khvicha Kvaratskhelia from Napoli",
+          "description": "Paris Saint-Germain FC Signs Georgian Winger Khvicha Kvaratskhelia from Napoli  FootBoom",
+          "date": "Sat, 18 Jan 2025 10:09:29 GMT"
+        },
+        {
+          "title": "Paris Saint-Germain complete signing of Khvicha Kvaratskhelia from Napoli",
+          "description": "Paris Saint-Germain complete signing of Khvicha Kvaratskhelia from Napoli",
+          "date": "Fri, 17 Jan 2025 21:41:08 GMT"
+        },
+        {
+          "title": "Khvicha Kvaratskhelia signs for Paris Saint-Germain until 2029",
+          "description": "Khvicha Kvaratskhelia signs for Paris Saint-Germain until 2029  Paris Saint-Germain",
           "date": "Fri, 17 Jan 2025 19:00:00 GMT"
         },
         {
-          "title": "Arsenal vs Aston Villa: Premier League preview, team news, stats & head-to-head",
-          "description": "Arsenal vs Aston Villa: Premier League preview, team news, stats & head-to-head  BBC",
-          "date": "Fri, 17 Jan 2025 01:27:00 GMT"
+          "title": "PSG signs Napoli’s star winger Khvicha Kvaratskhelia until 2029",
+          "description": "PSG signs Napoli’s star winger Khvicha Kvaratskhelia until 2029  The Hindu",
+          "date": "Sat, 18 Jan 2025 05:35:00 GMT"
+        },
+        {
+          "title": "Khvicha Kvaratskhelia to join PSG as Chelsea and Liverpool miss out",
+          "description": "Khvicha Kvaratskhelia to join PSG as Chelsea and Liverpool miss out  OneFootball",
+          "date": "Fri, 17 Jan 2025 23:44:27 GMT"
+        },
+        {
+          "title": "Khvicha Kvaratskhelia completes PSG switch to end transfer saga",
+          "description": "Khvicha Kvaratskhelia completes PSG switch to end transfer saga  The Independent",
+          "date": "Sat, 18 Jan 2025 06:49:00 GMT"
+        },
+        {
+          "title": "Napoli's Kvaratskhelia completes PSG transfer",
+          "description": "Napoli's Kvaratskhelia completes PSG transfer  ESPN",
+          "date": "Fri, 17 Jan 2025 23:24:18 GMT"
+        },
+        {
+          "title": "Georgian PM congratulates Khvicha Kvaratskhelia on joining Paris Saint-Germain FC",
+          "description": "Georgian PM congratulates Khvicha Kvaratskhelia on joining Paris Saint-Germain FC  Agenda.ge",
+          "date": "Sat, 18 Jan 2025 11:45:36 GMT"
         }
       ]
     },
     {
-      "player_id": 377122,
-      "player_name": "Endrick Felipe Moreira de Sousa",
-      "trending_score": 43.0,
-      "trend_summary": "In a thrilling Copa del Rey match, 16-year-old Endrick became the youngest player to score a brace in the competition's history, firing Real Madrid into the quarterfinals with two extra-time goals against Celta Vigo. The Brazilian prodigy dedicated his goals to teammate Antonio Rüdiger, who he credited with providing invaluable support on and off the pitch.",
+      "player_id": 281096,
+      "player_name": "Patrizio Masini",
+      "trending_score": 35.0,
+      "trend_summary": "Patrizio Masini enjoyed a memorable moment in Genoa's Serie A clash against Roma, scoring the equalizer in a match that ended 3-1 in Roma's favor. Despite the defeat, Genoa coach Vieira praised Masini's performance, highlighting his positive impact on the team.",
       "news": [
         {
-          "title": "Endrick joined Cristiano Ronaldo in an exclusive club in Real Madrid 5-2 Celta Vigo",
-          "description": "Endrick joined Cristiano Ronaldo in an exclusive club in Real Madrid 5-2 Celta Vigo  Yahoo Canada Sports",
-          "date": "Fri, 17 Jan 2025 21:05:00 GMT"
+          "title": "Roma surge continues with win over Genoa",
+          "description": "Roma surge continues with win over Genoa  beIN SPORTS",
+          "date": "Fri, 17 Jan 2025 23:03:17 GMT"
         },
         {
-          "title": "Endrick dedicates his two goals vs Celta Vigo to Real Madrid teammate",
-          "description": "Endrick dedicates his two goals vs Celta Vigo to Real Madrid teammate  Yahoo Canada Sports",
-          "date": "Fri, 17 Jan 2025 17:10:00 GMT"
+          "title": "Serie A",
+          "description": "Serie A",
+          "date": "Fri, 17 Jan 2025 21:33:45 GMT"
         },
         {
-          "title": "Endrick says goals for Rüdiger: 'Never praises me'",
-          "description": "Endrick says goals for Rüdiger: 'Never praises me'  ESPN",
-          "date": "Fri, 17 Jan 2025 00:13:20 GMT"
+          "title": "Genoa coach Vieira finds Masini positive in Roma defeat",
+          "description": "Genoa coach Vieira finds Masini positive in Roma defeat  Tribal Football",
+          "date": "Fri, 17 Jan 2025 15:54:00 GMT"
         },
         {
-          "title": "“I don’t talk much to Ancelotti”",
-          "description": "“I don’t talk much to Ancelotti”",
-          "date": "Fri, 17 Jan 2025 07:04:00 GMT"
+          "title": "Dybala on Roma ‘future’ and El Shaarawy warning",
+          "description": "Dybala on Roma ‘future’ and El Shaarawy warning  Football Italia",
+          "date": "Fri, 17 Jan 2025 22:01:09 GMT"
         },
         {
-          "title": "How many goals has Endrick scored with Real Madrid: his statistics",
-          "description": "How many goals has Endrick scored with Real Madrid: his statistics  FootBoom",
-          "date": "Fri, 17 Jan 2025 08:09:58 GMT"
+          "title": "Ranieri jokes about Roma future: ‘I already retired once’",
+          "description": "Ranieri jokes about Roma future: ‘I already retired once’  Football Italia",
+          "date": "Fri, 17 Jan 2025 22:30:00 GMT"
         },
         {
-          "title": "Soccer-Teenager Endrick strikes twice in extra time to fire Real Madrid into cup quarters",
-          "description": "Soccer-Teenager Endrick strikes twice in extra time to fire Real Madrid into cup quarters  MSN",
-          "date": "Fri, 17 Jan 2025 00:25:50 GMT"
-        },
-        {
-          "title": "\"He helps me everyday\"",
-          "description": "\"He helps me everyday\"",
-          "date": "Fri, 17 Jan 2025 08:45:00 GMT"
-        },
-        {
-          "title": "Soccer-Teenager Endrick strikes twice in extra time to fire Real Madrid into cup quarters",
-          "description": "Soccer-Teenager Endrick strikes twice in extra time to fire Real Madrid into cup quarters  MSN",
-          "date": "Fri, 17 Jan 2025 01:15:51 GMT"
-        },
-        {
-          "title": "Brazilian Endrick nets extra time double to fire Real into cup quarters",
-          "description": "Brazilian Endrick nets extra time double to fire Real into cup quarters  The Daily Star",
-          "date": "Fri, 17 Jan 2025 03:35:58 GMT"
-        },
-        {
-          "title": "\"Give your matchday fee to Endrick\", \"One of his worst performances\"",
-          "description": "\"Give your matchday fee to Endrick\", \"One of his worst performances\"",
-          "date": "Fri, 17 Jan 2025 04:35:00 GMT"
+          "title": "WATCH l Masini Levels the Score as Genoa Holds Roma to a Draw",
+          "description": "WATCH l Masini Levels the Score as Genoa Holds Roma to a Draw  El Futbolero USA",
+          "date": "Fri, 17 Jan 2025 20:35:31 GMT"
         }
       ]
     }
