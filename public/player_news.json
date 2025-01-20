@@ -1,12 +1,47 @@
 {
-  "updated_at": "2025-01-20T00:07:24.490290+00:00",
+  "updated_at": "2025-01-20T12:19:18.878135+00:00",
   "player_news": [
     {
       "player_id": 278,
       "player_name": "Kylian Mbappé Lottin",
       "trending_score": 100.0,
-      "trend_summary": "Kylian Mbappé's sensational double against Las Palmas propelled Real Madrid to the top of La Liga, prompting manager Carlo Ancelotti to hail him as \"the best center forward in the world.\" The French superstar has now equaled Cristiano Ronaldo's goal tally after 30 matches for Real Madrid, setting the stage for a potentially record-breaking season.",
+      "trend_summary": "Kylian Mbappé's scintillating double against Las Palmas propelled Real Madrid to the summit of La Liga, while his comments praising Liverpool manager Jürgen Klopp raised eyebrows amid uncertainty surrounding Carlo Ancelotti's future. Additionally, Didier Deschamps sent shockwaves through the French football community by omitting Mbappé from the national team squad.",
       "news": [
+        {
+          "title": "Kylian Mbappé Shines as Real Madrid Takes Top Spot in La Liga",
+          "description": "Kylian Mbappé Shines as Real Madrid Takes Top Spot in La Liga  FootBoom",
+          "date": "Mon, 20 Jan 2025 08:50:52 GMT"
+        },
+        {
+          "title": "Transfer Centre LIVE! Football transfers, news, updates and rumours",
+          "description": "Transfer Centre LIVE! Football transfers, news, updates and rumours  Sky Sports",
+          "date": "Mon, 20 Jan 2025 07:45:01 GMT"
+        },
+        {
+          "title": "La Liga: Mbappe Stars As Real Madrid Comeback To Seal Thumping 4-1 Victory",
+          "description": "La Liga: Mbappe Stars As Real Madrid Comeback To Seal Thumping 4-1 Victory  Outlook India",
+          "date": "Mon, 20 Jan 2025 09:53:15 GMT"
+        },
+        {
+          "title": "Kylian Mbappe, Vinicius Jr, Jude Bellingham and Luka Modric share messages as David Alaba returns to action for Real Madrid",
+          "description": "Kylian Mbappe, Vinicius Jr, Jude Bellingham and Luka Modric share messages as David Alaba returns to action for Real Madrid  Sportskeeda",
+          "date": "Mon, 20 Jan 2025 06:11:00 GMT"
+        },
+        {
+          "title": "Didier Deschamps Makes Bold Statement Dropping Kylian Mbappe From France Squad",
+          "description": "Didier Deschamps Makes Bold Statement Dropping Kylian Mbappe From France Squad  OneFootball",
+          "date": "Sun, 19 Jan 2025 19:26:18 GMT"
+        },
+        {
+          "title": "Kylian Mbappe's comments on Jurgen Klopp raise eyebrows amid Carlo Ancelotti uncertainty",
+          "description": "Kylian Mbappe's comments on Jurgen Klopp raise eyebrows amid Carlo Ancelotti uncertainty  The Mirror",
+          "date": "Mon, 20 Jan 2025 09:40:00 GMT"
+        },
+        {
+          "title": "Carlo Ancelotti makes ‘world’s best’ claim over in-form Kylian Mbappe",
+          "description": "Carlo Ancelotti makes ‘world’s best’ claim over in-form Kylian Mbappe  Football Espana",
+          "date": "Sun, 19 Jan 2025 19:47:46 GMT"
+        },
         {
           "title": "European football: Mbappé double elevates Real; Dele Alli joins Como",
           "description": "European football: Mbappé double elevates Real; Dele Alli joins Como  The Guardian",
@@ -18,52 +53,17 @@
           "date": "Sun, 19 Jan 2025 17:48:22 GMT"
         },
         {
-          "title": "\"Been a while since I saw a player make a difference like this\"",
-          "description": "\"Been a while since I saw a player make a difference like this\"",
-          "date": "Sun, 19 Jan 2025 23:29:00 GMT"
-        },
-        {
           "title": "Real Madrid 4-1 Las Palmas: Kylian Mbappe double sends Real top of La Liga",
           "description": "Real Madrid 4-1 Las Palmas: Kylian Mbappe double sends Real top of La Liga  BBC.com",
           "date": "Sun, 19 Jan 2025 17:34:03 GMT"
-        },
-        {
-          "title": "Real Madrid: Carlo Ancelotti labels Kylian Mbappe 'the best centre forward in the world' after Las Palmas thrashing",
-          "description": "Real Madrid: Carlo Ancelotti labels Kylian Mbappe 'the best centre forward in the world' after Las Palmas thrashing  Flashscore.com",
-          "date": "Sun, 19 Jan 2025 19:08:20 GMT"
-        },
-        {
-          "title": "Kylian Mbappe on form as Real Madrid go top of La Liga with Las Palmas demolition",
-          "description": "Kylian Mbappe on form as Real Madrid go top of La Liga with Las Palmas demolition  Football Espana",
-          "date": "Sun, 19 Jan 2025 17:12:04 GMT"
-        },
-        {
-          "title": "Comparing Kylian Mbappe’s record at Real Madrid after 30 matches with Cristiano Ronaldo’s",
-          "description": "Comparing Kylian Mbappe’s record at Real Madrid after 30 matches with Cristiano Ronaldo’s  Football365",
-          "date": "Sun, 19 Jan 2025 18:49:02 GMT"
-        },
-        {
-          "title": "Real Madrid 4-1 Las Palmas, La Liga: Ancelotti Lauds 'Best In The World' Mbappe",
-          "description": "Real Madrid 4-1 Las Palmas, La Liga: Ancelotti Lauds 'Best In The World' Mbappe  Outlook India",
-          "date": "Sun, 19 Jan 2025 20:23:08 GMT"
-        },
-        {
-          "title": "Comparing Kylian Mbappe’s record at Real Madrid after 30 matches with Cristiano Ronaldo’s",
-          "description": "Comparing Kylian Mbappe’s record at Real Madrid after 30 matches with Cristiano Ronaldo’s  Planet Football",
-          "date": "Sun, 19 Jan 2025 18:37:37 GMT"
-        },
-        {
-          "title": "Soccer-Mbappe shines as Real Madrid fight back to beat Las Palmas 4-1",
-          "description": "Soccer-Mbappe shines as Real Madrid fight back to beat Las Palmas 4-1  MSN",
-          "date": "Sun, 19 Jan 2025 20:53:47 GMT"
         }
       ]
     },
     {
       "player_id": 129791,
       "player_name": "Fábio Daniel Soares Silva",
-      "trending_score": 55.0,
-      "trend_summary": "Fábio Silva made a stunning impact on his return to the Real Madrid spotlight, scoring inside the first minute against his former club Las Palmas, silencing the Bernabéu crowd and helping his side secure a 4-1 victory. Silva's goal marked a remarkable resurgence for the Portuguese forward, who had struggled for form since leaving Wolverhampton Wanderers.",
+      "trending_score": 53.0,
+      "trend_summary": "In a stunning upset, ex-Wolverhampton Wanderers striker Fábio Silva silenced Real Madrid's home crowd with a goal within the first minute of Las Palmas' La Liga clash, leaving the defending champions reeling and fans calling for accountability. Despite Madrid's eventual 4-1 victory, Silva's strike marked a significant moment for the Portuguese forward, who had previously spent time on loan at Rangers.",
       "news": [
         {
           "title": "WATCH: Fabio Silva stuns Real Madrid as Las Palmas score inside first minute",
@@ -71,9 +71,14 @@
           "date": "Sun, 19 Jan 2025 15:20:53 GMT"
         },
         {
-          "title": "Clinical Madrid go top of the table",
-          "description": "Clinical Madrid go top of the table  Real Madrid CF",
-          "date": "Sun, 19 Jan 2025 17:00:58 GMT"
+          "title": "WATCH: Wolves striker Fabio Silva score against Real Madrid",
+          "description": "WATCH: Wolves striker Fabio Silva score against Real Madrid  Shropshire Star",
+          "date": "Mon, 20 Jan 2025 05:57:00 GMT"
+        },
+        {
+          "title": "La Liga: Mbappe Stars As Real Madrid Comeback To Seal Thumping 4-1 Victory",
+          "description": "La Liga: Mbappe Stars As Real Madrid Comeback To Seal Thumping 4-1 Victory  Outlook India",
+          "date": "Mon, 20 Jan 2025 09:53:15 GMT"
         },
         {
           "title": "Real Madrid captain responds perfectly to booing fans after inadvertently helping ex-Wolves man to goal...",
@@ -86,9 +91,9 @@
           "date": "Sun, 19 Jan 2025 16:58:00 GMT"
         },
         {
-          "title": "Real Madrid defeats Las Palmas and takes the lead in LaLiga from the penalty spot (4-1)",
-          "description": "Real Madrid defeats Las Palmas and takes the lead in LaLiga from the penalty spot (4-1)  FC Barcelona Noticias",
-          "date": "Sun, 19 Jan 2025 17:27:00 GMT"
+          "title": "UNITED NEWS OF INDIA",
+          "description": "UNITED NEWS OF INDIA  United News of India",
+          "date": "Mon, 20 Jan 2025 04:21:48 GMT"
         },
         {
           "title": "UD begins second half of the season with a defeat at the Bernabéu (4-1)",
@@ -101,47 +106,62 @@
           "date": "Sun, 19 Jan 2025 15:28:09 GMT"
         },
         {
+          "title": "Clinical Madrid go top of the table",
+          "description": "Clinical Madrid go top of the table  Real Madrid CF",
+          "date": "Sun, 19 Jan 2025 17:00:58 GMT"
+        },
+        {
           "title": "Real Madrid fans all take aim at one player yet again during Las Palmas clash",
           "description": "Real Madrid fans all take aim at one player yet again during Las Palmas clash  Yahoo Canada Sports",
           "date": "Sun, 19 Jan 2025 15:38:00 GMT"
-        },
-        {
-          "title": "Real Madrid 4-1 Las Palmas: Kylian Mbappe double sends Real top of La Liga",
-          "description": "Real Madrid 4-1 Las Palmas: Kylian Mbappe double sends Real top of La Liga  BBC.com",
-          "date": "Sun, 19 Jan 2025 17:34:03 GMT"
-        },
-        {
-          "title": "Ancelotti uses irony to attack Real Madrid critics: \"We play badly...\"",
-          "description": "Ancelotti uses irony to attack Real Madrid critics: \"We play badly...\"  Real Madrid Confidencial",
-          "date": "Sun, 19 Jan 2025 19:10:00 GMT"
         }
       ]
     },
     {
       "player_id": 1100,
       "player_name": "Erling Braut Haaland",
-      "trending_score": 48.0,
-      "trend_summary": "Erling Haaland has committed his long-term future to Manchester City, signing an extraordinary nine-and-a-half-year contract extension that will keep him at the Etihad Stadium until 2034. Despite reported interest from other clubs, the prolific Norwegian striker has rejected a lucrative offer to leave City, where he has already established himself as one of the world's most feared goalscorers.",
+      "trending_score": 50.0,
+      "trend_summary": "Erling Haaland has committed his long-term future to Manchester City, signing an unprecedented nine-and-a-half-year deal that will keep him at the club until 2034. Despite his staggering £500,000-a-week salary, the move has been met with widespread approval, with pundits praising its financial prudence.",
       "news": [
         {
           "title": "Football fans all say the same thing as Erling Haaland signs incredible nine-and-a-half-year deal at Man City to commit future to the club until 2034",
           "description": "Football fans all say the same thing as Erling Haaland signs incredible nine-and-a-half-year deal at Man City to commit future to the club until 2034  MSN",
-          "date": "Sun, 19 Jan 2025 18:22:39 GMT"
+          "date": "Mon, 20 Jan 2025 09:38:40 GMT"
+        },
+        {
+          "title": "The craziest thing about Erling Haaland’s £500,000-a-week salary? It makes sense",
+          "description": "The craziest thing about Erling Haaland’s £500,000-a-week salary? It makes sense",
+          "date": "Mon, 20 Jan 2025 08:00:00 GMT"
+        },
+        {
+          "title": "Juls calls Erling Haaland's new deal 'incredible'",
+          "description": "Juls calls Erling Haaland's new deal 'incredible'  ESPN",
+          "date": "Mon, 20 Jan 2025 00:04:25 GMT"
+        },
+        {
+          "title": "Erling Haaland and Harry Kane comfortably beaten in vote over best striker in football...",
+          "description": "Erling Haaland and Harry Kane comfortably beaten in vote over best striker in football...  talkSPORT",
+          "date": "Mon, 20 Jan 2025 09:00:00 GMT"
+        },
+        {
+          "title": "As Erling Haaland signs new nine-year contract, how much will he earn and what is his net worth?",
+          "description": "As Erling Haaland signs new nine-year contract, how much will he earn and what is his net worth?  NationalWorld",
+          "date": "Mon, 20 Jan 2025 00:34:17 GMT"
         },
         {
           "title": "Report: Erling Haaland has Rejected a ‘Lucrative’ Offer to Leave Man City",
           "description": "Report: Erling Haaland has Rejected a ‘Lucrative’ Offer to Leave Man City  OneFootball",
-          "date": "Sun, 19 Jan 2025 15:35:05 GMT"
+          "date": "Sun, 19 Jan 2025 19:26:18 GMT"
         },
         {
-          "title": "Cristiano Ronaldo among 7 footballers who earn more than Erling Haaland",
-          "description": "Cristiano Ronaldo among 7 footballers who earn more than Erling Haaland  Planet Football",
-          "date": "Sun, 19 Jan 2025 12:31:38 GMT"
+          "title": "Man City 'surprised' by Premier League's stance on Erling Haaland's enormous new contract",
+          "description": "Man City 'surprised' by Premier League's stance on Erling Haaland's enormous new contract  The Mirror",
+          "date": "Mon, 20 Jan 2025 09:31:00 GMT"
         },
         {
-          "title": "Erling Haaland's Lucrative Deal with Manchester City",
-          "description": "Erling Haaland's Lucrative Deal with Manchester City  FootBoom",
-          "date": "Sun, 19 Jan 2025 12:05:51 GMT"
+          "title": "Saturday briefing: Football mourns Denis Law as Erling Haaland signs mega deal",
+          "description": "Saturday briefing: Football mourns Denis Law as Erling Haaland signs mega deal  MSN",
+          "date": "Mon, 20 Jan 2025 01:18:41 GMT"
         },
         {
           "title": "Premier League top goal scorers 2024/2025: EPL golden boot rankings as Haaland chases Salah",
@@ -149,77 +169,52 @@
           "date": "Sun, 19 Jan 2025 18:22:00 GMT"
         },
         {
-          "title": "Man City find familiar groove to bully Ipswich as Erling Haaland toasts monster contract",
-          "description": "Man City find familiar groove to bully Ipswich as Erling Haaland toasts monster contract  The Mirror",
-          "date": "Sun, 19 Jan 2025 20:30:00 GMT"
-        },
-        {
-          "title": "Liam Delap: Erling Haaland is the one I look up to",
-          "description": "Liam Delap: Erling Haaland is the one I look up to  Sky Sports",
-          "date": "Sun, 19 Jan 2025 08:03:03 GMT"
-        },
-        {
-          "title": "The 7 players across world football who earn more than Erling Haaland",
-          "description": "The 7 players across world football who earn more than Erling Haaland  MSN",
-          "date": "Sun, 19 Jan 2025 13:29:28 GMT"
-        },
-        {
-          "title": "Erling Haaland Signs a Record 10-Year Deal With Man City",
-          "description": "Erling Haaland Signs a Record 10-Year Deal With Man City  FootBoom",
-          "date": "Sun, 19 Jan 2025 08:33:25 GMT"
-        },
-        {
-          "title": "Man City boss Pep Guardiola: Erling Haaland signing 10 year contract was a big surprise",
-          "description": "Man City boss Pep Guardiola: Erling Haaland signing 10 year contract was a big surprise  Sky Sports",
-          "date": "Sun, 19 Jan 2025 11:37:11 GMT"
+          "title": "Cristiano Ronaldo among 7 footballers who earn more than Erling Haaland",
+          "description": "Cristiano Ronaldo among 7 footballers who earn more than Erling Haaland  Planet Football",
+          "date": "Sun, 19 Jan 2025 12:31:38 GMT"
         }
       ]
     },
     {
       "player_id": 631,
       "player_name": "Philip Walter Foden",
-      "trending_score": 41.0,
-      "trend_summary": "Phil Foden's resurgence continued with a stunning brace in Manchester City's 6-0 thrashing of Ipswich Town in the FA Cup, sparking talk of a potential transfer demand from manager Pep Guardiola. The 22-year-old's impressive performance, which included a dazzling three-minute spell, has reignited speculation about his future at the club following the long-term contract extension signed by Erling Haaland.",
+      "trending_score": 43.0,
+      "trend_summary": "Manchester City star Phil Foden has been in scintillating form, scoring two goals in the 6-0 thrashing of Ipswich Town in the FA Cup, earning praise from manager Pep Guardiola, who believes Foden's success is crucial to City's achievements. Amidst speculation about his future, Foden has expressed his desire to remain a one-club man for City, while Guardiola has emphasized the importance of Foden signing a new contract after Erling Haaland's recent long-term",
       "news": [
+        {
+          "title": "Premier League: Pep Guardiola admits an in-form Phil Foden brings success for Manchester City",
+          "description": "Premier League: Pep Guardiola admits an in-form Phil Foden brings success for Manchester City  Flashscore.com",
+          "date": "Mon, 20 Jan 2025 08:45:48 GMT"
+        },
+        {
+          "title": "He can be a one-club man – Phil Foden urged to commit whole career to Man City",
+          "description": "He can be a one-club man – Phil Foden urged to commit whole career to Man City  The Independent",
+          "date": "Mon, 20 Jan 2025 07:06:00 GMT"
+        },
+        {
+          "title": "Phil Foden lauds Man City's 6-0 thrashing of Ipswich as 'best performance' of the season... as he sets sights",
+          "description": "Phil Foden lauds Man City's 6-0 thrashing of Ipswich as 'best performance' of the season... as he sets sights  Daily Mail",
+          "date": "Sun, 19 Jan 2025 20:45:50 GMT"
+        },
         {
           "title": "'That was gorgeous!'",
           "description": "'That was gorgeous!'",
           "date": "Sun, 19 Jan 2025 17:21:57 GMT"
         },
         {
-          "title": "Ipswich Town 0-6 Manchester City, Premier League: Phil Foden Stars In Portman Road Rout",
-          "description": "Ipswich Town 0-6 Manchester City, Premier League: Phil Foden Stars In Portman Road Rout  Outlook India",
-          "date": "Sun, 19 Jan 2025 19:09:00 GMT"
+          "title": "Ipswich Town 0-6 Manchester City, EPL: Foden Wants More After Confident Away Win",
+          "description": "Ipswich Town 0-6 Manchester City, EPL: Foden Wants More After Confident Away Win  Outlook India",
+          "date": "Mon, 20 Jan 2025 03:09:18 GMT"
         },
         {
-          "title": "Ipswich 0-6 Manchester City: What Phil Foden said",
-          "description": "Ipswich 0-6 Manchester City: What Phil Foden said  BBC.com",
-          "date": "Sun, 19 Jan 2025 18:45:36 GMT"
-        },
-        {
-          "title": "Phil Foden dazzles with three familiar minutes that could revive Man City",
-          "description": "Phil Foden dazzles with three familiar minutes that could revive Man City  The Independent",
-          "date": "Sun, 19 Jan 2025 20:10:00 GMT"
+          "title": "Foden double helps Manchester City rout Ipswich and return to top four",
+          "description": "Foden double helps Manchester City rout Ipswich and return to top four  The Guardian",
+          "date": "Mon, 20 Jan 2025 02:30:00 GMT"
         },
         {
           "title": "Pep Guardiola makes Phil Foden transfer demand after recovering from Man City struggles",
           "description": "Pep Guardiola makes Phil Foden transfer demand after recovering from Man City struggles  The Mirror",
           "date": "Sun, 19 Jan 2025 20:24:00 GMT"
-        },
-        {
-          "title": "Foden double helps Manchester City rout Ipswich and return to top four",
-          "description": "Foden double helps Manchester City rout Ipswich and return to top four  The Guardian",
-          "date": "Sun, 19 Jan 2025 21:54:00 GMT"
-        },
-        {
-          "title": "Football Tracker: Manchester City return to menacing best, Lazio leading Verona",
-          "description": "Football Tracker: Manchester City return to menacing best, Lazio leading Verona  Flashscore.com",
-          "date": "Sun, 19 Jan 2025 18:33:45 GMT"
-        },
-        {
-          "title": "Man City are back and so is Phil Foden",
-          "description": "Man City are back and so is Phil Foden  The Telegraph",
-          "date": "Sun, 19 Jan 2025 20:17:00 GMT"
         },
         {
           "title": "'He should not'",
@@ -229,65 +224,60 @@
         {
           "title": "Phil Foden finds the opener for City!",
           "description": "Phil Foden finds the opener for City!  Sky Sports",
-          "date": "Sun, 19 Jan 2025 17:06:09 GMT"
+          "date": "Sun, 19 Jan 2025 17:03:41 GMT"
+        },
+        {
+          "title": "Ipswich Town 0-6 Manchester City, Premier League: Phil Foden Stars In Portman Road Rout",
+          "description": "Ipswich Town 0-6 Manchester City, Premier League: Phil Foden Stars In Portman Road Rout  Outlook India",
+          "date": "Sun, 19 Jan 2025 19:09:00 GMT"
         }
       ]
     },
     {
-      "player_id": 517,
-      "player_name": "James David Rodríguez Rubio",
-      "trending_score": 35.0,
-      "trend_summary": "James Rodríguez made a triumphant debut for Club León in Liga MX, captaining the team to a dramatic 2-1 victory over Atlas. The Colombian playmaker also explained his decision not to take a penalty kick against former teammate Camilo Vargas. Meanwhile, rumors persist that former Real Madrid player James Rodríguez could be joining Boca Juniors.",
+      "player_id": 336988,
+      "player_name": "Lorenzo Aguado Herrera",
+      "trending_score": 25.0,
+      "trend_summary": "Lorenzo Aguado made his La Liga debut for Real Madrid against Las Palmas at the Bernabéu, fulfilling a lifelong dream. Aguado's performance, alongside fellow debutant Chema, helped Real Madrid secure a 4-1 victory, propelling them to the top of the league standings.",
       "news": [
         {
-          "title": "James Rodríguez Makes His Debut with Club León in Mexico",
-          "description": "James Rodríguez Makes His Debut with Club León in Mexico  beIN SPORTS",
-          "date": "Sun, 19 Jan 2025 15:28:55 GMT"
+          "title": "Aguado and Chema Make Their La Liga Debuts at the Bernabéu",
+          "description": "Aguado and Chema Make Their La Liga Debuts at the Bernabéu  FootBoom",
+          "date": "Sun, 19 Jan 2025 20:51:21 GMT"
         },
         {
-          "title": "James Makes the Difference",
-          "description": "James Makes the Difference  FootBoom",
-          "date": "Mon, 20 Jan 2025 00:05:57 GMT"
+          "title": "Lorenzo: “Playing at the Bernabéu is a dream come true”",
+          "description": "Lorenzo: “Playing at the Bernabéu is a dream come true”  Real Madrid CF",
+          "date": "Sun, 19 Jan 2025 18:25:00 GMT"
         },
         {
-          "title": "James Rodríguez Explains Why He Didn't Take Penalty Kick Against Camilo Vargas",
-          "description": "James Rodríguez Explains Why He Didn't Take Penalty Kick Against Camilo Vargas  FootBoom",
-          "date": "Sun, 19 Jan 2025 19:48:51 GMT"
+          "title": "Real Madrid vs. Las Palmas (19 Jan, 2025) Live Score",
+          "description": "Real Madrid vs. Las Palmas (19 Jan, 2025) Live Score  ESPN.co.uk",
+          "date": "Sun, 19 Jan 2025 15:18:02 GMT"
         },
         {
-          "title": "Riquelme wants to hire a former Real Madrid player for his Boca Juniors",
-          "description": "Riquelme wants to hire a former Real Madrid player for his Boca Juniors  MSN",
-          "date": "Sun, 19 Jan 2025 05:03:25 GMT"
+          "title": "Real Madrid 4-1 Las Palmas: Player ratings as big win sends champions top of La Liga",
+          "description": "Real Madrid 4-1 Las Palmas: Player ratings as big win sends champions top of La Liga  Bundle",
+          "date": "Mon, 20 Jan 2025 01:18:01 GMT"
         },
         {
-          "title": "Queen Sparks Controversy with Remarks on James Rodríguez's Transfer to Junior FC",
-          "description": "Queen Sparks Controversy with Remarks on James Rodríguez's Transfer to Junior FC  FootBoom",
-          "date": "Sun, 19 Jan 2025 21:09:39 GMT"
+          "title": "Real Madrid 4-1 Las Palmas: Player Ratings as Mbappe narrowly misses out on hat-trick, Rodrygo stars for Los Blancos",
+          "description": "Real Madrid 4-1 Las Palmas: Player Ratings as Mbappe narrowly misses out on hat-trick, Rodrygo stars for Los Blancos",
+          "date": "Sun, 19 Jan 2025 18:14:00 GMT"
         },
         {
-          "title": "Goals and Highligths Atlas 1-2 Leon in Liga MX",
-          "description": "Goals and Highligths Atlas 1-2 Leon in Liga MX  VAVEL.com",
-          "date": "Sun, 19 Jan 2025 05:15:00 GMT"
+          "title": "Real Madrid player ratings vs Las Palmas: The real Kylian Mbappe has arrived! Superstar steps up without Vinicius Jr as Blancos survive early scare to go top of La Liga",
+          "description": "Real Madrid player ratings vs Las Palmas: The real Kylian Mbappe has arrived! Superstar steps up without Vinicius Jr as Blancos survive early scare to go top of La Liga  Goal.com",
+          "date": "Sun, 19 Jan 2025 17:20:54 GMT"
         },
         {
-          "title": "James Rodríguez Makes Triumphant Return to Club León: When Will He Play at Home Again?",
-          "description": "James Rodríguez Makes Triumphant Return to Club León: When Will He Play at Home Again?  FootBoom",
-          "date": "Sun, 19 Jan 2025 14:09:06 GMT"
+          "title": "Real Madrid identify Trent Alexander-Arnold back-up with stance on new bid for Liverpool star revealed",
+          "description": "Real Madrid identify Trent Alexander-Arnold back-up with stance on new bid for Liverpool star revealed  TEAMtalk",
+          "date": "Sun, 19 Jan 2025 14:18:49 GMT"
         },
         {
-          "title": "James Rodríguez Makes Impactful Debut with León, Captains Team to Dramatic Victory Over Atlas",
-          "description": "James Rodríguez Makes Impactful Debut with León, Captains Team to Dramatic Victory Over Atlas  FootBoom",
-          "date": "Sun, 19 Jan 2025 13:07:13 GMT"
-        },
-        {
-          "title": "James Rodríguez Makes His Liga MX Debut",
-          "description": "James Rodríguez Makes His Liga MX Debut  FootBoom",
-          "date": "Sun, 19 Jan 2025 05:18:37 GMT"
-        },
-        {
-          "title": "James Rodríguez's Move to Club León and Rumored Romance Create Buzz",
-          "description": "James Rodríguez's Move to Club León and Rumored Romance Create Buzz  FootBoom",
-          "date": "Sun, 19 Jan 2025 02:49:26 GMT"
+          "title": "Ancelotti ready to bet on Real Madrid youngster if Trent Alexander-Arnold does not arrive this month",
+          "description": "Ancelotti ready to bet on Real Madrid youngster if Trent Alexander-Arnold does not arrive this month  Madrid Universal",
+          "date": "Sun, 19 Jan 2025 18:23:58 GMT"
         }
       ]
     }
