@@ -1,54 +1,16 @@
 {
-  "updated_at": "2025-01-22T23:54:04.225274+00:00",
+  "updated_at": "2025-01-23T12:55:58.366538+00:00",
   "player_news": [
-    {
-      "player_id": 198,
-      "player_name": "Milan Škriniar",
-      "trending_score": 100.0,
-      "trend_summary": "Paris Saint-Germain defender Milan Škriniar is set to join Turkish Süper Lig club Fenerbahçe on loan, with the deal expected to be finalized soon. The Slovakian international has been linked with a move to Fenerbahçe for several weeks, and it now appears that the transfer is close to completion. Škriniar has been a key player for PSG since joining the club in 2017, but he has fallen down the pecking order this season following the arrival of Sergio",
-      "news": [
-        {
-          "title": "PSG set to send Milan Škriniar on loan to Fenerbahçe",
-          "description": "PSG set to send Milan Škriniar on loan to Fenerbahçe  Get French Football News",
-          "date": "Wed, 22 Jan 2025 10:54:14 GMT"
-        },
-        {
-          "title": "‘Turkish League is fair!’ Mourinho reveals how he convinced Škriniar to join Fenerbahce",
-          "description": "‘Turkish League is fair!’ Mourinho reveals how he convinced Škriniar to join Fenerbahce  Hayters",
-          "date": "Wed, 22 Jan 2025 15:49:47 GMT"
-        },
-        {
-          "title": "Milan Škriniar Set To Join Fenerbahçe After PSG Deal",
-          "description": "Milan Škriniar Set To Join Fenerbahçe After PSG Deal  Evrim Ağacı",
-          "date": "Wed, 22 Jan 2025 11:39:24 GMT"
-        },
-        {
-          "title": "PSG agree to send Skriniar to Fenerbahce: Why it impacts Juventus and Milan",
-          "description": "PSG agree to send Skriniar to Fenerbahce: Why it impacts Juventus and Milan  OneFootball",
-          "date": "Wed, 22 Jan 2025 11:53:07 GMT"
-        },
-        {
-          "title": "Fenerbahce signs PSG’s Slovakian Skriniar after Galatasaray shows interest",
-          "description": "Fenerbahce signs PSG’s Slovakian Skriniar after Galatasaray shows interest  Türkiye Today",
-          "date": "Wed, 22 Jan 2025 13:26:21 GMT"
-        },
-        {
-          "title": "Škriniar agrees transfer to Fenerbahçe",
-          "description": "Škriniar agrees transfer to Fenerbahçe  DailySports",
-          "date": "Wed, 22 Jan 2025 10:48:04 GMT"
-        }
-      ]
-    },
     {
       "player_id": 161904,
       "player_name": "Bradley Barcola",
-      "trending_score": 35.0,
-      "trend_summary": "Bradley Barcola, the rising star of Paris Saint-Germain, inspired a remarkable Champions League comeback against Manchester City, scoring a crucial equalizer to spark a 4-2 victory that keeps the French giants in contention for the knockout stages. Barcola's performance has drawn widespread praise, with pundits hailing his impact and potential as a future footballing great.",
+      "trending_score": 100.0,
+      "trend_summary": "In a thrilling Champions League clash, 19-year-old Bradley Barcola stole the show for Paris Saint-Germain, leveling the score against Manchester City and contributing to a stunning comeback victory that leaves the English giants on the brink of elimination. Barcola's performance has sparked transfer rumors, with Manchester City reportedly considering a record-breaking bid for the French starlet.",
       "news": [
         {
-          "title": "PSG vs Manchester City live result: Barcola inspires hosts to extraordinary Champions League comeback win",
-          "description": "PSG vs Manchester City live result: Barcola inspires hosts to extraordinary Champions League comeback win  The New York Times",
-          "date": "Wed, 22 Jan 2025 22:21:11 GMT"
+          "title": "Manchester City could break the bank for this European star",
+          "description": "Manchester City could break the bank for this European star  fichajes.net",
+          "date": "Thu, 23 Jan 2025 09:15:00 GMT"
         },
         {
           "title": "Video: Man City Bottles Their Lead as Bradley Barcola Levels for PSG",
@@ -56,14 +18,29 @@
           "date": "Wed, 22 Jan 2025 21:37:44 GMT"
         },
         {
+          "title": "How Manchester City squandered a 2-0 lead in damaging Champions League defeat to Paris Saint-Germain",
+          "description": "How Manchester City squandered a 2-0 lead in damaging Champions League defeat to Paris Saint-Germain  The New York Times",
+          "date": "Wed, 22 Jan 2025 23:45:48 GMT"
+        },
+        {
+          "title": "Soccer-PSG roar back to stun Manchester City",
+          "description": "Soccer-PSG roar back to stun Manchester City  MSN",
+          "date": "Thu, 23 Jan 2025 01:14:54 GMT"
+        },
+        {
           "title": "PSG vs Manchester City: Dembélé Shines as Barcola Steals the Show",
           "description": "PSG vs Manchester City: Dembélé Shines as Barcola Steals the Show  FootBoom",
           "date": "Wed, 22 Jan 2025 21:50:24 GMT"
         },
         {
-          "title": "Manchester City collapse in calamitous defeat at Paris Saint-Germain",
-          "description": "Manchester City collapse in calamitous defeat at Paris Saint-Germain  The Guardian",
-          "date": "Wed, 22 Jan 2025 23:31:00 GMT"
+          "title": "Watch Champions League MOTD as PSG stun Man City, Celtic and Arsenal win",
+          "description": "Watch Champions League MOTD as PSG stun Man City, Celtic and Arsenal win  BBC.com",
+          "date": "Wed, 22 Jan 2025 21:02:10 GMT"
+        },
+        {
+          "title": "PSG Stages Stunning Comeback To Defeat Manchester City",
+          "description": "PSG Stages Stunning Comeback To Defeat Manchester City  Evrim Ağacı",
+          "date": "Thu, 23 Jan 2025 00:34:22 GMT"
         },
         {
           "title": "PSG roar back to win crucial Champions League clash with Man City",
@@ -71,47 +48,42 @@
           "date": "Wed, 22 Jan 2025 22:01:00 GMT"
         },
         {
-          "title": "Football: PSG’s brilliant comeback stuns City",
-          "description": "Football: PSG’s brilliant comeback stuns City  Gulf Digital News",
-          "date": "Wed, 22 Jan 2025 22:43:09 GMT"
+          "title": "Manchester City collapse in calamitous defeat at Paris Saint-Germain",
+          "description": "Manchester City collapse in calamitous defeat at Paris Saint-Germain  The Guardian",
+          "date": "Wed, 22 Jan 2025 22:53:31 GMT"
         },
         {
-          "title": "Champions League permutations: What Man City & PSG need to qualify",
-          "description": "Champions League permutations: What Man City & PSG need to qualify  BBC.com",
-          "date": "Wed, 22 Jan 2025 09:17:50 GMT"
-        },
-        {
-          "title": "PSG v Man City Tips: Joe Cole's 48/1 Bet Builder",
-          "description": "PSG v Man City Tips: Joe Cole's 48/1 Bet Builder  Paddy Power News",
-          "date": "Wed, 22 Jan 2025 14:55:13 GMT"
-        },
-        {
-          "title": "PSG vs. Man City live score: UEFA Champions League result, updates, stats as European giants face elimination threat",
-          "description": "PSG vs. Man City live score: UEFA Champions League result, updates, stats as European giants face elimination threat  Sporting News",
-          "date": "Wed, 22 Jan 2025 21:43:00 GMT"
-        },
-        {
-          "title": "Sad separation behind Man City's sharp decline as PSG score stunning 4-2 win",
-          "description": "Sad separation behind Man City's sharp decline as PSG score stunning 4-2 win  Nine",
-          "date": "Wed, 22 Jan 2025 22:25:08 GMT"
+          "title": "PSG stage stunning comeback to put Man City on brink of Champions League exit",
+          "description": "PSG stage stunning comeback to put Man City on brink of Champions League exit  Tribal Football",
+          "date": "Thu, 23 Jan 2025 00:08:24 GMT"
         }
       ]
     },
     {
       "player_id": 10009,
       "player_name": "Rodrygo Silva de Goes",
-      "trending_score": 31.0,
-      "trend_summary": "Rodrygo Goes demanded respect with a stunning brace in Real Madrid's 5-1 Champions League victory over Salzburg, while Jude Bellingham's brilliant back-heel assist set up one of his goals. The Brazilian forward's performance, alongside Vinicius Junior's brace, has sparked speculation that the duo could be the future of Real Madrid's attacking line.",
+      "trending_score": 86.0,
+      "trend_summary": "Rodrygo Goes, the rising Brazilian star, demanded respect after scoring a brace in Real Madrid's 5-1 Champions League victory over Salzburg, showcasing his exceptional talent and earning praise as the \"most underappreciated superstar in world football.\"",
       "news": [
         {
           "title": "Real Madrid 5 Salzburg 1 – Rodrygo demands respect, brilliant Bellingham, Vinicius Jr to miss Brest",
-          "description": "Real Madrid 5 Salzburg 1 – Rodrygo demands respect, brilliant Bellingham, Vinicius Jr to miss Brest  The Athletic",
+          "description": "Real Madrid 5 Salzburg 1 – Rodrygo demands respect, brilliant Bellingham, Vinicius Jr to miss Brest",
           "date": "Wed, 22 Jan 2025 22:02:32 GMT"
         },
         {
           "title": "Rodrygo and Vinícius double up as Real Madrid hit five past hapless Salzburg",
           "description": "Rodrygo and Vinícius double up as Real Madrid hit five past hapless Salzburg  The Guardian",
-          "date": "Wed, 22 Jan 2025 22:31:00 GMT"
+          "date": "Thu, 23 Jan 2025 04:41:00 GMT"
+        },
+        {
+          "title": "Rodrygo reveals what Vinícius said to his teammates after his expulsion at Mestalla",
+          "description": "Rodrygo reveals what Vinícius said to his teammates after his expulsion at Mestalla  Real Madrid Confidencial",
+          "date": "Thu, 23 Jan 2025 05:30:00 GMT"
+        },
+        {
+          "title": "\"Most underappreciated superstar in world football\"",
+          "description": "\"Most underappreciated superstar in world football\"",
+          "date": "Thu, 23 Jan 2025 00:19:00 GMT"
         },
         {
           "title": "Champions League: Rodrygo scores for Real Madrid",
@@ -124,43 +96,53 @@
           "date": "Wed, 22 Jan 2025 22:12:57 GMT"
         },
         {
-          "title": "WATCH: Real Madrid double advantage over RB Salzburg courtesy of Rodrygo Goes’ second",
-          "description": "WATCH: Real Madrid double advantage over RB Salzburg courtesy of Rodrygo Goes’ second  Football Espana",
+          "title": "WATCH: Real Madrid double advantage over RB Salzburg courtesy of Rodrygo Goes' second",
+          "description": "WATCH: Real Madrid double advantage over RB Salzburg courtesy of Rodrygo Goes' second  Football Espana",
           "date": "Wed, 22 Jan 2025 20:39:27 GMT"
         },
         {
-          "title": "Vinicius Junior and Rodrygo bag braces as five-star Real Madrid thump sorry Salzburg",
-          "description": "Vinicius Junior and Rodrygo bag braces as five-star Real Madrid thump sorry Salzburg  Flashscore.com",
-          "date": "Wed, 22 Jan 2025 22:04:42 GMT"
+          "title": "Soccer-Real Madrid thrash Salzburg 5-1 with Rodrygo and Vinicius doubles",
+          "description": "Soccer-Real Madrid thrash Salzburg 5-1 with Rodrygo and Vinicius doubles  MSN",
+          "date": "Thu, 23 Jan 2025 00:02:10 GMT"
         },
         {
-          "title": "Modric, directly going for Mbappé after Rodrygo's second goal",
-          "description": "Modric, directly going for Mbappé after Rodrygo's second goal  Real Madrid Confidencial",
-          "date": "Wed, 22 Jan 2025 20:45:00 GMT"
-        },
-        {
-          "title": "Real Madrid thrash Salzburg 5-1 with Rodrygo and Vinicius doubles",
-          "description": "Real Madrid thrash Salzburg 5-1 with Rodrygo and Vinicius doubles  The Straits Times",
-          "date": "Wed, 22 Jan 2025 22:51:00 GMT"
+          "title": "Real Madrid 5-1 RB Salzburg (22 Jan, 2025) Game Analysis",
+          "description": "Real Madrid 5-1 RB Salzburg (22 Jan, 2025) Game Analysis  ESPN.co.uk",
+          "date": "Wed, 22 Jan 2025 15:09:00 GMT"
         },
         {
           "title": "Real Madrid vs RB Salzburg Highlights: RMA 5-1 SAL; Vinicius, Rodrygo score brace; Mbappe finds net",
           "description": "Real Madrid vs RB Salzburg Highlights: RMA 5-1 SAL; Vinicius, Rodrygo score brace; Mbappe finds net  Sportstar",
-          "date": "Wed, 22 Jan 2025 21:52:26 GMT"
-        },
-        {
-          "title": "Real Madrid thrash Salzburg 5-1 with Rodrygo and Vinicius doubles",
-          "description": "Real Madrid thrash Salzburg 5-1 with Rodrygo and Vinicius doubles  CNA",
-          "date": "Wed, 22 Jan 2025 22:17:09 GMT"
+          "date": "Wed, 22 Jan 2025 21:52:37 GMT"
         }
       ]
     },
     {
       "player_id": 762,
       "player_name": "Vinícius José Paixão de Oliveira Júnior",
-      "trending_score": 27.0,
-      "trend_summary": "Vinicius Junior reached a remarkable milestone, scoring his 100th goal for Real Madrid in their 5-1 Champions League victory over Salzburg, where he netted a brace alongside fellow Brazilian Rodrygo. Amidst the transfer speculation, news emerged that the Saudi Pro League is reportedly preparing a world-record €350 million offer for Vinicius Junior, potentially tempting the winger away from the Spanish giants.",
+      "trending_score": 85.0,
+      "trend_summary": "Vinicius Junior reached a century of goals for Real Madrid, scoring a brace in their 5-0 Champions League triumph over Salzburg. Despite his on-field success, the Brazilian forward's future remains uncertain, with reports suggesting a world-record €350 million bid from the Saudi Pro League.",
       "news": [
+        {
+          "title": "Vinicius Jr brings up Real Madrid century – but will (another) booking prove costly?",
+          "description": "Vinicius Jr brings up Real Madrid century – but will (another) booking prove costly?",
+          "date": "Thu, 23 Jan 2025 07:48:47 GMT"
+        },
+        {
+          "title": "Vinicius Junior and Rodrygo bag braces as five-star Real Madrid thump sorry Salzburg",
+          "description": "Vinicius Junior and Rodrygo bag braces as five-star Real Madrid thump sorry Salzburg  Flashscore.com",
+          "date": "Thu, 23 Jan 2025 11:20:55 GMT"
+        },
+        {
+          "title": "Real Madrid star Vinicius Junior admits he expected to win Ballon d’Or",
+          "description": "Real Madrid star Vinicius Junior admits he expected to win Ballon d’Or  Football Espana",
+          "date": "Thu, 23 Jan 2025 10:56:35 GMT"
+        },
+        {
+          "title": "Netflix Announces Vinicius Junior Documentary Coming in 2025",
+          "description": "Netflix Announces Vinicius Junior Documentary Coming in 2025  OneFootball",
+          "date": "Thu, 23 Jan 2025 07:20:00 GMT"
+        },
         {
           "title": "Vinicius Junior completes 100 goals for Real Madrid: Key stats",
           "description": "Vinicius Junior completes 100 goals for Real Madrid: Key stats  NewsBytes",
@@ -172,62 +154,110 @@
           "date": "Wed, 22 Jan 2025 18:57:10 GMT"
         },
         {
-          "title": "Vinicius Junior Reacts to Scoring His 100th Goal for Real Madrid",
-          "description": "Vinicius Junior Reacts to Scoring His 100th Goal for Real Madrid  OneFootball",
-          "date": "Wed, 22 Jan 2025 23:35:55 GMT"
+          "title": "Saudi Pro League still keen on signing Real Madrid's Vinicius Junior",
+          "description": "Saudi Pro League still keen on signing Real Madrid's Vinicius Junior  MSN",
+          "date": "Thu, 23 Jan 2025 00:33:49 GMT"
         },
         {
-          "title": "WATCH: Vinicius Junior gets on the scoresheet as goal number four arrives for Real Madrid",
-          "description": "WATCH: Vinicius Junior gets on the scoresheet as goal number four arrives for Real Madrid  Football Espana",
-          "date": "Wed, 22 Jan 2025 21:17:59 GMT"
+          "title": "Football transfer rumours: Garnacho's Man Utd exit collapses; Real Madrid receive €350m Vinicius bid",
+          "description": "Football transfer rumours: Garnacho's Man Utd exit collapses; Real Madrid receive €350m Vinicius bid  90min UK",
+          "date": "Thu, 23 Jan 2025 09:00:00 GMT"
         },
         {
-          "title": "Vinicius Junior and Rodrygo bag braces as five-star Real Madrid thump sorry Salzburg",
-          "description": "Vinicius Junior and Rodrygo bag braces as five-star Real Madrid thump sorry Salzburg  Flashscore.com",
-          "date": "Wed, 22 Jan 2025 22:04:42 GMT"
+          "title": "Real Madrid injury, suspension news vs. Real Valladolid: Will Vinicius Junior be available?",
+          "description": "Real Madrid injury, suspension news vs. Real Valladolid: Will Vinicius Junior be available?  Sports Mole",
+          "date": "Thu, 23 Jan 2025 10:57:00 GMT"
         },
         {
           "title": "Vinicius Junior: Saudis to decimate world record with €350m offer as insider urges 'watch this space'",
           "description": "Vinicius Junior: Saudis to decimate world record with €350m offer as insider urges 'watch this space'  TEAMtalk",
           "date": "Wed, 22 Jan 2025 22:42:05 GMT"
+        }
+      ]
+    },
+    {
+      "player_id": 19187,
+      "player_name": "Jack Peter Grealish",
+      "trending_score": 78.0,
+      "trend_summary": "Jack Grealish's candid assessment of Manchester City's \"weird\" Champions League performance has raised concerns about the team's form, while the English international has also revealed his secret Gaelic football past, crediting the sport for toughening him up on the pitch.",
+      "news": [
+        {
+          "title": "Jack Grealish knows Manchester City have no margin for error in Champions League",
+          "description": "Jack Grealish knows Manchester City have no margin for error in Champions League  The Independent",
+          "date": "Thu, 23 Jan 2025 10:46:00 GMT"
         },
         {
-          "title": "UCL 2024-25: Real Madrid thrashes Salzburg 5-1 to get back on track in Europe",
-          "description": "UCL 2024-25: Real Madrid thrashes Salzburg 5-1 to get back on track in Europe  Sportstar",
-          "date": "Wed, 22 Jan 2025 21:58:00 GMT"
+          "title": "Jack Grealish laments ‘weird’ Man City performance that leaves them on brink of Champions League exit...",
+          "description": "Jack Grealish laments ‘weird’ Man City performance that leaves them on brink of Champions League exit...  talkSPORT",
+          "date": "Thu, 23 Jan 2025 09:17:29 GMT"
         },
         {
-          "title": "Real Madrid thrash Salzburg 5-1 with Rodrygo and Vinicius doubles",
-          "description": "Real Madrid thrash Salzburg 5-1 with Rodrygo and Vinicius doubles  The Straits Times",
-          "date": "Wed, 22 Jan 2025 22:51:00 GMT"
+          "title": "Jack Grealish calls out 'weird' Man City performance in honest interview as club on brink of Champions League exit",
+          "description": "Jack Grealish calls out 'weird' Man City performance in honest interview as club on brink of Champions League exit  SPORTbible",
+          "date": "Thu, 23 Jan 2025 07:38:54 GMT"
         },
         {
-          "title": "WATCH: Vinicius Junior doubles up as Real Madrid hit fifth against RB Salzburg",
-          "description": "WATCH: Vinicius Junior doubles up as Real Madrid hit fifth against RB Salzburg  Football Espana",
-          "date": "Wed, 22 Jan 2025 21:38:24 GMT"
+          "title": "Pep Guardiola and Jack Grealish admission underline how far Man City have fallen",
+          "description": "Pep Guardiola and Jack Grealish admission underline how far Man City have fallen  Sporting News",
+          "date": "Wed, 22 Jan 2025 23:25:09 GMT"
         },
         {
-          "title": "Football: Soccer-Real Madrid thrash Salzburg 5-1 with Rodrygo and Vinicius doubles",
-          "description": "Football: Soccer-Real Madrid thrash Salzburg 5-1 with Rodrygo and Vinicius doubles  The Star Online",
-          "date": "Wed, 22 Jan 2025 22:26:00 GMT"
+          "title": "Jack Grealish agrees with Pep Guardiola as sobering Man City confession speaks volumes",
+          "description": "Jack Grealish agrees with Pep Guardiola as sobering Man City confession speaks volumes  The Mirror",
+          "date": "Thu, 23 Jan 2025 07:21:00 GMT"
+        },
+        {
+          "title": "Jack Grealish explains how his secret Gaelic football career helped ‘toughen’ him up",
+          "description": "Jack Grealish explains how his secret Gaelic football career helped ‘toughen’ him up  MSN",
+          "date": "Wed, 22 Jan 2025 19:25:02 GMT"
+        },
+        {
+          "title": "Daily Schmankerl: The aftermath of Bayern Munich vs. Feyenoord; Bayern’s Daniel Peretz spurned multiple offers; Manchester City, Real Madrid tracking Florian Wirtz; Jack Grealish to Borussia Dortmund?; Manchester United’s Ruben Amorim unravels; and M",
+          "description": "Daily Schmankerl: The aftermath of Bayern Munich vs. Feyenoord; Bayern’s Daniel Peretz spurned multiple offers; Manchester City, Real Madrid tracking Florian Wirtz; Jack Grealish to Borussia Dortmund?; Manchester United’s Ruben Amorim unravels; and M  Bavarian Football Works",
+          "date": "Thu, 23 Jan 2025 05:00:00 GMT"
+        },
+        {
+          "title": "Man Utd striker shortlist includes Matheus Cunha, Bryan Mbeumo, Liam Delap and Jonathan David",
+          "description": "Man Utd striker shortlist includes Matheus Cunha, Bryan Mbeumo, Liam Delap and Jonathan David",
+          "date": "Wed, 22 Jan 2025 22:10:27 GMT"
+        },
+        {
+          "title": "Jack Grealish throwaway comment exposes concerning Man City issue that needs urgent attention",
+          "description": "Jack Grealish throwaway comment exposes concerning Man City issue that needs urgent attention  Manchester Evening News",
+          "date": "Thu, 23 Jan 2025 07:00:00 GMT"
+        },
+        {
+          "title": "Why Jack Grealish was stopped from playing Gaelic football",
+          "description": "Why Jack Grealish was stopped from playing Gaelic football  EVOKE",
+          "date": "Wed, 22 Jan 2025 14:33:21 GMT"
         }
       ]
     },
     {
       "player_id": 278,
       "player_name": "Kylian Mbappé Lottin",
-      "trending_score": 24.0,
-      "trend_summary": "Kylian Mbappé's Champions League brilliance continued as he surpassed Thierry Henry's goal tally in the competition with a strike against RB Salzburg. Despite Real Madrid's recent struggles, Mbappé has defended his performance, admitting he \"couldn't do any worse.\" Off the pitch, Mbappé has refuted Neymar's claims of jealousy towards Lionel Messi, highlighting the complex dynamics within the star-studded PSG squad.",
+      "trending_score": 72.0,
+      "trend_summary": "Kylian Mbappé made history by scoring for Real Madrid in a 5-1 win over Red Bull Salzburg, surpassing Thierry Henry as the French club's all-time top scorer in the UEFA Champions League. Despite speculation about a potential move to Real Madrid, Mbappé has denied claims of jealousy towards Lionel Messi and remains a key player for Paris Saint-Germain.",
       "news": [
+        {
+          "title": "The 'street football mentality' that helps Paris produce stars like Mbappe and Henry",
+          "description": "The 'street football mentality' that helps Paris produce stars like Mbappe and Henry  Eurosport COM",
+          "date": "Thu, 23 Jan 2025 10:40:00 GMT"
+        },
+        {
+          "title": "PSG superstar Achraf Hakimi comments on Kylian Mbappe scoring for Real Madrid in 5-1 win vs Red Bull Salzburg",
+          "description": "PSG superstar Achraf Hakimi comments on Kylian Mbappe scoring for Real Madrid in 5-1 win vs Red Bull Salzburg  Sportskeeda",
+          "date": "Thu, 23 Jan 2025 05:57:00 GMT"
+        },
+        {
+          "title": "Kylian Mbappe Net Worth In 2025: What Makes Him One of the Richest Athletes?",
+          "description": "Kylian Mbappe Net Worth In 2025: What Makes Him One of the Richest Athletes?  Tycoonstory Media",
+          "date": "Thu, 23 Jan 2025 03:51:38 GMT"
+        },
         {
           "title": "WATCH: Goalkeeper mistake allows Kylian Mbappe to score Real Madrid’s third",
           "description": "WATCH: Goalkeeper mistake allows Kylian Mbappe to score Real Madrid’s third  Football Espana",
           "date": "Wed, 22 Jan 2025 21:11:48 GMT"
-        },
-        {
-          "title": "LIVE: Real Madrid cruise by RB Salzburg – UEFA Champions League reaction",
-          "description": "LIVE: Real Madrid cruise by RB Salzburg – UEFA Champions League reaction  Al Jazeera English",
-          "date": "Wed, 22 Jan 2025 22:30:00 GMT"
         },
         {
           "title": "Deschamps Addresses Ex-PSG Star Kylian Mbappé’s Injury Omission Despite Starting for Real Madrid",
@@ -240,34 +270,24 @@
           "date": "Wed, 22 Jan 2025 21:46:00 GMT"
         },
         {
+          "title": "Real Madrid vs RB Salzburg 5-1: UEFA Champions League – as it happened",
+          "description": "Real Madrid vs RB Salzburg 5-1: UEFA Champions League – as it happened  Al Jazeera English",
+          "date": "Thu, 23 Jan 2025 00:00:00 GMT"
+        },
+        {
           "title": "Kylian Mbappe hits back at Neymar’s claim of being 'jealous' with Lionel Messi",
           "description": "Kylian Mbappe hits back at Neymar’s claim of being 'jealous' with Lionel Messi  Firstpost",
           "date": "Wed, 22 Jan 2025 16:22:36 GMT"
         },
         {
-          "title": "\"I think he should give it up\"",
-          "description": "\"I think he should give it up\"",
-          "date": "Wed, 22 Jan 2025 15:27:00 GMT"
-        },
-        {
-          "title": "Kylian Mbappe explains poor Real Madrid form: 'I couldn't do any worse‘",
-          "description": "Kylian Mbappe explains poor Real Madrid form: 'I couldn't do any worse‘  The Independent",
-          "date": "Wed, 22 Jan 2025 12:39:00 GMT"
-        },
-        {
-          "title": "Kylian Mbappe fires back at Neymar’s claim of jealousy towards Lionel Messi",
-          "description": "Kylian Mbappe fires back at Neymar’s claim of jealousy towards Lionel Messi  The Indian Express",
-          "date": "Wed, 22 Jan 2025 06:08:28 GMT"
+          "title": "Transfer Centre LIVE! Football transfers, news, updates and rumours",
+          "description": "Transfer Centre LIVE! Football transfers, news, updates and rumours  Sky Sports",
+          "date": "Wed, 22 Jan 2025 17:53:07 GMT"
         },
         {
           "title": "Kylian Mbappe Overtakes Thierry Henry With Historic Champions League Goal vs. RB Salzburg",
           "description": "Kylian Mbappe Overtakes Thierry Henry With Historic Champions League Goal vs. RB Salzburg  FootBoom",
           "date": "Wed, 22 Jan 2025 23:05:20 GMT"
-        },
-        {
-          "title": "Champions League: Kylian Mbappe proving doubters wrong as Real Madrid approach crunch clash",
-          "description": "Champions League: Kylian Mbappe proving doubters wrong as Real Madrid approach crunch clash  Flashscore.com",
-          "date": "Wed, 22 Jan 2025 14:28:59 GMT"
         }
       ]
     }
