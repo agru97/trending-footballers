@@ -1,79 +1,26 @@
 {
-  "updated_at": "2025-01-24T00:04:32.793584+00:00",
+  "updated_at": "2025-01-24T12:21:29.552954+00:00",
   "player_news": [
-    {
-      "player_id": 81573,
-      "player_name": "Omar Khaled Mohamed Abd Elsala Marmoush",
-      "trending_score": 100.0,
-      "trend_summary": "Egyptian forward Omar Marmoush has joined Manchester City from Eintracht Frankfurt for a reported £59 million. The 23-year-old has impressed with his pace and goal-scoring ability in the Bundesliga, leading to speculation that he could be a potential replacement for Julian Alvarez at the Etihad Stadium. However, some experts believe that City may be taking a risk with the transfer, given Marmoush's lack of experience at the highest level.",
-      "news": [
-        {
-          "title": "Omar Marmoush signs for Manchester City — What can we expect?",
-          "description": "Omar Marmoush signs for Manchester City — What can we expect?  NBC Sports",
-          "date": "Thu, 23 Jan 2025 21:19:08 GMT"
-        },
-        {
-          "title": "Manchester City complete Omar Marmoush signing from Eintracht Frankfurt",
-          "description": "Manchester City complete Omar Marmoush signing from Eintracht Frankfurt",
-          "date": "Thu, 23 Jan 2025 18:38:39 GMT"
-        },
-        {
-          "title": "Emotions high as Marmoush leaves Eintracht",
-          "description": "Emotions high as Marmoush leaves Eintracht  Bundesliga",
-          "date": "Thu, 23 Jan 2025 09:11:03 GMT"
-        },
-        {
-          "title": "Omar Marmoush signs with Man City on transfer from Eintracht Frankfurt",
-          "description": "Omar Marmoush signs with Man City on transfer from Eintracht Frankfurt  Al Jazeera English",
-          "date": "Thu, 23 Jan 2025 09:45:00 GMT"
-        },
-        {
-          "title": "What Omar Marmoush brings to Manchester City: Lethal on the break, runs behind and a passing option",
-          "description": "What Omar Marmoush brings to Manchester City: Lethal on the break, runs behind and a passing option  The Athletic",
-          "date": "Thu, 23 Jan 2025 18:16:58 GMT"
-        },
-        {
-          "title": "Omar Marmoush returns from international duty with injury",
-          "description": "Omar Marmoush returns from international duty with injury  OneFootball",
-          "date": "Thu, 23 Jan 2025 16:37:33 GMT"
-        },
-        {
-          "title": "Why Marmoush can be Man City's perfect Alvarez replacement",
-          "description": "Why Marmoush can be Man City's perfect Alvarez replacement  Premier League",
-          "date": "Thu, 23 Jan 2025 09:18:08 GMT"
-        },
-        {
-          "title": "Omar Marmoush: How Man City may use Egyptian forward & how he was used at Eintracht Frankfurt",
-          "description": "Omar Marmoush: How Man City may use Egyptian forward & how he was used at Eintracht Frankfurt  BBC.com",
-          "date": "Thu, 23 Jan 2025 10:02:33 GMT"
-        },
-        {
-          "title": "Omar Marmoush: 10 things you (probably) didn’t know",
-          "description": "Omar Marmoush: 10 things you (probably) didn’t know  Manchester City FC",
-          "date": "Thu, 23 Jan 2025 09:00:00 GMT"
-        },
-        {
-          "title": "Man City taking a huge risk paying £59m for Omar Marmoush given lack of elite experience or previous form ahead of current purple patch: GOAL grades 2025's biggest January transfers",
-          "description": "Man City taking a huge risk paying £59m for Omar Marmoush given lack of elite experience or previous form ahead of current purple patch: GOAL grades 2025's biggest January transfers  Goal.com",
-          "date": "Thu, 23 Jan 2025 14:10:00 GMT"
-        }
-      ]
-    },
     {
       "player_id": 1467,
       "player_name": "Alexandre Armand Lacazette",
-      "trending_score": 94.0,
-      "trend_summary": "In the Europa League clash between Fenerbahce and Lyon, Alexandre Lacazette failed to make a significant impact as his team was held to a disappointing 0-0 draw, leaving Fenerbahce in danger of Europa League elimination. The match was marked by Lyon's missed opportunities, with Lacazette among those who failed to convert their chances.",
+      "trending_score": 100.0,
+      "trend_summary": "Lyon's Europa League hopes were dented as they were held to a goalless draw by Fenerbahçe in Istanbul, with Alexandre Lacazette failing to find the net despite several chances. The French striker's recent form has sparked transfer rumors, with Arsenal reportedly interested in bringing him back to the Emirates Stadium.",
       "news": [
+        {
+          "title": "Fenerbahçe Hosts Lyon In Key Europa League Clash",
+          "description": "Fenerbahçe Hosts Lyon In Key Europa League Clash  Evrim Ağacı",
+          "date": "Thu, 23 Jan 2025 21:01:54 GMT"
+        },
+        {
+          "title": "Five fine wins from our trips to Wolves",
+          "description": "Five fine wins from our trips to Wolves",
+          "date": "Fri, 24 Jan 2025 06:01:45 GMT"
+        },
         {
           "title": "Fenerbahce 0-0 Lyon: Wasteful Lyon made to rue missed opportunities in goalless draw",
           "description": "Fenerbahce 0-0 Lyon: Wasteful Lyon made to rue missed opportunities in goalless draw  VAVEL",
           "date": "Thu, 23 Jan 2025 20:32:21 GMT"
-        },
-        {
-          "title": "Fenerbahce in danger of Europa League elimination after being held to draw by Lyon",
-          "description": "Fenerbahce in danger of Europa League elimination after being held to draw by Lyon  Flashscore.com",
-          "date": "Thu, 23 Jan 2025 20:05:43 GMT"
         },
         {
           "title": "Fenerbahce faces Lyon in crucial Europa League clash",
@@ -86,77 +33,29 @@
           "date": "Thu, 23 Jan 2025 21:51:30 GMT"
         },
         {
-          "title": "Lyon predicted XI v Fenerbahçe: Ainsley Maitland-Niles ill, Georges Mikautadze to start",
-          "description": "Lyon predicted XI v Fenerbahçe: Ainsley Maitland-Niles ill, Georges Mikautadze to start  Get French Football News",
-          "date": "Thu, 23 Jan 2025 10:10:29 GMT"
+          "title": "Lyon Holds Fenerbahce To 0-0 Draw",
+          "description": "Lyon Holds Fenerbahce To 0-0 Draw  Evrim Ağacı",
+          "date": "Fri, 24 Jan 2025 00:43:34 GMT"
         },
         {
-          "title": "Fenerbahce vs Lyon Prediction, lineups, betting tips & odds",
-          "description": "Fenerbahce vs Lyon Prediction, lineups, betting tips & odds  Khel Now",
-          "date": "Thu, 23 Jan 2025 19:46:35 GMT"
+          "title": "Fenerbahce Set To Face Lyon In UEFA Europa League Clash",
+          "description": "Fenerbahce Set To Face Lyon In UEFA Europa League Clash  Evrim Ağacı",
+          "date": "Thu, 23 Jan 2025 20:03:04 GMT"
         },
         {
-          "title": "Fenerbahçe and Olympique Lyon Settle for Goalless Draw",
-          "description": "Fenerbahçe and Olympique Lyon Settle for Goalless Draw  FootBoom",
-          "date": "Thu, 23 Jan 2025 22:35:44 GMT"
-        }
-      ]
-    },
-    {
-      "player_id": 21090,
-      "player_name": "Diego Carlos Santos Silva",
-      "trending_score": 75.0,
-      "trend_summary": "Aston Villa's Diego Carlos has departed the Premier League, joining Turkish giants Fenerbahce on a 3½-year deal. The Brazilian defender, who made 23 appearances for Villa, expressed gratitude for his time in England but is excited for a new chapter in Istanbul.",
-      "news": [
-        {
-          "title": "Aston Villa's Diego Carlos joins Fenerbahce on 3½-year deal",
-          "description": "Aston Villa's Diego Carlos joins Fenerbahce on 3½-year deal  ESPN",
-          "date": "Thu, 23 Jan 2025 14:25:37 GMT"
+          "title": "Five Significant Wins at Molineux",
+          "description": "Five Significant Wins at Molineux  777score",
+          "date": "Fri, 24 Jan 2025 07:23:24 GMT"
         },
         {
-          "title": "Brazilian Defender Diego Carlos signs for Fenerbahce",
-          "description": "Brazilian Defender Diego Carlos signs for Fenerbahce  Sarajevo Times",
-          "date": "Thu, 23 Jan 2025 20:51:03 GMT"
+          "title": "Mourinho defends Sage and Tackle Textor",
+          "description": "Mourinho defends Sage and Tackle Textor  French Football Weekly",
+          "date": "Fri, 24 Jan 2025 11:20:14 GMT"
         },
         {
-          "title": "Brazilian Diego Carlos moves to Fenerbahce from Aston Villa on three-and-a-half-year deal",
-          "description": "Brazilian Diego Carlos moves to Fenerbahce from Aston Villa on three-and-a-half-year deal  Flashscore.com",
-          "date": "Thu, 23 Jan 2025 13:46:05 GMT"
-        },
-        {
-          "title": "Villa's Carlos joins Fenerbahce on 3½-year deal",
-          "description": "Villa's Carlos joins Fenerbahce on 3½-year deal  ESPN",
-          "date": "Thu, 23 Jan 2025 13:52:00 GMT"
-        },
-        {
-          "title": "Fenerbahçe Signs Brazilian Defender Diego Carlos on Three and a Half Year Deal",
-          "description": "Fenerbahçe Signs Brazilian Defender Diego Carlos on Three and a Half Year Deal  FootBoom",
-          "date": "Thu, 23 Jan 2025 18:34:57 GMT"
-        },
-        {
-          "title": "Fenerbahce announce 'agreement' with Aston Villa for Diego Carlos",
-          "description": "Fenerbahce announce 'agreement' with Aston Villa for Diego Carlos  Tribal Football",
-          "date": "Thu, 23 Jan 2025 10:23:09 GMT"
-        },
-        {
-          "title": "Aston Villa very close to signing La Liga defender to replace Diego Carlos",
-          "description": "Aston Villa very close to signing La Liga defender to replace Diego Carlos  OneFootball",
-          "date": "Thu, 23 Jan 2025 13:40:02 GMT"
-        },
-        {
-          "title": "Transfer news :Brazilian Diego Carlos joins Fenerbahce from Aston Villa on three-and-a-half-year deal",
-          "description": "Transfer news :Brazilian Diego Carlos joins Fenerbahce from Aston Villa on three-and-a-half-year deal  Asaase Radio",
-          "date": "Thu, 23 Jan 2025 13:59:48 GMT"
-        },
-        {
-          "title": "Diego Carlos speaks out after Aston Villa transfer as Fenerbahce deal details revealed",
-          "description": "Diego Carlos speaks out after Aston Villa transfer as Fenerbahce deal details revealed  Birmingham Live",
-          "date": "Thu, 23 Jan 2025 11:10:00 GMT"
-        },
-        {
-          "title": "Diego Carlos inks 3.5 years contract with Fenerbahce",
-          "description": "Diego Carlos inks 3.5 years contract with Fenerbahce  Yeni Şafak English",
-          "date": "Thu, 23 Jan 2025 12:11:51 GMT"
+          "title": "Lyon shares the points with “Fener”",
+          "description": "Lyon shares the points with “Fener”  French Football Weekly",
+          "date": "Fri, 24 Jan 2025 05:06:42 GMT"
         }
       ]
     },
@@ -164,17 +63,27 @@
       "player_id": 1485,
       "player_name": "Bruno Miguel Borges Fernandes",
       "trending_score": 68.0,
-      "trend_summary": "In a thrilling Europa League clash, Bruno Fernandes scored a dramatic stoppage-time winner to secure a 2-1 victory for Manchester United over Rangers, keeping the Red Devils on course for a place in the last 16. Despite United's struggles throughout the match, Fernandes's late heroics highlighted his importance to the team, silencing critics who have questioned his recent form.",
+      "trend_summary": "Bruno Fernandes' late winner against Rangers in the Europa League secured a crucial victory for Manchester United, extending their unbeaten run to five matches. Despite speculation about a potential exit, Fernandes remains committed to the club and has emphasized the importance of fostering a winning mentality among United supporters.",
       "news": [
+        {
+          "title": "How Manchester United beat Rangers in the Europa League thanks to Bruno Fernandes' late winner",
+          "description": "How Manchester United beat Rangers in the Europa League thanks to Bruno Fernandes' late winner",
+          "date": "Thu, 23 Jan 2025 23:15:27 GMT"
+        },
+        {
+          "title": "Manchester United Should Never Get Used To Losing, Says Bruno Fernandes",
+          "description": "Manchester United Should Never Get Used To Losing, Says Bruno Fernandes  NDTV Sports",
+          "date": "Fri, 24 Jan 2025 05:26:17 GMT"
+        },
+        {
+          "title": "After scoring late winner against Rangers, Bruno Fernandes makes feelings clear about 'aggressive' Manchester United teammate",
+          "description": "After scoring late winner against Rangers, Bruno Fernandes makes feelings clear about 'aggressive' Manchester United teammate  Sportskeeda",
+          "date": "Fri, 24 Jan 2025 09:24:00 GMT"
+        },
         {
           "title": "Manchester United 2-1 Rangers: Player Ratings as Bruno Fernandes Wins it at the Death",
           "description": "Manchester United 2-1 Rangers: Player Ratings as Bruno Fernandes Wins it at the Death  Sports Illustrated",
           "date": "Thu, 23 Jan 2025 22:01:41 GMT"
-        },
-        {
-          "title": "Bruno Fernandes says Manchester United aiming to bypass Europa League play-offs: 'We want to get top eight'",
-          "description": "Bruno Fernandes says Manchester United aiming to bypass Europa League play-offs: 'We want to get top eight'  dazn.com",
-          "date": "Thu, 23 Jan 2025 22:52:15 GMT"
         },
         {
           "title": "Fernandes hopes United fans 'never get used to losing'",
@@ -182,52 +91,130 @@
           "date": "Thu, 23 Jan 2025 23:19:00 GMT"
         },
         {
-          "title": "Bruno Fernandes strikes late to keep Man United on course for Europa League last 16 spot",
-          "description": "Bruno Fernandes strikes late to keep Man United on course for Europa League last 16 spot  FOX Sports",
-          "date": "Thu, 23 Jan 2025 21:00:07 GMT"
-        },
-        {
-          "title": "Bruno Fernandes scores stoppage-time winner as Manchester United beat Rangers",
-          "description": "Bruno Fernandes scores stoppage-time winner as Manchester United beat Rangers  Yahoo Eurosport UK",
-          "date": "Thu, 23 Jan 2025 22:17:33 GMT"
-        },
-        {
-          "title": "Manchester United vs Rangers live updates: Butland own goal gives hosts Europa League lead",
-          "description": "Manchester United vs Rangers live updates: Butland own goal gives hosts Europa League lead",
-          "date": "Thu, 23 Jan 2025 21:32:16 GMT"
-        },
-        {
-          "title": "Manchester United Struggles But is Saved by Bruno Fernandes in Europa League",
-          "description": "Manchester United Struggles But is Saved by Bruno Fernandes in Europa League  beIN SPORTS",
-          "date": "Thu, 23 Jan 2025 22:59:00 GMT"
-        },
-        {
           "title": "Rio Ferdinand hits out at Bruno Fernandes' critics as he hails the Man United captain after he saved Red Devil",
           "description": "Rio Ferdinand hits out at Bruno Fernandes' critics as he hails the Man United captain after he saved Red Devil  Daily Mail",
-          "date": "Thu, 23 Jan 2025 22:34:23 GMT"
+          "date": "Fri, 24 Jan 2025 10:45:20 GMT"
         },
         {
-          "title": "Bruno Fernandes settles battle of Britain but late escape fails to mask Manchester United's issues",
-          "description": "Bruno Fernandes settles battle of Britain but late escape fails to mask Manchester United's issues  The Independent",
-          "date": "Thu, 23 Jan 2025 22:20:00 GMT"
+          "title": "“I could think about it” – Bruno Fernandes opens door to surprise Man United exit",
+          "description": "“I could think about it” – Bruno Fernandes opens door to surprise Man United exit  CaughtOffside",
+          "date": "Fri, 24 Jan 2025 07:33:02 GMT"
         },
         {
-          "title": "Bruno Fernandes's late goal secures Manchester United's victory over Rangers",
-          "description": "Bruno Fernandes's late goal secures Manchester United's victory over Rangers  NewsBytes",
-          "date": "Thu, 23 Jan 2025 22:24:16 GMT"
+          "title": "Bruno Fernandes strikes late to keep Man United on course for Europa League last 16 spot",
+          "description": "Bruno Fernandes strikes late to keep Man United on course for Europa League last 16 spot  Jamaica Gleaner",
+          "date": "Fri, 24 Jan 2025 00:04:42 GMT"
+        },
+        {
+          "title": "Fans discover person Rasmus Hojlund angrily pushed away during Bruno Fernandes' goal celebrations",
+          "description": "Fans discover person Rasmus Hojlund angrily pushed away during Bruno Fernandes' goal celebrations  SPORTbible",
+          "date": "Fri, 24 Jan 2025 10:18:06 GMT"
+        },
+        {
+          "title": "Bruno Fernandes and Rio Ferdinand give verdict on Toby Collyer's European debut",
+          "description": "Bruno Fernandes and Rio Ferdinand give verdict on Toby Collyer's European debut  Metro.co.uk",
+          "date": "Fri, 24 Jan 2025 08:19:00 GMT"
+        }
+      ]
+    },
+    {
+      "player_id": 81573,
+      "player_name": "Omar Khaled Mohamed Abd Elsala Marmoush",
+      "trending_score": 55.0,
+      "trend_summary": "Omar Marmoush, the Egyptian winger, has joined Manchester City after impressing in the Bundesliga with Eintracht Frankfurt. The 24-year-old, who was part of Egypt's squad at the 2022 World Cup, has returned from international duty with an injury. Despite the setback, Marmoush is expected to make his Manchester City debut against Chelsea in the Premier League.",
+      "news": [
+        {
+          "title": "Omar Marmoush signs for Manchester City — What can we expect?",
+          "description": "Omar Marmoush signs for Manchester City — What can we expect?  NBC Sports",
+          "date": "Fri, 24 Jan 2025 02:14:14 GMT"
+        },
+        {
+          "title": "Omar Marmoush: How Bundesliga forged Manchester City star",
+          "description": "Omar Marmoush: How Bundesliga forged Manchester City star  DW (English)",
+          "date": "Fri, 24 Jan 2025 11:48:54 GMT"
+        },
+        {
+          "title": "What Omar Marmoush brings to Manchester City: Lethal on the break, runs behind and a passing option",
+          "description": "What Omar Marmoush brings to Manchester City: Lethal on the break, runs behind and a passing option  The Athletic",
+          "date": "Thu, 23 Jan 2025 14:14:13 GMT"
+        },
+        {
+          "title": "Searing pace and plenty of goals: Can Omar Marmoush fill the Man City void left by Julian Alvarez?",
+          "description": "Searing pace and plenty of goals: Can Omar Marmoush fill the Man City void left by Julian Alvarez?  The Independent",
+          "date": "Fri, 24 Jan 2025 11:05:00 GMT"
+        },
+        {
+          "title": "Omar Marmoush: German football writer Constantin Eckner analyses new Man City forward",
+          "description": "Omar Marmoush: German football writer Constantin Eckner analyses new Man City forward  BBC.com",
+          "date": "Thu, 23 Jan 2025 23:10:19 GMT"
+        },
+        {
+          "title": "Omar Marmoush returns from international duty with injury",
+          "description": "Omar Marmoush returns from international duty with injury  OneFootball",
+          "date": "Thu, 23 Jan 2025 16:37:33 GMT"
+        },
+        {
+          "title": "Omar Marmoush: His best moments in an Eintracht Frankfurt shirt",
+          "description": "Omar Marmoush: His best moments in an Eintracht Frankfurt shirt  Sky Sports",
+          "date": "Fri, 24 Jan 2025 04:49:27 GMT"
+        },
+        {
+          "title": "Omar Marmoush to Manchester City: The Athletic 500 transfer ratings",
+          "description": "Omar Marmoush to Manchester City: The Athletic 500 transfer ratings  The Athletic",
+          "date": "Thu, 23 Jan 2025 19:15:32 GMT"
+        },
+        {
+          "title": "Man City XI vs Chelsea: Marmoush debut, predicted lineup, confirmed team news and injuries for Premier League",
+          "description": "Man City XI vs Chelsea: Marmoush debut, predicted lineup, confirmed team news and injuries for Premier League  Yahoo Eurosport UK",
+          "date": "Thu, 23 Jan 2025 14:28:34 GMT"
+        },
+        {
+          "title": "Man City taking a huge risk paying £59m for Omar Marmoush given lack of elite experience or previous form ahead of current purple patch: GOAL grades 2025's biggest January transfers",
+          "description": "Man City taking a huge risk paying £59m for Omar Marmoush given lack of elite experience or previous form ahead of current purple patch: GOAL grades 2025's biggest January transfers  Goal.com",
+          "date": "Thu, 23 Jan 2025 14:10:00 GMT"
         }
       ]
     },
     {
       "player_id": 284324,
       "player_name": "Alejandro Garnacho Ferreyra",
-      "trending_score": 53.0,
-      "trend_summary": "Amidst speculation of a potential departure from Manchester United, Alejandro Garnacho has reportedly chosen between Chelsea and Napoli as his preferred destination. The 18-year-old winger's impressive performances in the UEFA Europa League have caught the attention of several top clubs, with Chelsea reportedly preparing an opening bid for his services.",
+      "trending_score": 55.0,
+      "trend_summary": "In a surprising turn of events, Chelsea has reportedly made a formal offer to acquire Manchester United's highly-rated winger Alejandro Garnacho, with reports suggesting the transfer could reach a staggering £96 million. Meanwhile, Garnacho's agent has met with Chelsea officials, sparking speculation that the Argentine star could be on his way to Stamford Bridge.",
       "news": [
         {
-          "title": "Chelsea line up opening Alejandro Garnacho bid with Napoli moving on",
-          "description": "Chelsea line up opening Alejandro Garnacho bid with Napoli moving on  The Telegraph",
-          "date": "Thu, 23 Jan 2025 16:10:00 GMT"
+          "title": "Chelsea send formal offer to sign Alejandro Garnacho from Manchester United as advantage explained: Reports",
+          "description": "Chelsea send formal offer to sign Alejandro Garnacho from Manchester United as advantage explained: Reports  Sportskeeda",
+          "date": "Fri, 24 Jan 2025 10:41:00 GMT"
+        },
+        {
+          "title": "Alejandro Garnacho transfer price rockets as Chelsea handed massive £96m January dilemma",
+          "description": "Alejandro Garnacho transfer price rockets as Chelsea handed massive £96m January dilemma  Football.London",
+          "date": "Fri, 24 Jan 2025 11:00:00 GMT"
+        },
+        {
+          "title": "'Let's see': Chelsea handed new Garnacho boost after Man Utd update",
+          "description": "'Let's see': Chelsea handed new Garnacho boost after Man Utd update  Evening Standard",
+          "date": "Fri, 24 Jan 2025 11:04:05 GMT"
+        },
+        {
+          "title": "Enzo Maresca breaks silence on Chelsea's interest in Man Utd star Alejandro Garnacho",
+          "description": "Enzo Maresca breaks silence on Chelsea's interest in Man Utd star Alejandro Garnacho  Metro.co.uk",
+          "date": "Fri, 24 Jan 2025 11:15:00 GMT"
+        },
+        {
+          "title": "Enzo Maresca addresses Alejandro Garnacho signing after agent meets Chelsea chiefs",
+          "description": "Enzo Maresca addresses Alejandro Garnacho signing after agent meets Chelsea chiefs",
+          "date": "Fri, 24 Jan 2025 10:16:00 GMT"
+        },
+        {
+          "title": "Man Utd 2-1 Rangers: Doubt remains over futures of Marcus Rashford and Alejandro Garnacho",
+          "description": "Man Utd 2-1 Rangers: Doubt remains over futures of Marcus Rashford and Alejandro Garnacho  BBC.com",
+          "date": "Fri, 24 Jan 2025 00:02:38 GMT"
+        },
+        {
+          "title": "Alejandro Garnacho signs, Dusan Vlahovic transfer sealed",
+          "description": "Alejandro Garnacho signs, Dusan Vlahovic transfer sealed",
+          "date": "Fri, 24 Jan 2025 07:50:39 GMT"
         },
         {
           "title": "Alejandro Garnacho: Chelsea considering move for Manchester United winger before January transfer window closes",
@@ -235,44 +222,67 @@
           "date": "Thu, 23 Jan 2025 17:26:15 GMT"
         },
         {
-          "title": "Football gossip: Garnacho, Cambiaso, Rashford, Chilwell, Zinchenko, Veiga",
-          "description": "Football gossip: Garnacho, Cambiaso, Rashford, Chilwell, Zinchenko, Veiga  BBC.com",
-          "date": "Thu, 23 Jan 2025 21:34:54 GMT"
+          "title": "Chelsea line up opening Alejandro Garnacho bid with Napoli moving on",
+          "description": "Chelsea line up opening Alejandro Garnacho bid with Napoli moving on  The Telegraph",
+          "date": "Thu, 23 Jan 2025 16:10:00 GMT"
         },
         {
-          "title": "Chelsea's Alejandro Garnacho transfer stance explained as Man Utd brace for bid",
-          "description": "Chelsea's Alejandro Garnacho transfer stance explained as Man Utd brace for bid  Football.London",
-          "date": "Thu, 23 Jan 2025 19:21:24 GMT"
+          "title": "Napoli make OFFICIAL Garnacho statement",
+          "description": "Napoli make OFFICIAL Garnacho statement  FootballTransfers",
+          "date": "Fri, 24 Jan 2025 06:44:00 GMT"
+        }
+      ]
+    },
+    {
+      "player_id": 339887,
+      "player_name": "Can Yılmaz Uzun",
+      "trending_score": 49.0,
+      "trend_summary": "In the UEFA Europa League, Can Uzun and Hugo Ekitike inspired Eintracht Frankfurt to a second-half victory over Ferencvaros, propelling the German club into second place in Group H. Meanwhile, off the pitch, former Lyon manager Rudi Garcia was appointed as the new head coach of the Belgian national team.",
+      "news": [
+        {
+          "title": "Uzun and Ekitike inspire second-placed Frankfurt to Europa League win",
+          "description": "Uzun and Ekitike inspire second-placed Frankfurt to Europa League win  MSN",
+          "date": "Thu, 23 Jan 2025 23:11:49 GMT"
         },
         {
-          "title": "Chelsea to approach Manchester United over potential deal for Alejandro Garnacho: Reports",
-          "description": "Chelsea to approach Manchester United over potential deal for Alejandro Garnacho: Reports  Sportskeeda",
-          "date": "Thu, 23 Jan 2025 16:38:00 GMT"
+          "title": "Third home win in ten days",
+          "description": "Third home win in ten days  OneFootball",
+          "date": "Thu, 23 Jan 2025 22:39:36 GMT"
         },
         {
-          "title": "Rio Ferdinand offers Alejandro Garnacho transfer theory amid Chelsea links",
-          "description": "Rio Ferdinand offers Alejandro Garnacho transfer theory amid Chelsea links  Metro.co.uk",
-          "date": "Thu, 23 Jan 2025 23:48:00 GMT"
+          "title": "Frankfurt find way past Ferencvaros in second-half to go second in Europa League",
+          "description": "Frankfurt find way past Ferencvaros in second-half to go second in Europa League  Flashscore.com",
+          "date": "Thu, 23 Jan 2025 23:18:18 GMT"
         },
         {
-          "title": "Alejandro Garnacho 'picks between Chelsea and Napoli' as Man Utd exit edges near",
-          "description": "Alejandro Garnacho 'picks between Chelsea and Napoli' as Man Utd exit edges near  Express",
-          "date": "Thu, 23 Jan 2025 17:16:00 GMT"
+          "title": "Uzun and Ekitike inspire second-placed Frankfurt to Europa League win",
+          "description": "Uzun and Ekitike inspire second-placed Frankfurt to Europa League win  MSN",
+          "date": "Fri, 24 Jan 2025 00:09:25 GMT"
         },
         {
-          "title": "Chelsea take first step towards Alejandro Garnacho transfer as Man United demand £60m...",
-          "description": "Chelsea take first step towards Alejandro Garnacho transfer as Man United demand £60m...  talkSPORT",
-          "date": "Thu, 23 Jan 2025 17:06:40 GMT"
+          "title": "Uzun and Eketiké strike as Frankfurt soar past Ferencváros",
+          "description": "Uzun and Eketiké strike as Frankfurt soar past Ferencváros  OneFootball",
+          "date": "Thu, 23 Jan 2025 22:05:46 GMT"
         },
         {
-          "title": "Manchester United vs Rangers: Will Alejandro Garnacho play amid transfer rumours?",
-          "description": "Manchester United vs Rangers: Will Alejandro Garnacho play amid transfer rumours?  NationalWorld",
-          "date": "Thu, 23 Jan 2025 17:43:20 GMT"
+          "title": "Frenchman Rudi Garcia named new head coach of Belgian national team",
+          "description": "Frenchman Rudi Garcia named new head coach of Belgian national team  Flashscore.com",
+          "date": "Fri, 24 Jan 2025 07:46:34 GMT"
         },
         {
-          "title": "Should Chelsea Sign Alejandro Garnacho From Manchester United?",
-          "description": "Should Chelsea Sign Alejandro Garnacho From Manchester United?  OneFootball",
-          "date": "Thu, 23 Jan 2025 17:14:14 GMT"
+          "title": "‘We need to look in the mirror’ – Robbie Keane rues errors as Ferencvaros debut ends in Europa League defeat",
+          "description": "‘We need to look in the mirror’ – Robbie Keane rues errors as Ferencvaros debut ends in Europa League defeat  Irish Independent",
+          "date": "Fri, 24 Jan 2025 10:27:46 GMT"
+        },
+        {
+          "title": "“We had complete control”",
+          "description": "“We had complete control”  OneFootball",
+          "date": "Thu, 23 Jan 2025 23:27:43 GMT"
+        },
+        {
+          "title": "Fernandes secures late Man United win, Lazio stay top",
+          "description": "Fernandes secures late Man United win, Lazio stay top  SuperSport",
+          "date": "Thu, 23 Jan 2025 23:57:39 GMT"
         }
       ]
     }
