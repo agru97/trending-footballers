@@ -1,208 +1,293 @@
 {
-  "updated_at": "2025-01-24T23:58:48.382599+00:00",
+  "updated_at": "2025-01-26T00:09:40.175169+00:00",
   "player_news": [
     {
-      "player_id": 627,
-      "player_name": "Kyle Andrew Walker",
+      "player_id": 360114,
+      "player_name": "Abduqodir Khusanov",
       "trending_score": 100.0,
-      "trend_summary": "Kyle Walker has departed Manchester City on a loan deal until the end of the season, joining Italian giants AC Milan. The experienced defender, who has been a key player for Pep Guardiola's side since 2017, has expressed gratitude for his time at the Etihad Stadium while acknowledging the need for a new challenge.",
+      "trend_summary": "Abdukodir Khusanov's Manchester City debut was a nightmare, gifting Chelsea an early goal and earning a booking within five minutes, but the team rallied to a 3-1 victory. Despite his struggles, manager Pep Guardiola praised the debutant's resilience, calling his errors \"the best lesson\" for the young defender.",
       "news": [
         {
-          "title": "Kyle Walker: AC Milan complete loan deal for Man City captain",
-          "description": "Kyle Walker: AC Milan complete loan deal for Man City captain  BBC.com",
-          "date": "Fri, 24 Jan 2025 19:33:04 GMT"
+          "title": "Man City 3-1 Chelsea: Premier League champions recover from Abdukodir Khusanov's nightmare start",
+          "description": "Man City 3-1 Chelsea: Premier League champions recover from Abdukodir Khusanov's nightmare start  BBC.com",
+          "date": "Sat, 25 Jan 2025 22:18:59 GMT"
         },
         {
-          "title": "Kyle Walker transfer: Man City defender is one of Pep Guardiola's most trusted players",
-          "description": "Kyle Walker transfer: Man City defender is one of Pep Guardiola's most trusted players",
-          "date": "Fri, 24 Jan 2025 23:18:04 GMT"
+          "title": "\"He doesn't speak English so I didn't speak to him\"",
+          "description": "\"He doesn't speak English so I didn't speak to him\"",
+          "date": "Sat, 25 Jan 2025 21:32:00 GMT"
         },
         {
-          "title": "Walker leaves Man City to join Milan on loan deal until end of season",
-          "description": "Walker leaves Man City to join Milan on loan deal until end of season  Eurosport COM",
-          "date": "Fri, 24 Jan 2025 19:38:00 GMT"
+          "title": "Man City's Pep Guardiola made a mistake starting debutant Abdukodir Khusanov against Chelsea, says Jamie Redknapp",
+          "description": "Man City's Pep Guardiola made a mistake starting debutant Abdukodir Khusanov against Chelsea, says Jamie Redknapp  Sky Sports",
+          "date": "Sat, 25 Jan 2025 23:15:40 GMT"
         },
         {
-          "title": "Kyle Walker completes loan move to AC Milan",
-          "description": "Kyle Walker completes loan move to AC Milan  OneFootball",
-          "date": "Fri, 24 Jan 2025 20:34:58 GMT"
+          "title": "Debut errors ‘best lesson’ for new City recruit Khusanov, insists Guardiola",
+          "description": "Debut errors ‘best lesson’ for new City recruit Khusanov, insists Guardiola  The Guardian",
+          "date": "Sat, 25 Jan 2025 21:35:00 GMT"
         },
         {
-          "title": "Kyle Walker grateful for Manchester City 'dream' after sealing AC Milan loan move",
-          "description": "Kyle Walker grateful for Manchester City 'dream' after sealing AC Milan loan move  The Independent",
-          "date": "Fri, 24 Jan 2025 19:41:00 GMT"
+          "title": "Abdukodir Khusanov Debuts For Manchester City Amid Early Challenge",
+          "description": "Abdukodir Khusanov Debuts For Manchester City Amid Early Challenge  Evrim Ağacı",
+          "date": "Sat, 25 Jan 2025 18:53:35 GMT"
         },
         {
-          "title": "Kyle Walker says farewell to Man City: Star sends touching message to wife Annie Kilner and his family in 253-",
-          "description": "Kyle Walker says farewell to Man City: Star sends touching message to wife Annie Kilner and his family in 253-  Daily Mail",
-          "date": "Fri, 24 Jan 2025 19:32:41 GMT"
+          "title": "'WTF was he thinking?!'",
+          "description": "'WTF was he thinking?!'",
+          "date": "Sat, 25 Jan 2025 18:43:22 GMT"
         },
         {
-          "title": "Official: Milan sign Kyle Walker from Manchester City",
-          "description": "Official: Milan sign Kyle Walker from Manchester City  Football Italia",
-          "date": "Fri, 24 Jan 2025 19:41:15 GMT"
+          "title": "How Manchester City came from behind to beat Chelsea 3-1 in Premier League match",
+          "description": "How Manchester City came from behind to beat Chelsea 3-1 in Premier League match",
+          "date": "Sat, 25 Jan 2025 20:36:14 GMT"
         },
         {
-          "title": "Guardiola pays heartfelt thank you to Kyle Walker as defender joins AC Milan",
-          "description": "Guardiola pays heartfelt thank you to Kyle Walker as defender joins AC Milan  Hayters",
-          "date": "Fri, 24 Jan 2025 22:30:00 GMT"
+          "title": "Manchester City: Team Response to Abdukodir Khusanov's Mistake",
+          "description": "Manchester City: Team Response to Abdukodir Khusanov's Mistake  FootBoom",
+          "date": "Sat, 25 Jan 2025 21:22:03 GMT"
         },
         {
-          "title": "Kyle Walker Set to Depart Manchester City on Loan to AC Milan",
-          "description": "Kyle Walker Set to Depart Manchester City on Loan to AC Milan  FootBoom",
-          "date": "Fri, 24 Jan 2025 23:50:18 GMT"
+          "title": "Abdukodir Khusanov’s Man City debut from hell salvaged by even greater Chelsea gaffes",
+          "description": "Abdukodir Khusanov’s Man City debut from hell salvaged by even greater Chelsea gaffes  The Independent",
+          "date": "Sat, 25 Jan 2025 20:51:00 GMT"
         },
         {
-          "title": "Pep Guardiola's four-word parting message to Kyle Walker says it all about Man City future",
-          "description": "Pep Guardiola's four-word parting message to Kyle Walker says it all about Man City future  The Mirror",
-          "date": "Fri, 24 Jan 2025 22:30:00 GMT"
+          "title": "Pep Guardiola makes surprise admission when asked why he picked Abdukodir Khusanov vs Chelsea",
+          "description": "Pep Guardiola makes surprise admission when asked why he picked Abdukodir Khusanov vs Chelsea  SPORTbible",
+          "date": "Sat, 25 Jan 2025 20:51:35 GMT"
         }
       ]
     },
     {
-      "player_id": 30488,
-      "player_name": "Riccardo Orsolini",
-      "trending_score": 50.0,
-      "trend_summary": "AC Milan is reportedly eyeing a swap deal with Bologna to acquire Riccardo Orsolini, following the club's recent signing of Kyle Walker. Orsolini, who has been a key player for Bologna, has been linked with a move to Milan for some time, and this latest news suggests that a deal could be close.",
+      "player_id": 278,
+      "player_name": "Kylian Mbappé Lottin",
+      "trending_score": 88.0,
+      "trend_summary": "Kylian Mbappé's hat-trick heroics against Valladolid extended Real Madrid's lead in La Liga, marking his first treble for the Spanish giants and a significant milestone in his goal-scoring tally. Off the pitch, Mbappé expressed his desire to prioritize the team's title charge over personal accolades, while news emerged of a crisis at his former club, Caen, where fans are demanding answers amid relegation fears.",
       "news": [
         {
-          "title": "Milan targeting Orsolini swap deal with Bologna after Walker",
-          "description": "Milan targeting Orsolini swap deal with Bologna after Walker  Football Italia",
-          "date": "Fri, 24 Jan 2025 22:40:48 GMT"
+          "title": "Kylian Mbappe: Confident Real Madrid need to push hard for La Liga title",
+          "description": "Kylian Mbappe: Confident Real Madrid need to push hard for La Liga title  Yahoo Sports",
+          "date": "Sat, 25 Jan 2025 22:50:00 GMT"
+        },
+        {
+          "title": "Kylian Mbappe, the owner: This club ‘is not your toy’",
+          "description": "Kylian Mbappe, the owner: This club ‘is not your toy’",
+          "date": "Sat, 25 Jan 2025 18:23:50 GMT"
+        },
+        {
+          "title": "Hat-trick hero Kylian Mbappe returns to form in style as Real Madrid extend lead",
+          "description": "Hat-trick hero Kylian Mbappe returns to form in style as Real Madrid extend lead  The Independent",
+          "date": "Sat, 25 Jan 2025 22:34:00 GMT"
+        },
+        {
+          "title": "‘I am here’ – Kylian Mbappe emulates idol Cristiano Ronaldo after landmark Real Madrid strike...",
+          "description": "‘I am here’ – Kylian Mbappe emulates idol Cristiano Ronaldo after landmark Real Madrid strike...  talkSPORT",
+          "date": "Sat, 25 Jan 2025 22:42:38 GMT"
+        },
+        {
+          "title": "Kylian Mbappe Scores Sensational First Hat Trick for Real Madrid",
+          "description": "Kylian Mbappe Scores Sensational First Hat Trick for Real Madrid  OneFootball",
+          "date": "Sat, 25 Jan 2025 22:41:50 GMT"
+        },
+        {
+          "title": "Soccer-Mbappe hat-trick gives Real Madrid easy win at Valladolid",
+          "description": "Soccer-Mbappe hat-trick gives Real Madrid easy win at Valladolid  MSN",
+          "date": "Sat, 25 Jan 2025 23:29:01 GMT"
+        },
+        {
+          "title": "Kylian Mbappe extends Real Madrid’s La Liga title charge at Valladolid",
+          "description": "Kylian Mbappe extends Real Madrid’s La Liga title charge at Valladolid  Football Espana",
+          "date": "Sat, 25 Jan 2025 21:57:21 GMT"
+        },
+        {
+          "title": "Hat trick hero Mbappé wants title, not goals",
+          "description": "Hat trick hero Mbappé wants title, not goals  ESPN Australia",
+          "date": "Sat, 25 Jan 2025 23:06:19 GMT"
+        },
+        {
+          "title": "Kylian Mbappé hits Real Madrid goalscoring milestone during Valladolid clash",
+          "description": "Kylian Mbappé hits Real Madrid goalscoring milestone during Valladolid clash  Yahoo Canada Sports",
+          "date": "Sat, 25 Jan 2025 21:14:00 GMT"
+        },
+        {
+          "title": "'We feel abandoned': Kylian Mbappe's Caen in crisis",
+          "description": "'We feel abandoned': Kylian Mbappe's Caen in crisis",
+          "date": "Sat, 25 Jan 2025 21:34:12 GMT"
         }
       ]
     },
     {
-      "player_id": 323936,
-      "player_name": "Matías Soulé Malvano",
-      "trending_score": 49.0,
-      "trend_summary": "Amidst rumors of a potential loan move to Galatasaray, Matías Soulé has sparked interest from the Turkish giants. The Argentine winger, who has been capped at youth level for his country, has impressed with his performances for Juventus' youth teams and is now reportedly on the radar of several clubs across Europe.",
+      "player_id": 81573,
+      "player_name": "Omar Khaled Mohamed Abd Elsala Marmoush",
+      "trending_score": 45.0,
+      "trend_summary": "Omar Marmoush made his highly anticipated Manchester City debut against Chelsea, showcasing his potential as a replacement for Julian Alvarez. Despite no negotiations with Eintracht Frankfurt over a permanent transfer, Marmoush's impressive performance has sparked speculation about a potential rebirth for Manchester City's attacking prowess.",
       "news": [
         {
-          "title": "Galatasaray inquire about Matias Soulé",
-          "description": "Galatasaray inquire about Matias Soulé  OneFootball",
-          "date": "Fri, 24 Jan 2025 20:46:49 GMT"
+          "title": "Why Marmoush can be Man City's perfect Alvarez replacement",
+          "description": "Why Marmoush can be Man City's perfect Alvarez replacement  Premier League",
+          "date": "Sat, 25 Jan 2025 19:10:42 GMT"
         },
         {
-          "title": "Galatasaray inquire about Matias Soulé",
-          "description": "Galatasaray inquire about Matias Soulé  Yahoo Sports",
-          "date": "Fri, 24 Jan 2025 20:33:00 GMT"
+          "title": "Manchester City's new striker Omar Marmoush pits Guardiola's transfer success vs. Frankfurt's striker flops",
+          "description": "Manchester City's new striker Omar Marmoush pits Guardiola's transfer success vs. Frankfurt's striker flops  CBS Sports",
+          "date": "Sat, 25 Jan 2025 13:57:47 GMT"
+        },
+        {
+          "title": "Pep Guardiola reaction — Man City boss on Khusanov, Marmoush debuts in win over Chelsea",
+          "description": "Pep Guardiola reaction — Man City boss on Khusanov, Marmoush debuts in win over Chelsea  NBC Sports",
+          "date": "Sat, 25 Jan 2025 20:37:30 GMT"
+        },
+        {
+          "title": "Manchester City vs Chelsea live updates: Premier League match latest score, goal alerts",
+          "description": "Manchester City vs Chelsea live updates: Premier League match latest score, goal alerts",
+          "date": "Sat, 25 Jan 2025 17:08:02 GMT"
+        },
+        {
+          "title": "No negotiations between Manchester City and Eintracht Frankfurt over Omar Marmoush",
+          "description": "No negotiations between Manchester City and Eintracht Frankfurt over Omar Marmoush  OneFootball",
+          "date": "Sat, 25 Jan 2025 13:41:49 GMT"
+        },
+        {
+          "title": "Omar Marmoush: From Bundesliga to Premier League, the rise of Manchester City's new signing",
+          "description": "Omar Marmoush: From Bundesliga to Premier League, the rise of Manchester City's new signing  Flashscore.com",
+          "date": "Sat, 25 Jan 2025 09:56:35 GMT"
+        },
+        {
+          "title": "Marmoush's memorable debut could spark Man City rebirth",
+          "description": "Marmoush's memorable debut could spark Man City rebirth  Premier League",
+          "date": "Sat, 25 Jan 2025 21:48:44 GMT"
+        },
+        {
+          "title": "Man City vs. Chelsea lineups, starting 11, confirmed team news, injuries: Debuts for Marmoush, Khusanov",
+          "description": "Man City vs. Chelsea lineups, starting 11, confirmed team news, injuries: Debuts for Marmoush, Khusanov  Sporting News",
+          "date": "Sat, 25 Jan 2025 16:44:00 GMT"
+        },
+        {
+          "title": "Man City XI vs Chelsea: Marmoush debut, predicted lineup, confirmed team news and injuries for Premier League",
+          "description": "Man City XI vs Chelsea: Marmoush debut, predicted lineup, confirmed team news and injuries for Premier League  MSN",
+          "date": "Sat, 25 Jan 2025 17:30:00 GMT"
+        },
+        {
+          "title": "Khusanov and Marmoush in for City debuts and Reis on bench for Chelsea clash",
+          "description": "Khusanov and Marmoush in for City debuts and Reis on bench for Chelsea clash  Manchester City FC",
+          "date": "Sat, 25 Jan 2025 16:15:00 GMT"
         }
       ]
     },
     {
-      "player_id": 629,
-      "player_name": "Kevin De Bruyne",
-      "trending_score": 36.0,
-      "trend_summary": "Kevin De Bruyne's fitness has improved, and he has issued a warning to Arsenal and Liverpool ahead of crucial Premier League matches. Despite ongoing contract talks being disrupted by an injury, De Bruyne has been praised for his key role in Manchester City's recent resurgence.",
+      "player_id": 1100,
+      "player_name": "Erling Braut Haaland",
+      "trending_score": 31.0,
+      "trend_summary": "Erling Haaland starred in Manchester City's 3-1 comeback win over Chelsea, scoring a crucial goal after Chelsea goalkeeper Robert Sanchez's error. The Norwegian striker has now scored 26 goals in 21 Premier League appearances, placing him as one of the top contenders for the Golden Boot award.",
       "news": [
         {
-          "title": "Pep Guardiola issues major triple injury update on Kevin De Bruyne, Kyle Walker, and Oscar Bobb",
-          "description": "Pep Guardiola issues major triple injury update on Kevin De Bruyne, Kyle Walker, and Oscar Bobb  OneFootball",
-          "date": "Fri, 24 Jan 2025 20:59:44 GMT"
+          "title": "Manchester City vs Chelsea 3-1: English Premier League – as it happened",
+          "description": "Manchester City vs Chelsea 3-1: English Premier League – as it happened  Al Jazeera English",
+          "date": "Sat, 25 Jan 2025 20:26:15 GMT"
         },
         {
-          "title": "Manchester City boss Pep Guardiola says opponents no longer scared of his side",
-          "description": "Manchester City boss Pep Guardiola says opponents no longer scared of his side  BBC.com",
-          "date": "Fri, 24 Jan 2025 22:30:10 GMT"
+          "title": "Man City 3-1 Chelsea: Erling Haaland and Phil Foden seal comeback win as Pep Guardiola's side move fourth in table",
+          "description": "Man City 3-1 Chelsea: Erling Haaland and Phil Foden seal comeback win as Pep Guardiola's side move fourth in table  Eurosport COM",
+          "date": "Sat, 25 Jan 2025 19:58:45 GMT"
         },
         {
-          "title": "Injury disrupts De Bruyne’s contract talks with City",
-          "description": "Injury disrupts De Bruyne’s contract talks with City  OneFootball",
-          "date": "Fri, 24 Jan 2025 17:36:52 GMT"
+          "title": "Haaland magic lifts Manchester City to win over Chelsea after Khusanov error",
+          "description": "Haaland magic lifts Manchester City to win over Chelsea after Khusanov error  The Guardian",
+          "date": "Sat, 25 Jan 2025 21:55:00 GMT"
         },
         {
-          "title": "Premier League player stats: Palmer most key passes, Salah leads goals and assists",
-          "description": "Premier League player stats: Palmer most key passes, Salah leads goals and assists  Football365",
-          "date": "Fri, 24 Jan 2025 21:58:14 GMT"
+          "title": "Manchester City 3-1 Chelsea: Erling Haaland and Phil Foden power crucial win as Pep Guardiola's side show top-four fight",
+          "description": "Manchester City 3-1 Chelsea: Erling Haaland and Phil Foden power crucial win as Pep Guardiola's side show top-four fight  Sky Sports",
+          "date": "Sat, 25 Jan 2025 19:39:16 GMT"
         },
         {
-          "title": "Premier League: Erling Haaland, Kevin de Bruyne, Son Heung-min",
-          "description": "Premier League: Erling Haaland, Kevin de Bruyne, Son Heung-min",
-          "date": "Fri, 24 Jan 2025 13:32:53 GMT"
+          "title": "Erling Haaland and Phil Foden help Manchester City to comeback win over Chelsea",
+          "description": "Erling Haaland and Phil Foden help Manchester City to comeback win over Chelsea  The Independent",
+          "date": "Sat, 25 Jan 2025 19:38:00 GMT"
         },
         {
-          "title": "This is the beginning of the end for four Man City legends",
-          "description": "This is the beginning of the end for four Man City legends  inews",
-          "date": "Fri, 24 Jan 2025 10:33:32 GMT"
+          "title": "Erling Haaland makes Robert Sanchez admission after Chelsea goalkeeper’s latest blunder...",
+          "description": "Erling Haaland makes Robert Sanchez admission after Chelsea goalkeeper’s latest blunder...  talkSPORT",
+          "date": "Sat, 25 Jan 2025 22:11:09 GMT"
         },
         {
-          "title": "New Belgium coach Garcia hopes for Courtois return",
-          "description": "New Belgium coach Garcia hopes for Courtois return  The Straits Times",
-          "date": "Fri, 24 Jan 2025 12:57:17 GMT"
+          "title": "Manchester City 3-1 Chelsea: Erling Haaland capitalises on Robert Sanchez error as hosts win",
+          "description": "Manchester City 3-1 Chelsea: Erling Haaland capitalises on Robert Sanchez error as hosts win  BBC.com",
+          "date": "Sat, 25 Jan 2025 19:51:55 GMT"
         },
         {
-          "title": "“I feel like I’m back” – Kevin De Bruyne’s fitness admission is a stern warning to Arsenal and Liverpool",
-          "description": "“I feel like I’m back” – Kevin De Bruyne’s fitness admission is a stern warning to Arsenal and Liverpool  OneFootball",
-          "date": "Fri, 24 Jan 2025 12:28:35 GMT"
+          "title": "Man City 3-1 Chelsea: Phil Foden and Erling Haaland fire Pep Guardiola's side into the top four after Robert S",
+          "description": "Man City 3-1 Chelsea: Phil Foden and Erling Haaland fire Pep Guardiola's side into the top four after Robert S  Daily Mail",
+          "date": "Sat, 25 Jan 2025 19:26:14 GMT"
         },
         {
-          "title": "Man City's upturn in form has given them emphatic answer to major contract dilemma",
-          "description": "Man City's upturn in form has given them emphatic answer to major contract dilemma  MSN",
-          "date": "Fri, 24 Jan 2025 06:31:52 GMT"
+          "title": "Manchester City receive third major update to squad personnel with new Erling Haaland information",
+          "description": "Manchester City receive third major update to squad personnel with new Erling Haaland information  OneFootball",
+          "date": "Sat, 25 Jan 2025 09:08:55 GMT"
         },
         {
-          "title": "Will the new driver finally be able to drive the expensive Belgian limousine?",
-          "description": "Will the new driver finally be able to drive the expensive Belgian limousine?  Mozzart Sport",
-          "date": "Fri, 24 Jan 2025 10:28:47 GMT"
+          "title": "Premier League top goal scorers 2024/2025: EPL golden boot rankings as Isak chases Salah, Haaland",
+          "description": "Premier League top goal scorers 2024/2025: EPL golden boot rankings as Isak chases Salah, Haaland  Sporting News",
+          "date": "Sat, 25 Jan 2025 19:30:00 GMT"
         }
       ]
     },
     {
-      "player_id": 284324,
-      "player_name": "Alejandro Garnacho Ferreyra",
-      "trending_score": 36.0,
-      "trend_summary": "Manchester United's Alejandro Garnacho has sparked transfer speculation with Chelsea reportedly preparing a bid for the 18-year-old winger, who has recently impressed with his performances for the Red Devils. Amidst the rumors, United has reportedly identified 18-year-old Premier League sensation Christopher Nkunku as a potential replacement for Garnacho if he departs.",
+      "player_id": 21104,
+      "player_name": "Randal Kolo Muani",
+      "trending_score": 28.0,
+      "trend_summary": "Randal Kolo Muani marked his Juventus debut with a goal against Napoli, impressing manager Thiago Motta, who had previously identified him as a target for the club. Despite rumors linking him to a move to Napoli, Juventus are reportedly reluctant to sell the French striker.",
       "news": [
         {
-          "title": "Kobbie Mainoo: Alejandro Garnacho didn't prepare me for favourite Manchester United celebration",
-          "description": "Kobbie Mainoo: Alejandro Garnacho didn't prepare me for favourite Manchester United celebration  Eurosport COM",
-          "date": "Fri, 24 Jan 2025 12:19:25 GMT"
+          "title": "Thiago Motta: ‘Kolo Muani player Juventus were looking for’",
+          "description": "Thiago Motta: ‘Kolo Muani player Juventus were looking for’  Football Italia",
+          "date": "Sat, 25 Jan 2025 16:30:51 GMT"
         },
         {
-          "title": "Alejandro Garnacho sends seven-word Man Utd message as Chelsea transfer links grow",
-          "description": "Alejandro Garnacho sends seven-word Man Utd message as Chelsea transfer links grow  Football.London",
-          "date": "Fri, 24 Jan 2025 11:46:48 GMT"
+          "title": "Thiago Motta: ‘Kolo Muani player Juventus were looking for’",
+          "description": "Thiago Motta: ‘Kolo Muani player Juventus were looking for’  OneFootball",
+          "date": "Sat, 25 Jan 2025 17:42:55 GMT"
         },
         {
-          "title": "Man Utd may raid Chelsea in retaliation to Blues eyeing £70m Alejandro Garnacho",
-          "description": "Man Utd may raid Chelsea in retaliation to Blues eyeing £70m Alejandro Garnacho  Express",
-          "date": "Fri, 24 Jan 2025 22:28:00 GMT"
+          "title": "Video: CBS pundits unconvinced by Juventus signing Kolo Muani",
+          "description": "Video: CBS pundits unconvinced by Juventus signing Kolo Muani  Football Italia",
+          "date": "Sat, 25 Jan 2025 17:35:58 GMT"
         },
         {
-          "title": "‘More than embarrassing!’ – talkSPORT host left disgusted by Man United’s decision to sell Alejandro Garnac...",
-          "description": "‘More than embarrassing!’ – talkSPORT host left disgusted by Man United’s decision to sell Alejandro Garnac...  talkSPORT",
-          "date": "Fri, 24 Jan 2025 22:24:54 GMT"
+          "title": "Giuntoli: ‘Kolo Muani tomorrow, Juventus don’t want to sell’",
+          "description": "Giuntoli: ‘Kolo Muani tomorrow, Juventus don’t want to sell’  OneFootball",
+          "date": "Sat, 25 Jan 2025 20:51:00 GMT"
         },
         {
-          "title": "Manchester United earmark Christopher Nkunku as potential transfer target as Chelsea ponder Alejandro Garnacho move",
-          "description": "Manchester United earmark Christopher Nkunku as potential transfer target as Chelsea ponder Alejandro Garnacho move  Sky Sports",
-          "date": "Fri, 24 Jan 2025 19:17:26 GMT"
+          "title": "Serie A",
+          "description": "Serie A",
+          "date": "Sat, 25 Jan 2025 19:01:20 GMT"
         },
         {
-          "title": "Manchester United could consider signing 18-year-old Premier League sensation to replace Chelsea-linked Alejandro Garnacho: Reports",
-          "description": "Manchester United could consider signing 18-year-old Premier League sensation to replace Chelsea-linked Alejandro Garnacho: Reports  Sportskeeda",
-          "date": "Fri, 24 Jan 2025 12:28:00 GMT"
+          "title": "Picture: Mbappé’s two-word message after Kolo Muani Juventus transfer",
+          "description": "Picture: Mbappé’s two-word message after Kolo Muani Juventus transfer  OneFootball",
+          "date": "Sat, 25 Jan 2025 08:06:33 GMT"
         },
         {
-          "title": "Transfer news LIVE! Chelsea prepare Garnacho bid and Arsenal latest",
-          "description": "Transfer news LIVE! Chelsea prepare Garnacho bid and Arsenal latest  The Independent",
-          "date": "Fri, 24 Jan 2025 23:55:54 GMT"
+          "title": "Video: Kolo Muani scores with 6th touch in a Juventus jersey",
+          "description": "Video: Kolo Muani scores with 6th touch in a Juventus jersey  Football Italia",
+          "date": "Sat, 25 Jan 2025 18:01:08 GMT"
         },
         {
-          "title": "Enzo Maresca cools speculation regarding Chelsea's potential move for Alejandro Garnacho",
-          "description": "Enzo Maresca cools speculation regarding Chelsea's potential move for Alejandro Garnacho  Flashscore.com",
-          "date": "Fri, 24 Jan 2025 14:51:57 GMT"
+          "title": "Kolo Muani: ‘Proud to be at legendary Juventus’, ‘Motta made me want to sign’",
+          "description": "Kolo Muani: ‘Proud to be at legendary Juventus’, ‘Motta made me want to sign’  OneFootball",
+          "date": "Sat, 25 Jan 2025 07:58:37 GMT"
         },
         {
-          "title": "Alejandro Garnacho signs, Dusan Vlahovic transfer sealed",
-          "description": "Alejandro Garnacho signs, Dusan Vlahovic transfer sealed",
-          "date": "Fri, 24 Jan 2025 07:50:39 GMT"
+          "title": "Juventus: Randal Kolo Muani Impresses on Debut",
+          "description": "Juventus: Randal Kolo Muani Impresses on Debut  FootBoom",
+          "date": "Sat, 25 Jan 2025 20:33:38 GMT"
         },
         {
-          "title": "Man Utd reveal interest in signing Chelsea star during Alejandro Garnacho talks",
-          "description": "Man Utd reveal interest in signing Chelsea star during Alejandro Garnacho talks  Metro.co.uk",
-          "date": "Fri, 24 Jan 2025 16:45:00 GMT"
+          "title": "Official Juventus team to face Napoli – Kolo Muani starts",
+          "description": "Official Juventus team to face Napoli – Kolo Muani starts  Juve FC",
+          "date": "Sat, 25 Jan 2025 15:56:47 GMT"
         }
       ]
     }
