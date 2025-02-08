@@ -1,11 +1,15 @@
 name: Preprocess Players
 
 on:
+  schedule:
+    - cron: '0 17 * * 0'  # Every Sunday at 17:00 UTC
   workflow_dispatch:  # Allows manual triggering
   
 jobs:
   preprocess:
     runs-on: ubuntu-latest
+    permissions:      # Add permissions block
+      contents: write
     
     steps:
       - name: Checkout repository
