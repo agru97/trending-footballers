@@ -14,25 +14,23 @@ from pytrends.request import TrendReq
 import pandas as pd
 import random
 
-
 # Configuration
 pd.set_option('future.no_silent_downcasting', True)
 
 # Constants
-raw_proxies = os.environ['PROXY_LIST'].split(',') if 'PROXY_LIST' in os.environ else []
-PROXIES = [p.strip() for p in raw_proxies if p.strip()]  # Clean up any whitespace
+PROXIES = os.environ['PROXY_LIST'].split(',') if 'PROXY_LIST' in os.environ else []
+random.shuffle(PROXIES)  # Shuffle proxies for better load distribution
 print(f"\nFound {len(PROXIES)} proxies in configuration")
-
-# Keep track of failed proxies and currently used proxy
-failed_proxies = set()
-current_proxy_index = 0
-
-MIN_DELAY_BETWEEN_CALLS = 2  # Increased minimum seconds between API calls
+MIN_DELAY_BETWEEN_CALLS = 1  # Minimum seconds between API calls
 RATE_LIMIT_PAUSE = 60  # Seconds to pause when hitting rate limit
-MAX_CONSECUTIVE_FAILURES = 3  # Maximum number of consecutive failures before giving up
 
-# Initialize pytrends with no proxy initially
-pytrends = None
+# Initialize pytrends once
+pytrends = TrendReq(
+    timeout=(3.05, 30),
+    retries=3,
+    backoff_factor=3.0,
+    proxies=PROXIES
+)
 
 # Utility Classes
 class TimingStats:
@@ -146,52 +144,12 @@ def log_message(message, color=None):
     else:
         print(message)
 
-# Function to get a fresh pytrends instance with a new proxy
-def get_fresh_pytrends():
-    global pytrends, current_proxy_index, PROXIES, failed_proxies
-    
-    # If all proxies have failed, reset and try again with longer delays
-    if len(failed_proxies) >= len(PROXIES):
-        log_message("All proxies have failed. Resetting failed proxies list and trying again with longer delays.", Colors.YELLOW)
-        failed_proxies = set()  # Reset failed proxies
-        time.sleep(RATE_LIMIT_PAUSE * 2)  # Take a long pause
-    
-    # Find the next working proxy
-    attempts = 0
-    while attempts < len(PROXIES):
-        # Get next proxy that hasn't failed
-        current_proxy = PROXIES[current_proxy_index]
-        current_proxy_index = (current_proxy_index + 1) % len(PROXIES)
-        
-        if current_proxy not in failed_proxies:
-            log_message(f"Using proxy: {current_proxy[:10]}...{current_proxy[-10:]} (#{current_proxy_index+1}/{len(PROXIES)})", Colors.BLUE)
-            return TrendReq(
-                timeout=(5, 30),  # Increased timeout
-                retries=2,
-                backoff_factor=3.0,
-                proxies=[current_proxy]
-            )
-        
-        attempts += 1
-    
-    # If we get here, all proxies have failed
-    log_message("WARNING: All proxies have failed. Trying without a proxy as a last resort.", Colors.RED)
-    return TrendReq(
-        timeout=(5, 30),
-        retries=2,
-        backoff_factor=3.0
-    )
-
-# Initialize with first proxy
-pytrends = get_fresh_pytrends()
-
 # Tournament Functions
 def get_trends_data(players_group, progress=None):
     """Query Google Trends for a group of players"""
-    global api_calls_counter, pytrends, failed_proxies
-    max_retries = 5  # Increased retries
-    max_no_data_retries = 3  # Increased no data retries
-    consecutive_failures = 0
+    global api_calls_counter, last_api_call
+    max_retries = 3
+    max_no_data_retries = 2
     
     # Ensure minimum delay between API calls
     if hasattr(get_trends_data, 'last_call'):
@@ -217,119 +175,105 @@ def get_trends_data(players_group, progress=None):
         names_list = [p['player']['name'] for p in players_group]
         progress.set_message(f"Group: {' | '.join(names_list)}")
     
-    retry_delays = [5, 10, 20, 30, 60]  # Increased delays between retries
+    retry_delays = [2, 5, 10]  # Increasing delays between retries
     
-    for retry_attempt in range(max_retries):
-        for no_data_attempt in range(max_no_data_retries):
-            try:
-                call_start = datetime.now()
-                
-                # Add delay before API call
-                time.sleep(MIN_DELAY_BETWEEN_CALLS)
-                
-                # Try to build and execute the request
-                pytrends.build_payload(
-                    search_names,
-                    timeframe='now 1-d',
-                    geo='',
-                    gprop=''
-                )
-                
-                api_calls_counter += 1
-                get_trends_data.last_call = time.time()  # Update last call time
-                
-                interest_data = pytrends.interest_over_time()
-                
-                call_duration = datetime.now() - call_start
-                timing_stats.add_api_call(call_duration)
-                
-                if progress:
-                    progress.set_api_call_time(call_duration)
-                
-                # Reset consecutive failures on success
-                consecutive_failures = 0
-                
-                if interest_data.empty:
-                    if no_data_attempt < max_no_data_retries - 1:
-                        delay = retry_delays[min(no_data_attempt, len(retry_delays)-1)]
-                        if progress:
-                            # Use player names instead of topic IDs in messages
-                            names = [player_names.get(topic_id, topic_id) for topic_id in search_names]
-                            progress.set_message(
-                                f"No data received (attempt {no_data_attempt + 1}/{max_no_data_retries}), "
-                                f"retrying in {delay}s for: {', '.join(names)}",
-                                status="warning"
-                            )
-                        time.sleep(delay)
-                        continue
-                    else:
-                        if progress:
-                            names = [player_names.get(topic_id, topic_id) for topic_id in search_names]
-                            progress.set_message(
-                                f"No data after {max_no_data_retries} attempts for: {', '.join(names)}",
-                                status="error"
-                            )
-                        return {player['player']['name']: 0 for player in players_group}
-                
-                if progress:
-                    progress.clear_message()
-                
-                # Map the scores back to original player names
-                results = {}
-                for search_name, player in player_identifiers.items():
-                    original_name = player['player']['name']
-                    try:
-                        score = round(interest_data[search_name].max(), 2)
-                    except:
-                        # If player data is missing, set score to 0
-                        score = 0
-                    
-                    # If we already have a score for this player, take the higher one
-                    if original_name in results:
-                        results[original_name] = max(results[original_name], score)
-                    else:
-                        results[original_name] = score
-                
-                return results
-                
-            except Exception as e:
-                consecutive_failures += 1
-                
-                # If it's a rate limit error or we've had too many consecutive failures
-                if "429" in str(e) or consecutive_failures >= MAX_CONSECUTIVE_FAILURES:
-                    # Mark current proxy as failed
-                    current_proxy = PROXIES[current_proxy_index-1]
-                    failed_proxies.add(current_proxy)
-                    log_message(f"Proxy failed (HTTP 429): {current_proxy[:10]}...{current_proxy[-10:]}", Colors.RED)
-                    
-                    # Get a fresh pytrends instance with a new proxy
-                    pytrends = get_fresh_pytrends()
-                    
-                    if retry_attempt < max_retries - 1:
-                        delay = retry_delays[min(retry_attempt, len(retry_delays)-1)]
-                        if progress:
-                            progress.set_message(
-                                f"Rate limit hit, switching proxy and retrying in {delay}s (attempt {retry_attempt+1}/{max_retries})",
-                                status="warning"
-                            )
-                        time.sleep(delay)
-                        break  # Break the inner loop to try with new proxy
-                
-                # For other errors
-                if retry_attempt < max_retries - 1:
-                    delay = retry_delays[min(retry_attempt, len(retry_delays)-1)]
+    for no_data_attempt in range(max_no_data_retries + 1):
+        try:
+            call_start = datetime.now()
+            
+            # Add delay before API call
+            time.sleep(MIN_DELAY_BETWEEN_CALLS)
+            
+            pytrends.build_payload(
+                search_names,
+                timeframe='now 1-d',
+                geo='',
+                gprop=''
+            )
+            
+            api_calls_counter += 1
+            get_trends_data.last_call = time.time()  # Update last call time
+            
+            interest_data = pytrends.interest_over_time()
+            
+            call_duration = datetime.now() - call_start
+            timing_stats.add_api_call(call_duration)
+            
+            if progress:
+                progress.set_api_call_time(call_duration)
+            
+            if interest_data.empty:
+                if no_data_attempt < max_no_data_retries:
+                    delay = retry_delays[no_data_attempt]
                     if progress:
-                        error_msg = f"Error occurred: {str(e)}, retrying in {delay}s (attempt {retry_attempt+1}/{max_retries})"
-                        progress.set_message(error_msg, status="warning")
+                        # Use player names instead of topic IDs in messages
+                        names = [player_names[topic_id] for topic_id in search_names]
+                        progress.set_message(
+                            f"No data received (attempt {no_data_attempt + 1}/{max_no_data_retries + 1}), "
+                            f"retrying in {delay}s for: {', '.join(names)}",
+                            status="warning"
+                        )
                     time.sleep(delay)
-                    break  # Break the inner loop to retry
-    
-    # If we've exhausted all retries and proxies
-    log_message("\nAll retries failed for this group", Colors.RED)
-    log_message(f"Failed players: {', '.join(search_names)}", Colors.RED)
-    
-    # Instead of exiting, return zeros for this group and continue
-    return {player['player']['name']: 0 for player in players_group}
+                    continue
+                else:
+                    if progress:
+                        names = [player_names[topic_id] for topic_id in search_names]
+                        progress.set_message(
+                            f"No data after {max_no_data_retries + 1} attempts for: {', '.join(names)}",
+                            status="error"
+                        )
+                    return {player['player']['name']: 0 for player in players_group}
+            
+            if progress:
+                progress.clear_message()
+            
+            # Map the scores back to original player names
+            results = {}
+            for search_name, player in player_identifiers.items():
+                original_name = player['player']['name']
+                score = round(interest_data[search_name].max(), 2)
+                
+                # If we already have a score for this player, take the higher one
+                if original_name in results:
+                    results[original_name] = max(results[original_name], score)
+                else:
+                    results[original_name] = score
+            
+            return results
+            
+        except Exception as e:
+            if "429" in str(e):
+                if no_data_attempt < max_no_data_retries:
+                    # On rate limit, take a longer pause
+                    if progress:
+                        progress.set_message(
+                            f"Rate limit hit, pausing for {RATE_LIMIT_PAUSE}s before retry",
+                            status="warning"
+                        )
+                    time.sleep(RATE_LIMIT_PAUSE)
+                    continue
+            if no_data_attempt < max_no_data_retries:
+                delay = retry_delays[no_data_attempt]
+                if progress:
+                    # Add specific handling for 429 errors
+                    if "429" in str(e):
+                        error_msg = f"Too Many Requests (HTTP 429) - Rate limit exceeded, retrying in {delay}s"
+                    else:
+                        error_msg = f"Error occurred (attempt {no_data_attempt + 1}/{max_no_data_retries + 1}): {str(e)}, retrying in {delay}s"
+                    
+                    progress.set_message(error_msg, status="warning")
+                time.sleep(delay)
+                continue
+            
+            # If all retries fail, add specific message for 429
+            if "429" in str(e):
+                log_message("\nFailed due to rate limiting (HTTP 429)", Colors.RED)
+            else:
+                log_message(f"\nAll retries failed for group: {str(e)}", Colors.RED)
+            
+            log_message(f"Failed players: {', '.join(search_names)}", Colors.RED)
+            log_message("Stopping script due to repeated failures", Colors.RED)
+            exit(1)
 
 def filter_active_players(players):
     """Filter players who have been active in games"""
