@@ -13,10 +13,7 @@ from datetime import datetime, timedelta
 from pytrends.request import TrendReq
 import pandas as pd
 import random
-from dotenv import load_dotenv
 
-# Load environment variables from .env file
-load_dotenv()
 
 # Configuration
 pd.set_option('future.no_silent_downcasting', True)
