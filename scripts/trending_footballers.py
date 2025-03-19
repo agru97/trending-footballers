@@ -20,6 +20,7 @@ pd.set_option('future.no_silent_downcasting', True)
 # Constants
 PROXIES = os.environ['PROXY_LIST'].split(',') if 'PROXY_LIST' in os.environ else []
 random.shuffle(PROXIES)  # Shuffle proxies for better load distribution
+print(f"\nFound {len(PROXIES)} proxies in configuration")
 MIN_DELAY_BETWEEN_CALLS = 1  # Minimum seconds between API calls
 RATE_LIMIT_PAUSE = 60  # Seconds to pause when hitting rate limit
 
