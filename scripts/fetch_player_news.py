@@ -7,8 +7,7 @@ import re
 import google.generativeai as genai
 from google.generativeai.types import HarmCategory, HarmBlockThreshold
 
-#genai.configure(api_key=os.environ['GOOGLE_API_KEY'])
-MODEL = genai.GenerativeModel('gemini-2.0-flash')
+MODEL = genai.configure(api_key=os.environ['GOOGLE_API_KEY'])
 
 def clean_title(title):
     """Remove source names and clean up the title"""

@@ -10,6 +10,7 @@ import os
 import json
 import time
 from datetime import datetime, timedelta
+from typing import Dict, List, Optional, Set, Any, Tuple
 from pytrends.request import TrendReq
 import pandas as pd
 import random
@@ -18,91 +19,90 @@ import random
 pd.set_option('future.no_silent_downcasting', True)
 
 # Constants
+INPUT_FILE = 'public/preprocessed_players.json'
+OUTPUT_FILE = 'public/trending_footballers.json'
 PROXIES = os.environ['PROXY_LIST'].split(',') if 'PROXY_LIST' in os.environ else []
 random.shuffle(PROXIES)  # Shuffle proxies for better load distribution
-print(f"\nFound {len(PROXIES)} proxies in configuration")
 MIN_DELAY_BETWEEN_CALLS = 1  # Minimum seconds between API calls
 RATE_LIMIT_PAUSE = 60  # Seconds to pause when hitting rate limit
+MAX_RETRIES = 3
+MAX_NO_DATA_RETRIES = 2
+RETRY_DELAYS = [2, 5, 10]  # Increasing delays between retries
+TOURNAMENT_THRESHOLD = 25  # When to switch to final round
 
-# Initialize pytrends once
-pytrends = TrendReq(
-    timeout=(3.05, 30),
-    retries=3,
-    backoff_factor=3.0,
-    proxies=PROXIES
-)
-
-# Utility Classes
-class TimingStats:
-    """Track timing statistics for API calls"""
-    def __init__(self):
-        self.start_time = None
-        self.api_calls = []  # List to store duration of each call
-
-    def start(self):
-        self.start_time = datetime.now()
-        
-    def add_api_call(self, duration):
-        self.api_calls.append(duration)
-        
-    def get_total_time(self):
-        if self.start_time:
-            return datetime.now() - self.start_time
-        return timedelta(0)
-        
-    def get_avg_call_time(self):
-        if not self.api_calls:
-            return timedelta(0)
-        return sum(self.api_calls, timedelta(0)) / len(self.api_calls)
-
-# Global instances
-api_calls_counter = 0
-timing_stats = TimingStats()
-
+# ANSI color codes
 class Colors:
-    """ANSI color codes for terminal output"""
     GREEN = '\033[92m'
     RED = '\033[91m'
     YELLOW = '\033[93m'
     BLUE = '\033[94m'
     RESET = '\033[0m'
 
+# Initialize global variables
+api_calls_counter = 0
+pytrends = TrendReq(
+    timeout=(3.05, 30),
+    retries=MAX_RETRIES,
+    backoff_factor=3.0,
+    proxies=PROXIES
+)
+get_trends_data_last_call = 0  # Track last API call time
+
+
+class TimingStats:
+    """Track timing statistics for API calls"""
+    def __init__(self):
+        self.start_time = None
+        self.api_calls = []
+
+    def start(self):
+        self.start_time = datetime.now()
+        
+    def add_api_call(self, duration: timedelta):
+        self.api_calls.append(duration)
+        
+    def get_total_time(self) -> timedelta:
+        if self.start_time:
+            return datetime.now() - self.start_time
+        return timedelta(0)
+        
+    def get_avg_call_time(self) -> timedelta:
+        if not self.api_calls:
+            return timedelta(0)
+        return sum(self.api_calls, timedelta(0)) / len(self.api_calls)
+
+
 class ProgressDisplay:
     """Handle progress display and updates"""
-    def __init__(self, total, desc="Processing"):
+    def __init__(self, total: int, desc: str = "Processing"):
         self.total = total
         self.current = 0
         self.desc = desc
         self.start_time = datetime.now()
         self.last_api_call_time = None
-        self.message = ""
         
     def start(self):
         self.start_time = datetime.now()
         print(f"\n{Colors.BLUE}=== {self.desc} ==={Colors.RESET}")
-        # Don't print initial progress bar - wait for first update
     
-    def update(self, current):
-        """Update progress with current count"""
+    def update(self, current: int):
         self.current = current
         self._print_progress_bar()
     
-    def set_api_call_time(self, duration):
+    def set_api_call_time(self, duration: timedelta):
         self.last_api_call_time = duration.total_seconds()
     
-    def set_message(self, message, status="warning"):
-        """Set a warning or error message"""
+    def set_message(self, message: str, status: str = "warning"):
         color = Colors.RED if status == "error" else Colors.YELLOW
-        # Only print error messages, not group member warnings
         if status == "error":
             print(f"\n{color}⚠ {message}{Colors.RESET}")
             self._print_progress_bar()
     
     def clear_message(self):
+        # No-op, kept for interface consistency
         pass
     
     def _print_progress_bar(self):
-        """Print the progress bar"""
         elapsed = datetime.now() - self.start_time
         progress = int(50 * self.current / self.total)
         bar = Colors.GREEN + '=' * progress + Colors.RESET + '-' * (50 - progress)
@@ -116,9 +116,8 @@ class ProgressDisplay:
         print(f"\r{Colors.BLUE}▶{Colors.RESET} [{bar}] {percent}% ({self.current}/{self.total}) | "
               f"{' | '.join(timing_info)}", end='', flush=True)
     
-    def show_group_result(self, group_num, players, scores, winners):
-        """Display results for a completed group"""
-        # Format player scores more compactly
+    def show_group_result(self, group_num: int, players: List[Dict], 
+                          scores: Dict[str, float], winners: List[str]):
         player_scores = []
         for player in players:
             name = player['player']['name']
@@ -129,61 +128,73 @@ class ProgressDisplay:
                 player_scores.append(f"{name}({score})")
         
         print(f"\rGroup {group_num}: " + " | ".join(player_scores))
-        # Don't print progress bar here - it's handled by update()
     
     def finish(self):
         print('\n')  # Add extra line for spacing
         elapsed = datetime.now() - self.start_time
         print(f"{Colors.GREEN}✓ Done in {elapsed.total_seconds():.1f}s{Colors.RESET}\n")
 
+
 # Utility Functions
-def log_message(message, color=None):
+def log_message(message: str, color: Optional[str] = None):
     """Print a message with optional color"""
     if color:
         print(f"{color}{message}{Colors.RESET}")
     else:
         print(message)
 
-# Tournament Functions
-def get_trends_data(players_group, progress=None):
+
+def format_player_name_with_score(player: Dict, score: float, prefix: str = "") -> str:
+    """Format a player's name with score and team"""
+    name = player['player']['name']
+    team = player['statistics'][0]['team']['name']
+    return f"{prefix}{name:<20} {score:>3} ({team})"
+
+
+def get_player_identifier(player: Dict) -> str:
+    """Get the appropriate identifier for a player (topic ID or name)"""
+    topic_id = player['topic_id']
+    if topic_id.startswith('/m/') or topic_id.startswith('/g/'):
+        return topic_id
+    return player['player']['name']
+
+
+def wait_between_api_calls():
+    """Ensure minimum delay between API calls"""
+    global get_trends_data_last_call
+    time_since_last = time.time() - get_trends_data_last_call
+    if time_since_last < MIN_DELAY_BETWEEN_CALLS:
+        time.sleep(MIN_DELAY_BETWEEN_CALLS - time_since_last)
+
+
+def get_trends_data(players_group: List[Dict], 
+                    progress: Optional[ProgressDisplay] = None) -> Dict[str, float]:
     """Query Google Trends for a group of players"""
-    global api_calls_counter, last_api_call
-    max_retries = 3
-    max_no_data_retries = 2
+    global api_calls_counter, get_trends_data_last_call, timing_stats
     
     # Ensure minimum delay between API calls
-    if hasattr(get_trends_data, 'last_call'):
-        time_since_last = time.time() - get_trends_data.last_call
-        if time_since_last < MIN_DELAY_BETWEEN_CALLS:
-            time.sleep(MIN_DELAY_BETWEEN_CALLS - time_since_last)
+    wait_between_api_calls()
     
-    # Use topic ID if it has valid prefix, otherwise use player name
-    player_identifiers = {
-        player['topic_id'] if (player['topic_id'].startswith('/m/') or player['topic_id'].startswith('/g/'))
-        else player['player']['name']: player 
-        for player in players_group
-    }
+    # Map players to their identifiers
+    player_identifiers = {get_player_identifier(player): player for player in players_group}
     search_names = list(player_identifiers.keys())
     
-    # For display purposes, create a mapping of topic IDs to player names
-    player_names = {
-        f"{player['topic_id']}": player['player']['name']
-        for player in players_group
-    }
+    # Create mapping of topic IDs to player names for display
+    player_names = {player['topic_id']: player['player']['name'] for player in players_group}
     
-    if progress and len(players_group) > 0:
+    # Display players in the current group
+    if progress and players_group:
         names_list = [p['player']['name'] for p in players_group]
         progress.set_message(f"Group: {' | '.join(names_list)}")
     
-    retry_delays = [2, 5, 10]  # Increasing delays between retries
-    
-    for no_data_attempt in range(max_no_data_retries + 1):
+    # Try to get data with retries
+    for no_data_attempt in range(MAX_NO_DATA_RETRIES + 1):
         try:
+            # Record API call timing
             call_start = datetime.now()
+            time.sleep(MIN_DELAY_BETWEEN_CALLS)  # Add delay before API call
             
-            # Add delay before API call
-            time.sleep(MIN_DELAY_BETWEEN_CALLS)
-            
+            # Make the API call
             pytrends.build_payload(
                 search_names,
                 timeframe='now 1-d',
@@ -191,25 +202,24 @@ def get_trends_data(players_group, progress=None):
                 gprop=''
             )
             
+            # Update counters and timing
             api_calls_counter += 1
-            get_trends_data.last_call = time.time()  # Update last call time
-            
+            get_trends_data_last_call = time.time()
             interest_data = pytrends.interest_over_time()
-            
             call_duration = datetime.now() - call_start
             timing_stats.add_api_call(call_duration)
             
             if progress:
                 progress.set_api_call_time(call_duration)
             
+            # Handle empty response
             if interest_data.empty:
-                if no_data_attempt < max_no_data_retries:
-                    delay = retry_delays[no_data_attempt]
+                if no_data_attempt < MAX_NO_DATA_RETRIES:
+                    delay = RETRY_DELAYS[no_data_attempt]
                     if progress:
-                        # Use player names instead of topic IDs in messages
-                        names = [player_names[topic_id] for topic_id in search_names]
+                        names = [player_names.get(topic_id, topic_id) for topic_id in search_names]
                         progress.set_message(
-                            f"No data received (attempt {no_data_attempt + 1}/{max_no_data_retries + 1}), "
+                            f"No data received (attempt {no_data_attempt + 1}/{MAX_NO_DATA_RETRIES + 1}), "
                             f"retrying in {delay}s for: {', '.join(names)}",
                             status="warning"
                         )
@@ -217,9 +227,9 @@ def get_trends_data(players_group, progress=None):
                     continue
                 else:
                     if progress:
-                        names = [player_names[topic_id] for topic_id in search_names]
+                        names = [player_names.get(topic_id, topic_id) for topic_id in search_names]
                         progress.set_message(
-                            f"No data after {max_no_data_retries + 1} attempts for: {', '.join(names)}",
+                            f"No data after {MAX_NO_DATA_RETRIES + 1} attempts for: {', '.join(names)}",
                             status="error"
                         )
                     return {player['player']['name']: 0 for player in players_group}
@@ -227,7 +237,7 @@ def get_trends_data(players_group, progress=None):
             if progress:
                 progress.clear_message()
             
-            # Map the scores back to original player names
+            # Map scores back to original player names
             results = {}
             for search_name, player in player_identifiers.items():
                 original_name = player['player']['name']
@@ -242,61 +252,51 @@ def get_trends_data(players_group, progress=None):
             return results
             
         except Exception as e:
-            if "429" in str(e):
-                if no_data_attempt < max_no_data_retries:
-                    # On rate limit, take a longer pause
-                    if progress:
-                        progress.set_message(
-                            f"Rate limit hit, pausing for {RATE_LIMIT_PAUSE}s before retry",
-                            status="warning"
-                        )
-                    time.sleep(RATE_LIMIT_PAUSE)
-                    continue
-            if no_data_attempt < max_no_data_retries:
-                delay = retry_delays[no_data_attempt]
+            # Handle rate limiting errors
+            is_rate_limit = "429" in str(e)
+            
+            if no_data_attempt < MAX_NO_DATA_RETRIES:
+                # Determine retry delay
+                delay = RATE_LIMIT_PAUSE if is_rate_limit else RETRY_DELAYS[no_data_attempt]
+                
                 if progress:
-                    # Add specific handling for 429 errors
-                    if "429" in str(e):
-                        error_msg = f"Too Many Requests (HTTP 429) - Rate limit exceeded, retrying in {delay}s"
-                    else:
-                        error_msg = f"Error occurred (attempt {no_data_attempt + 1}/{max_no_data_retries + 1}): {str(e)}, retrying in {delay}s"
-                    
+                    error_msg = (
+                        f"Rate limit hit, pausing for {delay}s before retry" 
+                        if is_rate_limit else
+                        f"Error occurred (attempt {no_data_attempt + 1}/{MAX_NO_DATA_RETRIES + 1}): {str(e)}, retrying in {delay}s"
+                    )
                     progress.set_message(error_msg, status="warning")
+                
                 time.sleep(delay)
                 continue
             
-            # If all retries fail, add specific message for 429
-            if "429" in str(e):
-                log_message("\nFailed due to rate limiting (HTTP 429)", Colors.RED)
-            else:
-                log_message(f"\nAll retries failed for group: {str(e)}", Colors.RED)
-            
+            # All retries failed
+            error_msg = "Failed due to rate limiting (HTTP 429)" if is_rate_limit else f"All retries failed for group: {str(e)}"
+            log_message(f"\n{error_msg}", Colors.RED)
             log_message(f"Failed players: {', '.join(search_names)}", Colors.RED)
             log_message("Stopping script due to repeated failures", Colors.RED)
             exit(1)
 
-def filter_active_players(players):
-    """Filter players who have been active in games"""
-    active_players = []
-    
-    for player in players:
-        games = player['statistics'][0]['games']
-        # Check if player has any appearances or has been on the bench
-        if (games['appearences'] is not None and games['appearences'] > 0) or \
-           (player['statistics'][0]['substitutes']['bench'] is not None and 
-            player['statistics'][0]['substitutes']['bench'] > 0):
-            active_players.append(player)
-    
-    return active_players
 
-def create_progress_bar(current, total, width=50):
-    """Create a progress bar string"""
-    filled = int(width * current / total)
-    bar = '=' * filled + '-' * (width - filled)
-    percent = int(100 * current / total)
-    return f"[{bar}] {percent}% ({current}/{total})"
+def is_active_player(player: Dict) -> bool:
+    """Determine if a player is active based on game appearances or bench time"""
+    games = player['statistics'][0]['games']
+    has_appearances = games['appearences'] is not None and games['appearences'] > 0
+    
+    substitutes = player['statistics'][0]['substitutes']
+    on_bench = substitutes['bench'] is not None and substitutes['bench'] > 0
+    
+    return has_appearances or on_bench
 
-def run_tournament_round(players, players_to_keep=2, round_num=1):
+
+def filter_active_players(players: List[Dict]) -> List[Dict]:
+    """Filter to get only active players"""
+    return [player for player in players if is_active_player(player)]
+
+
+def run_tournament_round(players: List[Dict], 
+                         players_to_keep: int = 2,
+                         round_num: int = 1) -> List[Dict]:
     """Run one round of the tournament"""
     results = []
     total_groups = (len(players) + 4) // 5
@@ -306,11 +306,14 @@ def run_tournament_round(players, players_to_keep=2, round_num=1):
     
     for i in range(0, len(players), 5):
         group = players[i:min(i+5, len(players))]
-        if len(group) < 2:
+        if len(group) < 2:  # Skip groups that are too small
             results.extend(group)
             continue
         
+        # Get scores for this group
         scores = get_trends_data(group, progress)
+        
+        # Sort players by score and get winners
         sorted_group = sorted(group, key=lambda p: scores.get(p['player']['name'], 0), reverse=True)
         winners = [p['player']['name'] for p in sorted_group[:players_to_keep]]
         
@@ -318,93 +321,109 @@ def run_tournament_round(players, players_to_keep=2, round_num=1):
         group_num = (i + 5) // 5
         progress.show_group_result(group_num, group, scores, winners)
         
+        # Keep top players from this group
         results.extend(sorted_group[:players_to_keep])
         progress.update(group_num)
     
     progress.finish()
     
-    # Before returning results, deduplicate players by name, keeping highest score
+    # Deduplicate players by name, keeping highest score
     seen_players = {}
-    deduplicated_results = []
-    
     for player in results:
         name = player['player']['name']
         if name not in seen_players:
             seen_players[name] = player
-        else:
-            # If we've seen this player before, keep the one with the higher score
-            existing_score = scores.get(seen_players[name]['player']['name'], 0)
-            new_score = scores.get(name, 0)
-            if new_score > existing_score:
-                seen_players[name] = player
     
     return list(seen_players.values())
 
-def run_final_round(players):
-    """Run final round as a knockout system"""
-    log_message("\n=== Final Round ===", Colors.GREEN)
-    log_message(f"Starting final round with {len(players)} players", Colors.BLUE)
-    
-    # Initialize with first 5 players
-    current_group = players[:5]
-    challengers = players[5:]
-    final_scores = {}
-    
-    # Get initial scores
-    scores = get_trends_data(current_group)
-    final_scores.update(scores)
-    
-    # Sort initial group
-    current_group.sort(key=lambda p: scores.get(p['player']['name'], 0), reverse=True)
-    
-    # Initialize best_fifth with 5th place from initial group
-    best_fifth = current_group[4]
-    best_fifth_score = scores.get(best_fifth['player']['name'], 0)  # Use .get() with default 0
-    
-    # Show initial group
-    log_message("\nInitial Top 5:", Colors.BLUE)
-    for i, player in enumerate(current_group, 1):
-        name = player['player']['name']
-        score = scores.get(name, 0)  # Use .get() with default 0
-        team = player['statistics'][0]['team']['name']
-        log_message(f"{i}. {name:<20} {score:>3} ({team})", Colors.BLUE)
-    
-    # Process remaining challengers
+
+def get_detailed_interest_data(players: List[Dict]) -> Dict[str, Dict]:
+    """Get detailed interest over time data for players"""
+    try:
+        # Use appropriate identifiers for the players
+        player_identifiers = [get_player_identifier(player) for player in players]
+        
+        # Log what we're fetching
+        log_message(f"Fetching interest over time for topics: {player_identifiers}", Colors.BLUE)
+        
+        # Make API call
+        pytrends.build_payload(
+            player_identifiers,
+            timeframe='now 1-d',
+            geo='',
+            gprop=''
+        )
+        
+        interest_data = pytrends.interest_over_time()
+        log_message(f"Got interest data with columns: {interest_data.columns}", Colors.BLUE)
+        
+        # Convert to dictionary with player names as keys
+        result = {}
+        player_map = {get_player_identifier(player): player for player in players}
+        
+        for topic_id, player in player_map.items():
+            player_name = player['player']['name']
+            
+            if topic_id in interest_data:
+                # Convert values to native Python types
+                values = [float(x) for x in interest_data[topic_id].values]
+                dates = [d.strftime('%Y-%m-%d %H:%M:%S') for d in interest_data.index]
+                
+                result[player_name] = {
+                    "values": values,
+                    "dates": dates
+                }
+                
+                log_message(f"Added {len(values)} data points for {player_name}", Colors.BLUE)
+            
+        return result
+        
+    except Exception as e:
+        log_message(f"Warning: Could not fetch detailed data: {str(e)}", Colors.YELLOW)
+        log_message(f"Full error: {type(e).__name__}: {str(e)}", Colors.YELLOW)
+        return {}
+
+
+def run_knockout_phase(top_4: List[Dict], challengers: List[Dict]) -> Tuple[Dict, float]:
+    """Run the knockout phase to find the best 5th player"""
     progress = ProgressDisplay(len(challengers), desc="Processing challengers")
     progress.start()
     
+    current_group = top_4.copy()
+    best_fifth = None
+    best_fifth_score = -1
+    
     for i, challenger in enumerate(challengers):
-        # Keep top 4 from previous round and add challenger
-        comparison_group = current_group[:4] + [challenger]
-        scores = get_trends_data(comparison_group)
+        # Compare top 4 against this challenger
+        comparison_group = current_group + [challenger]
+        scores = get_trends_data(comparison_group, progress)
         
         # Sort based on this comparison
         comparison_group.sort(key=lambda p: scores.get(p['player']['name'], 0), reverse=True)
         
-        # Check if the 5th place (loser) of this round is better than our current best 5th
-        current_fifth = comparison_group[4]
-        current_fifth_score = scores.get(current_fifth['player']['name'], 0)  # Use .get() with default 0
+        # Check if challenger made it into top 4
+        if challenger in comparison_group[:4]:
+            # Challenger succeeded, update current top 4
+            current_group = comparison_group[:4]
+        else:
+            # Challenger failed, check if they're better than current best 5th
+            challenger_score = scores.get(challenger['player']['name'], 0)
+            if challenger_score > best_fifth_score:
+                best_fifth = challenger
+                best_fifth_score = challenger_score
+                log_message(f"\nNew best 5th: {challenger['player']['name']} ({challenger_score})", Colors.GREEN)
         
-        if current_fifth_score > best_fifth_score:
-            best_fifth = current_fifth
-            best_fifth_score = current_fifth_score
-        
-        # Update current group with top 4 from this comparison
-        current_group = comparison_group[:4]
-        
-        # Show current standings after each comparison
-        progress.show_group_result(i+1, comparison_group, scores, 
-                                 [p['player']['name'] for p in comparison_group[:4]])
+        # Show current standings
+        winners = [p['player']['name'] for p in comparison_group[:4]]
+        progress.show_group_result(i+1, comparison_group, scores, winners)
         progress.update(i+1)
     
     progress.finish()
+    return best_fifth, best_fifth_score
 
-    # Now we have the definitive top 4, find the best 5th
-    top_4 = current_group[:4]
-    
-    # Get all players that aren't in the top 4
-    remaining_players = [p for p in players if p not in top_4]
-    
+
+def find_best_fifth(top_4: List[Dict], remaining_players: List[Dict]) -> Tuple[Dict, float]:
+    """Find the best 5th place player from all remaining players"""
     log_message("\nFinding best 5th place from all remaining players...", Colors.BLUE)
     progress = ProgressDisplay(len(remaining_players), desc="Testing for 5th place")
     progress.start()
@@ -415,7 +434,7 @@ def run_final_round(players):
     # Test each remaining player against the top 4
     for i, player in enumerate(remaining_players):
         comparison_group = top_4 + [player]
-        scores = get_trends_data(comparison_group)
+        scores = get_trends_data(comparison_group, progress)
         player_score = scores.get(player['player']['name'], 0)
         
         if player_score > best_fifth_score:
@@ -423,152 +442,68 @@ def run_final_round(players):
             best_fifth_score = player_score
             log_message(f"\nNew best 5th: {player['player']['name']} ({player_score})", Colors.GREEN)
         
-        progress.show_group_result(i+1, comparison_group, scores, 
-                                 [p['player']['name'] for p in top_4])
-        progress.update(i+1)  # Update after showing group result
+        # Show result
+        winners = [p['player']['name'] for p in top_4]
+        progress.show_group_result(i+1, comparison_group, scores, winners)
+        progress.update(i+1)
     
-    # Update to final count before finishing
     progress.update(len(remaining_players))
     progress.finish()
+    
+    return best_fifth, best_fifth_score
+
+
+def run_final_round(players: List[Dict]) -> Tuple[List[Dict], Dict[str, float]]:
+    """Run final round as a knockout system"""
+    log_message("\n=== Final Round ===", Colors.GREEN)
+    log_message(f"Starting final round with {len(players)} players", Colors.BLUE)
+    
+    # Initialize with first 5 players
+    current_group = players[:5]
+    challengers = players[5:]
+    
+    # Get initial scores and sort initial group
+    initial_scores = get_trends_data(current_group)
+    current_group.sort(key=lambda p: initial_scores.get(p['player']['name'], 0), reverse=True)
+    
+    # Show initial top 5
+    log_message("\nInitial Top 5:", Colors.BLUE)
+    for i, player in enumerate(current_group, 1):
+        name = player['player']['name']
+        score = initial_scores.get(name, 0)
+        log_message(format_player_name_with_score(player, score, prefix=f"{i}. "), Colors.BLUE)
+    
+    # Process challengers to find top 4
+    best_fifth, _ = run_knockout_phase(current_group[:4], challengers)
+    top_4 = current_group[:4]
+    
+    # Find best 5th from all remaining players
+    remaining_players = [p for p in players if p not in top_4]
+    best_fifth, _ = find_best_fifth(top_4, remaining_players)
     
     # Final comparison of top 4 plus best 5th place
     final_group = top_4 + [best_fifth]
     final_scores = get_trends_data(final_group)
     final_group.sort(key=lambda p: final_scores.get(p['player']['name'], 0), reverse=True)
     
-    # Now get detailed interest over time data for the final top 5
+    # Get detailed data for the final top 5
     log_message("\nGetting detailed data for final top 5...", Colors.BLUE)
-    try:
-        # Use topic IDs for the final 5, keeping their original prefixes
-        top_5_topics = [
-            player['topic_id'] if (player['topic_id'].startswith('/m/') or player['topic_id'].startswith('/g/'))
-            else player['player']['name']  # Use player name if no valid prefix
-            for player in final_group[:5]
-        ]
-        
-        # Debug log
-        log_message(f"Fetching interest over time for topics: {top_5_topics}", Colors.BLUE)
-        
-        pytrends.build_payload(
-            top_5_topics,
-            timeframe='now 1-d',
-            geo='',
-            gprop=''
-        )
-        
-        interest_data = pytrends.interest_over_time()
-        
-        # Debug log
-        log_message(f"Got interest data with columns: {interest_data.columns}", Colors.BLUE)
-        
-        # Convert to dictionary with player names as keys
-        detailed_data = {}
-        for player in final_group[:5]:  # Process only top 5
-            topic_id = player['topic_id']  # Use the original topic_id
-            player_name = player['player']['name']
-            
-            if topic_id in interest_data:
-                # Debug log
-                log_message(f"Processing data for {player_name}", Colors.BLUE)
-                
-                # Convert numpy values to native Python types
-                values = [float(x) for x in interest_data[topic_id].values]
-                dates = [d.strftime('%Y-%m-%d %H:%M:%S') for d in interest_data.index]
-                
-                detailed_data[player_name] = {
-                    "values": values,
-                    "dates": dates
-                }
-                
-                # Debug log
-                log_message(f"Added {len(values)} data points for {player_name}", Colors.BLUE)
-        
-        # Save results with detailed data
-        save_results(final_group[:5], final_scores, interest_data=detailed_data)
-        log_message(f"Successfully saved interest over time data for {len(detailed_data)} players", Colors.GREEN)
-        
-    except Exception as e:
-        log_message(f"Warning: Could not fetch detailed data: {str(e)}", Colors.YELLOW)
-        log_message(f"Full error: {type(e).__name__}: {str(e)}", Colors.YELLOW)
-        # Fall back to saving without detailed data
-        save_results(final_group[:5], final_scores)
-        return final_group, final_scores
+    detailed_data = get_detailed_interest_data(final_group[:5])
+    
+    # Save results
+    save_results(final_group[:5], final_scores, interest_data=detailed_data)
     
     return final_group, final_scores
 
-def fetch_trending_footballers(test_limit=None):
-    """Main function to find trending footballers"""
-    try:
-        global api_calls_counter
-        api_calls_counter = 0
-        timing_stats.start()  # Start timing
-        
-        # Load preprocessed players
-        with open('public/preprocessed_players.json', 'r') as f:
-            active_players = json.load(f)
-        
-        log_message("\n=== Tournament Start ===", Colors.BLUE)
-        log_message(f"Total active players: {len(active_players)}", Colors.BLUE)
-        
-        if test_limit:
-            # In test mode, take first N players without shuffling
-            active_players = active_players[:test_limit]
-            log_message(f"TEST MODE: Limited to {test_limit} players\n", Colors.YELLOW)
-        else:
-            # In production mode, shuffle all players
-            random.shuffle(active_players)
-            log_message("Randomly shuffled players for fair competition\n", Colors.BLUE)
 
-        # Tournament rounds
-        current_players = active_players
-        round_num = 1
-        
-        while len(current_players) > 25:
-            log_message(f"\n=== Round {round_num} ===", Colors.BLUE)
-            log_message(f"Processing {len(current_players)} players in {(len(current_players) + 4) // 5} groups", Colors.BLUE)
-            current_players = run_tournament_round(current_players, players_to_keep=2, round_num=round_num)
-            round_num += 1
-
-        # Run final round with remaining players
-        final_5, final_scores = run_final_round(current_players)
-        
-        # Don't save here - it's already saved in run_final_round
-        # save_results(final_5, final_scores)  # Remove this line
-        
-        log_message("\n=== Final Results ===", Colors.GREEN)
-        log_message("Top 5 Trending Footballers:", Colors.GREEN)
-        for i, player in enumerate(final_5, 1):
-            name = player['player']['name']
-            score = final_scores[name]
-            team = player['statistics'][0]['team']['name']
-            log_message(f"{i}. {name:<20} {score:>3} ({team})", Colors.GREEN)
-        
-        # At the end, print timing statistics
-        total_time = timing_stats.get_total_time()
-        avg_call_time = timing_stats.get_avg_call_time()
-        
-        log_message("\n=== Performance Stats ===", Colors.YELLOW)
-        log_message(f"Total time: {total_time.total_seconds():.1f}s", Colors.YELLOW)
-        log_message(f"Total API calls: {api_calls_counter}", Colors.YELLOW)
-        log_message(f"Average call time: {avg_call_time.total_seconds():.1f}s", Colors.YELLOW)
-        log_message("=== Tournament Complete ===\n", Colors.BLUE)
-        
-    except Exception as e:
-        log_message(f"Error: {str(e)}", Colors.RED)
-        raise
-
-def save_results(top_5, scores, interest_data=None):
+def save_results(top_5: List[Dict], scores: Dict[str, float], 
+                 interest_data: Optional[Dict] = None) -> None:
     """Save the final results to JSON"""
-    # Debug log at start
-    log_message("Starting save_results...", Colors.BLUE)
-    if interest_data:
-        log_message(f"Interest data available for players: {list(interest_data.keys())}", Colors.BLUE)
-    
-    # Ensure directory exists
+    # Create output directory
     os.makedirs('public', exist_ok=True)
     
     # Load preprocessed players to get full data
-    with open('public/preprocessed_players.json', 'r') as f:
+    with open(INPUT_FILE, 'r') as f:
         preprocessed_players = json.load(f)
     
     # Create lookup for preprocessed players
@@ -586,12 +521,8 @@ def save_results(top_5, scores, interest_data=None):
     # Add data for each player
     for rank, player in enumerate(sorted_players, 1):
         player_name = player['player']['name']
-        
-        # Get full player data from preprocessed JSON
         player_data = player_lookup[player_name]
-        
-        # Convert any numpy integers to Python integers
-        trending_score = float(scores[player_name])  # Convert to float for safety
+        trending_score = float(scores[player_name])
         
         # Create player entry with base data
         player_entry = {
@@ -606,41 +537,95 @@ def save_results(top_5, scores, interest_data=None):
         
         # Add interest over time data if available
         if interest_data and player_name in interest_data:
-            player_entry["interest_over_time"] = {
-                "values": interest_data[player_name]["values"],
-                "dates": interest_data[player_name]["dates"]
-            }
-            log_message(f"Added interest data to {player_name} entry with {len(interest_data[player_name]['values'])} points", Colors.BLUE)
-        else:
-            log_message(f"No interest data available for {player_name}", Colors.YELLOW)
+            player_entry["interest_over_time"] = interest_data[player_name]
+            log_message(f"Added interest data to {player_name} entry with "
+                       f"{len(interest_data[player_name]['values'])} points", Colors.BLUE)
         
         result["players"].append(player_entry)
     
-    # Debug log before saving
-    log_message(f"Final JSON structure keys: {list(result.keys())}", Colors.BLUE)
-    log_message(f"Number of players: {len(result['players'])}", Colors.BLUE)
-    for p in result["players"]:
-        log_message(f"Player {p['player']['name']} data keys: {list(p.keys())}", Colors.BLUE)
-    
-    # Save to JSON
-    json_path = os.path.join('public', 'trending_footballers.json')
+    # Save to JSON with atomic write
+    json_path = OUTPUT_FILE
     tmp_json_path = json_path + '.tmp'
     
     try:
         with open(tmp_json_path, 'w', encoding='utf-8') as f:
             json.dump(result, f, indent=2, ensure_ascii=False)
         
-        # Atomic rename
         os.replace(tmp_json_path, json_path)
-        log_message(f"Successfully saved JSON with {len(result['players'])} players to {json_path}", Colors.GREEN)
+        log_message(f"Successfully saved JSON with {len(result['players'])} players to {json_path}", 
+                   Colors.GREEN)
         
     except Exception as e:
         if os.path.exists(tmp_json_path):
             os.remove(tmp_json_path)
         raise e
 
-# Initialize the last call time
-get_trends_data.last_call = 0
+
+def load_players() -> List[Dict]:
+    """Load preprocessed players from file"""
+    with open(INPUT_FILE, 'r') as f:
+        return json.load(f)
+
+
+def fetch_trending_footballers(test_limit: Optional[int] = None) -> None:
+    """Main function to find trending footballers"""
+    try:
+        global api_calls_counter
+        api_calls_counter = 0
+        timing_stats.start()
+        
+        # Load players
+        active_players = load_players()
+        log_message("\n=== Tournament Start ===", Colors.BLUE)
+        log_message(f"Total active players: {len(active_players)}", Colors.BLUE)
+        
+        # Handle test mode
+        if test_limit:
+            active_players = active_players[:test_limit]
+            log_message(f"TEST MODE: Limited to {test_limit} players\n", Colors.YELLOW)
+        else:
+            random.shuffle(active_players)
+            log_message("Randomly shuffled players for fair competition\n", Colors.BLUE)
+
+        # Run tournament rounds until we reach the threshold
+        current_players = active_players
+        round_num = 1
+        
+        while len(current_players) > TOURNAMENT_THRESHOLD:
+            log_message(f"\n=== Round {round_num} ===", Colors.BLUE)
+            log_message(f"Processing {len(current_players)} players in "
+                       f"{(len(current_players) + 4) // 5} groups", Colors.BLUE)
+            current_players = run_tournament_round(current_players, players_to_keep=2, round_num=round_num)
+            round_num += 1
+
+        # Run final round with remaining players
+        final_5, final_scores = run_final_round(current_players)
+        
+        # Display final results
+        log_message("\n=== Final Results ===", Colors.GREEN)
+        log_message("Top 5 Trending Footballers:", Colors.GREEN)
+        for i, player in enumerate(final_5, 1):
+            name = player['player']['name']
+            score = final_scores[name]
+            log_message(format_player_name_with_score(player, score, prefix=f"{i}. "), Colors.GREEN)
+        
+        # Show performance stats
+        total_time = timing_stats.get_total_time()
+        avg_call_time = timing_stats.get_avg_call_time()
+        
+        log_message("\n=== Performance Stats ===", Colors.YELLOW)
+        log_message(f"Total time: {total_time.total_seconds():.1f}s", Colors.YELLOW)
+        log_message(f"Total API calls: {api_calls_counter}", Colors.YELLOW)
+        log_message(f"Average call time: {avg_call_time.total_seconds():.1f}s", Colors.YELLOW)
+        log_message("=== Tournament Complete ===\n", Colors.BLUE)
+        
+    except Exception as e:
+        log_message(f"Error: {str(e)}", Colors.RED)
+        raise
+
+
+# Initialize global timing stats
+timing_stats = TimingStats()
 
 if __name__ == "__main__":
     try:

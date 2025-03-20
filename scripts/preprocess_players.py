@@ -11,20 +11,72 @@ import json
 import os
 import time
 import unicodedata
-from datetime import datetime
+from typing import Dict, List, Optional, Set, Any
 from pytrends.request import TrendReq
 import html
 import requests
 import random
 
 # Constants
+INPUT_FILE = 'public/players.json'
+OUTPUT_FILE = 'public/preprocessed_players.json'
 PROXIES = os.environ['PROXY_LIST'].split(',') if 'PROXY_LIST' in os.environ else []
 random.shuffle(PROXIES)  # Shuffle proxies for better load distribution
 MAX_RETRIES = 3
 RETRY_DELAYS = [2, 5, 10]
 MIN_DELAY_BETWEEN_CALLS = 1  # Minimum seconds between API calls
 
-# Initialize pytrends once
+# Player type constants
+VALID_PLAYER_TYPES = [
+    # General player types
+    'footballer', 'football player', 'soccer player',
+    
+    # Basic positions
+    'goalkeeper', 'defender', 'midfielder', 'forward', 'striker', 'winger',
+    
+    # Specific positions
+    'centre-back', 'center-back', 'centre forward', 'attacking midfielder', 'defensive midfielder',
+    
+    # Full backs
+    'full-back', 'full back', 'left-back', 'left back', 'right-back', 'right back',
+    
+    # Wingers and wide positions
+    'left-winger', 'left winger', 'right-winger', 'right winger',
+    
+    # Wide midfielders
+    'left-midfielder', 'left midfielder', 'right-midfielder', 'right midfielder',
+    
+    # Wide forwards
+    'left-forward', 'left forward', 'right-forward', 'right forward'
+]
+
+# Character normalization map
+CHAR_MAP = {
+    'ø': 'oe', 'æ': 'ae', 'å': 'aa', 'ö': 'oe', 'ä': 'ae', 'ü': 'ue', 'ß': 'ss',
+    'ć': 'c', 'č': 'c', 'ş': 's', 'ğ': 'g', 'ı': 'i',
+}
+
+# Nickname mappings
+NICKNAME_MAP = {
+    # English nicknames
+    'joshua': 'josh', 'benjamin': 'ben', 'matthew': 'matt', 'christopher': 'chris',
+    'michael': 'mike', 'robert': 'rob', 'william': 'will', 'alexander': 'alex',
+    'nicholas': 'nick', 'daniel': 'dan', 'anthony': 'tony', 'james': 'jim',
+    'richard': 'rick', 'thomas': 'tom', 'tobias': 'toby', 'edward': 'ed',
+    'timothy': 'tim', 'jonathan': 'jon', 'andrew': 'andy', 'samuel': 'sam',
+    'joseph': 'joe', 'charles': 'charlie', 'david': 'dave', 'stephen': 'steve',
+    'patrick': 'pat', 'frederick': 'fred', 'theodore': 'ted', 'oliver': 'ollie',
+    'maximilian': 'max', 'gabriel': 'gabe',
+    
+    # Spanish/Latin nicknames
+    'israel': 'isra', 'francisco': 'fran', 'santiago': 'santi', 'alejandro': 'alex',
+    'eduardo': 'edu', 'ignacio': 'nacho', 'jose': 'pepe', 'roberto': 'beto',
+    'alberto': 'beto', 'manuel': 'manu', 'emmanuel': 'manu', 'salvador': 'salva',
+    'sebastian': 'seba', 'cristian': 'cris', 'fernando': 'fer', 'federico': 'fede',
+    'ricardo': 'ricky', 'rodrigo': 'rodri', 'javier': 'javi'
+}
+
+# Initialize pytrends client
 pytrends = TrendReq(
     hl='en-US',
     timeout=(3.05, 30),
@@ -35,133 +87,48 @@ pytrends = TrendReq(
 
 # Custom Exceptions
 class RetryableError(Exception):
+    """Exception for errors that can be retried"""
     pass
 
 # Name Processing Functions
-def normalize_name(name):
+def normalize_name(name: str) -> str:
     """Normalize special characters in names and decode HTML entities"""
-    # First decode HTML entities (like &apos; -> ')
     decoded = html.unescape(name)
     
-    # Map of special characters to their common equivalents
-    char_map = {
-        'ø': 'oe',
-        'æ': 'ae',
-        'å': 'aa',
-        'ö': 'oe',
-        'ä': 'ae',
-        'ü': 'ue',
-        'ß': 'ss',
-        'ć': 'c',
-        'č': 'c',
-        'ş': 's',
-        'ğ': 'g',
-        'ı': 'i',
-    }
-    
     # Replace special characters with their equivalents
-    for special, replacement in char_map.items():
+    for special, replacement in CHAR_MAP.items():
         decoded = decoded.replace(special, replacement)
         decoded = decoded.replace(special.upper(), replacement.upper())
     
-    # Then normalize remaining special characters
-    normalized = unicodedata.normalize('NFKD', decoded).encode('ASCII', 'ignore').decode('utf-8')
-    return normalized
+    # Normalize remaining special characters
+    return unicodedata.normalize('NFKD', decoded).encode('ASCII', 'ignore').decode('utf-8')
 
-def normalize_for_comparison(text):
+def normalize_for_comparison(text: str) -> str:
     """Normalize text for name comparison by handling special cases"""
-    # First decode HTML entities (like &apos; -> ')
     text = html.unescape(text)
     
-    # Handle special cases for Irish/Scottish names
-    text = text.replace("'", "")  # Remove apostrophes
-    text = text.replace("O'", "o")  # Normalize O' prefix
-    text = text.replace("Mc", "mac")  # Normalize Mc prefix
-    text = text.replace("Mac", "mac")  # Normalize Mac prefix
+    # Handle name prefixes and special characters
+    replacements = [
+        ("'", ""), ("O'", "o"), ("Mc", "mac"), ("Mac", "mac"),
+        ("gui", "gi"), ("gue", "ge"), ("qui", "ki"), ("que", "ke"),
+        ("-", " "), (".", "")
+    ]
     
-    # Handle Basque/Spanish name variations
-    text = text.replace("gui", "gi")  # Eguiluz -> Egiluz
-    text = text.replace("gue", "ge")  # Miguel -> Migel
-    text = text.replace("qui", "ki")  # Enrique -> Enrike
-    text = text.replace("que", "ke")  # Quevedo -> Kevedo
+    for original, replacement in replacements:
+        text = text.replace(original, replacement)
     
-    # First normalize the text
-    text = text.replace('-', ' ')  # Replace hyphens with spaces
-    text = text.replace('.', '')   # Remove dots from initials
-    text = ' '.join(text.split())  # Handle all whitespace
-    
-    # Normalize unicode characters (like ć -> c)
+    # Normalize spaces and unicode characters
+    text = ' '.join(text.split())
     text = unicodedata.normalize('NFKD', text).encode('ASCII', 'ignore').decode('utf-8')
     
-    # Split into words and remove very short parts (likely initials)
+    # Remove very short words (likely initials)
     words = [w for w in text.lower().split() if len(w) > 1]
     
     return ' '.join(words).strip()
 
-def get_name_variations(name):
+def get_name_variations(name: str) -> Set[str]:
     """Get common variations of a name, including nicknames"""
-    variations = set()
-    
-    # Common nickname mappings
-    nickname_map = {
-        # English nicknames
-        'joshua': 'josh',
-        'benjamin': 'ben',
-        'matthew': 'matt',
-        'christopher': 'chris',
-        'michael': 'mike',
-        'robert': 'rob',
-        'william': 'will',
-        'alexander': 'alex',
-        'nicholas': 'nick',
-        'daniel': 'dan',
-        'anthony': 'tony',
-        'james': 'jim',
-        'richard': 'rick',
-        'thomas': 'tom',
-        'tobias': 'toby',
-        'edward': 'ed',
-        'timothy': 'tim',
-        'jonathan': 'jon',
-        'andrew': 'andy',
-        'samuel': 'sam',
-        'joseph': 'joe',
-        'charles': 'charlie',
-        'david': 'dave',
-        'stephen': 'steve',
-        'patrick': 'pat',
-        'frederick': 'fred',
-        'theodore': 'ted',
-        'oliver': 'ollie',
-        'maximilian': 'max',
-        'gabriel': 'gabe',
-        
-        # Spanish/Latin nicknames
-        'israel': 'isra',
-        'francisco': 'fran',
-        'santiago': 'santi',
-        'alejandro': 'alex',
-        'eduardo': 'edu',
-        'ignacio': 'nacho',
-        'jose': 'pepe',
-        'roberto': 'beto',
-        'alberto': 'beto',
-        'manuel': 'manu',
-        'emmanuel': 'manu',
-        'salvador': 'salva',
-        'sebastian': 'seba',
-        'cristian': 'cris',
-        'fernando': 'fer',
-        'federico': 'fede',
-        'ricardo': 'ricky',
-        'rodrigo': 'rodri',
-        'javier': 'javi'
-    }
-    
-    # Add the original name
-    variations.add(name.lower())
-    
-    # Split the name into parts
+    variations = {name.lower()}
     parts = name.lower().split()
     
     # Add variations without middle names
@@ -169,35 +136,30 @@ def get_name_variations(name):
         variations.add(f"{parts[0]} {parts[-1]}")
     
     # Add nickname variations
-    if parts[0] in nickname_map:
+    if parts[0] in NICKNAME_MAP:
         if len(parts) > 1:
-            variations.add(f"{nickname_map[parts[0]]} {' '.join(parts[1:])}")
-            variations.add(f"{nickname_map[parts[0]]} {parts[-1]}")
+            variations.add(f"{NICKNAME_MAP[parts[0]]} {' '.join(parts[1:])}")
+            variations.add(f"{NICKNAME_MAP[parts[0]]} {parts[-1]}")
         else:
-            variations.add(nickname_map[parts[0]])
+            variations.add(NICKNAME_MAP[parts[0]])
     
     return variations
 
-def normalize_name_parts(name):
+def normalize_name_parts(name: str) -> Set[str]:
     """Split a name into normalized parts, handling middle names"""
-    # First normalize the text
     name = normalize_for_comparison(name)
     parts = name.split()
     
-    # Handle middle names - create variations with and without middle names
-    variations = set()
-    variations.add(' '.join(parts))  # Full name
+    variations = {' '.join(parts)}  # Full name
     
     if len(parts) > 2:
         # Add version without middle names
-        variations.add(f"{parts[0]} {parts[-1]}")  # First and last only
-        variations.add(f"{parts[0]} {' '.join(parts[1:])}")  # First and rest
+        variations.add(f"{parts[0]} {parts[-1]}")
+        variations.add(f"{parts[0]} {' '.join(parts[1:])}")
         
         # Add versions with partial middle names
         for i in range(1, len(parts)-1):
-            # Include first name, current middle name, and last name
             variations.add(f"{parts[0]} {parts[i]} {parts[-1]}")
-            # Include first name and all names up to current
             variations.add(f"{parts[0]} {' '.join(parts[1:i+1])} {parts[-1]}")
     
     # Always add first and last name if we have at least 2 parts
@@ -206,40 +168,38 @@ def normalize_name_parts(name):
     
     return variations
 
-# Matching Functions
-def is_name_match(player, suggestion):
-    """Determine if a suggestion matches the player's name"""
-    # Normalize the suggestion title
-    title = normalize_for_comparison(suggestion['title'])
-    
-    # Get all name variations to check
+def get_player_name_variations(player: Dict) -> Set[str]:
+    """Get all possible name variations for a player"""
     name_variations = set()
     
-    # 1. Try with full name if available
+    # Use full name if available
     if player['player']['firstname'] and player['player']['lastname']:
         full_name = f"{player['player']['firstname']} {player['player']['lastname']}"
         name_variations.update(normalize_name_parts(full_name))
         
         # Add nickname variations
-        nickname_variations = get_name_variations(full_name)
-        # Flatten the sets of name variations
-        for nickname in nickname_variations:
+        for nickname in get_name_variations(full_name):
             name_variations.update(normalize_name_parts(nickname))
     
-    # 2. Add display name variations
+    # Add display name variations
     display_name = player['player']['name']
     name_variations.update(normalize_name_parts(display_name))
     
+    return name_variations
+
+# Matching Functions
+def is_name_match(player: Dict, suggestion: Dict) -> bool:
+    """Determine if a suggestion matches the player's name"""
+    title = normalize_for_comparison(suggestion['title'])
+    name_variations = get_player_name_variations(player)
+    
     # Check all variations against the title
     for variation in name_variations:
-        if variation in title:
-            return True
-        # Also check if title is in any of our variations
-        # This helps with cases where the suggestion is shorter than our name
-        if title in variation:
+        if variation in title or title in variation:
             return True
     
     # Special handling for names with initials
+    display_name = player['player']['name']
     if '.' in display_name:
         name_parts = display_name.replace('-', ' ').split()
         player_surname = normalize_for_comparison(' '.join(name_parts[1:]))
@@ -252,61 +212,27 @@ def is_name_match(player, suggestion):
                 if player_surname in remaining_text:
                     return True
     
-    # Return False if no match found
     return False
 
-def is_valid_player_type(type_lower):
+def is_valid_player_type(type_lower: str) -> bool:
     """Check if the type indicates an active football player"""
-    
-    # List of valid player type indicators
-    valid_types = [
-        # General player types
-        'footballer',
-        'football player',
-        'soccer player',
-        
-        # Basic positions
-        'goalkeeper',
-        'defender',
-        'midfielder',
-        'forward',
-        'striker',
-        'winger',
-        
-        # Specific positions (with variations combined)
-        'centre-back', 'center-back',
-        'centre forward',
-        'attacking midfielder',
-        'defensive midfielder',
-        
-        # Full backs
-        'full-back', 'full back',
-        'left-back', 'left back',
-        'right-back', 'right back',
-        
-        # Wingers and wide positions
-        'left-winger', 'left winger',
-        'right-winger', 'right winger',
-        
-        # Wide midfielders
-        'left-midfielder', 'left midfielder',
-        'right-midfielder', 'right midfielder',
-        
-        # Wide forwards
-        'left-forward', 'left forward',
-        'right-forward', 'right forward'
-    ]
-    
-    # Check if any valid type is in the string
-    is_player = any(t in type_lower for t in valid_types)
-    
-    # Check not retired/former
+    is_player = any(player_type in type_lower for player_type in VALID_PLAYER_TYPES)
     is_active = 'former' not in type_lower and 'retired' not in type_lower
     
     return is_player and is_active
 
+def is_active_player(player: Dict) -> bool:
+    """Determine if a player is active based on appearances or bench time"""
+    games = player['statistics'][0]['games']
+    has_appearances = games['appearences'] is not None and games['appearences'] > 0
+    
+    substitutes = player['statistics'][0]['substitutes']
+    on_bench = substitutes['bench'] is not None and substitutes['bench'] > 0
+    
+    return has_appearances or on_bench
+
 # API Functions
-def get_topic_suggestions(pytrends, keyword, max_retries=MAX_RETRIES):
+def get_topic_suggestions(pytrends_client, keyword: str, max_retries: int = MAX_RETRIES) -> List[Dict]:
     """Get topic suggestions with retry logic"""
     # Ensure minimum delay between API calls
     if hasattr(get_topic_suggestions, 'last_call'):
@@ -316,8 +242,8 @@ def get_topic_suggestions(pytrends, keyword, max_retries=MAX_RETRIES):
     
     for attempt in range(max_retries):
         try:
-            suggestions = pytrends.suggestions(keyword=keyword)
-            get_topic_suggestions.last_call = time.time()  # Update last call time
+            suggestions = pytrends_client.suggestions(keyword=keyword)
+            get_topic_suggestions.last_call = time.time()
             return suggestions
             
         except (requests.exceptions.ReadTimeout, requests.exceptions.ConnectTimeout) as e:
@@ -345,55 +271,112 @@ def get_topic_suggestions(pytrends, keyword, max_retries=MAX_RETRIES):
                 print(f"Request details: keyword='{keyword}', attempt={attempt + 1}")
                 raise
 
-def get_search_terms(player, team_name):
-    """Generate search terms for a player"""
+def get_search_terms(player: Dict, team_name: str) -> List[str]:
+    """Generate search terms for a player in priority order"""
     search_terms = []
-    
-    # Get the player's full name if available
     firstname = player['player']['firstname']
     lastname = player['player']['lastname']
     
     if firstname and lastname:
-        # Try full name with team first
         full_name = f"{firstname} {lastname}"
-        search_terms.append(f"{normalize_name(full_name)} {team_name}")
-        search_terms.append(f"{normalize_name(full_name)} footballer")
-        search_terms.append(normalize_name(full_name))
+        normalized_name = normalize_name(full_name)
+        search_terms.extend([
+            f"{normalized_name} {team_name}",
+            f"{normalized_name} footballer",
+            normalized_name
+        ])
     
-    # Fallback to display name if different
+    # Add display name if different from full name
     display_name = player['player']['name']
-    if display_name and display_name.lower() not in [term.lower() for term in search_terms]:
-        search_terms.append(f"{normalize_name(display_name)} {team_name}")
-        search_terms.append(f"{normalize_name(display_name)} footballer")
-        search_terms.append(normalize_name(display_name))
+    normalized_display = normalize_name(display_name)
+    
+    if display_name and normalized_display.lower() not in [term.lower() for term in search_terms]:
+        search_terms.extend([
+            f"{normalized_display} {team_name}",
+            f"{normalized_display} footballer",
+            normalized_display
+        ])
     
     return search_terms
 
-# Main Processing Function
-def preprocess_players():
-    """Main function to preprocess player data"""
-    print("\n=== Starting Player Preprocessing ===")
+def find_player_topic(player: Dict, team_name: str) -> tuple:
+    """Find Google Trends topic for a player, returning (topic, search_term)"""
+    # Clean input names
+    team_name = ' '.join(team_name.split())
+    search_terms = get_search_terms(player, team_name)
     
-    # Load players data
+    for search_term in search_terms:
+        suggestions = get_topic_suggestions(pytrends, search_term)
+        
+        for suggestion in suggestions:
+            type_lower = suggestion['type'].lower()
+            
+            if not is_valid_player_type(type_lower):
+                continue
+                
+            if is_name_match(player, suggestion):
+                return suggestion, search_term
+                
+    return None, None
+
+def add_topic_to_player(player: Dict, topic: Dict) -> None:
+    """Add topic data to player object"""
+    player['topic_id'] = topic['mid']
+    player['topic_title'] = topic['title']
+    player['topic_type'] = topic['type']
+
+def load_players() -> List[Dict]:
+    """Load players data from file"""
     print("Loading players data...")
-    with open('public/players.json', 'r') as f:
+    with open(INPUT_FILE, 'r') as f:
         players = json.load(f)
     print(f"Loaded {len(players)} total players")
-    
-    # Filter active players
+    return players
+
+def filter_active_players(players: List[Dict]) -> List[Dict]:
+    """Filter out inactive players"""
     print("\nFiltering active players...")
-    active_players = []
-    for player in players:
-        games = player['statistics'][0]['games']
-        # Check if player has any appearances or has been on the bench
-        if (games['appearences'] is not None and games['appearences'] > 0) or \
-           (player['statistics'][0]['substitutes']['bench'] is not None and 
-            player['statistics'][0]['substitutes']['bench'] > 0):
-            active_players.append(player)
-    
+    active_players = [player for player in players if is_active_player(player)]
     print(f"Found {len(active_players)} active players")
-    
-    # Process players and find their topic IDs
+    return active_players
+
+def save_processed_players(processed_players: List[Dict]) -> None:
+    """Save processed players to output file"""
+    print("\nSaving preprocessed data...")
+    with open(OUTPUT_FILE, 'w') as f:
+        json.dump(processed_players, f, indent=2)
+    print(f"Saved {len(processed_players)} preprocessed players to {OUTPUT_FILE}")
+
+def print_suggestions_for_player(player_name: str, search_terms: List[str]) -> None:
+    """Print suggestions found for a player"""
+    print("Tried following searches:")
+    for search_term in search_terms:
+        print(f"\nSearch term: '{search_term}'")
+        suggestions = get_topic_suggestions(pytrends, search_term)
+        if suggestions:
+            print("Got suggestions:")
+            for suggestion in suggestions:
+                print(f"- {suggestion['title']} ({suggestion['type']}) [ID: {suggestion['mid']}]")
+        else:
+            print("No suggestions found")
+
+def print_progress_update(current: int, total: int, processed_count: int, api_calls: int) -> None:
+    """Print progress update"""
+    success_rate = (processed_count/current*100)
+    print(f"\n--- Progress Update ({current}/{total}) ---")
+    print(f"Success rate: {success_rate:.1f}%")
+    print(f"API calls: {api_calls}\n")
+
+def print_summary(processed_players: List[Dict], skipped_players: List[str], total: int, api_calls: int) -> None:
+    """Print summary of processing results"""
+    print(f"\n=== Processing Complete ===")
+    print(f"Successfully processed: {len(processed_players)} players")
+    print(f"Skipped: {len(skipped_players)} players")
+    print(f"Success rate: {(len(processed_players)/total*100):.1f}%")
+    print(f"Total API calls: {api_calls}")
+
+def process_players(active_players: List[Dict]) -> tuple:
+    """Process all active players to find their topic IDs"""
     print("\nSearching for player topic IDs...")
     processed_players = []
     skipped_players = []
@@ -401,66 +384,22 @@ def preprocess_players():
     api_calls = 0
     
     for i, player in enumerate(active_players, 1):
-        name = player['player']['name']
-        team = player['statistics'][0]['team']['name']
+        name = ' '.join(player['player']['name'].split())  # Clean name
+        team = ' '.join(player['statistics'][0]['team']['name'].split())
         
         try:
-            # Clean the names first
-            name = ' '.join(name.split())  # Remove tabs and normalize spaces
-            team = ' '.join(team.split())  # Clean team name too
-            
-            # Get search terms in priority order
             search_terms = get_search_terms(player, team)
+            topic, found_with_term = find_player_topic(player, team)
+            api_calls += len(search_terms)  # Count each search as an API call
             
-            footballer_topic = None
-            found_with_term = None
-            
-            for search_term in search_terms:
-                if footballer_topic:
-                    break
-                    
-                suggestions = get_topic_suggestions(pytrends, search_term)
-                api_calls += 1
-                
-                for suggestion in suggestions:
-                    type_lower = suggestion['type'].lower()
-                    
-                    # First check: Must be a footballer/soccer player and not retired
-                    is_active_player = is_valid_player_type(type_lower)
-                    
-                    if not is_active_player:
-                        continue  # Skip to next suggestion if not an active player
-                    
-                    # Then check: Name must match using strict rules
-                    name_matches = is_name_match(player, suggestion)
-                    
-                    if is_active_player and name_matches:
-                        footballer_topic = suggestion
-                        found_with_term = search_term
-                        break
-            
-            if footballer_topic:
-                # Add topic data to player
-                player['topic_id'] = footballer_topic['mid']
-                player['topic_title'] = footballer_topic['title']
-                player['topic_type'] = footballer_topic['type']
+            if topic:
+                add_topic_to_player(player, topic)
                 processed_players.append(player)
-                print(f"[{i}/{total}] ✓ Found topic for {name}: {footballer_topic['title']} ({footballer_topic['type']}) [Search: {found_with_term}]")
+                print(f"[{i}/{total}] ✓ Found topic for {name}: {topic['title']} ({topic['type']}) [Search: {found_with_term}]")
             else:
                 skipped_players.append(name)
                 print(f"[{i}/{total}] ✗ No topic found for {name}")
-                print("Tried following searches:")
-                
-                # Try each search term and show results
-                for search_term in search_terms:
-                    print(f"\nSearch term: '{search_term}'")
-                    suggestions = get_topic_suggestions(pytrends, search_term)
-                    if suggestions:
-                        print("Got suggestions:")
-                        for s in suggestions:
-                            print(f"- {s['title']} ({s['type']}) [ID: {s['mid']}]")
-                    else:
-                        print("No suggestions found")
+                print_suggestions_for_player(name, search_terms)
                 
         except RetryableError as e:
             print(f"[{i}/{total}] ! Retryable error processing {name} ({team})")
@@ -471,28 +410,28 @@ def preprocess_players():
             print(f"Error type: {type(e).__name__}")
             print(f"Error details: {str(e)}")
             print("Stack trace follows:")
-            raise  # Stop execution on fatal errors
+            raise
         
         # Show stats every 100 players
         if i % 100 == 0:
-            success_rate = (len(processed_players)/i*100)
-            print(f"\n--- Progress Update ({i}/{total}) ---")
-            print(f"Success rate: {success_rate:.1f}%")
-            print(f"API calls: {api_calls}\n")
+            print_progress_update(i, total, len(processed_players), api_calls)
     
-    print(f"\n=== Processing Complete ===")
-    print(f"Successfully processed: {len(processed_players)} players")
-    print(f"Skipped: {len(skipped_players)} players")
-    print(f"Success rate: {(len(processed_players)/total*100):.1f}%")
-    print(f"Total API calls: {api_calls}")
+    print_summary(processed_players, skipped_players, total, api_calls)
+    return processed_players, skipped_players, api_calls
+
+def preprocess_players():
+    """Main function to preprocess player data"""
+    print("\n=== Starting Player Preprocessing ===")
     
-    # Save preprocessed data
-    print("\nSaving preprocessed data...")
-    output_file = 'public/preprocessed_players.json'
-    with open(output_file, 'w') as f:
-        json.dump(processed_players, f, indent=2)
+    players = load_players()
+    active_players = filter_active_players(players)
+    processed_players, _, _ = process_players(active_players)
     
-    print(f"Saved {len(processed_players)} preprocessed players to {output_file}")
+    if processed_players:
+        save_processed_players(processed_players)
+    else:
+        print("\nFailed to process any players.")
+    
     print("\n=== Preprocessing Complete ===")
 
 if __name__ == "__main__":
