@@ -1,11 +1,11 @@
 {
-  "updated_at": "2025-03-21T06:49:37.891280+00:00",
+  "updated_at": "2025-03-21T12:22:17.861733+00:00",
   "player_news": [
     {
       "player_id": 361497,
       "player_name": "Dean Donny Huijsen",
       "trending_score": 100.0,
-      "trend_summary": "Dean Huijsen, currently a Bournemouth defender, has debuted for the Spanish national team in the Nations League quarter-finals against the Netherlands, a decision met with a hostile reception in Rotterdam. Amidst transfer speculation linking him to Liverpool and Newcastle, Huijsen has expressed his preferred destination, while a new Premier League club has entered the race for the sought-after player.\n",
+      "trend_summary": "Dean Huijsen, currently a Bournemouth defender, has debuted for the Spanish national team, playing against his country of birth, and declared his allegiance to Spain despite Dutch heritage. Amidst transfer rumors linking him to Liverpool and Real Madrid, Huijsen has expressed a desire to potentially play for Real Madrid in the future.\n",
       "news": [
         {
           "title": "Dean Huijsen Joins Spanish National Team For Nations League Quarter-Finals",
@@ -15,7 +15,12 @@
         {
           "title": "'Meant to be': Dean Huijsen debuts for Spain in and against country of birth",
           "description": "'Meant to be': Dean Huijsen debuts for Spain in and against country of birth  Flashscore.com",
-          "date": "Fri, 21 Mar 2025 02:58:39 GMT"
+          "date": "Fri, 21 Mar 2025 00:29:57 GMT"
+        },
+        {
+          "title": "Transfer rumors, news: Liverpool set to rival Real Madrid for teen Dean Huijsen",
+          "description": "Transfer rumors, news: Liverpool set to rival Real Madrid for teen Dean Huijsen  ESPN.co.uk",
+          "date": "Fri, 21 Mar 2025 09:00:00 GMT"
         },
         {
           "title": "Dean Huijsen has no interest in Dutch drama after ‘dream’ Spain debut",
@@ -33,226 +38,201 @@
           "date": "Thu, 20 Mar 2025 17:00:49 GMT"
         },
         {
+          "title": "Football gossip: Man Utd to go 'all out' for Jarrad Branthwaite",
+          "description": "Football gossip: Man Utd to go 'all out' for Jarrad Branthwaite  BBC.com",
+          "date": "Thu, 20 Mar 2025 22:43:40 GMT"
+        },
+        {
+          "title": "£50m Liverpool transfer target 'prefers' La Liga move over Anfield",
+          "description": "£50m Liverpool transfer target 'prefers' La Liga move over Anfield  Football365",
+          "date": "Thu, 20 Mar 2025 19:04:28 GMT"
+        },
+        {
+          "title": "Bournemouth defender Huijsen: Would I like to play for Real Madrid...?",
+          "description": "Bournemouth defender Huijsen: Would I like to play for Real Madrid...?  Tribal Football",
+          "date": "Thu, 20 Mar 2025 16:25:00 GMT"
+        },
+        {
           "title": "New Premier League club enter race for Bournemouth star Dean Huijsen and eye double swoop...",
           "description": "New Premier League club enter race for Bournemouth star Dean Huijsen and eye double swoop...  talkSPORT",
           "date": "Thu, 20 Mar 2025 14:28:12 GMT"
-        },
-        {
-          "title": "Dean Huijsen tells Liverpool and Newcastle his preferred transfer destination",
-          "description": "Dean Huijsen tells Liverpool and Newcastle his preferred transfer destination  TBR Football",
-          "date": "Thu, 20 Mar 2025 13:15:00 GMT"
-        },
-        {
-          "title": "Football: Soccer-Spain defender Huijsen gets hostile reception in Rotterdam",
-          "description": "Football: Soccer-Spain defender Huijsen gets hostile reception in Rotterdam  The Star Online",
-          "date": "Thu, 20 Mar 2025 23:19:00 GMT"
-        },
-        {
-          "title": "Richard Hughes 'knows Dean Huijsen well' as two conditions set for £50m Liverpool transfer",
-          "description": "Richard Hughes 'knows Dean Huijsen well' as two conditions set for £50m Liverpool transfer  Liverpool Echo",
-          "date": "Thu, 20 Mar 2025 19:00:00 GMT"
-        },
-        {
-          "title": "Dean Huijsen Makes Emotional Switch To Spain, Debuts Against Netherlands",
-          "description": "Dean Huijsen Makes Emotional Switch To Spain, Debuts Against Netherlands  Evrim Ağacı",
-          "date": "Thu, 20 Mar 2025 23:20:16 GMT"
         }
       ]
     },
     {
       "player_id": 339887,
       "player_name": "Can Yılmaz Uzun",
-      "trending_score": 81.0,
-      "trend_summary": "Can Uzun is in the spotlight as Türkiye prepares to face Hungary in a crucial UEFA Nations League play-off for promotion to League A. The young player's potential role comes as Türkiye deals with key absences and new call-ups for the high-stakes match.\n",
+      "trending_score": 85.0,
+      "trend_summary": "Can Uzun, a rising star in Turkish football, has been recognized as one of the top 10 best performing U-20 players. This acknowledgment highlights his impressive performances, placing him alongside fellow Turkish talent Kenan Yildiz.\n",
       "news": [
         {
-          "title": "Türki̇ye-Hungary",
-          "description": "Türki̇ye-Hungary",
+          "title": "Turkish footballers Kenan Yildiz, Can Uzun in list of top 10 best performing U-20 players",
+          "description": "Turkish footballers Kenan Yildiz, Can Uzun in list of top 10 best performing U-20 players  Yeni Şafak English",
+          "date": "Fri, 21 Mar 2025 10:27:27 GMT"
+        }
+      ]
+    },
+    {
+      "player_id": 762,
+      "player_name": "Vinícius José Paixão de Oliveira Júnior",
+      "trending_score": 64.0,
+      "trend_summary": "Vinicius Junior etched his name into Brazilian football lore, scoring a 99th-minute winner against Colombia in a FIFA World Cup 2026 qualifier, securing a 2-1 victory for Brazil. Amidst his heroics for Brazil, speculation swirls around a potential move to Chelsea.\n",
+      "news": [
+        {
+          "title": "Brazil 2-1 Colombia: Vinicius Junior the hero deep in stoppage time",
+          "description": "Brazil 2-1 Colombia: Vinicius Junior the hero deep in stoppage time  NBC Sports",
+          "date": "Fri, 21 Mar 2025 03:00:00 GMT"
+        },
+        {
+          "title": "Vinícius Júnior launches 99th-minute winner to lift Brazil past Colombia",
+          "description": "Vinícius Júnior launches 99th-minute winner to lift Brazil past Colombia  The Guardian",
+          "date": "Fri, 21 Mar 2025 08:29:00 GMT"
+        },
+        {
+          "title": "Comparing Raphinha and Vinicius Junior’s surprisingly different records for Brazil",
+          "description": "Comparing Raphinha and Vinicius Junior’s surprisingly different records for Brazil  MSN",
+          "date": "Fri, 21 Mar 2025 06:15:11 GMT"
+        },
+        {
+          "title": "Brazil player ratings vs Colombia: Vinicius Junior comes up clutch! Real Madrid superstar's last-gasp wonder-strike saves Selecao as Raphinha pulls the strings in vital World Cup qualifying win",
+          "description": "Brazil player ratings vs Colombia: Vinicius Junior comes up clutch! Real Madrid superstar's last-gasp wonder-strike saves Selecao as Raphinha pulls the strings in vital World Cup qualifying win  Goal Singapore",
+          "date": "Fri, 21 Mar 2025 08:28:09 GMT"
+        },
+        {
+          "title": "Brazil 2-1 Colombia: Vinicius Junior the hero deep in stoppage time",
+          "description": "Brazil 2-1 Colombia: Vinicius Junior the hero deep in stoppage time  Yahoo Sports",
+          "date": "Fri, 21 Mar 2025 02:55:00 GMT"
+        },
+        {
+          "title": "FIFA World Cup 2026 qualifiers: Vinicius Junior’s late goal seals Brazil’s 2-1 win over Colombia in South American qualifying",
+          "description": "FIFA World Cup 2026 qualifiers: Vinicius Junior’s late goal seals Brazil’s 2-1 win over Colombia in South American qualifying  Sportstar",
+          "date": "Fri, 21 Mar 2025 04:17:07 GMT"
+        },
+        {
+          "title": "Vinicius Junior scores last-gasp screamer as Brazil beat Colombia in World Cup qualifiers; watch video",
+          "description": "Vinicius Junior scores last-gasp screamer as Brazil beat Colombia in World Cup qualifiers; watch video  Firstpost",
+          "date": "Fri, 21 Mar 2025 05:25:03 GMT"
+        },
+        {
+          "title": "Vinicius Junior scores 99th-minute winner against Colombia to claim huge win for Brazil",
+          "description": "Vinicius Junior scores 99th-minute winner against Colombia to claim huge win for Brazil  Flashscore.com",
+          "date": "Fri, 21 Mar 2025 04:23:26 GMT"
+        },
+        {
+          "title": "Brazil 2-1 Colombia, FIFA World Cup Qualifiers: Late Vinicius Jr Strike Helps BRA Win",
+          "description": "Brazil 2-1 Colombia, FIFA World Cup Qualifiers: Late Vinicius Jr Strike Helps BRA Win  Outlook India",
+          "date": "Fri, 21 Mar 2025 09:49:38 GMT"
+        },
+        {
+          "title": "Could Chelsea afford Vinicius Junior deal 😮 🤑",
+          "description": "Could Chelsea afford Vinicius Junior deal 😮 🤑  TBR Football",
+          "date": "Fri, 21 Mar 2025 10:01:59 GMT"
+        }
+      ]
+    },
+    {
+      "player_id": 10329,
+      "player_name": "João Pedro Junqueira de Jesus",
+      "trending_score": 52.0,
+      "trend_summary": "Brighton's João Pedro is attracting significant attention, with Arsenal reportedly interested in the striker, while Liverpool and Chelsea are also potential suitors. He is also set to feature for Brazil in their upcoming match against Colombia.\n",
+      "news": [
+        {
+          "title": "Brighton’s Joao Pedro Captures Attention Amid Arsenal Interest",
+          "description": "Brighton’s Joao Pedro Captures Attention Amid Arsenal Interest  Evrim Ağacı",
+          "date": "Fri, 21 Mar 2025 06:33:48 GMT"
+        },
+        {
+          "title": "João Pedro Set To Star For Brazil Against Colombia",
+          "description": "João Pedro Set To Star For Brazil Against Colombia  Evrim Ağacı",
+          "date": "Fri, 21 Mar 2025 01:58:15 GMT"
+        },
+        {
+          "title": "Gus Poyet tells Arsenal to sign £30m Liverpool target as their 'missing link'",
+          "description": "Gus Poyet tells Arsenal to sign £30m Liverpool target as their 'missing link'  Metro.co.uk",
+          "date": "Thu, 20 Mar 2025 16:21:00 GMT"
+        },
+        {
+          "title": "Gus Poyet Sees Joao Pedro As Arsenal Striker Solution",
+          "description": "Gus Poyet Sees Joao Pedro As Arsenal Striker Solution  Evrim Ağacı",
+          "date": "Fri, 21 Mar 2025 05:46:34 GMT"
+        },
+        {
+          "title": "João Pedro Faces Health Scare During BBB 25 Challenge",
+          "description": "João Pedro Faces Health Scare During BBB 25 Challenge  Evrim Ağacı",
+          "date": "Fri, 21 Mar 2025 01:54:32 GMT"
+        },
+        {
+          "title": "'He can play' – Brighton fans will not be happy as Gus Poyet says Albion star is perfect for Arsenal",
+          "description": "'He can play' – Brighton fans will not be happy as Gus Poyet says Albion star is perfect for Arsenal  SussexWorld",
+          "date": "Thu, 20 Mar 2025 15:34:00 GMT"
+        },
+        {
+          "title": "Joao Pedro: Chelsea’s Potential Backup, Liverpool’s New Target",
+          "description": "Joao Pedro: Chelsea’s Potential Backup, Liverpool’s New Target  Six Sports",
+          "date": "Thu, 20 Mar 2025 16:41:15 GMT"
+        },
+        {
+          "title": "'Brighton want lucrative Joao Pedro sale as Liverpool update emerges'",
+          "description": "'Brighton want lucrative Joao Pedro sale as Liverpool update emerges'  Football Addict",
+          "date": "Thu, 20 Mar 2025 14:53:38 GMT"
+        }
+      ]
+    },
+    {
+      "player_id": 2887,
+      "player_name": "Raúl Alonso Jiménez Rodríguez",
+      "trending_score": 47.0,
+      "trend_summary": "Raúl Jiménez propelled Mexico into the CONCACAF Nations League final with a brace against Canada, securing a 2-0 victory in the semifinal. His performance sets up a final showdown against Panama for \"El Tri\".\n",
+      "news": [
+        {
+          "title": "Raúl Jiménez puts Mexico into Nations League final, and Canada into US clash",
+          "description": "Raúl Jiménez puts Mexico into Nations League final, and Canada into US clash  The Guardian",
+          "date": "Fri, 21 Mar 2025 09:56:00 GMT"
+        },
+        {
+          "title": "A Mexican screamer: Raul Jimenez's \"golazo\" to qualify \"El Tri\" to the final",
+          "description": "A Mexican screamer: Raul Jimenez's \"golazo\" to qualify \"El Tri\" to the final  Marca English",
+          "date": "Fri, 21 Mar 2025 05:23:14 GMT"
+        },
+        {
+          "title": "Raúl Jiménez Shines As Mexico Reaches Nations League Final",
+          "description": "Raúl Jiménez Shines As Mexico Reaches Nations League Final  Evrim Ağacı",
+          "date": "Fri, 21 Mar 2025 06:09:24 GMT"
+        },
+        {
+          "title": "Raúl Jiménez’s brace sends Mexico past Canada 2-0, into the CONCACAF Nations League final vs Panama",
+          "description": "Raúl Jiménez’s brace sends Mexico past Canada 2-0, into the CONCACAF Nations League final vs Panama  MyMotherLode.com",
+          "date": "Fri, 21 Mar 2025 05:16:21 GMT"
+        },
+        {
+          "title": "Raul Jimenez scores twice as Mexico downs Canada in CONCACAF Nations League semifinal",
+          "description": "Raul Jimenez scores twice as Mexico downs Canada in CONCACAF Nations League semifinal  Rocky Mountain Outlook",
+          "date": "Fri, 21 Mar 2025 08:26:34 GMT"
+        },
+        {
+          "title": "Raúl Jiménez and a tested Mexico crush Canada’s Nations League hopes",
+          "description": "Raúl Jiménez and a tested Mexico crush Canada’s Nations League hopes  The Athletic",
+          "date": "Fri, 21 Mar 2025 05:01:47 GMT"
+        },
+        {
+          "title": "Mexico 2-0 Canada (Mar 20, 2025) Game Analysis",
+          "description": "Mexico 2-0 Canada (Mar 20, 2025) Game Analysis  ESPN",
           "date": "Fri, 21 Mar 2025 04:43:14 GMT"
         },
         {
-          "title": "Türkiye to face Hungary in UEFA Nations League play-off: Key absences, new call-ups",
-          "description": "Türkiye to face Hungary in UEFA Nations League play-off: Key absences, new call-ups  Türkiye Today",
-          "date": "Thu, 20 Mar 2025 09:16:13 GMT"
+          "title": "Raúl Jiménez's brace sends Mexico past Canada 2-0, into the CONCACAF Nations League final vs Panama",
+          "description": "Raúl Jiménez's brace sends Mexico past Canada 2-0, into the CONCACAF Nations League final vs Panama  LNP",
+          "date": "Fri, 21 Mar 2025 04:31:03 GMT"
         },
         {
-          "title": "Turkey Battles Hungary for League A Promotion in Nations League Playoff",
-          "description": "Turkey Battles Hungary for League A Promotion in Nations League Playoff  turkish football",
-          "date": "Thu, 20 Mar 2025 11:33:46 GMT"
-        }
-      ]
-    },
-    {
-      "player_id": 26256,
-      "player_name": "Tim Kleindienst",
-      "trending_score": 66.0,
-      "trend_summary": "Based on the provided headlines, there is no mention of Tim Kleindienst. The articles primarily focus on the Germany vs. Italy Nations League match and other Nations League games.\n",
-      "news": [
-        {
-          "title": "Italy 1-2 Germany: Initial Observations and Reactions",
-          "description": "Italy 1-2 Germany: Initial Observations and Reactions  Bavarian Football Works",
-          "date": "Fri, 21 Mar 2025 03:28:57 GMT"
+          "title": "Raúl Jiménez's brace sends Mexico past Canada 2-0, into the CONCACAF Nations League final vs Panama",
+          "description": "Raúl Jiménez's brace sends Mexico past Canada 2-0, into the CONCACAF Nations League final vs Panama  KSL.com",
+          "date": "Fri, 21 Mar 2025 04:36:32 GMT"
         },
         {
-          "title": "Spain grab late leveller against Dutch in Nations League, Croatia down France",
-          "description": "Spain grab late leveller against Dutch in Nations League, Croatia down France  KTEN",
-          "date": "Thu, 20 Mar 2025 23:17:36 GMT"
-        },
-        {
-          "title": "Italy 1-2 Germany: Visitors come from behind to win first leg",
-          "description": "Italy 1-2 Germany: Visitors come from behind to win first leg  UEFA.com",
-          "date": "Fri, 21 Mar 2025 00:31:48 GMT"
-        },
-        {
-          "title": "Italy 1-2 Germany: Visitors fight back to earn narrow first-leg lead",
-          "description": "Italy 1-2 Germany: Visitors fight back to earn narrow first-leg lead  BBC.com",
-          "date": "Thu, 20 Mar 2025 22:22:59 GMT"
-        },
-        {
-          "title": "Germany win 2-1 in Italy in first step towards Nations League finals",
-          "description": "Germany win 2-1 in Italy in first step towards Nations League finals  MSN",
-          "date": "Thu, 20 Mar 2025 23:04:01 GMT"
-        },
-        {
-          "title": "Italy shatter unpleasant records with capitulation to Germany",
-          "description": "Italy shatter unpleasant records with capitulation to Germany  Football Italia",
-          "date": "Thu, 20 Mar 2025 23:05:57 GMT"
-        },
-        {
-          "title": "Spain grab late leveller against Dutch in Nations League, Croatia down France",
-          "description": "Spain grab late leveller against Dutch in Nations League, Croatia down France  Northeast Mississippi Daily Journal",
-          "date": "Thu, 20 Mar 2025 23:17:36 GMT"
-        },
-        {
-          "title": "Germany player ratings against Italy",
-          "description": "Germany player ratings against Italy  Bulinews.com",
-          "date": "Thu, 20 Mar 2025 21:59:00 GMT"
-        },
-        {
-          "title": "Spain grab late leveller against Dutch in Nations League, Croatia down France",
-          "description": "Spain grab late leveller against Dutch in Nations League, Croatia down France  Black Hills Pioneer",
-          "date": "Thu, 20 Mar 2025 23:17:36 GMT"
-        },
-        {
-          "title": "UEFA Nations League quarterfinals: Goretzka winner helps Germany beat Italy 2-1 in first leg",
-          "description": "UEFA Nations League quarterfinals: Goretzka winner helps Germany beat Italy 2-1 in first leg  Sportstar",
-          "date": "Thu, 20 Mar 2025 22:45:59 GMT"
-        }
-      ]
-    },
-    {
-      "player_id": 386828,
-      "player_name": "Lamine Yamal Nasraoui Ebana",
-      "trending_score": 29.0,
-      "trend_summary": "Lamine Yamal's star continues to rise as he leads La Liga in goal creation, prompting Spain's coach to predict a historic career. The Barcelona player also featured in Spain's Nations League match against the Netherlands, while the reason for his unique jersey name choice has been revealed.\n",
-      "news": [
-        {
-          "title": "Lamine Yamal impostor fools excited fan while casually walking down the street of Barcelona",
-          "description": "Lamine Yamal impostor fools excited fan while casually walking down the street of Barcelona  Marca English",
-          "date": "Thu, 20 Mar 2025 19:51:24 GMT"
-        },
-        {
-          "title": "Lamine Yamal leads Real Madrid rivals as La Liga's No.1 goal creation machine",
-          "description": "Lamine Yamal leads Real Madrid rivals as La Liga's No.1 goal creation machine  Sporting News",
-          "date": "Thu, 20 Mar 2025 18:03:21 GMT"
-        },
-        {
-          "title": "Reason why Lamine Yamal wears both names on his shirt but neither is related to his family",
-          "description": "Reason why Lamine Yamal wears both names on his shirt but neither is related to his family  SPORTbible",
-          "date": "Thu, 20 Mar 2025 16:01:45 GMT"
-        },
-        {
-          "title": "Nations League: How the Barça internationals fared with Spain against the Netherlands",
-          "description": "Nations League: How the Barça internationals fared with Spain against the Netherlands  FC Barcelona Noticias",
-          "date": "Thu, 20 Mar 2025 22:48:00 GMT"
-        },
-        {
-          "title": "Lamine Yamal continues ‘spectacular’ rise as Spain and Barcelona target trophies",
-          "description": "Lamine Yamal continues ‘spectacular’ rise as Spain and Barcelona target trophies  MSN",
-          "date": "Thu, 20 Mar 2025 12:46:15 GMT"
-        },
-        {
-          "title": "Chelsea youngster ranked as second best teenager in world football, only Lamine Yamal is better",
-          "description": "Chelsea youngster ranked as second best teenager in world football, only Lamine Yamal is better  The Chelsea Chronicle",
-          "date": "Thu, 20 Mar 2025 16:30:00 GMT"
-        },
-        {
-          "title": "'We will witness a historic player'",
-          "description": "'We will witness a historic player'",
-          "date": "Thu, 20 Mar 2025 12:00:00 GMT"
-        },
-        {
-          "title": "Netherlands vs. Spain odds, where to watch, live stream: Nations League prediction, pick, predicted lineups",
-          "description": "Netherlands vs. Spain odds, where to watch, live stream: Nations League prediction, pick, predicted lineups  CBS Sports",
-          "date": "Thu, 20 Mar 2025 10:27:00 GMT"
-        },
-        {
-          "title": "Barcelona Players Discuss Champions League Aspirations Amid Pressure",
-          "description": "Barcelona Players Discuss Champions League Aspirations Amid Pressure  Evrim Ağacı",
-          "date": "Thu, 20 Mar 2025 07:47:36 GMT"
-        },
-        {
-          "title": "The reason why Lamine Yamal wears both names on his jersey, but neither is related to his family",
-          "description": "The reason why Lamine Yamal wears both names on his jersey, but neither is related to his family  Telegrafi",
-          "date": "Thu, 20 Mar 2025 17:12:43 GMT"
-        }
-      ]
-    },
-    {
-      "player_id": 47311,
-      "player_name": "Mikel Merino Zazón",
-      "trending_score": 26.0,
-      "trend_summary": "Mikel Merino etched his name into Spanish football folklore, scoring a dramatic stoppage-time equalizer against the Netherlands in the UEFA Nations League quarter-finals, rescuing a draw for the holders. Amidst the celebrations, Merino also revealed his preferred playing position, stating \"I never back down.\"\n",
-      "news": [
-        {
-          "title": "Netherlands 2-2 Spain: Late Mikel Merino strike earns draw for holders",
-          "description": "Netherlands 2-2 Spain: Late Mikel Merino strike earns draw for holders  UEFA.com",
-          "date": "Thu, 20 Mar 2025 22:10:11 GMT"
-        },
-        {
-          "title": "Netherlands 2–2 Spain: Player Ratings as Mikel Merino Scores Stoppage Time Equalizer for Spain",
-          "description": "Netherlands 2–2 Spain: Player Ratings as Mikel Merino Scores Stoppage Time Equalizer for Spain  OneFootball",
-          "date": "Fri, 21 Mar 2025 00:07:47 GMT"
-        },
-        {
-          "title": "Mikel Merino rescues Spain as Croatia stun France in Nations League quarter-finals",
-          "description": "Mikel Merino rescues Spain as Croatia stun France in Nations League quarter-finals  The Independent",
-          "date": "Thu, 20 Mar 2025 22:40:00 GMT"
-        },
-        {
-          "title": "Netherlands vs. Spain UEFA Nations League Highlights",
-          "description": "Netherlands vs. Spain UEFA Nations League Highlights",
-          "date": "Thu, 20 Mar 2025 22:11:06 GMT"
-        },
-        {
-          "title": "Nations League: Merino saves Spain in Netherlands, Germany roar back at Italy",
-          "description": "Nations League: Merino saves Spain in Netherlands, Germany roar back at Italy  The Guardian",
-          "date": "Thu, 20 Mar 2025 23:44:00 GMT"
-        },
-        {
-          "title": "Spain Scrape Last-Ditch Draw After 93rd-Minute Mikel Merino Equaliser vs Netherlands; France Lose",
-          "description": "Spain Scrape Last-Ditch Draw After 93rd-Minute Mikel Merino Equaliser vs Netherlands; France Lose  NDTV Sports",
-          "date": "Fri, 21 Mar 2025 03:11:30 GMT"
-        },
-        {
-          "title": "Mikel Merino reveals preference over Arsenal position: ‘I never back down’",
-          "description": "Mikel Merino reveals preference over Arsenal position: ‘I never back down’  MSN",
-          "date": "Fri, 21 Mar 2025 02:03:45 GMT"
-        },
-        {
-          "title": "Mikel Merino saves Spain! Arsenal star grabs stoppage-time equaliser against 10-man Netherlands as Nations League quarter-final tie ends all square",
-          "description": "Mikel Merino saves Spain! Arsenal star grabs stoppage-time equaliser against 10-man Netherlands as Nations League quarter-final tie ends all square  Goal.com",
-          "date": "Thu, 20 Mar 2025 21:59:24 GMT"
-        },
-        {
-          "title": "Netherlands 2-2 Spain: La Roja survives a tumultuous day in Rotterdam",
-          "description": "Netherlands 2-2 Spain: La Roja survives a tumultuous day in Rotterdam  FC Barcelona Noticias",
-          "date": "Thu, 20 Mar 2025 22:03:00 GMT"
-        },
-        {
-          "title": "Merino rescues draw for holders Spain against Netherlands",
-          "description": "Merino rescues draw for holders Spain against Netherlands  The Financial Express BD",
-          "date": "Fri, 21 Mar 2025 03:36:53 GMT"
+          "title": "Raul Jimenez scores twice as Mexico downs Canada in CONCACAF Nations League semifinal",
+          "description": "Raul Jimenez scores twice as Mexico downs Canada in CONCACAF Nations League semifinal  The Albertan",
+          "date": "Fri, 21 Mar 2025 05:16:08 GMT"
         }
       ]
     }
