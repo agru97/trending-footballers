@@ -1,205 +1,21 @@
 {
-  "updated_at": "2025-03-22T12:04:14.934211+00:00",
+  "updated_at": "2025-03-22T23:55:38.593796+00:00",
   "player_news": [
     {
-      "player_id": 313245,
-      "player_name": "Myles Anthony Lewis-Skelly",
+      "player_id": 6,
+      "player_name": "Leonardo Julián Balerdi Rosa",
       "trending_score": 100.0,
-      "trend_summary": "Arsenal's Myles Lewis-Skelly enjoyed a record-breaking England debut, scoring a goal against Albania and surpassing a 153-year record previously held by Marcus Rashford. His performance has sparked discussion about what England needs under Thomas Tuchel.\n",
+      "trend_summary": "Leonardo Balerdi is not mentioned in any of these articles. The headlines focus on Argentina's World Cup Qualifier win against Uruguay (1-0) and a charity match for Bahia Blanca. Premier League clubs are reportedly interested in Roma's Ndicka.\n",
       "news": [
         {
-          "title": "The Myles Lewis-Skelly moment that showed what England need under Thomas Tuchel",
-          "description": "The Myles Lewis-Skelly moment that showed what England need under Thomas Tuchel  The Independent",
-          "date": "Sat, 22 Mar 2025 10:02:00 GMT"
-        },
-        {
-          "title": "Myles Lewis-Skelly: Arsenal full-back stars on England debut with goal against Albania",
-          "description": "Myles Lewis-Skelly: Arsenal full-back stars on England debut with goal against Albania  BBC.com",
-          "date": "Fri, 21 Mar 2025 22:58:27 GMT"
-        },
-        {
-          "title": "Arsenal’s Myles Lewis-Skelly ‘lost for words’ after record-breaking England debut",
-          "description": "Arsenal’s Myles Lewis-Skelly ‘lost for words’ after record-breaking England debut  The Athletic",
-          "date": "Fri, 21 Mar 2025 22:14:48 GMT"
-        },
-        {
-          "title": "Arsenal's Myles Lewis-Skelly Breaks England Record With Debut Goal vs. Albania",
-          "description": "Arsenal's Myles Lewis-Skelly Breaks England Record With Debut Goal vs. Albania  Sports Illustrated",
-          "date": "Fri, 21 Mar 2025 20:36:06 GMT"
-        },
-        {
-          "title": "The Verdict: Myles Lewis-Skelly shines on debut as Thomas Tuchel's England leave room for improvement",
-          "description": "The Verdict: Myles Lewis-Skelly shines on debut as Thomas Tuchel's England leave room for improvement  Sky Sports",
-          "date": "Sat, 22 Mar 2025 00:00:00 GMT"
-        },
-        {
-          "title": "Bukayo Saka sends two-word message to Myles Lewis-Skelly after dream England debut",
-          "description": "Bukayo Saka sends two-word message to Myles Lewis-Skelly after dream England debut  Football.London",
-          "date": "Sat, 22 Mar 2025 08:20:48 GMT"
-        },
-        {
-          "title": "Myles Lewis-Skelly breaks Marcus Rashford's record as the Arsenal star makes history on his England debut",
-          "description": "Myles Lewis-Skelly breaks Marcus Rashford's record as the Arsenal star makes history on his England debut  Daily Mail",
-          "date": "Fri, 21 Mar 2025 20:52:22 GMT"
-        },
-        {
-          "title": "Lewis-Skelly sets England record with debut goal",
-          "description": "Lewis-Skelly sets England record with debut goal  ESPN.co.uk",
-          "date": "Fri, 21 Mar 2025 21:41:00 GMT"
-        },
-        {
-          "title": "Arsenal star Myles Lewis-Skelly makes England history as he breaks 153-year record...",
-          "description": "Arsenal star Myles Lewis-Skelly makes England history as he breaks 153-year record...  talkSPORT",
-          "date": "Fri, 21 Mar 2025 21:40:00 GMT"
-        },
-        {
-          "title": "Lewis-Skelly with an interesting record",
-          "description": "Lewis-Skelly with an interesting record  KOHA.net",
-          "date": "Fri, 21 Mar 2025 20:24:29 GMT"
-        }
-      ]
-    },
-    {
-      "player_id": 18961,
-      "player_name": "Daniel Johnson Burn",
-      "trending_score": 66.0,
-      "trend_summary": "Newcastle hero Dan Burn recently made his England debut against Albania, an appearance described as \"underwhelming\" by some reports. Despite this, Burn admitted he \"thought I had scored\" and is \"getting greedy\" for more opportunities.\n",
-      "news": [
-        {
-          "title": "Dan Burn: Newcastle hero's story shines a light on second chances",
-          "description": "Dan Burn: Newcastle hero's story shines a light on second chances  BBC.com",
-          "date": "Sat, 22 Mar 2025 08:35:24 GMT"
-        },
-        {
-          "title": "Dan Burn returns to earth with a bump as Newcastle's Wembley hero sees his limits exposed on underwhelming England debut, writes IAN LADYMAN",
-          "description": "Dan Burn returns to earth with a bump as Newcastle's Wembley hero sees his limits exposed on underwhelming England debut, writes IAN LADYMAN  MSN",
-          "date": "Sat, 22 Mar 2025 08:30:45 GMT"
-        },
-        {
-          "title": "One on One: Dan Burn",
-          "description": "One on One: Dan Burn",
-          "date": "Sat, 22 Mar 2025 04:48:52 GMT"
-        },
-        {
-          "title": "Dan Burn returns to earth with a bump as Newcastle's Wembley hero sees his limits exposed on underwhelming Eng",
-          "description": "Dan Burn returns to earth with a bump as Newcastle's Wembley hero sees his limits exposed on underwhelming Eng  Daily Mail",
-          "date": "Sat, 22 Mar 2025 07:00:49 GMT"
-        },
-        {
-          "title": "Lewis-Skelly, Burn handed debuts against Albania",
-          "description": "Lewis-Skelly, Burn handed debuts against Albania  ESPN",
-          "date": "Fri, 21 Mar 2025 18:46:05 GMT"
-        },
-        {
-          "title": "England v Albania: How Dan Burn can be a pillar of Tuchel's side",
-          "description": "England v Albania: How Dan Burn can be a pillar of Tuchel's side  Paddy Power News",
-          "date": "Sat, 22 Mar 2025 08:36:45 GMT"
-        },
-        {
-          "title": "Saturday Football Quiz: Burn, Pochettino, Gerrard, Ramos, Mourinho…",
-          "description": "Saturday Football Quiz: Burn, Pochettino, Gerrard, Ramos, Mourinho…  Football365",
-          "date": "Sat, 22 Mar 2025 11:33:16 GMT"
-        },
-        {
-          "title": "England XI vs Albania: Predicted lineup, confirmed team news, injury latest for Thomas Tuchel's first game",
-          "description": "England XI vs Albania: Predicted lineup, confirmed team news, injury latest for Thomas Tuchel's first game  Yahoo Sports",
-          "date": "Fri, 21 Mar 2025 16:28:39 GMT"
-        },
-        {
-          "title": "What Alan Shearer said about Newcastle's Dan Burn immediately after his England debut",
-          "description": "What Alan Shearer said about Newcastle's Dan Burn immediately after his England debut  Geordie Boot Boys",
-          "date": "Sat, 22 Mar 2025 06:00:00 GMT"
-        },
-        {
-          "title": "Dan Burn: I thought I had scored on England debut, I'm getting greedy",
-          "description": "Dan Burn: I thought I had scored on England debut, I'm getting greedy  Evening Standard",
-          "date": "Sat, 22 Mar 2025 00:05:17 GMT"
-        }
-      ]
-    },
-    {
-      "player_id": 184,
-      "player_name": "Harry Edward Kane",
-      "trending_score": 47.0,
-      "trend_summary": "Harry Kane scored in England's 2-0 World Cup qualifying win against Albania, a match that marked Thomas Tuchel's debut as England manager, and is being backed for the Ballon d'Or. However, at Bayern Munich, speculation is already swirling about his potential successor, with Jonathan Burkardt being considered.\n",
-      "news": [
-        {
-          "title": "BFW Question of the Day — March 22nd, 2025: Is Jonathan Burkardt a good fit to be Harry Kane’s successor at Bayern Munich?",
-          "description": "BFW Question of the Day — March 22nd, 2025: Is Jonathan Burkardt a good fit to be Harry Kane’s successor at Bayern Munich?  Bavarian Football Works",
-          "date": "Sat, 22 Mar 2025 10:00:00 GMT"
-        },
-        {
-          "title": "How Thomas Tuchel got England's 2026 World Cup qualifying campaign off to the perfect start in first game",
-          "description": "How Thomas Tuchel got England's 2026 World Cup qualifying campaign off to the perfect start in first game  The New York Times",
-          "date": "Fri, 21 Mar 2025 23:00:22 GMT"
-        },
-        {
-          "title": "England: Declan Rice and Harry Kane hail Myles Lewis-Skelly's debut",
-          "description": "England: Declan Rice and Harry Kane hail Myles Lewis-Skelly's debut  Sky Sports",
-          "date": "Sat, 22 Mar 2025 08:06:14 GMT"
-        },
-        {
-          "title": "Harry Kane and Jude Bellingham plan reveals England direction under Thomas Tuchel",
-          "description": "Harry Kane and Jude Bellingham plan reveals England direction under Thomas Tuchel  The Independent",
-          "date": "Sat, 22 Mar 2025 01:58:00 GMT"
-        },
-        {
-          "title": "England player ratings vs Albania: Thomas Tuchel has lift-off! Debutant Myles Lewis-Skelly delivers win in new manager's first game despite Phil Foden no-show as Harry Kane bags customary Three Lions goal",
-          "description": "England player ratings vs Albania: Thomas Tuchel has lift-off! Debutant Myles Lewis-Skelly delivers win in new manager's first game despite Phil Foden no-show as Harry Kane bags customary Three Lions goal  GOAL English",
-          "date": "Fri, 21 Mar 2025 22:18:45 GMT"
-        },
-        {
-          "title": "Harry Kane believes fans are ‘bored’ by his goals: ‘If I was 25 it would be different’",
-          "description": "Harry Kane believes fans are ‘bored’ by his goals: ‘If I was 25 it would be different’  MSN",
-          "date": "Fri, 21 Mar 2025 19:18:10 GMT"
-        },
-        {
-          "title": "England 2-0 Albania LIVE REACTION: Thomas Tuchel wins first Three Lions game as Harry Kane and Myles...",
-          "description": "England 2-0 Albania LIVE REACTION: Thomas Tuchel wins first Three Lions game as Harry Kane and Myles...  talkSPORT",
-          "date": "Fri, 21 Mar 2025 21:40:15 GMT"
-        },
-        {
-          "title": "England icon Emile Heskey gives Bayern Munich ace Harry Kane Ballon d'Or backing",
-          "description": "England icon Emile Heskey gives Bayern Munich ace Harry Kane Ballon d'Or backing  Tribal Football",
-          "date": "Fri, 21 Mar 2025 22:16:15 GMT"
-        },
-        {
-          "title": "England vs. Albania final score: World Cup qualifier result, stats as Lewis-Skelly and Kane give Tuchel lift-off",
-          "description": "England vs. Albania final score: World Cup qualifier result, stats as Lewis-Skelly and Kane give Tuchel lift-off  Sporting News",
-          "date": "Fri, 21 Mar 2025 22:00:00 GMT"
-        },
-        {
-          "title": "Tuchel starts mission WC with win over Albania, demands more from England players",
-          "description": "Tuchel starts mission WC with win over Albania, demands more from England players  Mathrubhumi English",
-          "date": "Sat, 22 Mar 2025 07:06:51 GMT"
-        }
-      ]
-    },
-    {
-      "player_id": 26315,
-      "player_name": "Nicolás Iván González",
-      "trending_score": 36.0,
-      "trend_summary": "Nicolás González will return early from international duty with Argentina, and is reportedly not injured. While Argentina edged closer to World Cup qualification with a 1-0 victory over Uruguay, González's role in the match is not specified.\n",
-      "news": [
-        {
-          "title": "Nicolas Gonzalez will return early from international duty and he is not injured",
-          "description": "Nicolas Gonzalez will return early from international duty and he is not injured  Juve FC",
-          "date": "Sat, 22 Mar 2025 11:01:12 GMT"
+          "title": "Premier League clubs interested in Ndicka: defender could leave Roma",
+          "description": "Premier League clubs interested in Ndicka: defender could leave Roma  Yahoo Sports",
+          "date": "Sat, 22 Mar 2025 06:28:00 GMT"
         },
         {
           "title": "Uruguay vs Argentina: summary: score, stats, goals and highlights",
           "description": "Uruguay vs Argentina: summary: score, stats, goals and highlights",
           "date": "Sat, 22 Mar 2025 01:26:09 GMT"
-        },
-        {
-          "title": "González: Messi's Replacement? Argentina's Hope Against Uruguay & Brazil",
-          "description": "González: Messi's Replacement? Argentina's Hope Against Uruguay & Brazil  Jobaaj Stories",
-          "date": "Sat, 22 Mar 2025 08:04:32 GMT"
-        },
-        {
-          "title": "Argentina edge closer to World Cup qualification with victory over Uruguay",
-          "description": "Argentina edge closer to World Cup qualification with victory over Uruguay  The Times of India",
-          "date": "Sat, 22 Mar 2025 05:52:00 GMT"
         },
         {
           "title": "Thiago Almada stunner goal for Argentina in 1-0 win vs. Uruguay",
@@ -212,14 +28,163 @@
           "date": "Sat, 22 Mar 2025 01:37:59 GMT"
         },
         {
-          "title": "Uruguay 0-1 Argentina: Thiago Almada strike puts World Cup holders on brink of 2026 qualification",
-          "description": "Uruguay 0-1 Argentina: Thiago Almada strike puts World Cup holders on brink of 2026 qualification  BBC",
-          "date": "Fri, 21 Mar 2025 23:30:00 GMT"
+          "title": "Argentina National Team Shines in Charity Match for Bahia Blanca",
+          "description": "Argentina National Team Shines in Charity Match for Bahia Blanca  FootBoom",
+          "date": "Sat, 22 Mar 2025 22:03:51 GMT"
         },
         {
-          "title": "Argentina on brink of World Cup after Thiago Almada strike sinks Uruguay",
-          "description": "Argentina on brink of World Cup after Thiago Almada strike sinks Uruguay  The Straits Times",
-          "date": "Sat, 22 Mar 2025 03:13:49 GMT"
+          "title": "Argentina's National Team to Play Charity Match Against U20 Squad",
+          "description": "Argentina's National Team to Play Charity Match Against U20 Squad  FootBoom",
+          "date": "Sat, 22 Mar 2025 12:51:13 GMT"
+        },
+        {
+          "title": "IDB Offers $200 Million to Argentina Amid Bahía Blanca Flood Crisis",
+          "description": "IDB Offers $200 Million to Argentina Amid Bahía Blanca Flood Crisis  FootBoom",
+          "date": "Sat, 22 Mar 2025 23:03:53 GMT"
+        },
+        {
+          "title": "Argentina Triumphs Against Uruguay in Thrilling Centenario Clash",
+          "description": "Argentina Triumphs Against Uruguay in Thrilling Centenario Clash  FootBoom",
+          "date": "Sat, 22 Mar 2025 02:04:11 GMT"
+        },
+        {
+          "title": "Argentina Defeats Uruguay, Takes Giant Leap Towards 2026 World Cup",
+          "description": "Argentina Defeats Uruguay, Takes Giant Leap Towards 2026 World Cup  FootBoom",
+          "date": "Sat, 22 Mar 2025 03:34:26 GMT"
+        }
+      ]
+    },
+    {
+      "player_id": 26315,
+      "player_name": "Nicolás Iván González",
+      "trending_score": 61.0,
+      "trend_summary": "Nicolás González is returning early from international duty, but is not injured. While Argentina edged Uruguay 1-0 in a World Cup Qualifier match with a goal by Thiago Almada, González's role is being speculated as a potential replacement for Lionel Messi in upcoming matches against Uruguay and Brazil.\n",
+      "news": [
+        {
+          "title": "Nicolas Gonzalez will return early from international duty and he is not injured",
+          "description": "Nicolas Gonzalez will return early from international duty and he is not injured  Juve FC",
+          "date": "Sat, 22 Mar 2025 11:01:12 GMT"
+        },
+        {
+          "title": "Uruguay vs Argentina: summary: score, stats, goals and highlights",
+          "description": "Uruguay vs Argentina: summary: score, stats, goals and highlights",
+          "date": "Sat, 22 Mar 2025 01:26:09 GMT"
+        },
+        {
+          "title": "Argentina edge closer to World Cup qualification with victory over Uruguay",
+          "description": "Argentina edge closer to World Cup qualification with victory over Uruguay  The Times of India",
+          "date": "Sat, 22 Mar 2025 05:52:00 GMT"
+        },
+        {
+          "title": "González: Messi's Replacement? Argentina's Hope Against Uruguay & Brazil",
+          "description": "González: Messi's Replacement? Argentina's Hope Against Uruguay & Brazil  Jobaaj Stories",
+          "date": "Sat, 22 Mar 2025 08:04:32 GMT"
+        },
+        {
+          "title": "Uruguay 0-1 Argentina: Thiago Almada's Stunning Strike Advances Team Towards World Cup Qualification",
+          "description": "Uruguay 0-1 Argentina: Thiago Almada's Stunning Strike Advances Team Towards World Cup Qualification  myKhel",
+          "date": "Sat, 22 Mar 2025 09:46:25 GMT"
+        },
+        {
+          "title": "Thiago Almada stunner goal for Argentina in 1-0 win vs. Uruguay",
+          "description": "Thiago Almada stunner goal for Argentina in 1-0 win vs. Uruguay  mundoalbiceleste.com",
+          "date": "Sat, 22 Mar 2025 01:34:09 GMT"
+        },
+        {
+          "title": "Uruguay vs Argentina Highlights: URU 0-1 ARG; Thiago Almada stunner takes Argentina on the verge of World Cup Qualification",
+          "description": "Uruguay vs Argentina Highlights: URU 0-1 ARG; Thiago Almada stunner takes Argentina on the verge of World Cup Qualification  myKhel",
+          "date": "Sat, 22 Mar 2025 01:37:59 GMT"
+        },
+        {
+          "title": "Argentina 1-0 Uruguay (Mar 21, 2025) Game Analysis",
+          "description": "Argentina 1-0 Uruguay (Mar 21, 2025) Game Analysis  ESPN",
+          "date": "Sat, 22 Mar 2025 02:15:00 GMT"
+        },
+        {
+          "title": "Argentina on brink after Almada strike sinks Uruguay",
+          "description": "Argentina on brink after Almada strike sinks Uruguay  Newsbug.info",
+          "date": "Sat, 22 Mar 2025 02:55:53 GMT"
+        },
+        {
+          "title": "Uruguay 0-1 Argentina: Almada stunner edges Messi-less visitors towards qualification",
+          "description": "Uruguay 0-1 Argentina: Almada stunner edges Messi-less visitors towards qualification  Stadium Astro",
+          "date": "Sat, 22 Mar 2025 09:23:19 GMT"
+        }
+      ]
+    },
+    {
+      "player_id": 19599,
+      "player_name": "Damián Emiliano Martínez Romero",
+      "trending_score": 41.0,
+      "trend_summary": "Emiliano Martínez is closing in on Sergio Romero's clean sheet record for Argentina, boasting 36 clean sheets in 50 national team appearances. His recent performance contributes to Argentina's triumph over Uruguay, a match where Thiago Almada scored the winning goal.\n",
+      "news": [
+        {
+          "title": "Emiliano Martínez persigue el récord de Chiquito Romero en la selección argentina: su obsesión con las vallas invictas",
+          "description": "Emiliano Martínez persigue el récord de Chiquito Romero en la selección argentina: su obsesión con las vallas invictas  beIN SPORTS",
+          "date": "Sat, 22 Mar 2025 17:59:44 GMT"
+        },
+        {
+          "title": "Emiliano Martínez reaches 36 clean sheets in 50 matches for Argentina national team",
+          "description": "Emiliano Martínez reaches 36 clean sheets in 50 matches for Argentina national team  mundoalbiceleste.com",
+          "date": "Sat, 22 Mar 2025 04:05:10 GMT"
+        },
+        {
+          "title": "Dominic Solanke shares who he deems the best goalkeeper out of Aston Villa's Emi Martinez, Arsenal's David Raya and Liverpool's Alisson",
+          "description": "Dominic Solanke shares who he deems the best goalkeeper out of Aston Villa's Emi Martinez, Arsenal's David Raya and Liverpool's Alisson  TBR Football",
+          "date": "Sat, 22 Mar 2025 07:15:00 GMT"
+        },
+        {
+          "title": "Aston Villa's Martinez comes closer to clean sheet mark",
+          "description": "Aston Villa's Martinez comes closer to clean sheet mark  OneFootball",
+          "date": "Sat, 22 Mar 2025 20:04:30 GMT"
+        },
+        {
+          "title": "Argentina Triumphs Over Uruguay: Scaloni Highlights Team Strength Beyond Messi",
+          "description": "Argentina Triumphs Over Uruguay: Scaloni Highlights Team Strength Beyond Messi  myKhel",
+          "date": "Sat, 22 Mar 2025 11:37:52 GMT"
+        },
+        {
+          "title": "Thiago Almada stunner goal for Argentina in 1-0 win vs. Uruguay",
+          "description": "Thiago Almada stunner goal for Argentina in 1-0 win vs. Uruguay  mundoalbiceleste.com",
+          "date": "Sat, 22 Mar 2025 01:34:09 GMT"
+        },
+        {
+          "title": "Argentina National Team Shines in Charity Match for Bahia Blanca",
+          "description": "Argentina National Team Shines in Charity Match for Bahia Blanca  FootBoom",
+          "date": "Sat, 22 Mar 2025 22:03:51 GMT"
+        },
+        {
+          "title": "Angel Correa to Wear Iconic Number 10 for Argentina vs Uruguay",
+          "description": "Angel Correa to Wear Iconic Number 10 for Argentina vs Uruguay  FootBoom",
+          "date": "Sat, 22 Mar 2025 00:05:47 GMT"
+        }
+      ]
+    },
+    {
+      "player_id": 6009,
+      "player_name": "Julián Álvarez",
+      "trending_score": 25.0,
+      "trend_summary": "Julián Álvarez is embroiled in controversy after a debated penalty decision against Real Madrid in the Champions League, sparking calls for clearer rules and reigniting debate fueled by Lionel Scaloni. Despite the controversy, Álvarez started for Argentina in their match against Uruguay.\n",
+      "news": [
+        {
+          "title": "Julián Álvarez Calls for Clearer Rules After his Controversial Penalty Against Real Madrid",
+          "description": "Julián Álvarez Calls for Clearer Rules After his Controversial Penalty Against Real Madrid  beIN SPORTS",
+          "date": "Sat, 22 Mar 2025 15:56:32 GMT"
+        },
+        {
+          "title": "Julián and Vini Have a Meeting, They Will Talk About the Penalty that Decided the Champions League Shootout",
+          "description": "Julián and Vini Have a Meeting, They Will Talk About the Penalty that Decided the Champions League Shootout  Real Madrid Confidencial",
+          "date": "Sat, 22 Mar 2025 19:15:00 GMT"
+        },
+        {
+          "title": "Lionel Scaloni Reignites the Controversy Over Julián Álvarez's Penalty Against Real Madrid in the Champions League",
+          "description": "Lionel Scaloni Reignites the Controversy Over Julián Álvarez's Penalty Against Real Madrid in the Champions League  MSN",
+          "date": "Sat, 22 Mar 2025 04:21:35 GMT"
+        },
+        {
+          "title": "Nadal Voices Support For Álvarez After Controversial Penalty Incident",
+          "description": "Nadal Voices Support For Álvarez After Controversial Penalty Incident  Evrim Ağacı",
+          "date": "Sat, 22 Mar 2025 02:24:35 GMT"
         },
         {
           "title": "Argentina starting XI vs. Uruguay, Giuliano Simeone and Julián Álvarez start",
@@ -227,67 +192,87 @@
           "date": "Sat, 22 Mar 2025 01:47:42 GMT"
         },
         {
-          "title": "Uruguay 0-1 Argentina: Thiago Almada's Stunning Strike Advances Team Towards World Cup Qualification",
-          "description": "Uruguay 0-1 Argentina: Thiago Almada's Stunning Strike Advances Team Towards World Cup Qualification  myKhel",
-          "date": "Sat, 22 Mar 2025 09:46:25 GMT"
+          "title": "Ancelotti and Fábregas Reach an Agreement with Nico Paz and Fortea, Florentino Already Knows",
+          "description": "Ancelotti and Fábregas Reach an Agreement with Nico Paz and Fortea, Florentino Already Knows  Real Madrid Confidencial",
+          "date": "Sat, 22 Mar 2025 20:55:00 GMT"
+        },
+        {
+          "title": "Bellingham's Record with England: He's Only 21 and Has Broken All Records",
+          "description": "Bellingham's Record with England: He's Only 21 and Has Broken All Records  Real Madrid Confidencial",
+          "date": "Sat, 22 Mar 2025 16:50:00 GMT"
+        },
+        {
+          "title": "Thiago Almada stunner goal for Argentina in 1-0 win vs. Uruguay",
+          "description": "Thiago Almada stunner goal for Argentina in 1-0 win vs. Uruguay  mundoalbiceleste.com",
+          "date": "Sat, 22 Mar 2025 01:34:09 GMT"
+        },
+        {
+          "title": "PSG-Real Madrid War for the Signature of the New Mbappé Who Plays at Arsenal",
+          "description": "PSG-Real Madrid War for the Signature of the New Mbappé Who Plays at Arsenal  Real Madrid Confidencial",
+          "date": "Sat, 22 Mar 2025 13:20:00 GMT"
+        },
+        {
+          "title": "Endrick Went to Florentino's Office and Told Him to His Face, His Future Clarified",
+          "description": "Endrick Went to Florentino's Office and Told Him to His Face, His Future Clarified  Real Madrid Confidencial",
+          "date": "Sat, 22 Mar 2025 15:20:00 GMT"
         }
       ]
     },
     {
-      "player_id": 521,
-      "player_name": "Robert Lewandowski",
-      "trending_score": 22.0,
-      "trend_summary": "Robert Lewandowski secured a late 1-0 victory for Poland against Lithuania in their opening World Cup qualifier. However, Sergio Aguero notably excluded Lewandowski from his list of the three best strikers of all time.\n",
+      "player_id": 30776,
+      "player_name": "Cristian Gabriel Romero",
+      "trending_score": 19.0,
+      "trend_summary": "Cristian Romero enjoyed a fitness boost ahead of Tottenham's future matches and shone in Argentina's 1-0 World Cup qualifying win against Uruguay, a match where he also sparked a scuffle. Meanwhile, teammate Heung-Min Son lauded a £43m Tottenham player as the fastest he's ever seen.\n",
       "news": [
         {
-          "title": "Lewandowski nets late winner as Poland start World Cup qualifiers with win over Lithuania",
-          "description": "Lewandowski nets late winner as Poland start World Cup qualifiers with win over Lithuania  Flashscore.com",
-          "date": "Sat, 22 Mar 2025 09:11:55 GMT"
+          "title": "Cristian Romero fitness boost and Wilson Odobert wows as future Tottenham opponent sends warning",
+          "description": "Cristian Romero fitness boost and Wilson Odobert wows as future Tottenham opponent sends warning  Football.London",
+          "date": "Sat, 22 Mar 2025 10:52:30 GMT"
         },
         {
-          "title": "Neither Alexander Isak nor Viktor Gyökeres, There's a Surprise: Robert Lewandowski Didn't Expect It",
-          "description": "Neither Alexander Isak nor Viktor Gyökeres, There's a Surprise: Robert Lewandowski Didn't Expect It  E-Notícies",
-          "date": "Sat, 22 Mar 2025 11:00:00 GMT"
+          "title": "Watch: Romero sparks scuffle as Nunez holds back Liverpool teammate",
+          "description": "Watch: Romero sparks scuffle as Nunez holds back Liverpool teammate  Evening Standard",
+          "date": "Sat, 22 Mar 2025 13:38:43 GMT"
         },
         {
-          "title": "Lamine and Pedri Are Freaking Out About Him in Spain: Top Player for Barça, Signed",
-          "description": "Lamine and Pedri Are Freaking Out About Him in Spain: Top Player for Barça, Signed  Carpetas Blaugranas",
-          "date": "Fri, 21 Mar 2025 20:00:00 GMT"
+          "title": "Watch: Cristian Romero sparks scuffle in Argentina win as Darwin Nunez holds back Liverpool teammate",
+          "description": "Watch: Cristian Romero sparks scuffle in Argentina win as Darwin Nunez holds back Liverpool teammate  MSN",
+          "date": "Sat, 22 Mar 2025 12:51:51 GMT"
         },
         {
-          "title": "The 3 best strikers of all time according to Sergio Aguero: No CR7 or Lewandowski…",
-          "description": "The 3 best strikers of all time according to Sergio Aguero: No CR7 or Lewandowski…  Football365",
-          "date": "Sat, 22 Mar 2025 08:20:11 GMT"
+          "title": "Uruguay vs Argentina Highlights: URU 0-1 ARG; Thiago Almada stunner takes Argentina on the verge of World Cup Qualification",
+          "description": "Uruguay vs Argentina Highlights: URU 0-1 ARG; Thiago Almada stunner takes Argentina on the verge of World Cup Qualification  myKhel",
+          "date": "Sat, 22 Mar 2025 01:37:59 GMT"
         },
         {
-          "title": "Poland Struggles To Victory Over Lithuania In World Cup Qualifiers",
-          "description": "Poland Struggles To Victory Over Lithuania In World Cup Qualifiers  Evrim Ağacı",
-          "date": "Fri, 21 Mar 2025 23:23:58 GMT"
+          "title": "Argentina Beats Uruguay 1-0 To Secure World Cup Spot",
+          "description": "Argentina Beats Uruguay 1-0 To Secure World Cup Spot  Evrim Ağacı",
+          "date": "Sat, 22 Mar 2025 03:18:45 GMT"
         },
         {
-          "title": "Cristiano Ronaldo absent as Sergio Aguero names the 3 best strikers of all time",
-          "description": "Cristiano Ronaldo absent as Sergio Aguero names the 3 best strikers of all time  Planet Football",
-          "date": "Sat, 22 Mar 2025 08:06:43 GMT"
+          "title": "Heung-Min Son says £43m Tottenham man is genuinely the fastest player he’s ever seen",
+          "description": "Heung-Min Son says £43m Tottenham man is genuinely the fastest player he’s ever seen  TBR Football",
+          "date": "Sat, 22 Mar 2025 10:45:00 GMT"
         },
         {
-          "title": "World Cup 2026 Qualifiers: Lewandowski Lifts Poland Over Lithuania",
-          "description": "World Cup 2026 Qualifiers: Lewandowski Lifts Poland Over Lithuania  Terrikon",
-          "date": "Fri, 21 Mar 2025 22:21:07 GMT"
+          "title": "Tuchel wins first England game, Lewis-Skelly makes history, Foden warned",
+          "description": "Tuchel wins first England game, Lewis-Skelly makes history, Foden warned  talkSPORT",
+          "date": "Sat, 22 Mar 2025 14:50:26 GMT"
         },
         {
-          "title": "Poland Prepares For Key World Cup Qualifiers Against Lithuania And Malta",
-          "description": "Poland Prepares For Key World Cup Qualifiers Against Lithuania And Malta  Evrim Ağacı",
-          "date": "Fri, 21 Mar 2025 21:30:08 GMT"
+          "title": "Son Heung-min faces uncertainty as Tottenham considers replacements",
+          "description": "Son Heung-min faces uncertainty as Tottenham considers replacements",
+          "date": "Sat, 22 Mar 2025 08:00:00 GMT"
         },
         {
-          "title": "Football: Poland beat Lithuania 1-0 in opening World Cup qualifier",
-          "description": "Football: Poland beat Lithuania 1-0 in opening World Cup qualifier  Polskie Radio",
-          "date": "Fri, 21 Mar 2025 22:00:00 GMT"
+          "title": "Cuti Romero Shines in Centenario Clash Against Uruguay",
+          "description": "Cuti Romero Shines in Centenario Clash Against Uruguay  FootBoom",
+          "date": "Sat, 22 Mar 2025 02:02:31 GMT"
         },
         {
-          "title": "Luis Enrique Leaves Barça Wanting More: Goodbye Camp Nou, Signs with PSG",
-          "description": "Luis Enrique Leaves Barça Wanting More: Goodbye Camp Nou, Signs with PSG  Madrid-Barcelona.com",
-          "date": "Fri, 21 Mar 2025 12:30:00 GMT"
+          "title": "Araujo on Uruguay's Missed Chances and Rivalry with Argentina",
+          "description": "Araujo on Uruguay's Missed Chances and Rivalry with Argentina  FootBoom",
+          "date": "Sat, 22 Mar 2025 14:33:43 GMT"
         }
       ]
     }
