@@ -1,97 +1,51 @@
 {
-  "updated_at": "2025-03-23T12:23:54.538252+00:00",
+  "updated_at": "2025-03-23T23:57:32.540440+00:00",
   "player_news": [
-    {
-      "player_id": 1100,
-      "player_name": "Erling Braut Haaland",
-      "trending_score": 100.0,
-      "trend_summary": "Erling Haaland starred as Norway thumped Moldova in a FIFA World Cup 2026 qualifier, contributing to their dominant victory. Off the field, Haaland addressed Manchester City's ongoing legal battle regarding Premier League charges, expressing confidence in the club's innocence.\n",
-      "news": [
-        {
-          "title": "Report: Moldova 0-5 Norway",
-          "description": "Report: Moldova 0-5 Norway  sportsmax.tv",
-          "date": "Sun, 23 Mar 2025 03:50:28 GMT"
-        },
-        {
-          "title": "FIFA WC 2026 Qualifiers: Haaland Stars As Norway Thump Moldova",
-          "description": "FIFA WC 2026 Qualifiers: Haaland Stars As Norway Thump Moldova  Outlook India",
-          "date": "Sun, 23 Mar 2025 05:58:45 GMT"
-        },
-        {
-          "title": "Erling Haaland’s latest comments hint at Man City’s fate as club awaits verdict on 130 Premier League charges",
-          "description": "Erling Haaland’s latest comments hint at Man City’s fate as club awaits verdict on 130 Premier League charges  MSN",
-          "date": "Sun, 23 Mar 2025 02:23:14 GMT"
-        },
-        {
-          "title": "Wales open with win in World Cup qualifying, Erling Haaland on target for Norway",
-          "description": "Wales open with win in World Cup qualifying, Erling Haaland on target for Norway  The Straits Times",
-          "date": "Sun, 23 Mar 2025 07:56:31 GMT"
-        },
-        {
-          "title": "Norway \"destroys\" Moldova, Haaland scores",
-          "description": "Norway \"destroys\" Moldova, Haaland scores  KOHA.net",
-          "date": "Sat, 22 Mar 2025 18:56:38 GMT"
-        },
-        {
-          "title": "Erling Haaland drops shocking revelation on Manchester City's crushed Premier League title dreams",
-          "description": "Erling Haaland drops shocking revelation on Manchester City's crushed Premier League title dreams  SportsTak",
-          "date": "Sat, 22 Mar 2025 15:19:25 GMT"
-        },
-        {
-          "title": "Erling Haaland makes feelings clear amid Manchester City's 115 charges legal battle",
-          "description": "Erling Haaland makes feelings clear amid Manchester City's 115 charges legal battle",
-          "date": "Sat, 22 Mar 2025 14:30:37 GMT"
-        },
-        {
-          "title": "Erling Haaland gives bullish verdict on Man City FFP case as Pep eyes a Real Madrid star",
-          "description": "Erling Haaland gives bullish verdict on Man City FFP case as Pep eyes a Real Madrid star  Football365",
-          "date": "Sat, 22 Mar 2025 14:58:23 GMT"
-        },
-        {
-          "title": "Haaland scores again, Norway outclasses Moldova",
-          "description": "Haaland scores again, Norway outclasses Moldova  Vijesti.me",
-          "date": "Sat, 22 Mar 2025 19:36:58 GMT"
-        },
-        {
-          "title": "“I’ve answered that 300 times” – Erling Haaland confident of Manchester City’s innocence as 115 charges verdict nears",
-          "description": "“I’ve answered that 300 times” – Erling Haaland confident of Manchester City’s innocence as 115 charges verdict nears  OneFootball",
-          "date": "Sat, 22 Mar 2025 13:13:44 GMT"
-        }
-      ]
-    },
-    {
-      "player_id": 702,
-      "player_name": "Oliver Baumann",
-      "trending_score": 94.0,
-      "trend_summary": "Despite accepting every role throughout his career, Oliver Baumann is now publicly vying for a chance to compete for Germany's No. 1 goalkeeper position. This comes as Germany experiences a \"surge\" heading into their Nations League showdown against Italy.\n",
-      "news": [
-        {
-          "title": "Oliver Baumann just wants a chance to compete for No. 1 gig with Germany",
-          "description": "Oliver Baumann just wants a chance to compete for No. 1 gig with Germany  Bavarian Football Works",
-          "date": "Sun, 23 Mar 2025 01:00:00 GMT"
-        },
-        {
-          "title": "Oliver Baumann: \"I've always accepted every role”",
-          "description": "Oliver Baumann: \"I've always accepted every role”  OneFootball",
-          "date": "Sat, 22 Mar 2025 16:34:32 GMT"
-        },
-        {
-          "title": "Germany riding 'surge' ahead of Italy showdown in Nations League",
-          "description": "Germany riding 'surge' ahead of Italy showdown in Nations League  eNCA",
-          "date": "Sat, 22 Mar 2025 20:40:00 GMT"
-        }
-      ]
-    },
     {
       "player_id": 386828,
       "player_name": "Lamine Yamal Nasraoui Ebana",
-      "trending_score": 69.0,
-      "trend_summary": "Barcelona prodigy Lamine Yamal won the Kopa Trophy at the Ballon d'Or ceremony, while his burgeoning talent has sparked comparisons to Lionel Messi, which teammate Frenkie De Jong has dismissed. Meanwhile, Netherlands coach Ronald Koeman is devising a plan to contain Yamal in an upcoming match.\n",
+      "trending_score": 100.0,
+      "trend_summary": "Lamine Yamal scored a clutch goal in extra time against the Netherlands in the UEFA Nations League Quarterfinals. Spain ultimately advanced to the semi-finals after a dramatic penalty shootout victory, where they will face France.\n",
       "news": [
         {
-          "title": "Ronald Koeman reveals Dutch plan to stop Lamine Yamal",
-          "description": "Ronald Koeman reveals Dutch plan to stop Lamine Yamal  Football Espana",
-          "date": "Sat, 22 Mar 2025 23:53:37 GMT"
+          "title": "Video: Lamine Yamal scores clutch goal for Spain against Netherlands in extra time",
+          "description": "Video: Lamine Yamal scores clutch goal for Spain against Netherlands in extra time  Bolavip US",
+          "date": "Sun, 23 Mar 2025 22:07:33 GMT"
+        },
+        {
+          "title": "WATCH: Lamine Yamal fires Spain in front in extra time against The Netherlands",
+          "description": "WATCH: Lamine Yamal fires Spain in front in extra time against The Netherlands  Football Espana",
+          "date": "Sun, 23 Mar 2025 21:59:23 GMT"
+        },
+        {
+          "title": "Spain 3-3 Netherlands: La Roja advances to the 'final four' of the Nations League on penalties",
+          "description": "Spain 3-3 Netherlands: La Roja advances to the 'final four' of the Nations League on penalties  FC Barcelona Noticias",
+          "date": "Sun, 23 Mar 2025 22:39:00 GMT"
+        },
+        {
+          "title": "Spain 3-3 Netherlands: Player Ratings and Match Highlights",
+          "description": "Spain 3-3 Netherlands: Player Ratings and Match Highlights  GIVEMESPORT",
+          "date": "Sun, 23 Mar 2025 22:31:00 GMT"
+        },
+        {
+          "title": "Spain 3-3 Netherlands (agg: 5-5, 5-4 on pens): Hosts edge dramatic tie to reach semi-finals",
+          "description": "Spain 3-3 Netherlands (agg: 5-5, 5-4 on pens): Hosts edge dramatic tie to reach semi-finals  BBC",
+          "date": "Sun, 23 Mar 2025 22:50:00 GMT"
+        },
+        {
+          "title": "Spain vs Netherlands Highlights, UEFA Nations League Quarterfinals second leg: ESP 5-4 NED (pen); La Roja enter semifinals",
+          "description": "Spain vs Netherlands Highlights, UEFA Nations League Quarterfinals second leg: ESP 5-4 NED (pen); La Roja enter semifinals  Sportstar",
+          "date": "Sun, 23 Mar 2025 22:18:45 GMT"
+        },
+        {
+          "title": "Nations League 'semis' defined: Spain will face France again",
+          "description": "Nations League 'semis' defined: Spain will face France again  FC Barcelona Noticias",
+          "date": "Sun, 23 Mar 2025 23:09:35 GMT"
+        },
+        {
+          "title": "Scotland 0-3 Greece, Spain squeeze past Netherlands, Germany beat Italy, and more: Nations League – live",
+          "description": "Scotland 0-3 Greece, Spain squeeze past Netherlands, Germany beat Italy, and more: Nations League – live  The Guardian",
+          "date": "Sun, 23 Mar 2025 16:34:00 GMT"
         },
         {
           "title": "Lamine Yamal: Barcelona Prodigy Wins Kopa Trophy at Ballon d’Or Ceremony",
@@ -99,160 +53,186 @@
           "date": "Sun, 23 Mar 2025 05:50:04 GMT"
         },
         {
-          "title": "FCBN Cover 03/23/2025: FRIENDSHIP, SOCCER, AND A SHARED DREAM",
-          "description": "FCBN Cover 03/23/2025: FRIENDSHIP, SOCCER, AND A SHARED DREAM  FC Barcelona Noticias",
-          "date": "Sun, 23 Mar 2025 09:39:05 GMT"
-        },
-        {
-          "title": "Lionel Messi vs Lamine Yamal? Frenkie De Jong Shuts Down Comparisons",
-          "description": "Lionel Messi vs Lamine Yamal? Frenkie De Jong Shuts Down Comparisons",
-          "date": "Sat, 22 Mar 2025 20:26:50 GMT"
-        },
-        {
-          "title": "What Lamine Yamal has now said about Liverpool will be bittersweet for Reds supporters",
-          "description": "What Lamine Yamal has now said about Liverpool will be bittersweet for Reds supporters  OneFootball",
-          "date": "Sat, 22 Mar 2025 22:02:10 GMT"
-        },
-        {
-          "title": "Barcelona ace Frenkie de Jong shuts down Lamine Yamal and Lionel Messi comparison",
-          "description": "Barcelona ace Frenkie de Jong shuts down Lamine Yamal and Lionel Messi comparison  Tribal Football",
-          "date": "Sat, 22 Mar 2025 14:51:33 GMT"
-        },
-        {
-          "title": "Frenkie De Jong Dismisses Comparisons Between Lamine Yamal And Lionel Messi",
-          "description": "Frenkie De Jong Dismisses Comparisons Between Lamine Yamal And Lionel Messi  myKhel",
-          "date": "Sat, 22 Mar 2025 16:18:40 GMT"
-        },
-        {
-          "title": "The 'hidden gem' of FC Barcelona for the left winger could be in Serie A",
-          "description": "The 'hidden gem' of FC Barcelona for the left winger could be in Serie A  FC Barcelona Noticias",
-          "date": "Sat, 22 Mar 2025 21:15:21 GMT"
-        },
-        {
-          "title": "Barça breathes! The RFEF releases three key players for the match against Osasuna",
-          "description": "Barça breathes! The RFEF releases three key players for the match against Osasuna  FC Barcelona Noticias",
-          "date": "Sat, 22 Mar 2025 15:02:00 GMT"
-        },
-        {
-          "title": "Football Tips: Sunday night’s 33/1 sharp shooting Nations League Bet Builder",
-          "description": "Football Tips: Sunday night’s 33/1 sharp shooting Nations League Bet Builder  Paddy Power News",
-          "date": "Sat, 22 Mar 2025 14:39:19 GMT"
+          "title": "Harry Kane release clause, Liverpool transfer interest and stance on Premier League return",
+          "description": "Harry Kane release clause, Liverpool transfer interest and stance on Premier League return  The Mirror",
+          "date": "Sun, 23 Mar 2025 17:46:00 GMT"
         }
       ]
     },
     {
-      "player_id": 754,
-      "player_name": "Luka Modrić",
-      "trending_score": 56.0,
-      "trend_summary": "Luka Modrić, a Real Madrid legend, has expressed his dream to retire at the club and is seeking a short-term, potentially one-year, contract extension as he prepares for negotiations. While providing a hint towards retirement plans, Modrić insists he's in no hurry to hang up his boots.\n",
+      "player_id": 24953,
+      "player_name": "Yann Aurel Ludger Bisseck",
+      "trending_score": 63.0,
+      "trend_summary": "Inter Milan's Yann Aurel Bisseck has earned his first call-up to the German national team, a testament to his perseverance. While team news suggests Kleindienst may feature in the second leg of the UEFA Nations League quarterfinal against Italy, Bisseck's specific role remains unconfirmed.\n",
       "news": [
         {
-          "title": "Luka Modric sets out Real Madrid ‘dream’ ahead of contract decision",
-          "description": "Luka Modric sets out Real Madrid ‘dream’ ahead of contract decision  Football Espana",
-          "date": "Sat, 22 Mar 2025 20:52:03 GMT"
+          "title": "Inter Milan Defender Yann Bisseck After First Germany Call-Up: “I Never Gave Up”",
+          "description": "Inter Milan Defender Yann Bisseck After First Germany Call-Up: “I Never Gave Up”  SempreInter.com",
+          "date": "Sun, 23 Mar 2025 12:29:07 GMT"
         },
         {
-          "title": "Aurélien Tchouaméni : « Luka Modric est une légende du Real Madrid et du football »",
-          "description": "Aurélien Tchouaméni : « Luka Modric est une légende du Real Madrid et du football »  OneFootball",
-          "date": "Sat, 22 Mar 2025 19:09:08 GMT"
-        },
-        {
-          "title": "Real Madrid aims to retain Luka Modric as veteran midfielder seeks short-term deal",
-          "description": "Real Madrid aims to retain Luka Modric as veteran midfielder seeks short-term deal",
-          "date": "Sun, 23 Mar 2025 09:05:00 GMT"
-        },
-        {
-          "title": "Luka Modric provides retirement hint as Real Madrid legend reveals his plans over a new contract at the Spanis",
-          "description": "Luka Modric provides retirement hint as Real Madrid legend reveals his plans over a new contract at the Spanis  Daily Mail",
-          "date": "Sat, 22 Mar 2025 16:12:17 GMT"
-        },
-        {
-          "title": "Modric: My dream is to retire at Real Madrid",
-          "description": "Modric: My dream is to retire at Real Madrid  KOHA.net",
-          "date": "Sat, 22 Mar 2025 20:45:00 GMT"
-        },
-        {
-          "title": "Modrić: I'm in no hurry to retire",
-          "description": "Modrić: I'm in no hurry to retire  Vijesti.me",
-          "date": "Sat, 22 Mar 2025 20:26:33 GMT"
-        },
-        {
-          "title": "'That would be a dream'",
-          "description": "'That would be a dream'",
-          "date": "Sat, 22 Mar 2025 22:54:01 GMT"
-        },
-        {
-          "title": "Real Madrid Legend Makes Huge Statement On His Future At The Club",
-          "description": "Real Madrid Legend Makes Huge Statement On His Future At The Club  Sports Illustrated",
-          "date": "Sat, 22 Mar 2025 17:32:32 GMT"
-        },
-        {
-          "title": "Luka Modric provides retirement hint as Real Madrid legend reveals his plans over a new contract at the Spanish giants",
-          "description": "Luka Modric provides retirement hint as Real Madrid legend reveals his plans over a new contract at the Spanish giants  MSN",
-          "date": "Sun, 23 Mar 2025 00:06:12 GMT"
-        },
-        {
-          "title": "Modrić plans to retire at Real Madrid, seeks one-year contract extension",
-          "description": "Modrić plans to retire at Real Madrid, seeks one-year contract extension",
-          "date": "Sun, 23 Mar 2025 01:00:00 GMT"
+          "title": "Germany vs. Italy lineups, confirmed starting 11, confirmed team news, injuries: Kleindienst a 2nd-leg option for UEFA Nations League quarterfinal",
+          "description": "Germany vs. Italy lineups, confirmed starting 11, confirmed team news, injuries: Kleindienst a 2nd-leg option for UEFA Nations League quarterfinal  Sporting News",
+          "date": "Sun, 23 Mar 2025 18:57:00 GMT"
         }
       ]
     },
     {
-      "player_id": 328074,
-      "player_name": "Jordan Anthony James",
-      "trending_score": 52.0,
-      "trend_summary": "Recent headlines are dominated by Wales' World Cup qualifying victory over Kazakhstan, with a score of 3-1, marking a successful start to their campaign under Craig Bellamy. However, none of these articles mention Jordan James.\n",
+      "player_id": 19617,
+      "player_name": "Michael Akpovie Olise",
+      "trending_score": 60.0,
+      "trend_summary": "Michael Olise is making waves for France in the Nations League, even inspiring them to a final four spot after a dramatic quarter-final victory over Croatia, decided on penalties. Furthermore, Franck Ribéry sees Olise as his successor, though a language barrier reportedly hinders Didier Deschamps from forming a close bond with the young player.\n",
       "news": [
         {
-          "title": "Oregon Ducks Transfer Makhi Hughes Leading 'Really Competitive' Running Back Room",
-          "description": "Oregon Ducks Transfer Makhi Hughes Leading 'Really Competitive' Running Back Room  Sports Illustrated",
-          "date": "Sat, 22 Mar 2025 19:39:09 GMT"
+          "title": "PLAYER RATINGS",
+          "description": "PLAYER RATINGS",
+          "date": "Sun, 23 Mar 2025 22:50:11 GMT"
         },
         {
-          "title": "The Replacements: The 5 biggest losses to graduation in Oregon football and the plan to account for them",
-          "description": "The Replacements: The 5 biggest losses to graduation in Oregon football and the plan to account for them  Autzen Zoo",
-          "date": "Sat, 22 Mar 2025 19:21:03 GMT"
+          "title": "Language barrier no issue for Michael Olise as he becomes key man in national team...",
+          "description": "Language barrier no issue for Michael Olise as he becomes key man in national team...  talkSPORT",
+          "date": "Sun, 23 Mar 2025 15:13:42 GMT"
         },
         {
-          "title": "Former Tulane Football Star Named Top 'Breakout' Candidate for Oregon Ducks",
-          "description": "Former Tulane Football Star Named Top 'Breakout' Candidate for Oregon Ducks  Sports Illustrated",
-          "date": "Sun, 23 Mar 2025 00:00:00 GMT"
+          "title": "Michael Olise seen as the second coming of Franck Ribéry by…Ribéry himself",
+          "description": "Michael Olise seen as the second coming of Franck Ribéry by…Ribéry himself  Bavarian Football Works",
+          "date": "Sun, 23 Mar 2025 11:30:00 GMT"
         },
         {
-          "title": "Wales sink Kazakhstan to get World Cup campaign up and running",
-          "description": "Wales sink Kazakhstan to get World Cup campaign up and running  The Guardian",
-          "date": "Sat, 22 Mar 2025 21:55:00 GMT"
+          "title": "(VIDEO) All Goals from France vs Croatia in the Nations League",
+          "description": "(VIDEO) All Goals from France vs Croatia in the Nations League  beIN SPORTS",
+          "date": "Sun, 23 Mar 2025 21:57:06 GMT"
         },
         {
-          "title": "Wales 3-1 Kazakhstan: Craig Bellamy begins World Cup bid with well-earned victory",
-          "description": "Wales 3-1 Kazakhstan: Craig Bellamy begins World Cup bid with well-earned victory  Wales Online",
-          "date": "Sat, 22 Mar 2025 21:51:00 GMT"
+          "title": "France, Spain, Germany & Portugal reach Nations League last four after epic quarter-finals",
+          "description": "France, Spain, Germany & Portugal reach Nations League last four after epic quarter-finals  BBC.com",
+          "date": "Sun, 23 Mar 2025 22:30:00 GMT"
         },
         {
-          "title": "Wales 3-1 Kazakhstan: Craig Bellamy's side start 2026 World Cup qualifying campaign with win",
-          "description": "Wales 3-1 Kazakhstan: Craig Bellamy's side start 2026 World Cup qualifying campaign with win  Sky Sports",
-          "date": "Sat, 22 Mar 2025 22:21:47 GMT"
+          "title": "Franck Ribéry speaks on his successors at Bayern Munich in Michael Olise and Jamal Musiala",
+          "description": "Franck Ribéry speaks on his successors at Bayern Munich in Michael Olise and Jamal Musiala  Bavarian Football Works",
+          "date": "Sun, 23 Mar 2025 14:30:00 GMT"
         },
         {
-          "title": "Wales win again as the World Cup kicks off in exciting style",
-          "description": "Wales win again as the World Cup kicks off in exciting style  FansNetwork",
-          "date": "Sat, 22 Mar 2025 22:43:00 GMT"
+          "title": "France 2-0 Croatia (a.e.t, 5-4 pens): Highlights, man of the match, stats from dramatic Nations League quarter-final",
+          "description": "France 2-0 Croatia (a.e.t, 5-4 pens): Highlights, man of the match, stats from dramatic Nations League quarter-final  Sports Mole",
+          "date": "Sun, 23 Mar 2025 22:46:00 GMT"
         },
         {
-          "title": "Wales 3-1 Kazakhstan: World Cup qualifier – as it happened",
-          "description": "Wales 3-1 Kazakhstan: World Cup qualifier – as it happened  The Guardian",
-          "date": "Sat, 22 Mar 2025 18:30:00 GMT"
+          "title": "France see off Croatia on penalties to reach Nations League Final Four",
+          "description": "France see off Croatia on penalties to reach Nations League Final Four  The Straits Times",
+          "date": "Sun, 23 Mar 2025 23:28:15 GMT"
         },
         {
-          "title": "Wales 3-1 Kazakhstan: Bellamy stays unbeaten as World Cup qualifying commences",
-          "description": "Wales 3-1 Kazakhstan: Bellamy stays unbeaten as World Cup qualifying commences  VAVEL",
-          "date": "Sat, 22 Mar 2025 22:23:59 GMT"
+          "title": "France 2-0 Croatia (2-2 agg, 5-4 on pens): France scrape through into Nations League semi-finals",
+          "description": "France 2-0 Croatia (2-2 agg, 5-4 on pens): France scrape through into Nations League semi-finals  BBC",
+          "date": "Sun, 23 Mar 2025 22:50:00 GMT"
         },
         {
-          "title": "Wales cruise to win against Kazakhstan on comfortable qualifying night in Cardiff",
-          "description": "Wales cruise to win against Kazakhstan on comfortable qualifying night in Cardiff  Flashscore.com",
-          "date": "Sun, 23 Mar 2025 07:57:10 GMT"
+          "title": "Language barrier preventing Didier Deschamps from forming close bond with Michael Olise",
+          "description": "Language barrier preventing Didier Deschamps from forming close bond with Michael Olise  Get French Football News",
+          "date": "Sun, 23 Mar 2025 11:41:09 GMT"
+        }
+      ]
+    },
+    {
+      "player_id": 47270,
+      "player_name": "Unai Simón Mendibil",
+      "trending_score": 29.0,
+      "trend_summary": "Unai Simón and Spain edged out the Netherlands in a dramatic UEFA Nations League quarter-final, advancing to the semi-finals after a penalty shootout following a 3-3 draw. La Roja will now face France in the semi-finals.\n",
+      "news": [
+        {
+          "title": "Highlights and Goals of Spain 3 (5)-(4) 3 Netherlands in UEFA Nations League 2024-25",
+          "description": "Highlights and Goals of Spain 3 (5)-(4) 3 Netherlands in UEFA Nations League 2024-25  VAVEL.com",
+          "date": "Sun, 23 Mar 2025 23:14:45 GMT"
+        },
+        {
+          "title": "Spain 3-3 Netherlands: La Roja advances to the 'final four' of the Nations League on penalties",
+          "description": "Spain 3-3 Netherlands: La Roja advances to the 'final four' of the Nations League on penalties  FC Barcelona Noticias",
+          "date": "Sun, 23 Mar 2025 22:39:00 GMT"
+        },
+        {
+          "title": "Spain edge Netherlands in penalty shootout to reach Nations League semis",
+          "description": "Spain edge Netherlands in penalty shootout to reach Nations League semis  The Straits Times",
+          "date": "Sun, 23 Mar 2025 22:53:17 GMT"
+        },
+        {
+          "title": "Spain Triumphs Over Netherlands In Nations League Quarter-Finals After Penalty Shootout Drama",
+          "description": "Spain Triumphs Over Netherlands In Nations League Quarter-Finals After Penalty Shootout Drama  myKhel",
+          "date": "Sun, 23 Mar 2025 23:32:44 GMT"
+        },
+        {
+          "title": "Spain 3-3 Netherlands (agg: 5-5, 5-4 on pens): Hosts edge dramatic tie to reach semi-finals",
+          "description": "Spain 3-3 Netherlands (agg: 5-5, 5-4 on pens): Hosts edge dramatic tie to reach semi-finals  BBC",
+          "date": "Sun, 23 Mar 2025 22:50:00 GMT"
+        },
+        {
+          "title": "Nations League: Spain, France to meet in semis after shootout thrillers",
+          "description": "Nations League: Spain, France to meet in semis after shootout thrillers  theScore",
+          "date": "Sun, 23 Mar 2025 23:25:24 GMT"
+        },
+        {
+          "title": "Spain into UEFA Nations League semi-final with penalty shoot-out victory over The Netherlands",
+          "description": "Spain into UEFA Nations League semi-final with penalty shoot-out victory over The Netherlands  Football Espana",
+          "date": "Sun, 23 Mar 2025 22:33:10 GMT"
+        },
+        {
+          "title": "Spain 3-3 Netherlands: Player Ratings and Match Highlights",
+          "description": "Spain 3-3 Netherlands: Player Ratings and Match Highlights  GIVEMESPORT",
+          "date": "Sun, 23 Mar 2025 22:31:00 GMT"
+        },
+        {
+          "title": "Spain Eliminates Netherlands In Nations League Quarterfinals",
+          "description": "Spain Eliminates Netherlands In Nations League Quarterfinals  Evrim Ağacı",
+          "date": "Sun, 23 Mar 2025 20:42:06 GMT"
+        },
+        {
+          "title": "Spain vs Netherlands Highlights, UEFA Nations League Quarterfinals second leg: ESP 5-4 NED (pen); La Roja enter semifinals",
+          "description": "Spain vs Netherlands Highlights, UEFA Nations League Quarterfinals second leg: ESP 5-4 NED (pen); La Roja enter semifinals  Sportstar",
+          "date": "Sun, 23 Mar 2025 22:18:45 GMT"
+        }
+      ]
+    },
+    {
+      "player_id": 47519,
+      "player_name": "Pedro Antonio Porro Sauceda",
+      "trending_score": 23.0,
+      "trend_summary": "Pedro Porro features in reports of a potential Tottenham dream XI amid transfer rumors, while also being linked with Barcelona as they look to bolster their right-back options for the 2025/26 season. He is also mentioned in the context of Spain's UEFA Nations League Quarterfinal against the Netherlands.\n",
+      "news": [
+        {
+          "title": "France, Spain, Germany & Portugal reach Nations League last four after epic quarter-finals",
+          "description": "France, Spain, Germany & Portugal reach Nations League last four after epic quarter-finals  BBC.com",
+          "date": "Sun, 23 Mar 2025 22:30:00 GMT"
+        },
+        {
+          "title": "Tottenham sign £50m defender, ex-Man Utd prodigy and wonderkid gem in dream XI",
+          "description": "Tottenham sign £50m defender, ex-Man Utd prodigy and wonderkid gem in dream XI",
+          "date": "Sun, 23 Mar 2025 19:00:00 GMT"
+        },
+        {
+          "title": "Spain Predicted Lineup vs. Netherlands: UEFA Nations League Quarterfinals (Leg 2)",
+          "description": "Spain Predicted Lineup vs. Netherlands: UEFA Nations League Quarterfinals (Leg 2)  Sports Illustrated",
+          "date": "Sun, 23 Mar 2025 05:00:00 GMT"
+        },
+        {
+          "title": "Tottenham star takes swipe at club staff amid exit links",
+          "description": "Tottenham star takes swipe at club staff amid exit links  LondonWorld",
+          "date": "Sun, 23 Mar 2025 18:00:00 GMT"
+        },
+        {
+          "title": "‘Targets identified’ as Barcelona look to bolster at right back for 2025/26",
+          "description": "‘Targets identified’ as Barcelona look to bolster at right back for 2025/26  Football Espana",
+          "date": "Sun, 23 Mar 2025 12:23:49 GMT"
+        },
+        {
+          "title": "Anthony Gordon out of England squad, Thomas Tuchel prepares for Lativa clash",
+          "description": "Anthony Gordon out of England squad, Thomas Tuchel prepares for Lativa clash  talkSPORT",
+          "date": "Sun, 23 Mar 2025 16:20:12 GMT"
+        },
+        {
+          "title": "Spain vs Netherlands LIVE streaming info, UEFA Nations League Quarterfinal: When, where to watch ESP v NED second leg; Squads",
+          "description": "Spain vs Netherlands LIVE streaming info, UEFA Nations League Quarterfinal: When, where to watch ESP v NED second leg; Squads  Sportstar",
+          "date": "Sun, 23 Mar 2025 04:04:01 GMT"
         }
       ]
     }
