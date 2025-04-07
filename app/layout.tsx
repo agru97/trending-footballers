@@ -1,4 +1,9 @@
+import React from 'react'
 import './globals.css'
+import { Inter } from 'next/font/google'
+import { Navigation } from './components/Navigation'
+
+const inter = Inter({ subsets: ['latin'] })
 
 export const viewport = {
   width: 'device-width',
@@ -8,14 +13,16 @@ export const viewport = {
 }
 
 export const metadata = {
-  title: 'Footballer Search Tracker',
-  description: 'Real-time football player trends and statistics',
+  title: 'Trending Footballers',
+  description: 'Track real-time popularity and trending status of football players worldwide',
   manifest: '/manifest.json',
-  appleWebApp: {
-    capable: true,
-    statusBarStyle: 'default',
-    title: 'Footballer Search Tracker',
+  icons: {
+    apple: [
+      { url: '/apple-touch-icon.png' },
+      { url: '/apple-touch-icon-precomposed.png' }
+    ]
   },
+  themeColor: '#4D96FF'
 }
 
 export default function RootLayout({
@@ -31,7 +38,12 @@ export default function RootLayout({
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
         <link rel="manifest" href="/manifest.json" />
       </head>
-      <body className="overflow-x-hidden">{children}</body>
+      <body className={`${inter.className} overflow-x-hidden bg-[#4D96FF]`}>
+        <Navigation />
+        <main className="min-h-screen w-full">
+          {children}
+        </main>
+      </body>
     </html>
   )
 }

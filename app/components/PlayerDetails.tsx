@@ -72,12 +72,12 @@ export default function PlayerDetails({
         delay: 0.15
       }}
       onAnimationComplete={() => setShowChart(true)}
-      className="min-w-[320px] bg-white/95 backdrop-blur-xl rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] p-6 w-[320px] xs:w-[375px] sm:w-[410px] border border-white/20"
+      className="min-w-[320px] bg-white/95 backdrop-blur-xl rounded-lg shadow-[0_8px_30px_rgb(0,0,0,0.12)] p-6 w-[320px] xs:w-[375px] sm:w-[410px] border border-white/20"
     >
       <div className="relative">
         <button
           onClick={onClose}
-          className="absolute -top-2 -right-2 bg-white hover:bg-brand rounded-full p-2 shadow-lg text-gray-500 hover:text-white transition-all duration-200"
+          className="absolute -top-2 -right-2 bg-white hover:bg-brand rounded-lg p-2 shadow-lg text-gray-500 hover:text-white transition-all duration-200"
         >
           <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -86,17 +86,17 @@ export default function PlayerDetails({
 
         {loading ? (
           <div className="flex items-center justify-center h-[460px]">
-            <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-brand"></div>
+            <div className="animate-spin rounded-lg h-8 w-8 border-b-2 border-brand"></div>
           </div>
         ) : news ? (
           <div>
             <div className="flex items-center gap-5 mb-8">
-              <div className="relative w-[76px] h-[76px]">
+              <div className="relative w-[70px] h-[70px]">
                 <div className="absolute inset-0 bg-blue-600 rounded-full opacity-90"></div>
                 <img
                   src={playerPhoto}
                   alt={playerName}
-                  className="absolute top-1 left-1 w-[68px] h-[68px] rounded-full object-cover z-10"
+                  className="absolute w-[66px] h-[66px] rounded-full object-cover z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
                 />
               </div>
               <div className="flex-1">
@@ -110,8 +110,8 @@ export default function PlayerDetails({
                     <div className="text-sm text-gray-500">Trending</div>
                     <div className="flex items-center gap-1">
                       <span className="relative flex h-2 w-2">
-                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand opacity-75"></span>
-                        <span className="relative inline-flex rounded-full h-2 w-2 bg-brand"></span>
+                        <span className="animate-ping absolute inline-flex h-full w-full rounded-lg bg-brand opacity-75"></span>
+                        <span className="relative inline-flex rounded-lg h-2 w-2 bg-brand"></span>
                       </span>
                       <span className="text-brand font-semibold">#{rank}</span>
                     </div>
@@ -120,7 +120,7 @@ export default function PlayerDetails({
               </div>
             </div>
 
-            <div className="mb-6 bg-white/80 rounded-xl p-4 border border-white/40">
+            <div className="mb-6 bg-white/80 rounded-lg p-4 border border-white/40">
               <div className="h-24">
                 <ResponsiveContainer width="100%" height="100%">
                   <LineChart
@@ -184,7 +184,7 @@ export default function PlayerDetails({
               </div>
             </div>
 
-            <div className="bg-white/80 rounded-xl p-6 border border-white/40">
+            <div className="bg-white/80 rounded-lg p-6 border border-white/40">
               <h3 className="text-lg font-semibold text-gray-800 mb-3">Trending News</h3>
               <p className="text-gray-600 leading-relaxed hyphens-auto" style={{ wordSpacing: '-1px' }}>
                 {news.trend_summary}

@@ -1,9 +1,16 @@
 {
   "name": "Trending Footballers",
-  "short_name": "Trending",
-  "description": "Track trending footballers based on search interest",
+  "short_name": "TrendingFB",
+  "description": "Track real-time popularity and trending status of football players worldwide",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#4D96FF",
-  "theme_color": "#4D96FF"
+  "theme_color": "#4D96FF",
+  "icons": [
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
 } 
