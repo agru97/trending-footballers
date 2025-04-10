@@ -1,248 +1,293 @@
 {
-  "updated_at": "2025-04-06T12:23:33.900437+00:00",
+  "updated_at": "2025-04-10T12:26:11.914245+00:00",
   "player_news": [
     {
-      "player_id": 296667,
-      "player_name": "Pablo Martín Páez Gavira",
+      "player_id": 521,
+      "player_name": "Robert Lewandowski",
       "trending_score": 100.0,
-      "trend_summary": "Despite Gavi's tireless efforts in the Barcelona vs. Real Betis La Liga match, the game ended in a 1-1 draw, a result that saw the Blaugrana fail to fully capitalize on Real Madrid's slip-up. Gavi's performance, though commendable, couldn't secure the win as Barcelona missed the opportunity to extend their lead at the top of La Liga.\n",
+      "trend_summary": "Robert Lewandowski scored twice as Barcelona dominated Borussia Dortmund 4-0 in the Champions League, putting them on the verge of the semi-finals. His performance etched his name in Champions League history, achieving a yet unspecified record.\n",
       "news": [
         {
-          "title": "Barcelona vs Real Betis 1-1: LaLiga – as it happened",
-          "description": "Barcelona vs Real Betis 1-1: LaLiga – as it happened  Al Jazeera",
-          "date": "Sat, 05 Apr 2025 19:27:57 GMT"
+          "title": "Lewandowski scores Champions League double for imperious Barcelona",
+          "description": "Lewandowski scores Champions League double for imperious Barcelona  TVP World",
+          "date": "Thu, 10 Apr 2025 10:09:00 GMT"
         },
         {
-          "title": "Barça does not exploit Real's mistake",
-          "description": "Barça does not exploit Real's mistake  KOHA.net",
-          "date": "Sat, 05 Apr 2025 20:55:46 GMT"
+          "title": "Lewandowski doubles up as Barcelona dominate Dortmund to close on semis",
+          "description": "Lewandowski doubles up as Barcelona dominate Dortmund to close on semis  The Guardian",
+          "date": "Wed, 09 Apr 2025 21:00:00 GMT"
         },
         {
-          "title": "Barça-Betis: the non-negotiable mandate of the most loyal Gavi",
-          "description": "Barça-Betis: the non-negotiable mandate of the most loyal Gavi  Diari ARA",
-          "date": "Sat, 05 Apr 2025 20:56:39 GMT"
+          "title": "Find out how Robert Lewandowski has defied age and logic to enter the Champions League record books",
+          "description": "Find out how Robert Lewandowski has defied age and logic to enter the Champions League record books  Flashscore.com",
+          "date": "Thu, 10 Apr 2025 11:06:31 GMT"
         },
         {
-          "title": "Barcelona held by Betis, miss chance to extend LaLiga lead over Real Madrid",
-          "description": "Barcelona held by Betis, miss chance to extend LaLiga lead over Real Madrid  Al Jazeera",
-          "date": "Sat, 05 Apr 2025 21:56:15 GMT"
+          "title": "Lewandowski strikes twice as Barcelona thrash Dortmund 4-0",
+          "description": "Lewandowski strikes twice as Barcelona thrash Dortmund 4-0  Reuters",
+          "date": "Wed, 09 Apr 2025 22:27:32 GMT"
         },
         {
-          "title": "Barcelona 1-1 Real Betis: Barca extend lead at top of La Liga despite draw",
-          "description": "Barcelona 1-1 Real Betis: Barca extend lead at top of La Liga despite draw  BBC",
-          "date": "Sat, 05 Apr 2025 20:54:00 GMT"
+          "title": "Rampant Robert Lewandowski downs Borussia Dortmund as Barcelona put one foot in Champions League semi-finals",
+          "description": "Rampant Robert Lewandowski downs Borussia Dortmund as Barcelona put one foot in Champions League semi-finals  MSN",
+          "date": "Thu, 10 Apr 2025 08:54:09 GMT"
         },
         {
-          "title": "Barcelona player ratings vs Real Betis: Robert Lewandowski goes missing & Gavi's efforts go to waste as Hansi Flick's men fail to capitalise on Real Madrid slip-up",
-          "description": "Barcelona player ratings vs Real Betis: Robert Lewandowski goes missing & Gavi's efforts go to waste as Hansi Flick's men fail to capitalise on Real Madrid slip-up  Goal.com",
-          "date": "Sat, 05 Apr 2025 21:15:24 GMT"
+          "title": "Barcelona 4-0 Borussia Dortmund: Robert Lewandowski hits double against former club in dominant win",
+          "description": "Barcelona 4-0 Borussia Dortmund: Robert Lewandowski hits double against former club in dominant win  UEFA.com",
+          "date": "Thu, 10 Apr 2025 00:00:00 GMT"
         },
         {
-          "title": "Barcelona 1-1 Real Betis: Highlights, man of the match, stats as Blaugrana see long winning run ended by impressive visitors",
-          "description": "Barcelona 1-1 Real Betis: Highlights, man of the match, stats as Blaugrana see long winning run ended by impressive visitors  Sports Mole",
-          "date": "Sat, 05 Apr 2025 21:11:00 GMT"
+          "title": "Barcelona's Robert Lewandowski becomes first player in Champions League history to...",
+          "description": "Barcelona's Robert Lewandowski becomes first player in Champions League history to...  Wion",
+          "date": "Thu, 10 Apr 2025 07:49:54 GMT"
         },
         {
-          "title": "BAR vs BET Highlights, La Liga 2024-25: Points shared as Real Betis holds Barcelona to draw",
-          "description": "BAR vs BET Highlights, La Liga 2024-25: Points shared as Real Betis holds Barcelona to draw  Sportstar",
-          "date": "Sat, 05 Apr 2025 20:47:15 GMT"
+          "title": "Lewandowski, Raphinha light up Barca’s 4-0 UCL blitz over Dortmund",
+          "description": "Lewandowski, Raphinha light up Barca’s 4-0 UCL blitz over Dortmund",
+          "date": "Thu, 10 Apr 2025 07:16:00 GMT"
         },
         {
-          "title": "Football: Soccer-Barcelona held by Betis, miss chance to extend league lead",
-          "description": "Football: Soccer-Barcelona held by Betis, miss chance to extend league lead  The Star",
-          "date": "Sat, 05 Apr 2025 21:23:00 GMT"
+          "title": "WATCH: Robert Lewandowski scores as Barcelona double lead against Borussia Dortmund",
+          "description": "WATCH: Robert Lewandowski scores as Barcelona double lead against Borussia Dortmund  Yahoo",
+          "date": "Wed, 09 Apr 2025 20:10:00 GMT"
         },
         {
-          "title": "FC Barcelona 1-1 Real Betis Highlights, La Liga Updates: Blaugrana Held At Home, Extend Lead To Four Points",
-          "description": "FC Barcelona 1-1 Real Betis Highlights, La Liga Updates: Blaugrana Held At Home, Extend Lead To Four Points  Outlook India",
-          "date": "Sat, 05 Apr 2025 21:24:50 GMT"
+          "title": "Barcelona 4-0 Dortmund (Apr 9, 2025) Game Analysis",
+          "description": "Barcelona 4-0 Dortmund (Apr 9, 2025) Game Analysis  ESPN",
+          "date": "Wed, 09 Apr 2025 22:18:45 GMT"
         }
       ]
     },
     {
-      "player_id": 396475,
-      "player_name": "Francisco Javier González Pérez",
-      "trending_score": 49.0,
-      "trend_summary": "Amidst an injury crisis forcing Real Madrid to start academy product Fran González, the young goalkeeper made his debut against Valencia, becoming the fifth-youngest goalkeeper to do so for the club. Despite González's debut and some positive moments, Real Madrid lost at home to Valencia, with Vinícius missing a penalty.\n",
+      "player_id": 343027,
+      "player_name": "Désiré Doué",
+      "trending_score": 85.0,
+      "trend_summary": "Désiré Doué's stunning, equalizing curler against Aston Villa in the Champions League quarter-final first leg has ignited social media and pundit debates, inspiring PSG to a 3-1 victory alongside goals from Khvicha Kvaratskhelia and Nuno Mendes. His performance is being hailed as a \"masterclass\" and evidence of a transformed PSG, leaving Aston Villa on the brink in the competition.\n",
       "news": [
         {
-          "title": "Bittersweet Debut for Fran González with Real Madrid: Historic Record with Defeat",
-          "description": "Bittersweet Debut for Fran González with Real Madrid: Historic Record with Defeat  Real Madrid Confidencial",
-          "date": "Sun, 06 Apr 2025 11:00:00 GMT"
+          "title": "'Free spirit Doue epitomises PSG",
+          "description": "'Free spirit Doue epitomises PSG",
+          "date": "Wed, 09 Apr 2025 23:39:00 GMT"
         },
         {
-          "title": "Fran Gonzalez to make Real Madrid debut; Thibaut Courtois, Andriy Lunin left out",
-          "description": "Fran Gonzalez to make Real Madrid debut; Thibaut Courtois, Andriy Lunin left out",
-          "date": "Sat, 05 Apr 2025 14:09:45 GMT"
+          "title": "What Djed Spence said ahead of Desire Doue masterclass as Arsenal sent Champions League warning",
+          "description": "What Djed Spence said ahead of Desire Doue masterclass as Arsenal sent Champions League warning  Football London",
+          "date": "Thu, 10 Apr 2025 12:00:00 GMT"
         },
         {
-          "title": "Fran González Makes Debut As Real Madrid Faces Valencia",
-          "description": "Fran González Makes Debut As Real Madrid Faces Valencia  Evrim Ağacı",
-          "date": "Sat, 05 Apr 2025 16:43:38 GMT"
+          "title": "'I'm lost for words bro'",
+          "description": "'I'm lost for words bro'",
+          "date": "Thu, 10 Apr 2025 03:50:27 GMT"
         },
         {
-          "title": "Real Madrid Crisis: Teen Goalkeeper Fran Gonzalez Thrust into Spotlight Amidst Injury Chaos",
-          "description": "Real Madrid Crisis: Teen Goalkeeper Fran Gonzalez Thrust into Spotlight Amidst Injury Chaos  MotorcycleSports",
-          "date": "Sat, 05 Apr 2025 22:37:35 GMT"
+          "title": "Dazzling Desire Doue inspires transformed PSG as Aston Villa taught Champions League lesson",
+          "description": "Dazzling Desire Doue inspires transformed PSG as Aston Villa taught Champions League lesson  The Independent",
+          "date": "Thu, 10 Apr 2025 11:11:00 GMT"
         },
         {
-          "title": "Real Madrid starlet becomes the fifth-youngest goalkeeper to debut for club",
-          "description": "Real Madrid starlet becomes the fifth-youngest goalkeeper to debut for club  Yahoo Sports",
-          "date": "Sat, 05 Apr 2025 13:24:00 GMT"
+          "title": "PSG 3-1 Aston Villa: Desire Doue, Khvicha Kvaratskhelia, Nuno Mendes earn Champions League quarter-final first leg victory",
+          "description": "PSG 3-1 Aston Villa: Desire Doue, Khvicha Kvaratskhelia, Nuno Mendes earn Champions League quarter-final first leg victory  Sky Sports",
+          "date": "Thu, 10 Apr 2025 08:36:12 GMT"
         },
         {
-          "title": "Who is Real Madrid goalkeeper Fran Gonzalez? Los Blancos forced to start academy product",
-          "description": "Who is Real Madrid goalkeeper Fran Gonzalez? Los Blancos forced to start academy product  sportingnews.com",
-          "date": "Sat, 05 Apr 2025 13:35:00 GMT"
+          "title": "BBC Pundits Debate Whether Emiliano Martínez Could Have Saved Desire Doue’s Stunning Goal",
+          "description": "BBC Pundits Debate Whether Emiliano Martínez Could Have Saved Desire Doue’s Stunning Goal  OneFootball",
+          "date": "Wed, 09 Apr 2025 20:09:41 GMT"
         },
         {
-          "title": "Vinícius misses penalty as Real Madrid loses at home to Valencia",
-          "description": "Vinícius misses penalty as Real Madrid loses at home to Valencia  FOX Sports",
-          "date": "Sat, 05 Apr 2025 16:34:14 GMT"
+          "title": "‘My first thought was to cross’ – PSG’s Désiré Doué on his wondergoal against Aston Villa",
+          "description": "‘My first thought was to cross’ – PSG’s Désiré Doué on his wondergoal against Aston Villa  Get French Football News",
+          "date": "Wed, 09 Apr 2025 21:59:27 GMT"
         },
         {
-          "title": "Real Madrid's lack of planning exposed in last-minute defeat to Valencia",
-          "description": "Real Madrid's lack of planning exposed in last-minute defeat to Valencia  OneFootball",
-          "date": "Sun, 06 Apr 2025 05:20:26 GMT"
+          "title": "PSG 3-1 Aston Villa",
+          "description": "PSG 3-1 Aston Villa",
+          "date": "Wed, 09 Apr 2025 21:10:28 GMT"
         },
         {
-          "title": "Vinicius misses another penalty as Real Madrid shocked by Valencia",
-          "description": "Vinicius misses another penalty as Real Madrid shocked by Valencia  Al Jazeera",
-          "date": "Sat, 05 Apr 2025 17:41:48 GMT"
+          "title": "Champions League highlights: Desire Doue's curling strike brings PSG level against Aston Villa",
+          "description": "Champions League highlights: Desire Doue's curling strike brings PSG level against Aston Villa  BBC",
+          "date": "Wed, 09 Apr 2025 21:00:29 GMT"
         },
         {
-          "title": "Fran González Shines In Real Madrid Debut Against Valencia",
-          "description": "Fran González Shines In Real Madrid Debut Against Valencia  Evrim Ağacı",
-          "date": "Sat, 05 Apr 2025 18:29:29 GMT"
+          "title": "Stunning strikes leave Villa on Champions League brink",
+          "description": "Stunning strikes leave Villa on Champions League brink  The Australian",
+          "date": "Wed, 09 Apr 2025 21:33:45 GMT"
         }
       ]
     },
     {
-      "player_id": 386828,
-      "player_name": "Lamine Yamal Nasraoui Ebana",
-      "trending_score": 23.0,
-      "trend_summary": "Amidst contract negotiations with Barcelona, teenage sensation Lamine Yamal is drawing intense interest from Premier League giants Manchester City and Liverpool, with both clubs closely monitoring his situation. This comes as Real Madrid legend Guti boldly claims Yamal is already surpassing Lionel Messi's level at the same age.\n",
+      "player_id": 135775,
+      "player_name": "Anssumane Fati Vieira",
+      "trending_score": 59.0,
+      "trend_summary": "After a three-month absence, Ansu Fati made a rare appearance for Barcelona in their 4-0 Champions League victory against Borussia Dortmund, receiving support from fans. Adding to the intrigue, Lamine Yamal requested to be substituted during the match, reportedly to allow Fati to gain playing time.\n",
       "news": [
         {
-          "title": "Barcelona’s plan with Lamine Yamal amid contract situation",
-          "description": "Barcelona’s plan with Lamine Yamal amid contract situation  Yahoo Sports",
-          "date": "Sat, 05 Apr 2025 21:01:53 GMT"
+          "title": "Ansu Fati breaks his drought: three months later he plays again with Barça",
+          "description": "Ansu Fati breaks his drought: three months later he plays again with Barça  FCBN",
+          "date": "Wed, 09 Apr 2025 21:57:00 GMT"
         },
         {
-          "title": "Barcelona vs Real Betis 1-1: LaLiga – as it happened",
-          "description": "Barcelona vs Real Betis 1-1: LaLiga – as it happened  Al Jazeera",
-          "date": "Sat, 05 Apr 2025 19:27:57 GMT"
+          "title": "Lamine Yamal Injury Update: Did the 17-Year-Old Fake An Injury for Ansu Fati?",
+          "description": "Lamine Yamal Injury Update: Did the 17-Year-Old Fake An Injury for Ansu Fati?  The Playoffs",
+          "date": "Wed, 09 Apr 2025 23:37:35 GMT"
         },
         {
-          "title": "Two Premier League clubs closely watching Lamine Yamal’s Barcelona contract talks",
-          "description": "Two Premier League clubs closely watching Lamine Yamal’s Barcelona contract talks  Yahoo Sports",
-          "date": "Sat, 05 Apr 2025 21:50:00 GMT"
+          "title": "A rare appearance for Ansu Fati",
+          "description": "A rare appearance for Ansu Fati  The New York Times",
+          "date": "Wed, 09 Apr 2025 20:43:18 GMT"
         },
         {
-          "title": "Manchester City and Liverpool in Intense Battle for Barcelona Wonderkid Lamine Yamal",
-          "description": "Manchester City and Liverpool in Intense Battle for Barcelona Wonderkid Lamine Yamal  MotorcycleSports",
-          "date": "Sat, 05 Apr 2025 23:20:55 GMT"
+          "title": "Barcelona fans show their support after forgotten Ansu Fati’s return vs Dortmund",
+          "description": "Barcelona fans show their support after forgotten Ansu Fati’s return vs Dortmund  Yahoo Sports",
+          "date": "Wed, 09 Apr 2025 21:20:00 GMT"
         },
         {
-          "title": "Lamine Yamal linked with shock transfer that would send shockwaves through Europe as two clubs ready to make a move",
-          "description": "Lamine Yamal linked with shock transfer that would send shockwaves through Europe as two clubs ready to make a move  SPORTbible",
-          "date": "Sat, 05 Apr 2025 15:27:29 GMT"
+          "title": "Barcelona vs Borussia Dortmund 4-0: UEFA Champions League – as it happened",
+          "description": "Barcelona vs Borussia Dortmund 4-0: UEFA Champions League – as it happened  Al Jazeera",
+          "date": "Wed, 09 Apr 2025 19:40:46 GMT"
         },
         {
-          "title": "Lamine Yamal Transfer News: Star winger on Premier League radar as Barcelona's financial woes continue",
-          "description": "Lamine Yamal Transfer News: Star winger on Premier League radar as Barcelona's financial woes continue  MSN",
-          "date": "Sat, 05 Apr 2025 14:52:52 GMT"
+          "title": "Lamine Yamal asked to be subbed off so struggling Barcelona teammate could get some minutes",
+          "description": "Lamine Yamal asked to be subbed off so struggling Barcelona teammate could get some minutes  SPORTbible",
+          "date": "Thu, 10 Apr 2025 06:55:12 GMT"
         },
         {
-          "title": "Liverpool 'monitoring' Lamine Yamal situation as Alexander Isak transfer alternative linked",
-          "description": "Liverpool 'monitoring' Lamine Yamal situation as Alexander Isak transfer alternative linked  Liverpool Echo",
-          "date": "Sun, 06 Apr 2025 03:00:00 GMT"
+          "title": "Flick delivers update after Lamine Yamal injury scare for Barcelona",
+          "description": "Flick delivers update after Lamine Yamal injury scare for Barcelona  London Evening Standard",
+          "date": "Thu, 10 Apr 2025 10:07:26 GMT"
         },
         {
-          "title": "Real Madrid Legend Guti Believes Lamine Yamal Is Better Than Lionel Messi Was At 17",
-          "description": "Real Madrid Legend Guti Believes Lamine Yamal Is Better Than Lionel Messi Was At 17  News18",
-          "date": "Sat, 05 Apr 2025 15:00:20 GMT"
+          "title": "Flick reveals Yamal wanted to be substituted to give Ansu Fati minutes",
+          "description": "Flick reveals Yamal wanted to be substituted to give Ansu Fati minutes  Telegrafi",
+          "date": "Thu, 10 Apr 2025 02:38:48 GMT"
         },
         {
-          "title": "Manchester City and Liverpool monitoring Lamine Yamal contract situation",
-          "description": "Manchester City and Liverpool monitoring Lamine Yamal contract situation  CaughtOffside",
-          "date": "Sat, 05 Apr 2025 18:21:38 GMT"
+          "title": "FC Barcelona Team News, Starting XI Prediction at Leganes",
+          "description": "FC Barcelona Team News, Starting XI Prediction at Leganes  The Sports Bank",
+          "date": "Thu, 10 Apr 2025 05:50:44 GMT"
         },
         {
-          "title": "Barcelona 1-1 Real Betis: Barca extend lead at top of La Liga despite draw",
-          "description": "Barcelona 1-1 Real Betis: Barca extend lead at top of La Liga despite draw  BBC",
-          "date": "Sat, 05 Apr 2025 20:54:00 GMT"
+          "title": "Barcelona boss Hansi Flick provides Lamine Yamal update after injury scare",
+          "description": "Barcelona boss Hansi Flick provides Lamine Yamal update after injury scare  TribalFootball",
+          "date": "Thu, 10 Apr 2025 08:01:06 GMT"
         }
       ]
     },
     {
-      "player_id": 195100,
-      "player_name": "Natan Bernardo de Souza",
-      "trending_score": 21.0,
-      "trend_summary": "Natan etched his name into the headlines by scoring the equalizing goal for Real Betis against Barcelona in their La Liga clash, which ended 1-1. His header denied Barcelona a chance to extend their league lead, keeping the La Liga title race fiercely contested.\n",
+      "player_id": 1496,
+      "player_name": "Raphael Dias Belloli",
+      "trending_score": 54.0,
+      "trend_summary": "Raphinha is making headlines after a stellar performance in Barcelona's Champions League quarter-final dismantling of Borussia Dortmund, where he combined with Lewandowski and Yamal in a 4-0 victory and matched a Messi record. However, the Brazilian winger also apologized to teammate Cubarsi for a stolen goal in the same match, and earlier this summer, he was reportedly willing to join Arsenal under certain conditions.\n",
       "news": [
         {
-          "title": "WATCH: Real Betis equalise against Barcelona as Natan heads home",
-          "description": "WATCH: Real Betis equalise against Barcelona as Natan heads home  Yahoo Sports",
-          "date": "Sat, 05 Apr 2025 19:21:00 GMT"
+          "title": "'Phenomenal' & 'breathtaking'",
+          "description": "'Phenomenal' & 'breathtaking'",
+          "date": "Wed, 09 Apr 2025 23:16:00 GMT"
         },
         {
-          "title": "Barcelona 1-1 Betis (Apr 5, 2025) Game Analysis",
-          "description": "Barcelona 1-1 Betis (Apr 5, 2025) Game Analysis  ESPN",
-          "date": "Sat, 05 Apr 2025 22:18:45 GMT"
+          "title": "Raphinha & Amadou Onana were both willing to join Arsenal on one condition this summer – report",
+          "description": "Raphinha & Amadou Onana were both willing to join Arsenal on one condition this summer – report  Yahoo Sports",
+          "date": "Wed, 09 Apr 2025 16:49:59 GMT"
         },
         {
-          "title": "Barcelona miss chance to go six points clear as Real Betis hold them to draw",
-          "description": "Barcelona miss chance to go six points clear as Real Betis hold them to draw  Flashscore.com",
-          "date": "Sun, 06 Apr 2025 09:45:00 GMT"
+          "title": "Lewandowski, Raphinha and Yamal combine to dismantle Dortmund in UCL quarter-final",
+          "description": "Lewandowski, Raphinha and Yamal combine to dismantle Dortmund in UCL quarter-final  OneFootball",
+          "date": "Thu, 10 Apr 2025 00:52:59 GMT"
         },
         {
-          "title": "Soccer-Barcelona held by Betis, miss chance to extend league lead",
-          "description": "Soccer-Barcelona held by Betis, miss chance to extend league lead  MSN",
-          "date": "Sat, 05 Apr 2025 22:36:41 GMT"
+          "title": "Raphinha breaks silence on controversial Brazil threat before Argentina stars mocked him",
+          "description": "Raphinha breaks silence on controversial Brazil threat before Argentina stars mocked him  The Mirror",
+          "date": "Thu, 10 Apr 2025 06:59:00 GMT"
         },
         {
-          "title": "FC Barcelona 1-1 Betis: Unexpected setback to keep the LaLiga battle alive",
-          "description": "FC Barcelona 1-1 Betis: Unexpected setback to keep the LaLiga battle alive  FCBN",
-          "date": "Sat, 05 Apr 2025 21:18:45 GMT"
+          "title": "Raphinha matches Messi as superb Barcelona dismantle Borussia Dortmund",
+          "description": "Raphinha matches Messi as superb Barcelona dismantle Borussia Dortmund  London Evening Standard",
+          "date": "Thu, 10 Apr 2025 08:27:29 GMT"
         },
         {
-          "title": "Barcelona draw to increase Liga lead after Real Madrid stumble",
-          "description": "Barcelona draw to increase Liga lead after Real Madrid stumble  Prothom Alo English",
-          "date": "Sun, 06 Apr 2025 04:54:11 GMT"
+          "title": "Raphinha apologies to Barcelona teammate for action during victory over Borussia Dortmund",
+          "description": "Raphinha apologies to Barcelona teammate for action during victory over Borussia Dortmund  Football España",
+          "date": "Wed, 09 Apr 2025 22:32:19 GMT"
         },
         {
-          "title": "FC Barcelona 1-1 Real Betis Highlights, La Liga Updates: Blaugrana Held At Home, Extend Lead To Four Points",
-          "description": "FC Barcelona 1-1 Real Betis Highlights, La Liga Updates: Blaugrana Held At Home, Extend Lead To Four Points  Outlook India",
-          "date": "Sat, 05 Apr 2025 21:24:50 GMT"
+          "title": "Barcelona vs. Borussia Dortmund lineups, starting 11, confirmed team news, injuries: Raphinha ready after rest",
+          "description": "Barcelona vs. Borussia Dortmund lineups, starting 11, confirmed team news, injuries: Raphinha ready after rest  sportingnews.com",
+          "date": "Wed, 09 Apr 2025 17:57:00 GMT"
         },
         {
-          "title": "FC Barcelona fail to take advantage of Real Madrid's defeat and can only manage a draw against a great Betis",
-          "description": "FC Barcelona fail to take advantage of Real Madrid's defeat and can only manage a draw against a great Betis  Grada3.COM",
-          "date": "Sat, 05 Apr 2025 22:44:13 GMT"
+          "title": "Barcelona's Raphinha joins Messi in record books after stunning 4-0 win against Dortmund",
+          "description": "Barcelona's Raphinha joins Messi in record books after stunning 4-0 win against Dortmund  SportsTak",
+          "date": "Thu, 10 Apr 2025 11:37:00 GMT"
         },
         {
-          "title": "Football: Barcelona miss chance to extend lead",
-          "description": "Football: Barcelona miss chance to extend lead  Gulf Daily News",
-          "date": "Sun, 06 Apr 2025 01:42:07 GMT"
+          "title": "Barcelona's Raphinha apologizes to Cubarsi for stolen goal",
+          "description": "Barcelona's Raphinha apologizes to Cubarsi for stolen goal  ESPN",
+          "date": "Wed, 09 Apr 2025 22:55:00 GMT"
         },
         {
-          "title": "Barcelona vs Real Betis 1-1: LaLiga – as it happened",
-          "description": "Barcelona vs Real Betis 1-1: LaLiga – as it happened  Al Jazeera",
-          "date": "Sat, 05 Apr 2025 19:27:57 GMT"
+          "title": "Raphinha flexes Ballon d’Or credentials with big goal in Champions League quarter-final",
+          "description": "Raphinha flexes Ballon d’Or credentials with big goal in Champions League quarter-final  101greatgoals.com",
+          "date": "Wed, 09 Apr 2025 19:47:49 GMT"
         }
       ]
     },
     {
-      "player_id": 714,
-      "player_name": "Nadiem Amiri",
-      "trending_score": 14.0,
-      "trend_summary": "Nadiem Amiri is featured in the live coverage of the Mainz 05 versus Holstein Kiel match, as reported by Marca.com. Details on his performance in this specific game are currently unfolding.\n",
+      "player_id": 19170,
+      "player_name": "Morgan Elliot Rogers",
+      "trending_score": 20.0,
+      "trend_summary": "Morgan Rogers believes Aston Villa can still progress in the Champions League despite a 3-1 defeat to PSG, a match where he scored a goal that prompted excitement from Sky Sports pundit Paul Merson. Rogers also reportedly stunned Man City by refusing a return to his former club, citing \"struggles.\"\n",
       "news": [
         {
-          "title": "Mainz 05",
-          "description": "Mainz 05",
-          "date": "Sat, 05 Apr 2025 15:37:46 GMT"
+          "title": "🎥 Morgan Rogers chooses his favourite football heavyweight 👀",
+          "description": "🎥 Morgan Rogers chooses his favourite football heavyweight 👀  Yahoo Sports",
+          "date": "Wed, 09 Apr 2025 14:38:20 GMT"
+        },
+        {
+          "title": "Morgan Rogers believes Aston Villa can still progress in Champions League",
+          "description": "Morgan Rogers believes Aston Villa can still progress in Champions League  The Independent",
+          "date": "Thu, 10 Apr 2025 07:28:00 GMT"
+        },
+        {
+          "title": "PSG 3-1 Aston Villa: 'It's not done yet'",
+          "description": "PSG 3-1 Aston Villa: 'It's not done yet'",
+          "date": "Wed, 09 Apr 2025 21:39:37 GMT"
+        },
+        {
+          "title": "Morgan Rogers stuns Man City with refusal to return to former club with ‘struggles’ cited",
+          "description": "Morgan Rogers stuns Man City with refusal to return to former club with ‘struggles’ cited  MSN",
+          "date": "Wed, 09 Apr 2025 23:48:15 GMT"
+        },
+        {
+          "title": "Morgan Rogers insists Aston Villa 'have nothing to lose' and possess quality to spring huge shock in return le",
+          "description": "Morgan Rogers insists Aston Villa 'have nothing to lose' and possess quality to spring huge shock in return le  Daily Mail",
+          "date": "Wed, 09 Apr 2025 23:08:00 GMT"
+        },
+        {
+          "title": "Villa have the quality to turn PSG tie around, says Rogers",
+          "description": "Villa have the quality to turn PSG tie around, says Rogers  The Straits Times",
+          "date": "Thu, 10 Apr 2025 07:00:39 GMT"
+        },
+        {
+          "title": "Morgan Rogers Reveals Aston Villa’s Mindset in Attempt to Overturn PSG Deficit in Champions League",
+          "description": "Morgan Rogers Reveals Aston Villa’s Mindset in Attempt to Overturn PSG Deficit in Champions League  OneFootball",
+          "date": "Thu, 10 Apr 2025 03:18:38 GMT"
+        },
+        {
+          "title": "PSG vs Aston Villa: Paul Merson goes wild as Morgan Rogers puts Villa ahead",
+          "description": "PSG vs Aston Villa: Paul Merson goes wild as Morgan Rogers puts Villa ahead  Sky Sports",
+          "date": "Wed, 09 Apr 2025 19:47:22 GMT"
+        },
+        {
+          "title": "Unai Emery responds to shock Aston Villa accusation as Morgan Rogers wades in",
+          "description": "Unai Emery responds to shock Aston Villa accusation as Morgan Rogers wades in  birminghamworld.uk",
+          "date": "Thu, 10 Apr 2025 07:23:00 GMT"
+        },
+        {
+          "title": "Exclusive: Sky Sports pundit tips Middlesbrough FC star to follow Morgan Rogers path on one condition",
+          "description": "Exclusive: Sky Sports pundit tips Middlesbrough FC star to follow Morgan Rogers path on one condition  Football League World",
+          "date": "Thu, 10 Apr 2025 11:30:00 GMT"
         }
       ]
     }
