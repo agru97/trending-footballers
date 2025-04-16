@@ -6,7 +6,11 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "scripts:fetch": "python src/scripts/fetch_players.py",
+    "scripts:preprocess": "python src/scripts/preprocess_players.py",
+    "scripts:trending": "python src/scripts/trending_footballers.py",
+    "scripts:news": "python src/scripts/fetch_player_news.py"
   },
   "dependencies": {
     "@radix-ui/react-progress": "^1.1.1",

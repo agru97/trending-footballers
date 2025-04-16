@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import countryCodes from '../public/country-codes.json'
+import countryCodes from '../../public/country-codes.json'
 import { LineChart, Line, ResponsiveContainer } from 'recharts'
 import PlayerDetails from './components/PlayerDetails'
 import { Info, Coffee, CreditCard, Github, Search, Star, Trophy, Globe, ChartLine } from "lucide-react"

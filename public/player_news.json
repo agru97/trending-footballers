@@ -1,293 +1,248 @@
 {
-  "updated_at": "2025-04-13T12:13:23.962594+00:00",
+  "updated_at": "2025-04-06T12:23:33.900437+00:00",
   "player_news": [
     {
-      "player_id": 158697,
-      "player_name": "James John McAtee",
+      "player_id": 296667,
+      "player_name": "Pablo Martín Páez Gavira",
       "trending_score": 100.0,
-      "trend_summary": "James McAtee is attracting interest from Premier League rivals amid a potential January exit from Manchester City, while also drawing attention from Bundesliga clubs. He recently featured in Manchester City's 5-2 victory over Crystal Palace.\n",
+      "trend_summary": "Despite Gavi's tireless efforts in the Barcelona vs. Real Betis La Liga match, the game ended in a 1-1 draw, a result that saw the Blaugrana fail to fully capitalize on Real Madrid's slip-up. Gavi's performance, though commendable, couldn't secure the win as Barcelona missed the opportunity to extend their lead at the top of La Liga.\n",
       "news": [
         {
-          "title": "James McAtee attracts interest from Premier League rivals amid potential Manchester City exit in January",
-          "description": "James McAtee attracts interest from Premier League rivals amid potential Manchester City exit in January  Yahoo Sports",
-          "date": "Sat, 12 Apr 2025 22:09:53 GMT"
+          "title": "Barcelona vs Real Betis 1-1: LaLiga – as it happened",
+          "description": "Barcelona vs Real Betis 1-1: LaLiga – as it happened  Al Jazeera",
+          "date": "Sat, 05 Apr 2025 19:27:57 GMT"
         },
         {
-          "title": "Post-Match Reaction – Manchester City 5–2 Crystal Palace, James McAtee on the Goal, De Bruyne Heroics and More",
-          "description": "Post-Match Reaction – Manchester City 5–2 Crystal Palace, James McAtee on the Goal, De Bruyne Heroics and More  The Playoffs",
-          "date": "Sat, 12 Apr 2025 14:42:53 GMT"
+          "title": "Barça does not exploit Real's mistake",
+          "description": "Barça does not exploit Real's mistake  KOHA.net",
+          "date": "Sat, 05 Apr 2025 20:55:46 GMT"
         },
         {
-          "title": "Manchester City 5-2 Crystal Palace: Kevin de Bruyne leads comeback win",
-          "description": "Manchester City 5-2 Crystal Palace: Kevin de Bruyne leads comeback win  BBC",
-          "date": "Sun, 13 Apr 2025 10:02:27 GMT"
+          "title": "Barça-Betis: the non-negotiable mandate of the most loyal Gavi",
+          "description": "Barça-Betis: the non-negotiable mandate of the most loyal Gavi  Diari ARA",
+          "date": "Sat, 05 Apr 2025 20:56:39 GMT"
         },
         {
-          "title": "Bundesliga duo show interest in Manchester City’s James McAtee",
-          "description": "Bundesliga duo show interest in Manchester City’s James McAtee  Yahoo Sports",
-          "date": "Sat, 12 Apr 2025 23:04:41 GMT"
+          "title": "Barcelona held by Betis, miss chance to extend LaLiga lead over Real Madrid",
+          "description": "Barcelona held by Betis, miss chance to extend LaLiga lead over Real Madrid  Al Jazeera",
+          "date": "Sat, 05 Apr 2025 21:56:15 GMT"
         },
         {
-          "title": "Ederson injury update from Pep Guardiola as he bemoans 'nightmare' season",
-          "description": "Ederson injury update from Pep Guardiola as he bemoans 'nightmare' season  Metro.co.uk",
-          "date": "Sun, 13 Apr 2025 12:08:00 GMT"
+          "title": "Barcelona 1-1 Real Betis: Barca extend lead at top of La Liga despite draw",
+          "description": "Barcelona 1-1 Real Betis: Barca extend lead at top of La Liga despite draw  BBC",
+          "date": "Sat, 05 Apr 2025 20:54:00 GMT"
         },
         {
-          "title": "Man City recover from nightmare start to beat Crystal Palace 5-2",
-          "description": "Man City recover from nightmare start to beat Crystal Palace 5-2  MSN",
-          "date": "Sat, 12 Apr 2025 14:10:15 GMT"
+          "title": "Barcelona player ratings vs Real Betis: Robert Lewandowski goes missing & Gavi's efforts go to waste as Hansi Flick's men fail to capitalise on Real Madrid slip-up",
+          "description": "Barcelona player ratings vs Real Betis: Robert Lewandowski goes missing & Gavi's efforts go to waste as Hansi Flick's men fail to capitalise on Real Madrid slip-up  Goal.com",
+          "date": "Sat, 05 Apr 2025 21:15:24 GMT"
         },
         {
-          "title": "Man City vs Crystal Palace: Premier League latest score and updates",
-          "description": "Man City vs Crystal Palace: Premier League latest score and updates",
-          "date": "Sat, 12 Apr 2025 23:53:59 GMT"
+          "title": "Barcelona 1-1 Real Betis: Highlights, man of the match, stats as Blaugrana see long winning run ended by impressive visitors",
+          "description": "Barcelona 1-1 Real Betis: Highlights, man of the match, stats as Blaugrana see long winning run ended by impressive visitors  Sports Mole",
+          "date": "Sat, 05 Apr 2025 21:11:00 GMT"
         },
         {
-          "title": "Man City firm up Florian Wirtz transfer interest as Leverkusen eye two players in exchange",
-          "description": "Man City firm up Florian Wirtz transfer interest as Leverkusen eye two players in exchange  The Mirror",
-          "date": "Sat, 12 Apr 2025 23:00:00 GMT"
+          "title": "BAR vs BET Highlights, La Liga 2024-25: Points shared as Real Betis holds Barcelona to draw",
+          "description": "BAR vs BET Highlights, La Liga 2024-25: Points shared as Real Betis holds Barcelona to draw  Sportstar",
+          "date": "Sat, 05 Apr 2025 20:47:15 GMT"
         },
         {
-          "title": "Premier League LIVE: Onana dropped from Man United squad, Howe also absent, Liverpool in action after Arsenal draw",
-          "description": "Premier League LIVE: Onana dropped from Man United squad, Howe also absent, Liverpool in action after Arsenal draw  talkSPORT",
-          "date": "Sun, 13 Apr 2025 09:54:52 GMT"
+          "title": "Football: Soccer-Barcelona held by Betis, miss chance to extend league lead",
+          "description": "Football: Soccer-Barcelona held by Betis, miss chance to extend league lead  The Star",
+          "date": "Sat, 05 Apr 2025 21:23:00 GMT"
         },
         {
-          "title": "Pep Guardiola gesture to Etihad fans shows true colours as Man City send clear message",
-          "description": "Pep Guardiola gesture to Etihad fans shows true colours as Man City send clear message  Manchester Evening News",
-          "date": "Sun, 13 Apr 2025 05:00:00 GMT"
+          "title": "FC Barcelona 1-1 Real Betis Highlights, La Liga Updates: Blaugrana Held At Home, Extend Lead To Four Points",
+          "description": "FC Barcelona 1-1 Real Betis Highlights, La Liga Updates: Blaugrana Held At Home, Extend Lead To Four Points  Outlook India",
+          "date": "Sat, 05 Apr 2025 21:24:50 GMT"
         }
       ]
     },
     {
-      "player_id": 522,
-      "player_name": "Thomas Müller",
-      "trending_score": 98.0,
-      "trend_summary": "After a stellar \"Klassiker\" performance earning him Man of the Match, Thomas Müller's future at Bayern Munich is uncertain, with reports suggesting a potential club departure after 25 years and debate over his necessity if Florian Wirtz arrives. Despite this, Bayern leadership believes Müller will continue playing, even as he laments a lack of efficiency in their recent 2-2 draw against Borussia Dortmund.\n",
+      "player_id": 396475,
+      "player_name": "Francisco Javier González Pérez",
+      "trending_score": 49.0,
+      "trend_summary": "Amidst an injury crisis forcing Real Madrid to start academy product Fran González, the young goalkeeper made his debut against Valencia, becoming the fifth-youngest goalkeeper to do so for the club. Despite González's debut and some positive moments, Real Madrid lost at home to Valencia, with Vinícius missing a penalty.\n",
       "news": [
         {
-          "title": "Bayern Munich convinced Thomas Müller isn’t heading for retirement after club departure",
-          "description": "Bayern Munich convinced Thomas Müller isn’t heading for retirement after club departure  Yahoo Sports",
-          "date": "Sun, 13 Apr 2025 11:19:00 GMT"
+          "title": "Bittersweet Debut for Fran González with Real Madrid: Historic Record with Defeat",
+          "description": "Bittersweet Debut for Fran González with Real Madrid: Historic Record with Defeat  Real Madrid Confidencial",
+          "date": "Sun, 06 Apr 2025 11:00:00 GMT"
         },
         {
-          "title": "After Borussia Dortmund draw, Bayern Munich star Joshua Kimmich say he’ll miss \"fun\" days with Thomas Müller",
-          "description": "After Borussia Dortmund draw, Bayern Munich star Joshua Kimmich say he’ll miss \"fun\" days with Thomas Müller  Bavarian Football Works",
-          "date": "Sun, 13 Apr 2025 11:30:00 GMT"
+          "title": "Fran Gonzalez to make Real Madrid debut; Thibaut Courtois, Andriy Lunin left out",
+          "description": "Fran Gonzalez to make Real Madrid debut; Thibaut Courtois, Andriy Lunin left out",
+          "date": "Sat, 05 Apr 2025 14:09:45 GMT"
         },
         {
-          "title": "Bayern boss convinced Müller will keep playing",
-          "description": "Bayern boss convinced Müller will keep playing  Bundesliga News in English",
-          "date": "Sun, 13 Apr 2025 11:20:00 GMT"
+          "title": "Fran González Makes Debut As Real Madrid Faces Valencia",
+          "description": "Fran González Makes Debut As Real Madrid Faces Valencia  Evrim Ağacı",
+          "date": "Sat, 05 Apr 2025 16:43:38 GMT"
         },
         {
-          "title": "Müller named Klassiker Man of the Match!",
-          "description": "Müller named Klassiker Man of the Match!  bundesliga.com",
-          "date": "Sat, 12 Apr 2025 18:53:50 GMT"
+          "title": "Real Madrid Crisis: Teen Goalkeeper Fran Gonzalez Thrust into Spotlight Amidst Injury Chaos",
+          "description": "Real Madrid Crisis: Teen Goalkeeper Fran Gonzalez Thrust into Spotlight Amidst Injury Chaos  MotorcycleSports",
+          "date": "Sat, 05 Apr 2025 22:37:35 GMT"
         },
         {
-          "title": "Lothar Matthäus: Bayern Munich does “not need Thomas Müller anymore” if Florian Wirtz is signed",
-          "description": "Lothar Matthäus: Bayern Munich does “not need Thomas Müller anymore” if Florian Wirtz is signed  MSN",
-          "date": "Sun, 13 Apr 2025 00:39:44 GMT"
+          "title": "Real Madrid starlet becomes the fifth-youngest goalkeeper to debut for club",
+          "description": "Real Madrid starlet becomes the fifth-youngest goalkeeper to debut for club  Yahoo Sports",
+          "date": "Sat, 05 Apr 2025 13:24:00 GMT"
         },
         {
-          "title": "Thomas Muller reacts to being drawn against Barcelona and Hansi Flick",
-          "description": "Thomas Muller reacts to being drawn against Barcelona and Hansi Flick  Yahoo Sports",
-          "date": "Sat, 12 Apr 2025 23:49:34 GMT"
+          "title": "Who is Real Madrid goalkeeper Fran Gonzalez? Los Blancos forced to start academy product",
+          "description": "Who is Real Madrid goalkeeper Fran Gonzalez? Los Blancos forced to start academy product  sportingnews.com",
+          "date": "Sat, 05 Apr 2025 13:35:00 GMT"
         },
         {
-          "title": "Thomas Müller laments lack of \"efficiency\" during 2-2 draw between Bayern Munich and Borussia Dortmund",
-          "description": "Thomas Müller laments lack of \"efficiency\" during 2-2 draw between Bayern Munich and Borussia Dortmund  Bavarian Football Works",
-          "date": "Sat, 12 Apr 2025 21:30:00 GMT"
+          "title": "Vinícius misses penalty as Real Madrid loses at home to Valencia",
+          "description": "Vinícius misses penalty as Real Madrid loses at home to Valencia  FOX Sports",
+          "date": "Sat, 05 Apr 2025 16:34:14 GMT"
         },
         {
-          "title": "Harry Kane and Thomas Müller score as Bayern beats Freiburg in the Bundesliga",
-          "description": "Harry Kane and Thomas Müller score as Bayern beats Freiburg in the Bundesliga  Yahoo Sports",
-          "date": "Sat, 12 Apr 2025 23:11:10 GMT"
+          "title": "Real Madrid's lack of planning exposed in last-minute defeat to Valencia",
+          "description": "Real Madrid's lack of planning exposed in last-minute defeat to Valencia  OneFootball",
+          "date": "Sun, 06 Apr 2025 05:20:26 GMT"
         },
         {
-          "title": "Thomas Müller to leave Bayern Munich after 25 years at club",
-          "description": "Thomas Müller to leave Bayern Munich after 25 years at club  Yahoo Sports",
-          "date": "Sun, 13 Apr 2025 00:21:21 GMT"
+          "title": "Vinicius misses another penalty as Real Madrid shocked by Valencia",
+          "description": "Vinicius misses another penalty as Real Madrid shocked by Valencia  Al Jazeera",
+          "date": "Sat, 05 Apr 2025 17:41:48 GMT"
         },
         {
-          "title": "Former Bayern Munich boss Jürgen Klinsmann thinks Thomas Müller will rise to the occasion this week",
-          "description": "Former Bayern Munich boss Jürgen Klinsmann thinks Thomas Müller will rise to the occasion this week  Yahoo Sports",
-          "date": "Sun, 13 Apr 2025 05:32:45 GMT"
+          "title": "Fran González Shines In Real Madrid Debut Against Valencia",
+          "description": "Fran González Shines In Real Madrid Debut Against Valencia  Evrim Ağacı",
+          "date": "Sat, 05 Apr 2025 18:29:29 GMT"
         }
       ]
     },
     {
       "player_id": 386828,
       "player_name": "Lamine Yamal Nasraoui Ebana",
-      "trending_score": 95.0,
-      "trend_summary": "Barcelona's Lamine Yamal is making waves, both on and off the pitch, with Jorge Mendes declaring him the best player of 2024 and reports surfacing of a potential world-record bid from PSG exceeding €200 million. However, his playing time at Euro 2024 could be limited due to German law, a concern the Spanish Football Federation appears to dismiss.\n",
+      "trending_score": 23.0,
+      "trend_summary": "Amidst contract negotiations with Barcelona, teenage sensation Lamine Yamal is drawing intense interest from Premier League giants Manchester City and Liverpool, with both clubs closely monitoring his situation. This comes as Real Madrid legend Guti boldly claims Yamal is already surpassing Lionel Messi's level at the same age.\n",
       "news": [
         {
-          "title": "German authorities to enforce law that could limit Lamine Yamal’s playing time in Euro 2024 final",
-          "description": "German authorities to enforce law that could limit Lamine Yamal’s playing time in Euro 2024 final  Yahoo Sports",
-          "date": "Sat, 12 Apr 2025 23:07:38 GMT"
+          "title": "Barcelona’s plan with Lamine Yamal amid contract situation",
+          "description": "Barcelona’s plan with Lamine Yamal amid contract situation  Yahoo Sports",
+          "date": "Sat, 05 Apr 2025 21:01:53 GMT"
         },
         {
-          "title": "Lamine Yamal sends public message to Barcelona teammate Ter Stegen",
-          "description": "Lamine Yamal sends public message to Barcelona teammate Ter Stegen  Yahoo Sports",
-          "date": "Sun, 13 Apr 2025 05:19:53 GMT"
+          "title": "Barcelona vs Real Betis 1-1: LaLiga – as it happened",
+          "description": "Barcelona vs Real Betis 1-1: LaLiga – as it happened  Al Jazeera",
+          "date": "Sat, 05 Apr 2025 19:27:57 GMT"
         },
         {
-          "title": "Watch: Barcelona’s Lamine Yamal leaves 2 Young Boys stars for dead with gorgeous skill",
-          "description": "Watch: Barcelona’s Lamine Yamal leaves 2 Young Boys stars for dead with gorgeous skill  Yahoo Sports",
-          "date": "Sat, 12 Apr 2025 23:46:05 GMT"
+          "title": "Two Premier League clubs closely watching Lamine Yamal’s Barcelona contract talks",
+          "description": "Two Premier League clubs closely watching Lamine Yamal’s Barcelona contract talks  Yahoo Sports",
+          "date": "Sat, 05 Apr 2025 21:50:00 GMT"
         },
         {
-          "title": "Lamine Yamal dependence underlined after Barcelona drop points again in La Liga",
-          "description": "Lamine Yamal dependence underlined after Barcelona drop points again in La Liga  Yahoo Sports",
-          "date": "Sat, 12 Apr 2025 22:14:07 GMT"
+          "title": "Manchester City and Liverpool in Intense Battle for Barcelona Wonderkid Lamine Yamal",
+          "description": "Manchester City and Liverpool in Intense Battle for Barcelona Wonderkid Lamine Yamal  MotorcycleSports",
+          "date": "Sat, 05 Apr 2025 23:20:55 GMT"
         },
         {
-          "title": "Jorge Mendes: Lamine Yamal was the best player of 2024, will renew with Barcelona",
-          "description": "Jorge Mendes: Lamine Yamal was the best player of 2024, will renew with Barcelona  Yahoo Sports",
-          "date": "Sat, 12 Apr 2025 22:00:49 GMT"
+          "title": "Lamine Yamal linked with shock transfer that would send shockwaves through Europe as two clubs ready to make a move",
+          "description": "Lamine Yamal linked with shock transfer that would send shockwaves through Europe as two clubs ready to make a move  SPORTbible",
+          "date": "Sat, 05 Apr 2025 15:27:29 GMT"
         },
         {
-          "title": "Barcelona starlet Lamine Yamal set an all-time La Liga record in win over Valladolid",
-          "description": "Barcelona starlet Lamine Yamal set an all-time La Liga record in win over Valladolid  Yahoo Sports",
-          "date": "Sat, 12 Apr 2025 22:11:43 GMT"
+          "title": "Lamine Yamal Transfer News: Star winger on Premier League radar as Barcelona's financial woes continue",
+          "description": "Lamine Yamal Transfer News: Star winger on Premier League radar as Barcelona's financial woes continue  MSN",
+          "date": "Sat, 05 Apr 2025 14:52:52 GMT"
         },
         {
-          "title": "Spanish Football Federation unconcerned by prospect of breaking German law with Lamine Yamal",
-          "description": "Spanish Football Federation unconcerned by prospect of breaking German law with Lamine Yamal  Yahoo Sports",
-          "date": "Sat, 12 Apr 2025 16:59:46 GMT"
+          "title": "Liverpool 'monitoring' Lamine Yamal situation as Alexander Isak transfer alternative linked",
+          "description": "Liverpool 'monitoring' Lamine Yamal situation as Alexander Isak transfer alternative linked  Liverpool Echo",
+          "date": "Sun, 06 Apr 2025 03:00:00 GMT"
         },
         {
-          "title": "Hansi Flick reveals huge Lamine Yamal tactical plus ahead of El Clasico",
-          "description": "Hansi Flick reveals huge Lamine Yamal tactical plus ahead of El Clasico  Yahoo Sports",
-          "date": "Sun, 13 Apr 2025 01:51:39 GMT"
+          "title": "Real Madrid Legend Guti Believes Lamine Yamal Is Better Than Lionel Messi Was At 17",
+          "description": "Real Madrid Legend Guti Believes Lamine Yamal Is Better Than Lionel Messi Was At 17  News18",
+          "date": "Sat, 05 Apr 2025 15:00:20 GMT"
         },
         {
-          "title": "The promise that Xavi Hernandez made to Lamine Yamal to stop him joining Paris Saint-Germain",
-          "description": "The promise that Xavi Hernandez made to Lamine Yamal to stop him joining Paris Saint-Germain  Yahoo Sports",
-          "date": "Sun, 13 Apr 2025 00:58:11 GMT"
+          "title": "Manchester City and Liverpool monitoring Lamine Yamal contract situation",
+          "description": "Manchester City and Liverpool monitoring Lamine Yamal contract situation  CaughtOffside",
+          "date": "Sat, 05 Apr 2025 18:21:38 GMT"
         },
         {
-          "title": "PSG considered making a world-record bid of over €200 million for Barcelona crown jewel – Romano",
-          "description": "PSG considered making a world-record bid of over €200 million for Barcelona crown jewel – Romano  Yahoo Sports",
-          "date": "Sat, 12 Apr 2025 22:03:58 GMT"
+          "title": "Barcelona 1-1 Real Betis: Barca extend lead at top of La Liga despite draw",
+          "description": "Barcelona 1-1 Real Betis: Barca extend lead at top of La Liga despite draw  BBC",
+          "date": "Sat, 05 Apr 2025 20:54:00 GMT"
         }
       ]
     },
     {
-      "player_id": 81573,
-      "player_name": "Omar Khaled Mohamed Abd Elsala Marmoush",
-      "trending_score": 81.0,
-      "trend_summary": "Omar Marmoush is at the center of a transfer tug-of-war, with Manchester City reportedly scheduling a medical after having a bid rejected by Eintracht Frankfurt, while Liverpool has reportedly begun €60m transfer talks. Despite the swirling rumors, Marmoush secured a win for Eintracht Frankfurt and is expected to be involved in their game against Borussia Dortmund.\n",
+      "player_id": 195100,
+      "player_name": "Natan Bernardo de Souza",
+      "trending_score": 21.0,
+      "trend_summary": "Natan etched his name into the headlines by scoring the equalizing goal for Real Betis against Barcelona in their La Liga clash, which ended 1-1. His header denied Barcelona a chance to extend their league lead, keeping the La Liga title race fiercely contested.\n",
       "news": [
         {
-          "title": "Manchester City schedule Omar Marmoush medical as transfer fee revealed for Egypt star",
-          "description": "Manchester City schedule Omar Marmoush medical as transfer fee revealed for Egypt star  Yahoo Sports",
-          "date": "Sat, 12 Apr 2025 23:39:30 GMT"
+          "title": "WATCH: Real Betis equalise against Barcelona as Natan heads home",
+          "description": "WATCH: Real Betis equalise against Barcelona as Natan heads home  Yahoo Sports",
+          "date": "Sat, 05 Apr 2025 19:21:00 GMT"
         },
         {
-          "title": "Eintracht Frankfurt manager issues update on Omar Marmoush amid Manchester City transfer chase",
-          "description": "Eintracht Frankfurt manager issues update on Omar Marmoush amid Manchester City transfer chase  Yahoo Sports",
-          "date": "Sun, 13 Apr 2025 07:28:11 GMT"
+          "title": "Barcelona 1-1 Betis (Apr 5, 2025) Game Analysis",
+          "description": "Barcelona 1-1 Betis (Apr 5, 2025) Game Analysis  ESPN",
+          "date": "Sat, 05 Apr 2025 22:18:45 GMT"
         },
         {
-          "title": "Eintracht Frankfurt’s plan for when Omar Marmoush leaves the club",
-          "description": "Eintracht Frankfurt’s plan for when Omar Marmoush leaves the club  Yahoo Sports",
-          "date": "Sun, 13 Apr 2025 00:45:24 GMT"
+          "title": "Barcelona miss chance to go six points clear as Real Betis hold them to draw",
+          "description": "Barcelona miss chance to go six points clear as Real Betis hold them to draw  Flashscore.com",
+          "date": "Sun, 06 Apr 2025 09:45:00 GMT"
         },
         {
-          "title": "Manchester City close in on agreement for Eintracht Frankfurt’s Omar Marmoush",
-          "description": "Manchester City close in on agreement for Eintracht Frankfurt’s Omar Marmoush  Yahoo Sports",
-          "date": "Sun, 13 Apr 2025 00:45:57 GMT"
+          "title": "Soccer-Barcelona held by Betis, miss chance to extend league lead",
+          "description": "Soccer-Barcelona held by Betis, miss chance to extend league lead  MSN",
+          "date": "Sat, 05 Apr 2025 22:36:41 GMT"
         },
         {
-          "title": "Revealed: Omar Marmoush arrives in Manchester with City medical scheduled for Tuesday",
-          "description": "Revealed: Omar Marmoush arrives in Manchester with City medical scheduled for Tuesday  Yahoo Sports",
-          "date": "Sat, 12 Apr 2025 13:22:00 GMT"
+          "title": "FC Barcelona 1-1 Betis: Unexpected setback to keep the LaLiga battle alive",
+          "description": "FC Barcelona 1-1 Betis: Unexpected setback to keep the LaLiga battle alive  FCBN",
+          "date": "Sat, 05 Apr 2025 21:18:45 GMT"
         },
         {
-          "title": "Watch: Omar Marmoush secures win for Eintracht Frankfurt",
-          "description": "Watch: Omar Marmoush secures win for Eintracht Frankfurt  Yahoo Sports",
-          "date": "Sat, 12 Apr 2025 16:41:13 GMT"
+          "title": "Barcelona draw to increase Liga lead after Real Madrid stumble",
+          "description": "Barcelona draw to increase Liga lead after Real Madrid stumble  Prothom Alo English",
+          "date": "Sun, 06 Apr 2025 04:54:11 GMT"
         },
         {
-          "title": "Liverpool BEGIN €60m Omar Marmoush transfer talks",
-          "description": "Liverpool BEGIN €60m Omar Marmoush transfer talks  Yahoo Sports",
-          "date": "Sun, 13 Apr 2025 01:16:18 GMT"
+          "title": "FC Barcelona 1-1 Real Betis Highlights, La Liga Updates: Blaugrana Held At Home, Extend Lead To Four Points",
+          "description": "FC Barcelona 1-1 Real Betis Highlights, La Liga Updates: Blaugrana Held At Home, Extend Lead To Four Points  Outlook India",
+          "date": "Sat, 05 Apr 2025 21:24:50 GMT"
         },
         {
-          "title": "Eintracht Frankfurt reject Manchester City bid for Omar Marmoush as player expected to be involved against Borussia Dortmund",
-          "description": "Eintracht Frankfurt reject Manchester City bid for Omar Marmoush as player expected to be involved against Borussia Dortmund  Yahoo Sports",
-          "date": "Sun, 13 Apr 2025 01:38:36 GMT"
+          "title": "FC Barcelona fail to take advantage of Real Madrid's defeat and can only manage a draw against a great Betis",
+          "description": "FC Barcelona fail to take advantage of Real Madrid's defeat and can only manage a draw against a great Betis  Grada3.COM",
+          "date": "Sat, 05 Apr 2025 22:44:13 GMT"
         },
         {
-          "title": "From Germany: Eintracht Frankfurt and Manchester City separated by significant difference in valuation of Omar Marmoush",
-          "description": "From Germany: Eintracht Frankfurt and Manchester City separated by significant difference in valuation of Omar Marmoush  Yahoo Sports",
-          "date": "Sat, 12 Apr 2025 23:18:06 GMT"
+          "title": "Football: Barcelona miss chance to extend lead",
+          "description": "Football: Barcelona miss chance to extend lead  Gulf Daily News",
+          "date": "Sun, 06 Apr 2025 01:42:07 GMT"
         },
         {
-          "title": "Manchester City closing in on €80m agreement for Omar Marmoush",
-          "description": "Manchester City closing in on €80m agreement for Omar Marmoush  Yahoo Sports",
-          "date": "Sat, 12 Apr 2025 16:29:00 GMT"
+          "title": "Barcelona vs Real Betis 1-1: LaLiga – as it happened",
+          "description": "Barcelona vs Real Betis 1-1: LaLiga – as it happened  Al Jazeera",
+          "date": "Sat, 05 Apr 2025 19:27:57 GMT"
         }
       ]
     },
     {
-      "player_id": 340279,
-      "player_name": "Vitor Hugo Roque Ferreira",
-      "trending_score": 52.0,
-      "trend_summary": "Vitor Roque's tumultuous Barcelona career faces further uncertainty as a potential €25m transfer back to Palmeiras is complicated by La Liga and RFEF blocks, despite FIFA's green light. Negotiations with Palmeiras have been on and off, while Real Betis have requested a loan option for the Barcelona forward as part of talks surrounding Roque.\n",
+      "player_id": 714,
+      "player_name": "Nadiem Amiri",
+      "trending_score": 14.0,
+      "trend_summary": "Nadiem Amiri is featured in the live coverage of the Mainz 05 versus Holstein Kiel match, as reported by Marca.com. Details on his performance in this specific game are currently unfolding.\n",
       "news": [
         {
-          "title": "Vitor Roque makes Barcelona goal promise ahead Real Betis reunion",
-          "description": "Vitor Roque makes Barcelona goal promise ahead Real Betis reunion  Yahoo Sports",
-          "date": "Sat, 12 Apr 2025 22:29:47 GMT"
-        },
-        {
-          "title": "Vitor Roque blames hefty price tag for difficult start at Barcelona",
-          "description": "Vitor Roque blames hefty price tag for difficult start at Barcelona  Yahoo Sports",
-          "date": "Sat, 12 Apr 2025 22:56:34 GMT"
-        },
-        {
-          "title": "FIFA gives green light for Barcelona to sell Vitor Roque to Palmeiras",
-          "description": "FIFA gives green light for Barcelona to sell Vitor Roque to Palmeiras  Yahoo Sports",
-          "date": "Sun, 13 Apr 2025 00:38:59 GMT"
-        },
-        {
-          "title": "Palmeiras will sign Vitor Roque from Barcelona in €25m deal no matter what – report",
-          "description": "Palmeiras will sign Vitor Roque from Barcelona in €25m deal no matter what – report  Yahoo Sports",
-          "date": "Sun, 13 Apr 2025 01:04:47 GMT"
-        },
-        {
-          "title": "Vitor Roque move set to hinge on Real Betis compensation",
-          "description": "Vitor Roque move set to hinge on Real Betis compensation  Yahoo Sports",
-          "date": "Sat, 12 Apr 2025 20:14:30 GMT"
-        },
-        {
-          "title": "Palmeiras break off negotiations with Barcelona for Vitor Roque as move collapses",
-          "description": "Palmeiras break off negotiations with Barcelona for Vitor Roque as move collapses  Yahoo Sports",
-          "date": "Sat, 12 Apr 2025 22:03:01 GMT"
-        },
-        {
-          "title": "Barcelona and Palmeiras settle on final figures for Vitor Roque deal",
-          "description": "Barcelona and Palmeiras settle on final figures for Vitor Roque deal  Yahoo Sports",
-          "date": "Sat, 12 Apr 2025 23:56:43 GMT"
-        },
-        {
-          "title": "Barcelona face €25m blow as La Liga, RFEF block Vitor Roque transfer – report",
-          "description": "Barcelona face €25m blow as La Liga, RFEF block Vitor Roque transfer – report  Yahoo Sports",
-          "date": "Sun, 13 Apr 2025 00:29:36 GMT"
-        },
-        {
-          "title": "Vitor Roque's Journey: From Promise to Frustration at Palmeiras",
-          "description": "Vitor Roque's Journey: From Promise to Frustration at Palmeiras  FootBoom",
-          "date": "Sun, 13 Apr 2025 11:20:05 GMT"
-        },
-        {
-          "title": "Real Betis ask for a loan option for Barcelona forward as part of Vitor Roque talks",
-          "description": "Real Betis ask for a loan option for Barcelona forward as part of Vitor Roque talks  Yahoo Sports",
-          "date": "Sun, 13 Apr 2025 01:14:21 GMT"
+          "title": "Mainz 05",
+          "description": "Mainz 05",
+          "date": "Sat, 05 Apr 2025 15:37:46 GMT"
         }
       ]
     }
