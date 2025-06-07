@@ -34,7 +34,7 @@ jobs:
           pip install google-generativeai
         
       - name: Update trending footballers
-        run: python scripts/trending_footballers.py
+        run: python src/scripts/trending_footballers.py
 
       - name: Update player news
         run: python scripts/fetch_player_news.py
